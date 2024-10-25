@@ -513,6 +513,9 @@ ol li {
   margin-top: 1rem;
 }
 
+
+
+
 /* -------------------------------------
     Custom Class
 ------------------------------------- */
@@ -5217,6 +5220,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   position: relative;
   top: -2px;
 }
+.logo-home {
+  width: 70px; 
+  height: auto; 
+  margin-left: 55px; 
+}
+
 
 .ltn__header-1 .ltn__header-middle-area {
   padding-top: 10px;
@@ -5256,6 +5265,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 .header-menu-2 .ltn__main-menu > ul {
   display: inline-block;
+
 }
 
 /* ----------------------------------------------
@@ -5289,6 +5299,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   font-size: 14px;
   line-height: 1;
 }
+
 .header-feature-item p {
   margin-bottom: 0;
   font-size: 16px;
@@ -5326,16 +5337,24 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   list-style: none;
   display: block;
   margin-top: 0;
+  
 }
 
 .ltn__main-menu li > a {
   position: relative;
+  font-size: 14px !important;
+  margin-top: 10px;
+
+}
+.ltn__main-menu li:last-child > a {
+  margin-right: 55px !important;
 }
 
 .ltn__main-menu > ul > li {
   display: inline-block;
   position: relative;
   margin-right: 20px;
+
 }
 
 .ltn__main-menu > ul > li:last-child {
@@ -5355,6 +5374,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .ltn__main-menu li:hover > a {
   color: var(--ltn__secondary-color);
 }
+
+
 
 /* Submenu */
 .ltn__main-menu li > ul,
@@ -6448,7 +6469,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .special-link a {
   background-color: var(--ltn__secondary-color);
   color: var(--white) !important;
-  padding: 12px 30px !important;
+  padding: 10px 20px !important;
+  font-size: 12px !important;
 }
 .special-link a:hover {
   background-color: var(--section-bg-1);
@@ -7579,6 +7601,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  
 }
 
 .slide-item-info-inner {
@@ -7755,7 +7778,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding-top: 200px;
 }
 .ltn__slide-item-2 .slide-item-info {
-  max-width: 650px;
+  max-width: 1100px;
+  margin-top: 50PX;
 }
 .ltn__slide-item-2 .slide-sub-title {
   margin-bottom: 20px;
@@ -10011,10 +10035,25 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 1.8;
+  color: #000 !important;   
 }
-
+.nice-select.selected {
+  color: #000 !important;
+}
 .nice-select .list {
   min-width: 100%;
+  
+}
+
+select.nice-select option {
+  color: black !important; 
+  background-color: red !important; 
+}
+
+
+select.nice-select option:checked {
+  color: red !important; 
+  background-color: black !important; 
 }
 
 .ltn__shop-options {

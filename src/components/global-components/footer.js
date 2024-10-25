@@ -51,38 +51,11 @@ class Footer_v1 extends Component {
 				          <div className="footer-widget footer-about-widget">
 				            <div className="footer-logo">
 				              <div className="site-logo">
-				                <img src={publicUrl+"assets/img/logo-2.png"} alt="Logo" />
+							  <img src={publicUrl + "assets/img/logo-2.png"} alt="Logo" style={{ width: "100px", height: "auto" }} />
 				              </div>
 				            </div>
-				            <p>Lorem Ipsum is simply dummy text of the and typesetting industry. Lorem Ipsum is dummy text of the printing.</p>
-				            <div className="footer-address">
-				              <ul>
-				                <li>
-				                  <div className="footer-address-icon">
-				                    <i className="icon-placeholder" />
-				                  </div>
-				                  <div className="footer-address-info">
-				                    <p>Brooklyn, New York, United States</p>
-				                  </div>
-				                </li>
-				                <li>
-				                  <div className="footer-address-icon">
-				                    <i className="icon-call" />
-				                  </div>
-				                  <div className="footer-address-info">
-				                    <p><a href="tel:+0123-456789">+0123-456789</a></p>
-				                  </div>
-				                </li>
-				                <li>
-				                  <div className="footer-address-icon">
-				                    <i className="icon-mail" />
-				                  </div>
-				                  <div className="footer-address-info">
-				                    <p><a href="mailto:example@example.com">example@example.com</a></p>
-				                  </div>
-				                </li>
-				              </ul>
-				            </div>
+				            <p>Fort de son expertise, Leaders Immobilier vous accompagne pour garantir le succès de votre projet immobilier.</p>
+				           
 				            <div className="ltn__social-media mt-20">
 						    	<Social />
 				            </div>
@@ -90,15 +63,15 @@ class Footer_v1 extends Component {
 				        </div>
 				        <div className="col-xl-2 col-md-6 col-sm-6 col-12">
 				          <div className="footer-widget footer-menu-widget clearfix">
-				            <h4 className="footer-title">Company</h4>
+				            <h4 className="footer-title">Entreprise</h4>
 				            <div className="footer-menu go-top">
 				              <ul>
-				                <li><Link to="/about">About</Link></li>
-				                <li><Link to="/blog-grid">Blog</Link></li>
-				                <li><Link to="/shop">All Products</Link></li>
-				                <li><Link to="/contact">Contact</Link></li>
-				                <li><Link to="/faq">FAQ</Link></li>
-				                <li><Link to="/contact">Contact us</Link></li>
+				                <li><Link to="/Accueil">Accueil</Link></li>
+				                <li><Link to="/about">À propos</Link></li>
+				                <li><Link to="/Vente">Vente</Link></li>
+				                <li><Link to="/Location">Location</Link></li>
+				                <li><Link to="/Estimation">Estimation</Link></li>
+				               
 				              </ul>
 				            </div>
 				          </div>
@@ -108,27 +81,43 @@ class Footer_v1 extends Component {
 				            <h4 className="footer-title">Services</h4>
 				            <div className="footer-menu go-top">
 				              <ul>
-				                <li><Link to="/cart">Cart</Link></li>
-				                <li><Link to="/wishlist">Wish List</Link></li>
-				                <li><Link to="/login">Login</Link></li>
-				                <li><Link to="/checkout">Checkout</Link></li>
-				                <li><Link to="/about">Terms &amp; Conditions</Link></li>
-				                <li><Link to="/shop">Promotional Offers</Link></li>
+				                <li><Link to="/Acheteur">Trouvez Acheteur</Link></li>
+				                <li><Link to="/Exchange">Échange Bien</Link></li>
+				                <li><Link to="/Contact">Contactez Nous</Link></li>
+				              
 				              </ul>
 				            </div>
 				          </div>
 				        </div>
 				        <div className="col-xl-2 col-md-6 col-sm-6 col-12">
 				          <div className="footer-widget footer-menu-widget clearfix">
-				            <h4 className="footer-title">Customer Care</h4>
-				            <div className="footer-menu go-top">
+				            <h4 className="footer-title">Contact</h4>
+							<div className="footer-address">
 				              <ul>
-				                <li><Link to="/login">Login</Link></li>
-				                <li><Link to="/my-account">My account</Link></li>
-				                <li><Link to="/wishlist">Wish List</Link></li>
-				                <li><Link to="/add-listing">Add listing</Link></li>
-				                <li><Link to="/faq">FAQ</Link></li>
-				                <li><Link to="/contact">Contact us</Link></li>
+				                <li>
+				                  <div className="footer-address-icon">
+				                    <i className="icon-placeholder" />
+				                  </div>
+				                  <div className="footer-address-info">
+				                    <p>En face Clinique Hannibal <br/> Lac2, Tunisie</p>
+				                  </div>
+				                </li>
+				                <li>
+				                  <div className="footer-address-icon">
+				                    <i className="icon-call" />
+				                  </div>
+				                  <div className="footer-address-info">
+				                    <p><a href="tel:+0123-456789">(+216) 27 246 300</a></p>
+				                  </div>
+				                </li>
+				                <li>
+				                  <div className="footer-address-icon">
+				                    <i className="icon-mail" />
+				                  </div>
+				                  <div className="footer-address-info">
+				                    <p><a href="mailto:contact@leaders-immo.com">contact@leaders-immo.com</a></p>
+				                  </div>
+				                </li>
 				              </ul>
 				            </div>
 				          </div>
@@ -136,7 +125,7 @@ class Footer_v1 extends Component {
 				        <div className="col-xl-3 col-md-6 col-sm-12 col-12">
 				          <div className="footer-widget footer-newsletter-widget">
 				            <h4 className="footer-title">Newsletter</h4>
-				            <p>Subscribe to our weekly Newsletter and receive updates via email.</p>
+				            <p>Abonnez-vous à notre newsletter hebdomadaire et recevez mises à jour par e-mail.</p>
 				            <div className="footer-newsletter">
 				              <form action="#">
 				                <input type="email" name="email" placeholder="Email*" />
@@ -145,8 +134,7 @@ class Footer_v1 extends Component {
 				                </div>
 				              </form>
 				            </div>
-				            <h5 className="mt-30">We Accept</h5>
-				            <img src={publicUrl+"assets/img/icons/payment-4.png"} alt="Payment Image" />
+				         
 				          </div>
 				        </div>
 				      </div>

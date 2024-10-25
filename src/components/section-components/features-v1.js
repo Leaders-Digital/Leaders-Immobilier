@@ -15,8 +15,8 @@ class FeaturesV1 extends Component {
 			    <div className="row">
 			      <div className="col-lg-12">
 			        <div className="section-title-area ltn__section-title-2--- text-center">
-			          <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">Our Services</h6>
-			          <h1 className="section-title">Our Main Focus</h1>
+			          <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">Nos prestations</h6>
+			          <h1 className="section-title">Notre Objectif Principal</h1>
 			        </div>
 			      </div>
 			    </div>
@@ -24,36 +24,36 @@ class FeaturesV1 extends Component {
 			      <div className="col-lg-4 col-sm-6 col-12">
 			        <div className="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
 			          <div className="ltn__feature-icon">
-			            <img src={publicUrl+"assets/img/icons/icon-img/21.png"} alt="#" />
+			            <img src={publicUrl+"assets/img/icons/icon-img/24.png"} alt="#" />
 			          </div>
 			          <div className="ltn__feature-info">
-			            <h3><Link to="/service-details">Buy a home</Link></h3>
-			            <p>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-			            <Link className="ltn__service-btn" to="/service-details">Find A Home <i className="flaticon-right-arrow" /></Link>
+			            <h3><Link to="/service-details">ACHAT						</Link></h3>
+			            <p>Nous cherchons et dénichons pour vous le bien immobilier le plus conforme à vos besoins dans les meuilleurs délais.</p>
+			            <Link className="ltn__service-btn" to="/service-details">Acheter une maison <i className="flaticon-right-arrow" /></Link>
 			          </div>
 			        </div>
 			      </div>
 			      <div className="col-lg-4 col-sm-6 col-12">
 			        <div className="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1 active">
 			          <div className="ltn__feature-icon">
-			            <img src={publicUrl+"assets/img/icons/icon-img/22.png"} alt="#" />
+			            <img src={publicUrl+"assets/img/icons/icon-img/25.png"} alt="#" />
 			          </div>
 			          <div className="ltn__feature-info">
-			            <h3><Link to="/service-details">Rent a home</Link></h3>
-			            <p>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-			            <Link className="ltn__service-btn" to="/service-details">Find A Home <i className="flaticon-right-arrow" /></Link>
+			            <h3><Link to="/service-details">VENTE</Link></h3>
+			            <p>Nous nous tenons à vos cotés jusqu'à la concrétisation de l'acte de vente de votre bien immobilier.</p>
+			            <Link className="ltn__service-btn" to="/service-details">Vendre une maison <i className="flaticon-right-arrow" /></Link>
 			          </div>
 			        </div>
 			      </div>
 			      <div className="col-lg-4 col-sm-6 col-12">
 			        <div className="ltn__feature-item ltn__feature-item-6 text-center bg-white  box-shadow-1">
 			          <div className="ltn__feature-icon">
-			            <img src={publicUrl+"assets/img/icons/icon-img/23.png"} alt="#" />
+			            <img src={publicUrl+"assets/img/icons/icon-img/26.png"} alt="#" />
 			          </div>
 			          <div className="ltn__feature-info">
-			            <h3><Link to="/service-details">Sell a home</Link></h3>
-			            <p>over 1 million+ homes for sale available on the website, we can match you with a house you will want to call home.</p>
-			            <Link className="ltn__service-btn" to="/service-details">Find A Home <i className="flaticon-right-arrow" /></Link>
+			            <h3><Link to="/service-details">LOCATION</Link></h3>
+			            <p>Nos agents immobiliers mettent tout en oeuvre pour trouver le bon locataire ou la location qui vous convient.</p>
+			            <Link className="ltn__service-btn" to="/service-details">Louer une maison <i className="flaticon-right-arrow" /></Link>
 			          </div>
 			        </div>
 			      </div>

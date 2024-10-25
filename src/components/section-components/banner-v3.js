@@ -24,13 +24,13 @@ class BannerV3 extends Component {
 			                      <i className="fa fa-play" />
 			                    </a>
 			                  </div>
-			                  <h6 className="slide-sub-title white-color--- animated"><span><i className="fas fa-home" /></span> Real Estate Agency</h6>
-			                  <h1 className="slide-title animated ">Find Your Dream <br /> House By Us</h1>
-			                  <div className="slide-brief animated">
-			                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+			                  <h6 className="slide-sub-title white-color--- animated"  style={{fontSize: "1.5rem"}}><span><i className="fas fa-home" /></span> Agence Immobilière</h6>
+							  <h1 className="slide-title animated" style={{fontSize: "7rem"}}>وين ما تمشي <span style={{color: "--ltn__secondary-color"}}>تلقانا</span> معاك</h1>
+			                  <div className=" animated">
+			                    <p  style={{fontSize: "1.2rem"}}>Nos agents vous feront visiter les biens et suivront votre dossier pour <br/> saisir les meilleures opportunités.</p>
 			                  </div>
 			                  <div className="btn-wrapper animated go-top">
-			                    <Link to="/shop" className="theme-btn-1 btn btn-effect-1">Make An Enquiry</Link>
+			                    <Link to="/shop" className="theme-btn-1 btn btn-effect-1">Trouver un bien</Link>
 			                  </div>
 			                </div>
 			              </div>
@@ -47,13 +47,13 @@ class BannerV3 extends Component {
 			            <div className="col-lg-12 align-self-center">
 			              <div className="slide-item-info">
 			                <div className="slide-item-info-inner ltn__slide-animation">
-			                  <h6 className="slide-sub-title white-color--- animated"><span><i className="fas fa-home" /></span> Real Estate Agency</h6>
-			                  <h1 className="slide-title animated ">Find Your Dream <br /> House By Us</h1>
-			                  <div className="slide-brief animated">
-			                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+							<h6 className="slide-sub-title white-color--- animated"  style={{fontSize: "1.5rem"}}><span><i className="fas fa-home" /></span> Agence Immobilière</h6>
+							  <h1 className="slide-title animated" style={{fontSize: "7rem"}}>وين ما تمشي <span style={{color: "--ltn__secondary-color"}}>تلقانا</span> معاك</h1>
+			                  <div className=" animated">
+			                    <p  style={{fontSize: "1.2rem"}}>Nos agents vous feront visiter les biens et suivront votre dossier pour <br/> saisir les meilleures opportunités.</p>
 			                  </div>
 			                  <div className="btn-wrapper animated go-top">
-			                    <Link to="/shop" className="theme-btn-1 btn btn-effect-1">Make An Enquiry</Link>
+			                    <Link to="/shop" className="theme-btn-1 btn btn-effect-1">Trouver un bien</Link>
 			                  </div>
 			                </div>
 			              </div>
@@ -70,13 +70,13 @@ class BannerV3 extends Component {
 			            <div className="col-lg-12 align-self-center">
 			              <div className="slide-item-info">
 			                <div className="slide-item-info-inner ltn__slide-animation">
-			                  <h6 className="slide-sub-title white-color--- animated"><span><i className="fas fa-home" /></span> Real Estate Agency</h6>
-			                  <h1 className="slide-title animated ">Find Your Dream <br /> House By Us</h1>
-			                  <div className="slide-brief animated">
-			                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+							<h6 className="slide-sub-title white-color--- animated"  style={{fontSize: "1.5rem"}}><span><i className="fas fa-home" /></span> Agence Immobilière</h6>
+							  <h1 className="slide-title animated" style={{fontSize: "7rem"}}>وين ما تمشي <span style={{color: "--ltn__secondary-color"}}>تلقانا</span> معاك</h1>
+			                  <div className=" animated">
+			                    <p  style={{fontSize: "1.2rem"}}>Nos agents vous feront visiter les biens et suivront votre dossier pour <br/> saisir les meilleures opportunités.</p>
 			                  </div>
 			                  <div className="btn-wrapper animated go-top">
-			                    <Link to="/shop" className="theme-btn-1 btn btn-effect-1">Make An Enquiry</Link>
+			                    <Link to="/shop" className="theme-btn-1 btn btn-effect-1">Trouver un bien</Link>
 			                  </div>
 			                </div>
 			              </div>

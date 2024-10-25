@@ -17,8 +17,8 @@ class NavbarV3 extends Component {
 			        <div className="col-md-7">
 			          <div className="ltn__top-bar-menu">
 			            <ul>
-			              <li><a href="mailto:info@webmail.com?Subject=Flower%20greetings%20to%20you"><i className="icon-mail" /> info@webmail.com</a></li>
-			              <li><a href="locations.html"><i className="icon-placeholder" /> 15/A, Nest Tower, NYC</a></li>
+			              <li><a href="mailto:contact@leaders-immo.com?Subject=Flower%20greetings%20to%20you"><i className="icon-mail" /> contact@leaders-immo.com</a></li>
+			              <li><a href="locations.html"><i className="icon-placeholder" />En face Clinique Hannibal Lac2, Tunisie</a></li>
 			            </ul>
 			          </div>
 			        </div>
@@ -26,23 +26,6 @@ class NavbarV3 extends Component {
 			          <div className="top-bar-right text-end">
 			            <div className="ltn__top-bar-menu">
 			              <ul>
-			                <li>
-			                  {/* ltn__language-menu */}
-			                  <div className="ltn__drop-menu ltn__currency-menu ltn__language-menu">
-			                    <ul>
-			                      <li><Link to="#" className="dropdown-toggle"><span className="active-currency">English</span></Link>
-			                        <ul>
-			                          <li><Link to="#">Arabic</Link></li>
-			                          <li><Link to="#">Bengali</Link></li>
-			                          <li><Link to="#">Chinese</Link></li>
-			                          
-			                          <li><Link to="#">French</Link></li>
-			                          <li><Link to="#">Hindi</Link></li>
-			                        </ul>
-			                      </li>
-			                    </ul>
-			                  </div>
-			                </li>
 			                <li>
 							<Social />
 			                </li>
@@ -54,12 +37,13 @@ class NavbarV3 extends Component {
 			    </div>
 			  </div>
 			  <div className="ltn__header-middle-area ltn__header-sticky ltn__sticky-bg-black">
-			    <div className="container">
+			
 			      <div className="row">
 			        <div className="col">
 			          <div className="site-logo-wrap">
-			            <div className="site-logo go-top">
-			              <Link to="/"><img src={publicUrl+"assets/img/logo-2.png"} alt="Logo" /></Link>
+			            <div className="site-logo go-top col ml-5" >
+			              <Link to="/">        <img src={publicUrl + "assets/img/logo-2.png"} alt="Logo" className="logo-home" />
+						  </Link>
 			            </div>
 			            <div className="get-support clearfix d-none">
 			              <div className="get-support-icon">
@@ -84,16 +68,17 @@ class NavbarV3 extends Component {
 			                  <li><a href="#">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
 			                  <li><a href="#">À propos</a> </li>
+			                  <li><a href="#">Contactez Nous</a> </li>
 			                 
 			                 
 
-			                  <li className="special-link">
+			                  <li className="special-link" >
 			                    <Link to="/add-listing">Espace Membre</Link>
 			                  </li>
 			                </ul>
 			              </div>
 			            </nav>
-			          </div>
+			        
 			        </div>
 			        <div className="col--- ltn__header-options ltn__header-options-2 ">
 			          {/* Mobile Menu Button */}
