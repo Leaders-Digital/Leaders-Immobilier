@@ -224,8 +224,9 @@ font-family: 'Poppins', sans-serif;
     Normalize    0B2C3D
 ---------------------------------------------------- */
 :root {
-  --ltn__primary-color: #000000;
-  --ltn__primary-color-2: #041113;
+  --ltn__primary-color: #004874;
+  --ltn__primary-color-2: #575756 ;
+
   /* Darken */
   --ltn__primary-color-3: #004874;
   /* Lighten */
@@ -272,7 +273,7 @@ font-family: 'Poppins', sans-serif;
     rgba(0, 0, 0, 0.8) 70%
   );
   /* Background Colors ( 1, 2, 3, 4, 5 )  */
-  --section-bg-1: #f2f6f7;
+  --section-bg-1: ;
   /* White */
   --section-bg-2: #171b2a;
   /* Black */
@@ -985,6 +986,21 @@ fieldset legend {
   background-color: var(--fuchsia) !important;
   color: var(--white) !important;
 }
+
+.voir{
+  background-color: var(--ltn__secondary-color); 
+  color: #fff; 
+  padding: 15px 30px !important;
+  border: none; 
+  border-radius: 5px !important;
+  text-decoration: none; 
+  display: inline-block; 
+  margin-bottom: 30px;
+}
+.voir:hover{
+  background-color: var(--ltn__primary-color); 
+}
+
 
 /* ----------------------------------------------------
     input and button type focus outline disable
@@ -5339,6 +5355,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   margin-top: 0;
   
 }
+.ltn__main-menu li a:hover 
+{ color: var(--ltn__secondary-color) !important; }
 
 .ltn__main-menu li > a {
   position: relative;
@@ -7028,10 +7046,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 @media (max-width: 991px) {
-  .header-search-column,
-  .header-menu-column {
-    display: none;
-  }
+ 
   /* sticky */
   .sticky-active {
     position: inherit;
@@ -13383,7 +13398,7 @@ blockquote::before {
   -webkit-transition: all 0.4s ease 0s;
   -o-transition: all 0.4s ease 0s;
   transition: all 0.4s ease 0s;
-  background-color: var(--ltn__primary-color);
+  background-color: #000;
   opacity: 0.3;
 }
 .ltn__banner-style-4:hover::before {
