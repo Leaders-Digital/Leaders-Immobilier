@@ -9,13 +9,13 @@ class Testimonial extends Component {
         let publicUrl = process.env.PUBLIC_URL+'/'
         let imagealt = 'image'
 
-    return <div className="ltn__testimonial-area section-bg-1--- bg-image-top pt-115 pb-70" data-bs-bg={publicUrl+"assets/img/bg/20.jpg"}>
+    return <div className="ltn__testimonial-area section-bg-1--- bg-image-top pb-70 pt-115" data-bs-bg={publicUrl+"assets/img/bg/20.jpg"}>
 			  <div className="container">
 			    <div className="row">
 			      <div className="col-lg-12">
-			        <div className="section-title-area ltn__section-title-2--- text-center">
-			          <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">Our Testimonial</h6>
-			          <h1 className="section-title">Clients Feedback</h1>
+			        <div className="section-title-area ltn__section-title-2--- text-center">	
+			          <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">Notre témoignage</h6>
+			          <h1 className="section-title">Commentaires Des Clients </h1>
 			        </div>
 			      </div>
 			    </div>
@@ -32,11 +32,11 @@ class Testimonial extends Component {
 			              um dolor sit amet, consecte</p>
 			            <div className="ltn__testimoni-info-inner">
 			              <div className="ltn__testimoni-img">
-			                <img src={publicUrl+"assets/img/testimonial/1.jpg"} alt="#" />
+			                <img src={publicUrl+"assets/img/testimonial/1.png"} alt="#" />
 			              </div>
 			              <div className="ltn__testimoni-name-designation">
 			                <h5>Jacob William</h5>
-			                <label>Selling Agents</label>
+			                <label>agents de vente</label>
 			              </div>
 			            </div>
 			          </div>
@@ -54,11 +54,11 @@ class Testimonial extends Component {
 			              um dolor sit amet, consecte</p>
 			            <div className="ltn__testimoni-info-inner">
 			              <div className="ltn__testimoni-img">
-			                <img src={publicUrl+"assets/img/testimonial/2.jpg"} alt="#" />
+			                <img src={publicUrl+"assets/img/testimonial/2.png"} alt="#" />
 			              </div>
 			              <div className="ltn__testimoni-name-designation">
 			                <h5>Kelian Anderson</h5>
-			                <label>Selling Agents</label>
+			                <label>agents de vente</label>
 			              </div>
 			            </div>
 			          </div>
@@ -76,11 +76,11 @@ class Testimonial extends Component {
 			              um dolor sit amet, consecte</p>
 			            <div className="ltn__testimoni-info-inner">
 			              <div className="ltn__testimoni-img">
-			                <img src={publicUrl+"assets/img/testimonial/3.jpg"} alt="#" />
+			                <img src={publicUrl+"assets/img/testimonial/3.png"} alt="#" />
 			              </div>
 			              <div className="ltn__testimoni-name-designation">
 			                <h5>Adam Joseph</h5>
-			                <label>Selling Agents</label>
+			                <label>agents de vente</label>
 			              </div>
 			            </div>
 			          </div>
@@ -98,11 +98,11 @@ class Testimonial extends Component {
 			              um dolor sit amet, consecte</p>
 			            <div className="ltn__testimoni-info-inner">
 			              <div className="ltn__testimoni-img">
-			                <img src={publicUrl+"assets/img/testimonial/4.jpg"} alt="#" />
+			                <img src={publicUrl+"assets/img/testimonial/2.png"} alt="#" />
 			              </div>
 			              <div className="ltn__testimoni-name-designation">
 			                <h5>James Carter</h5>
-			                <label>Selling Agents</label>
+			                <label>agents de vente</label>
 			              </div>
 			            </div>
 			          </div>

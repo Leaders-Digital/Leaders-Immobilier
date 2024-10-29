@@ -1001,7 +1001,6 @@ fieldset legend {
   background-color: var(--ltn__primary-color); 
 }
 
-
 /* ----------------------------------------------------
     input and button type focus outline disable
 ---------------------------------------------------- */
@@ -5902,7 +5901,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .ltn__header-options-2 .mobile-menu-toggle > a {
   width: 50px;
   height: 50px;
-  background: var(--white);
+  background: var(--ltn__secondary-color);
   -webkit-box-shadow: var(--ltn__box-shadow-1);
   box-shadow: var(--ltn__box-shadow-1);
 }
@@ -6701,6 +6700,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   -webkit-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   transform: translateX(-100%);
+
 }
 
 .ltn__utilize-menu-inner {
@@ -6890,7 +6890,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   transition: stroke-dashoffset 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25),
     stroke-dasharray 0.5s cubic-bezier(0.25, -0.25, 0.75, 1.25);
   fill: none;
-  stroke: #333;
+  stroke: #fff;
   stroke-dashoffset: 0;
   stroke-linecap: round;
   stroke-width: 30px;
@@ -7800,6 +7800,21 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   margin-bottom: 20px;
   font-family: var(--ltn__body-font);
 }
+@media (max-width: 767px) {
+  .slide-title {
+  font-size: 3.5rem !important;
+  }
+  .desc p {
+    font-size: 1rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+
+
+
+}
+
 .ltn__slide-item-2 .slide-sub-title span {
   color: var(--ltn__secondary-color);
 }
@@ -10656,11 +10671,11 @@ select.nice-select option:checked {
   background-position: center center;
   background-repeat: no-repeat;
   background-image: url(../img/bg/21.jpg);
-  height: 100%;
+  height: 70%;
   width: 48%;
   left: auto;
   right: 0;
-  top: 0;
+  top: 22;
 }
 
 .bg-image-left-before {
@@ -10691,7 +10706,7 @@ select.nice-select option:checked {
   }
   .bg-image-right-before::before,
   .bg-image-left-before::before {
-    display: none;
+ display: none;
   }
 }
 
@@ -14907,7 +14922,7 @@ input.cart-plus-minus-box {
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
-  right: -100px;
+  right: -85px;
 }
 
 .about-us-info-devide {
@@ -17505,7 +17520,7 @@ input.cart-plus-minus-box {
 }
 .footer-menu ul li a::before {
   position: absolute;
-  content: "//";
+  content: "";
   left: 0;
   top: 50%;
   -webkit-transform: translateY(-50%);

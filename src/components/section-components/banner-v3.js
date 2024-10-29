@@ -31,12 +31,12 @@ class BannerV3 extends Component {
                                                 <h1 className="slide-title animated" style={{ fontSize: "7rem" }}>
                                                     وين ما تمشي <span style={{ color: "--ltn__secondary-color" }}>تلقانا</span> معاك
                                                 </h1>
-                                                <div className="animated">
+                                                <div className="animated desc" >
                                                     <p style={{ fontSize: "1.2rem" }}>
                                                         Nos agents vous feront visiter les biens et suivront votre dossier pour <br /> saisir les meilleures opportunités.
                                                     </p>
                                                 </div>
-                                                <div className="btn-wrapper animated go-top">
+                                                <div className="btn-wrapper animated go-top ">
                                                     <Link to="/shop" style={{ padding: '12px 20px' }} className="theme-btn-1 btn btn-effect-1">
                                                         Trouver un bien
                                                     </Link>
