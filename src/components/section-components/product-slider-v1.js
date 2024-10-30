@@ -123,7 +123,7 @@ class ProductSliderV1 extends Component {
                                                 <p>{product.description}</p>
                                             </div>
                                             <ul className="ltn__list-item-2 ltn__list-item-2-before">
-                                                <li><span>{product.bedrooms} <i className="flaticon-bed" /></span> Chambres</li>
+                                                <li><span>{product.bedrooms} <i className="flaticon-bed" /></span> Lit</li>
                                                 <li><span>{product.bathrooms} <i className="flaticon-clean" /></span> salles de bains</li>
                                                 <li><span>{product.squareFt} <i className="flaticon-square-shape-design-interface-tool-symbol" /></span> carrés</li>
                                             </ul>
@@ -136,7 +136,7 @@ class ProductSliderV1 extends Component {
 
                         </div>
 						<div className="text-center mt-4">
-                            <Link to="/more-products" className="btn btn-primary voir" >
+                            <Link to="/shop" className="btn btn-primary voir" >
                                 Voir Plus
                             </Link>
                         </div>

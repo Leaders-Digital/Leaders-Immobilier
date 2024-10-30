@@ -69,7 +69,7 @@ class Footer_v1 extends Component {
 				                <li><Link to="/Accueil">Accueil</Link></li>
 				                <li><Link to="/about">À propos</Link></li>
 				                <li><Link to="/Vente">Vente</Link></li>
-				                <li><Link to="/Location">Location</Link></li>
+				                <li><Link to="/louer">Location</Link></li>
 				                <li><Link to="/Estimation">Estimation</Link></li>
 				               
 				              </ul>

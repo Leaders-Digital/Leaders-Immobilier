@@ -1000,6 +1000,12 @@ fieldset legend {
 .voir:hover{
   background-color: var(--ltn__primary-color); 
 }
+.navi ul li a{
+font-size: 13px !important;
+margin: 1px 1px !important;
+
+
+}
 
 /* ----------------------------------------------------
     input and button type focus outline disable
@@ -5211,7 +5217,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .site-logo {
-  min-width: 185px;
+  min-width: 75px !important ;
+  max-width: 90px !important ;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -6490,7 +6497,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   font-size: 12px !important;
 }
 .special-link a:hover {
-  background-color: var(--section-bg-1);
+  background-color: var(--white);
   color: var(--ltn__primary-color) !important;
 }
 
@@ -16077,11 +16084,13 @@ input.cart-plus-minus-box {
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
   margin: 10px 0;
+
 }
 .ltn__brand-logo-item img {
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
+  width: 50%;
 }
 .ltn__brand-logo-item:hover {
   -webkit-filter: grayscale(0);

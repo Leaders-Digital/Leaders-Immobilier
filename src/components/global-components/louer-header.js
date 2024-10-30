@@ -18,12 +18,12 @@ class Page_header extends Component {
 				<div className="row">
 				<div className="col-lg-12">
 					<div className="ltn__breadcrumb-inner">
-					<h1 className="page-title">Liste des biens à vendre
+					<h1 className="page-title">Liste des biens à louer
 					</h1>
 					<div className="ltn__breadcrumb-list">
 						<ul> 
 						<li><Link to="/"><span className="ltn__secondary-color"><i className="fas fa-home" /></span> Accueil</Link></li>
-						<li>Vente</li>
+						<li>Location</li>
 						</ul>
 					</div>
 					</div>

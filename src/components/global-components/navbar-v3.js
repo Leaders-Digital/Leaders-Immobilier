@@ -61,9 +61,9 @@ class NavbarV3 extends Component {
 			            <nav>
 			              <div className="ltn__main-menu">
 			                <ul>
-			                  <li><a href="#">Accueil</a> </li>
-			                  <li><a href="#">Vente</a> </li>
-			                  <li><a href="#">Location</a> </li>
+			                  <li><a href="/">Accueil</a> </li>
+			                  <li><a href="/vente">Vente</a> </li>
+			                  <li><a href="/louer">Location</a> </li>
 			                  <li><a href="#">Estimation</a> </li>
 			                  <li><a href="#">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
@@ -72,8 +72,8 @@ class NavbarV3 extends Component {
 			                 
 			                 
 
-			                  <li className="special-link" >
-			                    <Link to="/add-listing">Espace Membre</Link>
+			                  <li className="special-link btn-wrapper " >
+			                    <Link className='theme-btn-1 btn btn-effect-1' to="/add-listing">Espace Membre</Link>
 			                  </li>
 			                </ul>
 			              </div>
@@ -107,9 +107,9 @@ class NavbarV3 extends Component {
 				
 					<div className="ltn__utilize-menu">
 					<ul>
-					<li><a href="#">Accueil</a> </li>
-			                  <li><a href="#">Vente</a> </li>
-			                  <li><a href="#">Location</a> </li>
+					<li><a href="/">Accueil</a> </li>
+			                  <li><a href="/vente">Vente</a> </li>
+			                  <li><a href="/louer">Location</a> </li>
 			                  <li><a href="#">Estimation</a> </li>
 			                  <li><a href="#">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
