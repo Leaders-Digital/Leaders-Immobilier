@@ -125,6 +125,20 @@ class Sidebar extends Component {
 					<span className="categorey-no">À partir de 800M</span>
 				</li>
 				</ul>
+				<hr />
+				{/* Price Filter Widget */}
+				<div className="widget--- ltn__price-filter-widget">
+				<h4 className="ltn__widget-title ltn__widget-title-border---">Filtrer par prix</h4>
+				<div className="price_filter">
+					<div className="price_slider_amount">
+					<input type="submit" defaultValue="Your range:" /> 
+					<input type="text" className="amount" name="price" placeholder="Add Your Price" /> 
+					</div>
+					<div className="slider-range" />
+				</div>
+				</div>
+				<hr />
+
 			
 				<h4 className="ltn__widget-title pt-30 ">Lits/Salles de bains</h4>
 				<ul>

@@ -136,7 +136,7 @@ class ProductSliderV1 extends Component {
 
                         </div>
 						<div className="text-center mt-4">
-                            <Link to="/shop" className="btn btn-primary voir" >
+                            <Link to="/vente" className="btn btn-primary voir" >
                                 Voir Plus
                             </Link>
                         </div>

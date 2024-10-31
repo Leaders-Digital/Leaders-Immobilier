@@ -1003,9 +1003,19 @@ fieldset legend {
 .navi ul li a{
 font-size: 13px !important;
 margin: 1px 1px !important;
-
-
 }
+
+  @media (max-width: 1650px) {
+    .ltn__custom-gutter--- {
+  margin: 0 20px !important;
+    }
+  }
+  @media (max-width: 767px) {
+    .ltn__custom-gutter--- {
+  margin: 0 100px !important;
+    }
+  }
+
 
 /* ----------------------------------------------------
     input and button type focus outline disable

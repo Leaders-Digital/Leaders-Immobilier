@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import LouerSidebar from './side-louer';
+    import React, { useState } from 'react';
+    import { Link } from 'react-router-dom';
+    import LouerSidebar from './side-louer';
 
-class ShopGridV1 extends Component {
-    render() {
-        let publicUrl = process.env.PUBLIC_URL + '/';
+    const ShopGridV1 = () => {
+        const [searchTerm, setSearchTerm] = useState('');    
+        const [priceRange, setPriceRange] = useState([0, Infinity]); 
+
+        const publicUrl = process.env.PUBLIC_URL + '/';
 
         const products = [
             {
@@ -25,30 +27,43 @@ class ShopGridV1 extends Component {
                 beds: 3,
                 baths: 2,
                 area: 3450,
-                price: '2000DT/Month',
+                price: '2500DT/Month',
             },
             {
                 id: 3,
                 title: 'Maison à KELIBIA',
                 imgSrc: 'assets/img/product-3/3.png',
-                location: 'kelibia, Tunisie',
+                location: 'Kelibia, Tunisie',
                 beds: 3,
                 baths: 2,
                 area: 3450,
-                price: '2000DT/Month',
+                price: '300DT/Month',
             },
             {
                 id: 4,
                 title: 'Etage de villa à ENNASR',
                 imgSrc: 'assets/img/product-3/4.png',
-                location: 'kelibia, Tunisie',
+                location: 'Kelibia, Tunisie',
                 beds: 3,
                 baths: 2,
                 area: 3450,
-                price: '2000DT/Month',
+                price: '1500DT/Month',
             },
-           
         ];
+
+    
+        const filteredProducts = products.filter(product => {
+            const priceValue = parseInt(product.price); 
+            return product.title.toLowerCase().includes(searchTerm.toLowerCase())
+                && priceValue >= priceRange[0] && priceValue <= priceRange[1];
+        });
+        
+        
+        const handlePriceRangeChange = (min, max) => {
+            setPriceRange([min, max]);
+        };
+
+        
 
         return (
             <div>
@@ -61,14 +76,18 @@ class ShopGridV1 extends Component {
                                         <li>
                                             <div className="ltn__grid-list-tab-menu">
                                                 <div className="nav">
-                                                    <a className="active show" data-bs-toggle="tab" href="#liton_product_grid"><i className="fas fa-th-large" /></a>
-                                                    <a data-bs-toggle="tab" href="#liton_product_list"><i className="fas fa-list" /></a>
+                                                    <a className="active show" data-bs-toggle="tab" href="#liton_product_grid">
+                                                        <i className="fas fa-th-large" />
+                                                    </a>
+                                                    <a data-bs-toggle="tab" href="#liton_product_list">
+                                                        <i className="fas fa-list" />
+                                                    </a>
                                                 </div>
                                             </div>
                                         </li>
                                         <li className="d-none">
                                             <div className="showing-product-number text-right">
-                                                <span>Showing 1–12 of {products.length} results</span>
+                                                <span>Showing 1–12 of {filteredProducts.length} results</span>
                                             </div>
                                         </li>
                                         <li>
@@ -91,13 +110,19 @@ class ShopGridV1 extends Component {
                                                     {/* Search Widget */}
                                                     <div className="ltn__search-widget mb-30">
                                                         <form action="#">
-                                                            <input type="text" name="search" placeholder="Recherche par nom..." />
+                                                            <input 
+                                                                type="text" 
+                                                                name="search" 
+                                                                placeholder="Recherche par nom..." 
+                                                                value={searchTerm}
+                                                                onChange={(e) => setSearchTerm(e.target.value)} 
+                                                            />
                                                             <button type="submit"><i className="fas fa-search" /></button>
                                                         </form>
                                                     </div>
                                                 </div>
                                                 {/* Product Items */}
-                                                {products.map(product => (
+                                                {filteredProducts.map(product => (
                                                     <div className="col-xl-6 col-sm-6 col-12" key={product.id}>
                                                         <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                                                             <div className="product-img go-top">
@@ -108,7 +133,7 @@ class ShopGridV1 extends Component {
                                                             <div className="product-info">
                                                                 <div className="product-badge">
                                                                     <ul>
-                                                                        <li className="sale-badg">à vendre</li>
+                                                                        <li className="sale-badg">à louer</li>
                                                                     </ul>
                                                                 </div>
                                                                 <h2 className="product-title go-top">
@@ -145,13 +170,19 @@ class ShopGridV1 extends Component {
                                                     {/* Search Widget */}
                                                     <div className="ltn__search-widget mb-30">
                                                         <form action="#">
-                                                            <input type="text" name="search" placeholder="Recherche par nom..." />
+                                                            <input 
+                                                                type="text" 
+                                                                name="search" 
+                                                                placeholder="Recherche par nom..." 
+                                                                value={searchTerm}
+                                                                onChange={(e) => setSearchTerm(e.target.value)} 
+                                                            />
                                                             <button type="submit"><i className="fas fa-search" /></button>
                                                         </form>
                                                     </div>
                                                 </div>
                                                 {/* Product List Items */}
-                                                {products.map(product => (
+                                                {filteredProducts.map(product => (
                                                     <div className="col-lg-12" key={product.id}>
                                                         <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5">
                                                             <div className="product-img go-top">
@@ -163,7 +194,7 @@ class ShopGridV1 extends Component {
                                                                 <div className="product-badge-price">
                                                                     <div className="product-badge">
                                                                         <ul>
-                                                                            <li className="sale-badg">à vendre</li>
+                                                                            <li className="sale-badg">à louer</li>
                                                                         </ul>
                                                                     </div>
                                                                     <div className="product-price">
@@ -193,6 +224,7 @@ class ShopGridV1 extends Component {
                                         </div>
                                     </div>
                                 </div>
+                                {/* Pagination */}
                                 <div className="ltn__pagination-area text-center">
                                     <div className="ltn__pagination">
                                         <ul>
@@ -207,14 +239,13 @@ class ShopGridV1 extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <LouerSidebar />
+                            <LouerSidebar onPriceRangeChange={handlePriceRangeChange} />
                         </div>
                     </div>
                 </div>
                 {/* Modals and other components omitted for brevity */}
             </div>
         );
-    }
-}
+    };
 
-export default ShopGridV1;
+    export default ShopGridV1;  

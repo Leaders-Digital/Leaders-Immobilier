@@ -4,6 +4,10 @@ import { Link } from 'react-router-dom';
 
 
 class Sidebar extends Component {
+    handlePriceChange = (min, max) => {
+        this.props.onPriceRangeChange(min, max);
+    };
+	
   render() {
    let anchor = '#'
    let imagealt = 'image'
@@ -104,28 +108,47 @@ class Sidebar extends Component {
 				<h4 className="ltn__widget-title">Plage de prix</h4>
 				<ul>
 				<li>
+					<label className="checkbox-item">Tous
+					<input type="checkbox" onChange={() => this.handlePriceChange(0,10000000)} />
+					<span className="checkmark" />
+					</label>
+				
+				</li>
+				<li>
 					<label className="checkbox-item">Budget limité
-					<input type="checkbox" />
+					<input type="checkbox" onChange={() => this.handlePriceChange(300, 600)} />
 					<span className="checkmark" />
 					</label>
 					<span className="categorey-no">300DT - 600DT</span>
 				</li>
 				<li>
 					<label className="checkbox-item">Moyen
-					<input type="checkbox" defaultChecked="checked" />
+					<input type="checkbox" onChange={() => this.handlePriceChange(600, 1500)}  />
 					<span className="checkmark" />
 					</label>
 					<span className="categorey-no">600DT- 1500DT</span>
 				</li>
 				<li>
 					<label className="checkbox-item">Budget élevé
-					<input type="checkbox" />
+					<input type="checkbox" onChange={() => this.handlePriceChange(1500, Infinity)} />
 					<span className="checkmark" />
 					</label>
 					<span className="categorey-no">À partir de 1500DT</span>
 				</li>
 				</ul>
-			
+				<hr />
+				{/* Price Filter Widget */}
+				<div className="widget--- ltn__price-filter-widget">
+				<h4 className="ltn__widget-title ltn__widget-title-border---">Filter by price</h4>
+				<div className="price_filter">
+					<div className="price_slider_amount">
+					<input type="submit" defaultValue="Your range:" /> 
+					<input type="text" className="amount" name="price" placeholder="Add Your Price" /> 
+					</div>
+					<div className="slider-range" />
+				</div>
+				</div>
+				<hr />
 				<h4 className="ltn__widget-title pt-30 ">Lits/Salles de bains</h4>
 				<ul>
 				<li>
