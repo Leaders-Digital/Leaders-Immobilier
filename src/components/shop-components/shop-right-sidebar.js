@@ -13,18 +13,22 @@ const ShopGridV1 = () => {
             location: 'Kelibia, Tunisie',
             beds: 3,
             baths: 2,
+            type: 'Maison',
             area: 3450,
-            price: '403500 TND',
+            price: 450000,
+            date: 2025
         },
         {
             id: 2,
-            title: 'Immeuble à LA SOUKRA',
+            title: 'Villa à LA SOUKRA',
             imgSrc: 'assets/img/product-3/2.png',
             location: 'Soukra, Tunisie',
             beds: 3,
             baths: 2,
+            type: 'Villa',
             area: 3450,
-            price: '403500 TND',
+            price: 350000,
+            date: 2020
         },
         {
             id: 3,
@@ -32,9 +36,11 @@ const ShopGridV1 = () => {
             imgSrc: 'assets/img/product-3/3.png',
             location: 'Kelibia, Tunisie',
             beds: 3,
+            type: 'Maison',
             baths: 2,
             area: 3450,
-            price: '403500 TND',
+            price: 200500,
+            date: 2001
         },
         {
             id: 4,
@@ -42,9 +48,11 @@ const ShopGridV1 = () => {
             imgSrc: 'assets/img/product-3/4.png',
             location: 'Kelibia, Tunisie',
             beds: 3,
+            type: 'Etage de villa',
             baths: 2,
             area: 3450,
-            price: '403500 TND',
+            price: 200000,
+            date: 2005
         },
     ];
 

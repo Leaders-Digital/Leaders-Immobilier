@@ -1017,6 +1017,126 @@ margin: 1px 1px !important;
   }
 
 
+.sort-radios {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+
+.sort-radios label {
+  position: relative;
+  padding-left: 30px; 
+  cursor: pointer;
+  font-weight: 600; 
+  color: #333; 
+  transition: color 0.2s ease; 
+}
+
+
+.sort-radios input[type="radio"] {
+  position: absolute;
+  opacity: 0; 
+}
+
+
+.sort-radios input[type="radio"] + .custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px; 
+  width: 20px; 
+  background-color: #fff; 
+  border: 2px solid #007bff; 
+  border-radius: 50%; 
+  transition: background-color 0.2s ease;
+}
+
+
+.sort-radios input[type="radio"]:checked + .custom-radio {
+  background-color: #007bff; 
+  border-color: #0056b3; 
+}
+
+
+.sort-radios input[type="radio"]:checked + .custom-radio::after {
+  content: "";
+  position: absolute;
+  top: 4px; 
+  left: 4px; 
+  height: 10px; 
+  width: 10px; 
+  border-radius: 50%;
+  background-color: #fff; 
+}
+
+
+.sort-radios label:hover {
+  color: #007bff;
+}
+
+
+/* Base styles for radio items */
+.radio-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  user-select: none;
+}
+
+.radio-item input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Customize radio button appearance */
+.radio-item .checkmark {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 20px;
+  background-color: #e0e0e0;
+  border-radius: 50%;
+  transition: background-color 0.2s ease;
+}
+
+/* Radio button selected state */
+.radio-item input[type="radio"]:checked ~ .checkmark {
+  background-color: #007bff;
+}
+
+/* Indicator for selected radio button */
+.radio-item .checkmark::after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-item input[type="radio"]:checked ~ .checkmark::after {
+  display: block;
+  top: 4px;
+  left: 4px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Inline style for price range text */
+.radio-item .categorey-no {
+  margin-left: auto;
+  font-size: 14px;
+  color: #999;
+}
+
+
 /* ----------------------------------------------------
     input and button type focus outline disable
 ---------------------------------------------------- */
@@ -10092,16 +10212,6 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   
 }
 
-select.nice-select option {
-  color: black !important; 
-  background-color: red !important; 
-}
-
-
-select.nice-select option:checked {
-  color: red !important; 
-  background-color: black !important; 
-}
 
 .ltn__shop-options {
   margin-bottom: 50px;
