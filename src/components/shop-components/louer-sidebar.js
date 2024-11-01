@@ -9,6 +9,8 @@ const ShopGridV1 = () => {
     const [sortOption, setSortOption] = useState('default');
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [sortedProducts, setSortedProducts] = useState([]);
+    const [selectedState, setSelectedState] = useState('Tous');
+
 
     const publicUrl = process.env.PUBLIC_URL + '/';
 
@@ -17,7 +19,8 @@ const ShopGridV1 = () => {
             id: 1,
             title: 'Maison à KELIBIA',
             imgSrc: 'assets/img/product-3/1.png',
-            location: 'Kelibia, Tunisie',
+            location: 'Kelibia, Tunisie',   
+            State: 'Nabeul',   
             beds: 3,
             baths: 2,
             type: 'Maison',
@@ -30,6 +33,7 @@ const ShopGridV1 = () => {
             title: 'Villa à LA SOUKRA',
             imgSrc: 'assets/img/product-3/2.png',
             location: 'Soukra, Tunisie',
+            State: 'Tunis',
             beds: 3,
             baths: 2,
             type: 'Villa',
@@ -39,9 +43,10 @@ const ShopGridV1 = () => {
         },
         {
             id: 3,
-            title: 'Maison à KELIBIA',
+            title: 'Maison à Sousse',
             imgSrc: 'assets/img/product-3/3.png',
-            location: 'Kelibia, Tunisie',
+            location: 'Sousse, Tunisie',
+            State: 'Sousse',
             beds: 3,
             type: 'Maison',
             baths: 2,
@@ -53,7 +58,8 @@ const ShopGridV1 = () => {
             id: 4,
             title: 'Etage de villa à ENNASR',
             imgSrc: 'assets/img/product-3/4.png',
-            location: 'Kelibia, Tunisie',
+            location: 'Sfax, Tunisie',
+            State: 'Sfax',
             beds: 3,
             type: 'Etage de villa',
             baths: 2,
@@ -68,12 +74,18 @@ const ShopGridV1 = () => {
     };
 
     const handleTypeChange = (type) => {
-        setSelectedType(type); // Update selected type state
+        setSelectedType(type); 
     };
 
     const handleSortChange = (selectedSortOption) => {
         setSortOption(selectedSortOption);
     };
+
+    const handleStateChange = (state) => {
+        setSelectedState(state);
+    };
+
+    
 
     useEffect(() => {
         const filtered = products.filter(product => {
@@ -82,11 +94,12 @@ const ShopGridV1 = () => {
                 product.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
                 priceValue >= priceRange[0] &&
                 priceValue <= priceRange[1] &&
-                (selectedType === 'Tous' || product.type === selectedType) 
+                (selectedType === 'Tous' || product.type === selectedType) &&
+                (selectedState === 'Tous' || product.State === selectedState) 
             );
         });
         setFilteredProducts(filtered);
-    }, [searchTerm, priceRange, selectedType]);
+    }, [searchTerm, priceRange, selectedType, selectedState]);
 
     useEffect(() => {
         const sorted = [...filteredProducts].sort((a, b) => {
@@ -302,8 +315,26 @@ const ShopGridV1 = () => {
                                     </div>
                                 </div>
                             </div>
+                             {/* Pagination */}
+                             <div className="ltn__pagination-area text-center">
+                                <div className="ltn__pagination">
+                                    <ul>
+                                        <li><Link to="#"><i className="fas fa-angle-double-left" /></Link></li>
+                                        <li><Link to="#">1</Link></li>
+                                        <li className="active"><Link to="#">2</Link></li>
+                                        <li><Link to="#">3</Link></li>
+                                        <li><Link to="#">...</Link></li>
+                                        <li><Link to="#">10</Link></li>
+                                        <li><Link to="#"><i className="fas fa-angle-double-right" /></Link></li>
+                                    </ul>
+                                </div>
+                            </div>
                         </div>
-                        <LouerSidebar onPriceRangeChange={handlePriceRangeChange} onTypeChange={handleTypeChange} /> 
+                        <LouerSidebar 
+    onPriceRangeChange={handlePriceRangeChange} 
+    onTypeChange={handleTypeChange} 
+    onStateChange={handleStateChange} 
+/>
                     </div>
                 </div>
             </div>

@@ -2,9 +2,10 @@ import React, { useState } from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
-const Sidebar = ({ onPriceRangeChange, onTypeChange }) => {
+const Sidebar = ({ onPriceRangeChange, onTypeChange,onStateChange  }) => {
     const [selectedType, setSelectedType] = useState('Tous');
     const [selectedPriceRange, setSelectedPriceRange] = useState([0, 10000]); 
+    const [selectedState, setSelectedState] = useState('Tous');
 
     const handlePriceChange = (range) => {
         setSelectedPriceRange(range);
@@ -14,6 +15,12 @@ const Sidebar = ({ onPriceRangeChange, onTypeChange }) => {
     const handleTypeChange = (type) => {
         setSelectedType(type);
         onTypeChange(type); 
+    };
+
+	const handleStateChange = (event) => {
+        const state = event.target.value;
+        setSelectedState(state);
+        onStateChange(state);  
     };
 
     return (
@@ -58,6 +65,19 @@ const Sidebar = ({ onPriceRangeChange, onTypeChange }) => {
                     </div>
 
                     <hr />
+					
+ {/* State Selection */}
+ <h4 className="ltn__widget-title">État</h4>
+                    <select value={selectedState} onChange={handleStateChange}>
+                        <option value="Tous">Tous</option>
+                        <option value="Tunis">Tunis</option>
+                        <option value="Sousse">Sousse</option>
+                        <option value="Sfax">Sfax</option>
+                        <option value="Nabeul">Nabeul</option>
+                    </select>
+
+                    <hr />
+
 
                     {/* Additional Amenities Filter */}
                     <h4 className="ltn__widget-title">Équipements</h4>
