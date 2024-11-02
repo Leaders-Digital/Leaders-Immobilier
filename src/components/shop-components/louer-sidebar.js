@@ -245,7 +245,7 @@ const ShopGridV1 = () => {
                                                         </div>
                                                         <div className="product-info-bottom">
                                                             <div className="product-price">
-                                                                <span>{product.price}<label>/Month</label></span>
+                                                                <span>{product.price}<label>/Mois</label></span>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -289,7 +289,7 @@ const ShopGridV1 = () => {
                                                                     </ul>
                                                                 </div>
                                                                 <div className="product-price">
-                                                                    <span>{product.price}<label>/Month</label></span>
+                                                                    <span>{product.price}<label>/Mois</label></span>
                                                                 </div>
                                                             </div>
                                                             <h2 className="product-title go-top">

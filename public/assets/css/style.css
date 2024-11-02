@@ -70,6 +70,11 @@ font-family: 'Poppins', sans-serif;
 /* ====================================================
     Gutter Code 
 ==================================================== */
+body, html {
+  overflow-x: hidden;
+
+}
+
 .container,
 .container-fluid {
   padding-right: 15px;
@@ -4339,7 +4344,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .ltn__widget-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   margin-bottom: 25px;
   text-transform: capitalize;

@@ -66,17 +66,8 @@ const Sidebar = ({ onPriceRangeChange, onTypeChange,onStateChange  }) => {
 
                     <hr />
 					
- {/* State Selection */}
- <h4 className="ltn__widget-title">État</h4>
-                    <select value={selectedState} onChange={handleStateChange}>
-                        <option value="Tous">Tous</option>
-                        <option value="Tunis">Tunis</option>
-                        <option value="Sousse">Sousse</option>
-                        <option value="Sfax">Sfax</option>
-                        <option value="Nabeul">Nabeul</option>
-                    </select>
 
-                    <hr />
+
 
 
                     {/* Additional Amenities Filter */}

@@ -23,7 +23,7 @@ class CategoryV3 extends Component {
 					<div className="col-lg-8 col-md-6">
 					<div className="ltn__banner-item ltn__banner-style-4 text-color-white bg-image" data-bs-bg= {publicUrl+"assets/img/gallery/2.png"} >                        
 						<div className="ltn__banner-info">
-						<h3><Link to="/shop"> Apartments </Link></h3>
+						<h3><Link to="/shop"> Appartements </Link></h3>
 						<p> Offres exceptionnelles disponibles</p>
 						<mark> 13 annonces</mark>
 						</div>
@@ -32,7 +32,7 @@ class CategoryV3 extends Component {
 					<div className="col-lg-4 col-md-6">
 					<div className="ltn__banner-item ltn__banner-style-4 text-color-white bg-image" data-bs-bg= {publicUrl+"assets/img/gallery/3.jpg"} >                        
 						<div className="ltn__banner-info">
-						<h3><Link to="/shop">   commercial</Link></h3>
+						<h3><Link to="/shop">   Commercial</Link></h3>
 						<p> Offres exceptionnelles disponibles</p>
 						<mark> 13 annonces</mark>
 						</div>

@@ -16,7 +16,7 @@ class ShopDetails extends Component {
 						<div className="ltn__blog-meta">
 						<ul>
 							<li className="ltn__blog-category">
-							<Link to="#">For Rent	</Link>
+							<Link to="#">À VENDRE</Link>
 							</li>
 							
 							<li className="ltn__blog-date">
@@ -26,29 +26,30 @@ class ShopDetails extends Component {
 						</ul>
 						</div>
 						<h1>Appartement à KELIBIA</h1>
-						<label><span className="ltn__secondary-color"><i className="flaticon-pin" /></span> Belmont Gardens, Chicago</label>
+						<label><span className="ltn__secondary-color"><i className="flaticon-pin" /></span> Kelibia , Tunisie</label>
 						<h4 className="title-2">Description</h4>
 						<p>Massa tempor nec feugiat nisl pretium. Egestas fringilla phasellus faucibus scelerisque eleifend donec
 						Porta nibh venenatis cras sed felis eget velit aliquet. Neque volutpat ac tincidunt vitae semper
 						quis lectus. Turpis in eu mi bibendum neque egestas congue quisque. Sed elementum tempus egestas
 						sed sed risus pretium quam. Dignissim sodales ut eu sem. Nibh mauris cursus mattis molestee
 						iaculis at erat pellentesque. Id interdum velit laoreet id donec ultrices tincidunt.</p>
-						<p>To the left is the modern kitchen with central island, leading through to the unique breakfast family room which feature glass walls and doors out onto the garden and access to the separate utility room.</p>
-						<h4 className="title-2">Property Detail</h4>  
+						<p>À gauche se trouve la cuisine moderne avec îlot central, menant à la salle familiale unique pour le petit-déjeuner dotée de murs en verre et de portes donnant sur le jardin et d'un accès à la buanderie séparée.						</p>
+						<h4 className="title-2">Caractéristiques</h4>  
 						<div className="property-detail-info-list section-bg-1 clearfix mb-60">                          
 						<ul>
-							<li><label>Property ID:</label> <span>HZ29</span></li>
-							<li><label>Home Area: </label> <span>120 sqft</span></li>
-							<li><label>Rooms:</label> <span>7</span></li>
-							<li><label>Baths:</label> <span>2</span></li>
-							<li><label>Year built:</label> <span>1992</span></li>
+							<li><label>Référence :</label> <span>HZ29</span></li>
+							<li><label>Superficie : </label> <span>80 m²</span></li>
+							<li><label>Chambres :</label> <span>7</span></li>
+							<li><label>Salles de bain :</label> <span>2</span></li>
+							
 						</ul>
 						<ul>
-							<li><label>Lot Area:</label> <span>HZ29 </span></li>
-							<li><label>Lot dimensions:</label> <span>120 sqft</span></li>
-							<li><label>Beds:</label> <span>7</span></li>
-							<li><label>Price:</label> <span>2</span></li>
-							<li><label>Property Status:</label> <span>For Sale</span></li>
+							<li><label>Parking :</label> <span>0</span></li>
+							<li><label>Etage :</label> <span>2</span></li>
+							<li><label>Meublé :</label> <span>oui</span></li>
+							<li><label>Statut de la propriété :</label> <span>à vendre
+							</span></li>
+							
 						</ul>
 						</div>
 						
@@ -58,15 +59,15 @@ class ShopDetails extends Component {
 				
 						<h4 className="title-2">Location</h4>
 						<div className="property-details-google-map mb-60">
-						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d9334.271551495209!2d-73.97198251485975!3d40.668170674982946!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25b0456b5a2e7%3A0x68bdf865dda0b669!2sBrooklyn%20Botanic%20Garden%20Shop!5e0!3m2!1sen!2sbd!4v1590597267201!5m2!1sen!2sbd" width="100%" height="100%" frameBorder={0} allowFullScreen aria-hidden="false" tabIndex={0} />
+						<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1596.5755999114247!2d11.086171631258225!3d36.83885474574435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131d3354eaddf7f3%3A0xb6c66ff6c6ef2045!2sAppartement%20Bensaid!5e0!3m2!1sfr!2stn!4v1730535085481!5m2!1sfr!2stn" width="100%" height="100%" frameBorder={0} allowFullScreen aria-hidden="false" tabIndex={0} />
 						</div>
-						<h4 className="title-2">Floor Plans</h4>
+						<h4 className="title-2">Plans d'étage						</h4>
 						{/* APARTMENTS PLAN AREA START */}
 						<div className="ltn__apartments-plan-area product-details-apartments-plan mb-60">
 						<div className="ltn__tab-menu ltn__tab-menu-3 ltn__tab-menu-top-right-- text-uppercase--- text-center---">
 							<div className="nav">
-							<a data-bs-toggle="tab" href="#liton_tab_3_1">First Floor</a>
-							<a className="active show" data-bs-toggle="tab" href="#liton_tab_3_2">Second Floor</a>
+							<a data-bs-toggle="tab" href="#liton_tab_3_1">Premier étage							</a>
+							<a className="active show" data-bs-toggle="tab" href="#liton_tab_3_2">Deuxième étage</a>
 							</div>
 						</div>
 						<div className="tab-content">
@@ -80,35 +81,14 @@ class ShopDetails extends Component {
 								</div>
 								<div className="col-lg-5">
 									<div className="apartments-plan-info ltn__secondary-bg--- text-color-white---">
-									<h2>First Floor</h2>
+									<h2>Premier étage	</h2>
 									<p>Enimad minim veniam quis nostrud exercitation ullamco laboris.
 										Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo
 										eiusmod tempor.Incididunt labore et dolore magna aliqua.
 										sed ayd minim veniam.</p>
 									</div>
 								</div>
-								<div className="col-lg-12">
-									<div className="product-details-apartments-info-list  section-bg-1">
-									<div className="row">
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Total Area</label> <span>2800 Sq. Ft</span></li>
-											<li><label>Bedroom</label> <span>150 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Belcony/Pets</label> <span>Allowed</span></li>
-											<li><label>Lounge</label> <span>650 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-									</div>
-									</div>
-								</div>
+								
 								</div>
 							</div>
 							</div>
@@ -122,7 +102,7 @@ class ShopDetails extends Component {
 								</div>
 								<div className="col-lg-5">
 									<div className="apartments-plan-info ltn__secondary-bg--- text-color-white---">
-									<h2>Second Floor</h2>
+									<h2>Deuxième étage</h2>
 									<p>Enimad minim veniam quis nostrud exercitation ullamco laboris.
 										Lorem ipsum dolor sit amet cons aetetur adipisicing elit sedo
 										eiusmod tempor.Incididunt labore et dolore magna aliqua.
@@ -143,31 +123,7 @@ class ShopDetails extends Component {
 									<img src={publicUrl+"assets/img/others/10.png"} alt="#" />
 									</div>
 								</div>
-							
-
-							
-								<div className="col-lg-12">
-									<div className="product-details-apartments-info-list  section-bg-1">
-									<div className="row">
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Total Area</label> <span>2800 Sq. Ft</span></li>
-											<li><label>Bedroom</label> <span>150 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-										<div className="col-lg-6">
-										<div className="apartments-info-list apartments-info-list-color mt-40---">
-											<ul>
-											<li><label>Belcony/Pets</label> <span>Allowed</span></li>
-											<li><label>Lounge</label> <span>650 Sq. Ft</span></li>
-											</ul>
-										</div>
-										</div>
-									</div>
-									</div>
-								</div>
+						
 								</div>
 							</div>
 							</div>
@@ -216,14 +172,14 @@ class ShopDetails extends Component {
 						</div>
 						</div>
 						{/* APARTMENTS PLAN AREA END */}
-						<h4 className="title-2">Property Video</h4>
-						<div className="ltn__video-bg-img ltn__video-popup-height-500 bg-overlay-black-50 bg-image mb-60" data-bs-bg={publicUrl+"assets/img/others/5.jpg"}>
-						<a className="ltn__video-icon-2 ltn__video-icon-2-border---" href="https://www.youtube.com/embed/eWUxqVFBq74?autoplay=1&showinfo=0" data-rel="lightcase:myCollection">
+						<h4 className="title-2">Vidéo de la propriété</h4>
+						<div className="ltn__video-bg-img ltn__video-popup-height-500 bg-overlay-black-50 bg-image mb-60" data-bs-bg={publicUrl+"assets/img/img-slide/1.png"}>
+						<a className="ltn__video-icon-2 ltn__video-icon-2-border---" href="https://www.youtube.com/embed/3RcwJbTTaJs" data-rel="lightcase">
 							<i className="fa fa-play" />
 						</a>
 						</div>
 						<div className="ltn__shop-details-tab-content-inner--- ltn__shop-details-tab-inner-2 ltn__product-details-review-inner mb-60">
-						<h4 className="title-2">Customer Reviews</h4>
+						<h4 className="title-2">Avis des clients</h4>
 						<div className="product-ratting">
 							<ul>
 							<li><a href="#"><i className="fas fa-star" /></a></li>
@@ -242,7 +198,7 @@ class ShopDetails extends Component {
 								<li>
 								<div className="ltn__comment-item clearfix">
 									<div className="ltn__commenter-img">
-									<img src={publicUrl+"assets/img/testimonial/1.jpg"} alt="Image" />
+									<img src={publicUrl+"assets/img/testimonial/1.png"} alt="Image" />
 									</div>
 									<div className="ltn__commenter-comment">
 									<h6><a href="#">Adam Smit</a></h6>
@@ -256,14 +212,14 @@ class ShopDetails extends Component {
 										</ul>
 									</div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, omnis fugit corporis iste magnam ratione.</p>
-									<span className="ltn__comment-reply-btn">September 3, 2020</span>
+									<span className="ltn__comment-reply-btn">September 3, 2024</span>
 									</div>
 								</div>
 								</li>
 								<li>
 								<div className="ltn__comment-item clearfix">
 									<div className="ltn__commenter-img">
-									<img src={publicUrl+"assets/img/testimonial/3.jpg"} alt="Image" />
+									<img src={publicUrl+"assets/img/testimonial/2.png"} alt="Image" />
 									</div>
 									<div className="ltn__commenter-comment">
 									<h6><a href="#">Adam Smit</a></h6>
@@ -277,17 +233,17 @@ class ShopDetails extends Component {
 										</ul>
 									</div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, omnis fugit corporis iste magnam ratione.</p>
-									<span className="ltn__comment-reply-btn">September 2, 2020</span>
+									<span className="ltn__comment-reply-btn">September 2, 2024</span>
 									</div>
 								</div>
 								</li>
 								<li>
 								<div className="ltn__comment-item clearfix">
 									<div className="ltn__commenter-img">
-									<img src={publicUrl+"assets/img/testimonial/2.jpg"} alt="Image" />
+									<img src={publicUrl+"assets/img/testimonial/3.png"} alt="Image" />
 									</div>
 									<div className="ltn__commenter-comment">
-									<h6><a href="#">Adam Smit</a></h6>
+									<h6><a href="#">Adam Smit </a></h6>
 									<div className="product-ratting">
 										<ul>
 										<li><a href="#"><i className="fas fa-star" /></a></li>
@@ -298,7 +254,7 @@ class ShopDetails extends Component {
 										</ul>
 									</div>
 									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Doloribus, omnis fugit corporis iste magnam ratione.</p>
-									<span className="ltn__comment-reply-btn">September 2, 2020</span>
+									<span className="ltn__comment-reply-btn">September 1, 2024</span>
 									</div>
 								</div>
 								</li>
@@ -308,10 +264,10 @@ class ShopDetails extends Component {
 						{/* comment-reply */}
 						<div className="ltn__comment-reply-area ltn__form-box mb-30">
 							<form action="#">
-							<h4>Add a Review</h4>
+							<h4>Ajouter un avis</h4>
 							<div className="mb-30">
 								<div className="add-a-review">
-								<h6>Your Ratings:</h6>
+								<h6>Vos notes :	</h6>
 								<div className="product-ratting">
 									<ul>
 									<li><a href="#"><i className="fas fa-star" /></a></li>
@@ -324,20 +280,17 @@ class ShopDetails extends Component {
 								</div>
 							</div>
 							<div className="input-item input-item-textarea ltn__custom-icon">
-								<textarea placeholder="Type your comments...." defaultValue={""} />
+								<textarea placeholder="Tapez vos commentaires...." defaultValue={""} />
 							</div>
 							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" placeholder="Type your name...." />
+								<input type="text" placeholder="Tapez votre nom...." />
 							</div>
 							<div className="input-item input-item-email ltn__custom-icon">
-								<input type="email" placeholder="Type your email...." />
+								<input type="email" placeholder="Tapez votre email...." />
 							</div>
-							<div className="input-item input-item-website ltn__custom-icon">
-								<input type="text" name="website" placeholder="Type your website...." />
-							</div>
-							<label className="mb-0"><input type="checkbox" name="agree" /> Save my name, email, and website in this browser for the next time I comment.</label>
+							
 							<div className="btn-wrapper">
-								<button className="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Submit</button>
+								<button className="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Envoyer</button>
 							</div>
 							</form>
 						</div>
@@ -477,12 +430,15 @@ class ShopDetails extends Component {
 						
 						{/* Form Widget */}
 						<div className="widget ltn__form-widget">
-						<h4 className="ltn__widget-title ltn__widget-title-border-2">Drop Messege For Book</h4>
+						<h4 className="ltn__widget-title ltn__widget-title-border-2">Contactez-nous à propos ce bien</h4>
 						<form action="#">
-							<input type="text" name="yourname" placeholder="Your Name*" />
-							<input type="text" name="youremail" placeholder="Your e-Mail*" />
-							<textarea name="yourmessage" placeholder="Write Message..." defaultValue={""} />
-							<button type="submit" className="btn theme-btn-1">Send Messege</button>
+							<input type="text" name="référence" placeholder="HZ29" disabled/>
+							<input type="text" name="name" placeholder="Nom Et Prénom *" />
+							<input type="text" name="phone" placeholder="Téléphone *" />
+							<input type="text" name="date" placeholder="Date *" />
+							<input type="text" name="time" placeholder="Temps *" />
+							<textarea name="yourmessage" placeholder="Écrire un message..." defaultValue={""} />
+							<button type="submit" className="btn theme-btn-1">Envoyer</button>
 						</form>
 						</div>
 		
