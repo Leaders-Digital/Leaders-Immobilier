@@ -9,7 +9,6 @@ import ProSlider2 from './section-components/product-slider-v2';
 import Video from './section-components/video-v2';
 import Testimonial from './section-components/testimonial-v1';
 import Sponsor from './section-components/sponsor-v1';
-
 import CallToActionV1 from './section-components/call-to-action-v1';
 import Footer from './global-components/footer';
 

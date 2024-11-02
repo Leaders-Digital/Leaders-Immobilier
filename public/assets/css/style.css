@@ -1017,7 +1017,7 @@ margin: 1px 1px !important;
   }
   @media (max-width: 767px) {
     .ltn__custom-gutter--- {
-  margin: 0 100px !important;
+  margin: 0 60px !important;
     }
   }
 
@@ -17030,8 +17030,8 @@ input.cart-plus-minus-box {
   display: inline-block;
   text-align: center;
   border-radius: 100%;
-  -webkit-box-shadow: var(--ltn__box-shadow-2);
-  box-shadow: var(--ltn__box-shadow-2);
+transition: 0.5s;
+
 }
 
 /* YouTube Video */

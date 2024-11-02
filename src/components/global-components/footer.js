@@ -68,9 +68,8 @@ class Footer_v1 extends Component {
 				              <ul>
 				                <li><Link to="/Accueil">Accueil</Link></li>
 				                <li><Link to="/about">À propos</Link></li>
-				                <li><Link to="/Vente">Vente</Link></li>
-				                <li><Link to="/louer">Location</Link></li>
-				                <li><Link to="/Estimation">Estimation</Link></li>
+								<li><Link to="/Estimation">Estimation</Link></li>
+								<li><Link to="/Contact">Contactez Nous</Link></li>
 				               
 				              </ul>
 				            </div>
@@ -80,10 +79,12 @@ class Footer_v1 extends Component {
 				          <div className="footer-widget footer-menu-widget clearfix">
 				            <h4 className="footer-title">Services</h4>
 				            <div className="footer-menu go-top">
-				              <ul>
-				                <li><Link to="/Acheteur">Trouvez Acheteur</Link></li>
+				              <ul>    
+								<li><Link to="/Vente">Vente</Link></li>
+				                <li><Link to="/louer">Location</Link></li>
+								<li><Link to="/Acheteur">Trouvez Acheteur</Link></li>
 				                <li><Link to="/Exchange">Échange Bien</Link></li>
-				                <li><Link to="/Contact">Contactez Nous</Link></li>
+				           
 				              
 				              </ul>
 				            </div>

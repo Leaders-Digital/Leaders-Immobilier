@@ -1,10 +1,12 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 
-class ShopDetails extends Component {
+const ShopDetails = () => {
 
-    render() {
+	
+	const [rating, setRating] = useState(0);
+
 
         let publicUrl = process.env.PUBLIC_URL+'/'
 
@@ -263,98 +265,81 @@ class ShopDetails extends Component {
 						</div>
 						{/* comment-reply */}
 						<div className="ltn__comment-reply-area ltn__form-box mb-30">
-							<form action="#">
-							<h4>Ajouter un avis</h4>
-							<div className="mb-30">
-								<div className="add-a-review">
-								<h6>Vos notes :	</h6>
-								<div className="product-ratting">
-									<ul>
-									<li><a href="#"><i className="fas fa-star" /></a></li>
-									<li><a href="#"><i className="fas fa-star" /></a></li>
-									<li><a href="#"><i className="fas fa-star" /></a></li>
-									<li><a href="#"><i className="fas fa-star" /></a></li>
-									<li><a href="#"><i className="fas fa-star" /></a></li>
-									</ul>
-								</div>
-								</div>
-							</div>
-							<div className="input-item input-item-textarea ltn__custom-icon">
-								<textarea placeholder="Tapez vos commentaires...." defaultValue={""} />
-							</div>
-							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" placeholder="Tapez votre nom...." />
-							</div>
-							<div className="input-item input-item-email ltn__custom-icon">
-								<input type="email" placeholder="Tapez votre email...." />
-							</div>
-							
-							<div className="btn-wrapper">
-								<button className="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Envoyer</button>
-							</div>
-							</form>
+    <form action="#">
+        <h4>Ajouter un avis</h4>
+        <div className="mb-30">
+            <div className="add-a-review">
+                <h6>Vos notes :</h6>
+                <div className="product-ratting">
+                    <ul style={{ listStyleType: 'none', padding: 0, display: 'flex' }}>
+                        {[1, 2, 3, 4, 5].map((star) => (
+                            <li key={star} style={{ cursor: 'pointer', marginRight: '5px' }}>
+                                <span onClick={() => setRating(star)}>
+                                    <i className={star <= rating ? "fas fa-star" : "far fa-star"} />
+                                </span>
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+                {rating > 0 }
+            </div>
+        </div>
+        <div className="input-item input-item-textarea ltn__custom-icon">
+            <textarea placeholder="Tapez vos commentaires...." defaultValue={""} />
+        </div>
+        <div className="input-item input-item-name ltn__custom-icon">
+            <input type="text" placeholder="Tapez votre nom...." />
+        </div>
+        <div className="input-item input-item-email ltn__custom-icon">
+            <input type="email" placeholder="Tapez votre email...." />
+        </div>
+        
+        <div className="btn-wrapper">
+            <button className="btn theme-btn-1" type="submit">Envoyer</button>
+        </div>
+    </form>
+</div>
+
 						</div>
-						</div>
-						<h4 className="title-2">Related Properties</h4>
+						<h4 className="title-2">BIENS SIMILAIRES :</h4>
 						<div className="row">
 						{/* ltn__product-item */}
 						<div className="col-xl-6 col-sm-6 col-12 go-top">
 							<div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
 							<div className="product-img">
-								<Link to="/shop"><img src={publicUrl+"assets/img/product-3/1.jpg"} alt="#" /></Link>
-								<div className="real-estate-agent">
-								<div className="agent-img">
-									<Link to="/team-details"><img src={publicUrl+"assets/img/blog/author.jpg"} alt="#" /></Link>
-								</div>
-								</div>
+								<Link to="/shop"><img src={publicUrl+"assets/img/product-3/1.png"} alt="#" /></Link>
+							
 							</div>
 							<div className="product-info">
 								<div className="product-badge">
 								<ul>
-									<li className="sale-badg">For Rent</li>
+									<li className="sale-badg">À VENDRE</li>
 								</ul>
 								</div>
-								<h2 className="product-title"><Link to="/shop">New Apartment Nice View</Link></h2>
+								<h2 className="product-title"><Link to="/shop">Villa à LA SOUKRA</Link></h2>
 								<div className="product-img-location">
 								<ul>
 									<li>
-									<Link to="/shop"><i className="flaticon-pin" /> Belmont Gardens, Chicago</Link>
+									<Link to="/shop"><i className="flaticon-pin" /> Soukra, Tunisie</Link>
 									</li>
 								</ul>
 								</div>
 								<ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
 								<li><span>3 </span>
-									Bedrooms
+									Lits
 								</li>
 								<li><span>2 </span>
-									Bathrooms
+									Salles de bains
 								</li>
 								<li><span>3450 </span>
-									square Ft
+									Carrés
 								</li>
 								</ul>
-								<div className="product-hover-action">
-								<ul>
-									<li>
-									<a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-										<i className="flaticon-expand" />
-									</a>
-									</li>
-									<li>
-									<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-										<i className="flaticon-heart-1" /></a>
-									</li>
-									<li>
-									<Link to="/shop" title="Compare">
-										<i className="flaticon-add" />
-									</Link>
-									</li>
-								</ul>
-								</div>
+							
 							</div>
 							<div className="product-info-bottom">
 								<div className="product-price">
-								<span>$349,00<label>/Month</label></span>
+								<span>349,000DT</span>
 								</div>
 							</div>
 							</div>
@@ -363,60 +348,39 @@ class ShopDetails extends Component {
 						<div className="col-xl-6 col-sm-6 col-12 go-top">
 							<div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
 							<div className="product-img">
-								<Link to="/shop"><img src={publicUrl+"assets/img/product-3/2.jpg"} alt="#" /></Link>
-								<div className="real-estate-agent">
-								<div className="agent-img">
-									<Link to="/team-details"><img src={publicUrl+"assets/img/blog/author.jpg"} alt="#" /></Link>
-								</div>
-								</div>
+								<Link to="/shop"><img src={publicUrl+"assets/img/product-3/4.png"} alt="#" /></Link>
+							
 							</div>
 							<div className="product-info">
 								<div className="product-badge">
 								<ul>
-									<li className="sale-badg">For Sale</li>
+									<li className="sale-badg">À VENDRE</li>
 								</ul>
 								</div>
-								<h2 className="product-title"><Link to="/shop">New Apartment Nice View</Link></h2>
+								<h2 className="product-title"><Link to="/shop">Etage de villa à ENNASR</Link></h2>
 								<div className="product-img-location">
 								<ul>
 									<li>
-									<Link to="/shop"><i className="flaticon-pin" /> Belmont Gardens, Chicago</Link>
+									<Link to="/shop"><i className="flaticon-pin" /> Ariana, Tunisie</Link>
 									</li>
 								</ul>
 								</div>
 								<ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
 								<li><span>3 </span>
-									Bedrooms
+									Lits
 								</li>
 								<li><span>2 </span>
-									Bathrooms
+									Salles de bains
 								</li>
 								<li><span>3450 </span>
-									square Ft
+									Carrés
 								</li>
 								</ul>
-								<div className="product-hover-action">
-								<ul>
-									<li>
-									<a href="#" title="Quick View" data-bs-toggle="modal" data-bs-target="#quick_view_modal">
-										<i className="flaticon-expand" />
-									</a>
-									</li>
-									<li>
-									<a href="#" title="Wishlist" data-bs-toggle="modal" data-bs-target="#liton_wishlist_modal">
-										<i className="flaticon-heart-1" /></a>
-									</li>
-									<li>
-									<a href="portfolio-details.html" title="Compare">
-										<i className="flaticon-add" />
-									</a>
-									</li>
-								</ul>
-								</div>
+								
 							</div>
 							<div className="product-info-bottom">
 								<div className="product-price">
-								<span>$349,00<label>/Month</label></span>
+								<span>349,000DT</span>
 								</div>
 							</div>
 							</div>
@@ -455,6 +419,6 @@ class ShopDetails extends Component {
 				</div>
 			</div>
         }
-}
+
 
 export default ShopDetails
