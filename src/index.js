@@ -17,7 +17,7 @@ class Root extends Component {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/" element={<Home />} />
-              <Route path="/vente" element={<ShopGrid />} />
+              {/* <Route path="/vente" element={<ShopGrid />} /> */}
               <Route path="/louer" element={<Louer />} />
               <Route path="/product-details" element={<ProdductDetails />} />
               <Route path="/contact" element={<Contact />} />

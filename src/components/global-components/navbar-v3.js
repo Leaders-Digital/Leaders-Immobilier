@@ -114,7 +114,7 @@ class NavbarV3 extends Component {
 			                  <li><a href="#">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
 			                  <li><a href="#">À propos</a> </li>
-			                  <li><a href="#">Contactez Nous</a> </li>
+			                  <li><a href="/contactg">Contactez Nous</a> </li>
 						
 				
 					</ul>
