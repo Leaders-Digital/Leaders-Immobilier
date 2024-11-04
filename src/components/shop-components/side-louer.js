@@ -148,33 +148,60 @@ const Sidebar = ({ onPriceRangeChange, onTypeChange, onStateChange , onRoomsChan
 
 <h4 className="ltn__widget-title pt-30">Nombre de chambres</h4>
 <ul>
-                    <li>
-                        <label className="radio-item">
-                            <input
-                                type="radio"
-                                name="bedroomCount"
-                                value="1"
-                                checked={selectedRooms === 1}
-                                onChange={() => handleRoomsChange(1)}
-                            />
-                            Seul (1 chambre)
-                            <span className="checkmark" />
-                        </label>
-                    </li>
-                    <li>
-                        <label className="radio-item">
-                            <input
-                                type="radio"
-                                name="bedroomCount"
-                                value="2"
-                                checked={selectedRooms === 2}
-                                onChange={() => handleRoomsChange(2)}
-                            />
-                            Double (2 chambres)
-                            <span className="checkmark" />
-                        </label>
-                    </li>
-                </ul>
+    <li>
+        <label className="radio-item">
+            <input
+                type="radio"
+                name="bedroomCount"
+                value="1"
+                checked={selectedRooms === 1}
+                onChange={() => handleRoomsChange(1)}
+            />
+            Seul (1 chambre)
+            <span className="checkmark" />
+        </label>
+    </li>
+    <li>
+        <label className="radio-item">
+            <input
+                type="radio"
+                name="bedroomCount"
+                value="2"
+                checked={selectedRooms === 2}
+                onChange={() => handleRoomsChange(2)}
+            />
+            Double (2 chambres)
+            <span className="checkmark" />
+        </label>
+    </li>
+    <li>
+        <label className="radio-item">
+            <input
+                type="radio"
+                name="bedroomCount"
+                value="3-5"
+                checked={selectedRooms?.[0] === 3 && selectedRooms?.[1] === 5}
+                onChange={() => handleRoomsChange([3, 5])}
+            />
+            Jusqu'à 5 chambres (3-5)
+            <span className="checkmark" />
+        </label>
+    </li>
+    <li>
+        <label className="radio-item">
+            <input
+                type="radio"
+                name="bedroomCount"
+                value="5-10"
+                checked={selectedRooms?.[0] === 5 && selectedRooms?.[1] === 10}
+                onChange={() => handleRoomsChange([5, 10])}
+            />
+            Jusqu'à 10 chambres (5-10)
+            <span className="checkmark" />
+        </label>
+    </li>
+</ul>
+
 
                     <hr />
                 </div>

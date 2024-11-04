@@ -38,7 +38,7 @@ const ShopGridV1 = () => {
             State: 'Tunis',
             beds: 3,
             baths: 2,
-            rooms: 1,
+            rooms: 2,
             type: 'Villa',
             area: 3450,
             price: 2500,
@@ -51,7 +51,7 @@ const ShopGridV1 = () => {
             location: 'Sousse, Tunisie',
             State: 'Sousse',
             beds: 3,
-            rooms: 2,
+            rooms: 4,
             type: 'Maison',
             baths: 2,
             area: 3450,
@@ -94,21 +94,28 @@ const ShopGridV1 = () => {
         setSelectedRooms(rooms);
     };
     
-
     useEffect(() => {
         const filtered = products.filter(product => {
             const priceValue = parseInt(product.price, 10);
+            const roomsMatch =
+                selectedRooms === null ||
+                product.rooms === selectedRooms ||
+                (Array.isArray(selectedRooms) &&
+                    product.rooms >= selectedRooms[0] &&
+                    product.rooms <= selectedRooms[1]);
+    
             return (
                 product.title.toLowerCase().includes(searchTerm.toLowerCase()) &&
                 priceValue >= priceRange[0] &&
                 priceValue <= priceRange[1] &&
                 (selectedType === 'Tous' || product.type === selectedType) &&
                 (selectedState === 'Tous' || product.State === selectedState) &&
-                (selectedRooms === null || product.rooms === selectedRooms) // New room filter
+                roomsMatch
             );
         });
         setFilteredProducts(filtered);
     }, [searchTerm, priceRange, selectedType, selectedState, selectedRooms]);
+    
     
     useEffect(() => {
         const sorted = [...filteredProducts].sort((a, b) => {
