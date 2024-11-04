@@ -37,7 +37,7 @@ class BannerV3 extends Component {
                                                     </p>
                                                 </div>
                                                 <div className="btn-wrapper animated go-top ">
-                                                    <Link to="/shop" style={{ padding: '12px 20px' }} className="theme-btn-1 btn btn-effect-1">
+                                                    <Link to="/vente" style={{ padding: '12px 20px' }} className="theme-btn-1 btn btn-effect-1">
                                                         Trouver un bien
                                                     </Link>
                                                 </div>
@@ -73,7 +73,7 @@ class BannerV3 extends Component {
                                                     </p>
                                                 </div>
                                                 <div className="btn-wrapper animated go-top">
-                                                    <Link to="/shop" style={{ padding: '12px 20px' }} className="theme-btn-1 btn btn-effect-1">
+                                                    <Link to="/vente" style={{ padding: '12px 20px' }} className="theme-btn-1 btn btn-effect-1">
                                                         Trouver un bien
                                                     </Link>
                                                 </div>
@@ -109,7 +109,7 @@ class BannerV3 extends Component {
                                                     </p>
                                                 </div>
                                                 <div className="btn-wrapper animated go-top">
-                                                    <Link to="/shop" style={{ padding: '12px 20px' }} className="theme-btn-1 btn btn-effect-1">
+                                                    <Link to="/vente" style={{ padding: '12px 20px' }} className="theme-btn-1 btn btn-effect-1">
                                                         Trouver un bien
                                                     </Link>
                                                 </div>

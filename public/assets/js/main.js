@@ -78,6 +78,7 @@
                       $this.addClass('close');
                   }
               });
+              
               $('.ltn__utilize-close, .ltn__utilize-overlay').on('click', function (e) {
                   e.preventDefault();
                   $body.removeClass('ltn__utilize-open');

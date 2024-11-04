@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import Slider from 'rc-slider';
 import 'rc-slider/assets/index.css';
 
-const Sidebar = ({ onPriceRangeChange, onTypeChange,onStateChange  }) => {
+const Sidebar = ({ onPriceRangeChange, onTypeChange, onStateChange , onRoomsChange}) => {
     const [selectedType, setSelectedType] = useState('Tous');
     const [selectedPriceRange, setSelectedPriceRange] = useState([0, 10000]); 
     const [selectedState, setSelectedState] = useState('Tous');
+    const [selectedRooms, setSelectedRooms] = useState(null); // New state for rooms filter
 
     const handlePriceChange = (range) => {
         setSelectedPriceRange(range);
@@ -15,13 +16,20 @@ const Sidebar = ({ onPriceRangeChange, onTypeChange,onStateChange  }) => {
     const handleTypeChange = (type) => {
         setSelectedType(type);
         onTypeChange(type); 
+        
     };
 
-	const handleStateChange = (event) => {
-        const state = event.target.value;
+    const handleStateChange = (state) => {
         setSelectedState(state);
         onStateChange(state);  
     };
+
+
+    const handleRoomsChange = (rooms) => { 
+        setSelectedRooms(rooms);
+        onRoomsChange(rooms); 
+    };
+
 
     return (
         <div className="col-lg-4 mb-100">
@@ -39,11 +47,10 @@ const Sidebar = ({ onPriceRangeChange, onTypeChange,onStateChange  }) => {
                                         type="radio"
                                         name="propertyType"
                                         checked={selectedType === type}
-                                        onChange={() => handleTypeChange(type === 'All' ? 'all' : type)}
+                                        onChange={() => handleTypeChange(type)}
                                     />
                                     {type}
                                     <span className="checkmark" />
-									
                                 </label>
                             </li>
                         ))}
@@ -63,15 +70,50 @@ const Sidebar = ({ onPriceRangeChange, onTypeChange,onStateChange  }) => {
                             onChange={handlePriceChange}
                         />
                     </div>
-
                     <hr />
-					
 
+                    {/* State Filter */}
+                    <h4 className="ltn__widget-title">Ville :</h4>
+                    <div className="dropdown short-by text-center  mb-5">
+            <button 
+        className="nice-select d-flex justify-content-between align-items-center" 
+        type="button" 
+        id="dropdownMenuButton" 
+        data-bs-toggle="dropdown" 
+        aria-expanded="false" 
+        style={{ 
+            border: '1px solid #EDEDED', 
+            borderRadius: '0.25rem', 
+            padding: '1.5rem 3rem' 
+        }}
+    >
+        <span>{selectedState}</span>
+       
+    </button>
 
+                        <ul className="dropdown-menu " aria-labelledby="dropdownMenuButton">
+                            {['Tous', 'Nabeul', 'Sousse', 'Sfax'].map((state) => (
+                                <li key={state}>
+                                    <label className="dropdown-item ">
+                                        <input
+                                            type="radio"
+                                            name="state"
+                                            value={state}
+                                            checked={selectedState === state}
+                                            onChange={() => handleStateChange(state)}
+                                             style={{ display: 'none' }} 
+                                        />
+                                        {state}
+                                    </label>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                    <hr />
 
 
                     {/* Additional Amenities Filter */}
-                    <h4 className="ltn__widget-title">Équipements</h4>
+                    <h4 className="ltn__widget-title mt-65">Équipements</h4>
                     <ul>    
                         <li>
                             <label className="checkbox-item">Meublé 
@@ -104,38 +146,36 @@ const Sidebar = ({ onPriceRangeChange, onTypeChange,onStateChange  }) => {
                     </ul>
                     <hr />
 
-                    {/* Bedroom/Bathroom Filter */}
-                    <h4 className="ltn__widget-title pt-30">Lits/Salles de bains</h4>
-                    <ul>
-                        <li>
-                            <label className="checkbox-item">Seul
-                                <input type="checkbox" defaultChecked />
-                                <span className="checkmark" />
-                            </label>
-                            <span className="categorey-no">3,924</span>
-                        </li>
-                        <li>
-                            <label className="checkbox-item">Double
-                                <input type="checkbox" />
-                                <span className="checkmark" />
-                            </label>
-                            <span className="categorey-no">3,610</span>
-                        </li>
-                        <li>
-                            <label className="checkbox-item">jusqu'à 3
-                                <input type="checkbox" />
-                                <span className="checkmark" />
-                            </label>
-                            <span className="categorey-no">2,912</span>
-                        </li>
-                        <li>
-                            <label className="checkbox-item">jusqu'à 5
-                                <input type="checkbox" />
-                                <span className="checkmark" />
-                            </label>
-                            <span className="categorey-no">2,687</span>
-                        </li>
-                    </ul>
+<h4 className="ltn__widget-title pt-30">Nombre de chambres</h4>
+<ul>
+                    <li>
+                        <label className="radio-item">
+                            <input
+                                type="radio"
+                                name="bedroomCount"
+                                value="1"
+                                checked={selectedRooms === 1}
+                                onChange={() => handleRoomsChange(1)}
+                            />
+                            Seul (1 chambre)
+                            <span className="checkmark" />
+                        </label>
+                    </li>
+                    <li>
+                        <label className="radio-item">
+                            <input
+                                type="radio"
+                                name="bedroomCount"
+                                value="2"
+                                checked={selectedRooms === 2}
+                                onChange={() => handleRoomsChange(2)}
+                            />
+                            Double (2 chambres)
+                            <span className="checkmark" />
+                        </label>
+                    </li>
+                </ul>
+
                     <hr />
                 </div>
             </aside>

@@ -68,12 +68,12 @@ class NavbarV3 extends Component {
 			                  <li><a href="#">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
 			                  <li><a href="#">À propos</a> </li>
-			                  <li><a href="#">Contactez Nous</a> </li>
+			                  <li><a href="/contact">Contactez Nous</a> </li>
 			                 
 			                 
 
 			                  <li className="special-link btn-wrapper " >
-			                    <Link className='theme-btn-1 btn btn-effect-1' to="/add-listing">Espace Membre</Link>
+			                    <Link className='theme-btn-1 btn btn-effect-1' to="/login">Espace Membre</Link>
 			                  </li>
 			                </ul>
 			              </div>

@@ -7,7 +7,7 @@ class Page_header extends Component {
 
         let HeaderTitle = this.props.headertitle;
         let publicUrl = process.env.PUBLIC_URL+'/'
-       
+        let Subheader = this.props.subheader ? this.props.subheader : HeaderTitle
 		let CustomClass = this.props.customclass ? this.props.customclass : ''
         let Img = '24.jpg'
 
@@ -18,12 +18,11 @@ class Page_header extends Component {
 				<div className="row">
 				<div className="col-lg-12">
 					<div className="ltn__breadcrumb-inner">
-					<h1 className="page-title">Propriétés
-					</h1>
+					<h1 className="page-title">{ HeaderTitle }</h1>
 					<div className="ltn__breadcrumb-list">
 						<ul> 
 						<li><Link to="/"><span className="ltn__secondary-color"><i className="fas fa-home" /></span> Accueil</Link></li>
-						<li>Propriétés</li>
+						<li>{ Subheader }</li>
 						</ul>
 					</div>
 					</div>

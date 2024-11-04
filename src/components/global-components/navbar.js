@@ -56,9 +56,9 @@ class Navbar extends Component {
                                                     <li><Link to="#">Trouvez Acheteur</Link></li>
                                                     <li><Link to="#">Échange Bien</Link></li>
                                                     <li><Link to="#">À propos</Link></li>
-                                                    <li><Link to="#">Contactez Nous</Link></li>
+                                                    <li><Link to="/contact">Contactez Nous</Link></li>
                                                     <li className="special-link btn-wrapper">
-                                                        <Link className="theme-btn-1 btn btn-effect-1" to="/add-listing">Espace Membre</Link>
+                                                        <Link className="theme-btn-1 btn btn-effect-1" to="/login">Espace Membre</Link>
                                                     </li>
                                                 </ul>
                                             </div>

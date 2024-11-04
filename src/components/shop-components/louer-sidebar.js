@@ -10,6 +10,7 @@ const ShopGridV1 = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
     const [sortedProducts, setSortedProducts] = useState([]);
     const [selectedState, setSelectedState] = useState('Tous');
+    const [selectedRooms, setSelectedRooms] = useState(null);
 
 
     const publicUrl = process.env.PUBLIC_URL + '/';
@@ -23,6 +24,7 @@ const ShopGridV1 = () => {
             State: 'Nabeul',   
             beds: 3,
             baths: 2,
+            rooms: 1,
             type: 'Maison',
             area: 3450,
             price: 2000,
@@ -36,6 +38,7 @@ const ShopGridV1 = () => {
             State: 'Tunis',
             beds: 3,
             baths: 2,
+            rooms: 1,
             type: 'Villa',
             area: 3450,
             price: 2500,
@@ -48,6 +51,7 @@ const ShopGridV1 = () => {
             location: 'Sousse, Tunisie',
             State: 'Sousse',
             beds: 3,
+            rooms: 2,
             type: 'Maison',
             baths: 2,
             area: 3450,
@@ -63,6 +67,7 @@ const ShopGridV1 = () => {
             beds: 3,
             type: 'Etage de villa',
             baths: 2,
+            rooms: 8,
             area: 3450,
             price: 1500,
             date: 2005  
@@ -85,6 +90,9 @@ const ShopGridV1 = () => {
         setSelectedState(state);
     };
 
+    const handleRoomsChange = (rooms) => {
+        setSelectedRooms(rooms);
+    };
     
 
     useEffect(() => {
@@ -95,12 +103,13 @@ const ShopGridV1 = () => {
                 priceValue >= priceRange[0] &&
                 priceValue <= priceRange[1] &&
                 (selectedType === 'Tous' || product.type === selectedType) &&
-                (selectedState === 'Tous' || product.State === selectedState) 
+                (selectedState === 'Tous' || product.State === selectedState) &&
+                (selectedRooms === null || product.rooms === selectedRooms) // New room filter
             );
         });
         setFilteredProducts(filtered);
-    }, [searchTerm, priceRange, selectedType, selectedState]);
-
+    }, [searchTerm, priceRange, selectedType, selectedState, selectedRooms]);
+    
     useEffect(() => {
         const sorted = [...filteredProducts].sort((a, b) => {
             switch (sortOption) {
@@ -333,7 +342,9 @@ const ShopGridV1 = () => {
                         <LouerSidebar 
     onPriceRangeChange={handlePriceRangeChange} 
     onTypeChange={handleTypeChange} 
-    onStateChange={handleStateChange} 
+    onStateChange={handleStateChange}
+    onRoomsChange={handleRoomsChange} // Pass the room filter handler
+
 />
                     </div>
                 </div>

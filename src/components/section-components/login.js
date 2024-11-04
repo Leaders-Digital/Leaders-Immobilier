@@ -14,9 +14,8 @@ class Login extends Component {
 				<div className="row">
 					<div className="col-lg-12">
 					<div className="section-title-area text-center">
-						<h1 className="section-title">Sign In <br />To  Your Account</h1>
-						<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br />
-						Sit aliquid,  Non distinctio vel iste.</p>
+						<h1 className="section-title">Se Connecter	</h1>
+						<p>Accédez à un large choix de biens immobiliers. Trouvez la propriété <br /> de vos rêves en toute simplicité.</p>
 					</div>
 					</div>
 				</div>
@@ -24,24 +23,24 @@ class Login extends Component {
 					<div className="col-lg-6">
 					<div className="account-login-inner">
 						<form  method="GET" className="ltn__form-box contact-form-box">
-						<input type="text" name="email" placeholder="Email*" />
-						<input type="password" name="password" placeholder="Password*" />
+						
+						<input type="password" name="password" placeholder="Mot de passe *" />
+						<input type="text" name="number" placeholder="Votre CIN *" />
 						<div className="btn-wrapper mt-0">
-							<button className="theme-btn-1 btn btn-block" type="submit">SIGN IN</button>
+							<button className="theme-btn-1 btn btn-block" type="submit">Se Connecter</button>
 						</div>
 						<div className="go-to-btn mt-20">
-						<a href="#" title="Forgot Password?" data-bs-toggle="modal" data-bs-target="#ltn_forget_password_modal"><small>FORGOTTEN YOUR PASSWORD?</small></a>
+						<a href="#" title="Forgot Password?" data-bs-toggle="modal" data-bs-target="#ltn_forget_password_modal"><small>Mot de passe oublié ?</small></a>
 						</div>
 						</form>
 					</div>
 					</div>
 					<div className="col-lg-6">
 					<div className="account-create text-center pt-50">
-						<h4>DON'T HAVE AN ACCOUNT?</h4>
-						<p>Add items to your wishlistget personalised recommendations <br />
-						check out more quickly track your orders register</p>
+						<h4>Vous n'avez pas de compte ?</h4>
+						<p>Inscrivez-vous dès aujourd'hui pour bénéficier d'un accès exclusif  aux <br /> meilleures offres immobilières.</p>
 						<div className="btn-wrapper go-top">
-							<Link to="/register" className="theme-btn-1 btn black-btn">CREATE ACCOUNT</Link>
+							<Link to="/register" className="theme-btn-1 btn black-btn">Créer un compte</Link>
 						</div>
 					</div>
 					</div>
