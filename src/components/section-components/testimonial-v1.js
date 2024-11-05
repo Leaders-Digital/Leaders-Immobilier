@@ -15,7 +15,7 @@ class Testimonial extends Component {
 			      <div className="col-lg-12">
 			        <div className="section-title-area ltn__section-title-2--- text-center">	
 			          <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">Notre témoignage</h6>
-			          <h1 className="section-title">Commentaires Des Clients </h1>
+			          <h1 className="section-title">Avis Des Clients </h1>
 			        </div>
 			      </div>
 			    </div>
@@ -24,19 +24,15 @@ class Testimonial extends Component {
 			        <div className="ltn__testimonial-item ltn__testimonial-item-7">
 			          <div className="ltn__testimoni-info">
 			            <p><i className="flaticon-left-quote-1" /> 
-			              Precious ipsum dolor sit amet
-			              consectetur adipisicing elit, sed dos
-			              mod tempor incididunt ut labore et
-			              dolore magna aliqua. Ut enim ad min
-			              veniam, quis nostrud Precious ips
-			              um dolor sit amet, consecte</p>
+						 Vraiment un service professionnel et une réactivité idéal.
+						Je tiens à remercie amal et yathreb pour l'accueil chaleureux et OLFA pour son professionnalisme et son assistance....</p>
 			            <div className="ltn__testimoni-info-inner">
 			              <div className="ltn__testimoni-img">
 			                <img src={publicUrl+"assets/img/testimonial/1.png"} alt="#" />
 			              </div>
 			              <div className="ltn__testimoni-name-designation">
-			                <h5>Jacob William</h5>
-			                <label>agents de vente</label>
+			                <h5>Seifeddine Oueslati</h5>
+			                <label>avis google	</label>
 			              </div>
 			            </div>
 			          </div>
@@ -46,19 +42,16 @@ class Testimonial extends Component {
 			        <div className="ltn__testimonial-item ltn__testimonial-item-7">
 			          <div className="ltn__testimoni-info">
 			            <p><i className="flaticon-left-quote-1" /> 
-			              Precious ipsum dolor sit amet
-			              consectetur adipisicing elit, sed dos
-			              mod tempor incididunt ut labore et
-			              dolore magna aliqua. Ut enim ad min
-			              veniam, quis nostrud Precious ips
-			              um dolor sit amet, consecte</p>
-			            <div className="ltn__testimoni-info-inner">
-			              <div className="ltn__testimoni-img">
-			                <img src={publicUrl+"assets/img/testimonial/2.png"} alt="#" />
+						Merci beaucoup agence Leaders Immobilier l'aouina Je suis tres satisfaite par le service. Une excellente equipe je remercie hasna. Bonne continuation et bravo  encore.
+
+						</p>
+			            <div className="ltn__testimoni-info-inner mt-5">
+			              <div className="ltn__testimoni-img mt-2">
+			                <img src={publicUrl+"assets/img/testimonial/2.jpg"} alt="#" />
 			              </div>
 			              <div className="ltn__testimoni-name-designation">
-			                <h5>Kelian Anderson</h5>
-			                <label>agents de vente</label>
+			                <h5>Sihem Mezni</h5>
+			                <label>avis google	</label>
 			              </div>
 			            </div>
 			          </div>
@@ -68,19 +61,14 @@ class Testimonial extends Component {
 			        <div className="ltn__testimonial-item ltn__testimonial-item-7">
 			          <div className="ltn__testimoni-info">
 			            <p><i className="flaticon-left-quote-1" /> 
-			              Precious ipsum dolor sit amet
-			              consectetur adipisicing elit, sed dos
-			              mod tempor incididunt ut labore et
-			              dolore magna aliqua. Ut enim ad min
-			              veniam, quis nostrud Precious ips
-			              um dolor sit amet, consecte</p>
+						Très bon accueil de la part de l'équipe avec un grand professionnalisme. Je conseille vivement cette agence. Un grand bravo pour pour mademoiselle insaf 🥰🥰</p>
 			            <div className="ltn__testimoni-info-inner">
 			              <div className="ltn__testimoni-img">
-			                <img src={publicUrl+"assets/img/testimonial/3.png"} alt="#" />
+			                <img src={publicUrl+"assets/img/testimonial/2.jpg"} alt="#" />
 			              </div>
 			              <div className="ltn__testimoni-name-designation">
-			                <h5>Adam Joseph</h5>
-			                <label>agents de vente</label>
+			                <h5>Fatma Bel Hadj Ali</h5>
+			                <label>avis google	</label>
 			              </div>
 			            </div>
 			          </div>
@@ -90,19 +78,15 @@ class Testimonial extends Component {
 			        <div className="ltn__testimonial-item ltn__testimonial-item-7">
 			          <div className="ltn__testimoni-info">
 			            <p><i className="flaticon-left-quote-1" /> 
-			              Precious ipsum dolor sit amet
-			              consectetur adipisicing elit, sed dos
-			              mod tempor incididunt ut labore et
-			              dolore magna aliqua. Ut enim ad min
-			              veniam, quis nostrud Precious ips
-			              um dolor sit amet, consecte</p>
-			            <div className="ltn__testimoni-info-inner">
-			              <div className="ltn__testimoni-img">
-			                <img src={publicUrl+"assets/img/testimonial/2.png"} alt="#" />
+						Je recommande fortement des vrais professionnels un Grand bravo chaima islem et olfa pour le service  et bonne continuation leaders immobilier laouina🤗🤗
+						</p>
+			            <div className="ltn__testimoni-info-inner mt-5">
+			              <div className="ltn__testimoni-img mt-2">
+			                <img src={publicUrl+"assets/img/testimonial/2.jpg"} alt="#" />
 			              </div>
-			              <div className="ltn__testimoni-name-designation">
-			                <h5>James Carter</h5>
-			                <label>agents de vente</label>
+			              <div className="ltn__testimoni-name-designation ">
+			                <h5>Ahlem Aousji</h5>
+			                <label>avis google							</label>
 			              </div>
 			            </div>
 			          </div>

@@ -39,20 +39,18 @@ const ShopDetails = () => {
 						<h4 className="title-2">Caractéristiques</h4>  
 						<div className="property-detail-info-list section-bg-1 clearfix mb-60">                          
 						<ul>
-							<li><label>Référence :</label> <span>HZ29</span></li>
-							<li><label>Superficie : </label> <span>80 m²</span></li>
-							<li><label>Chambres :</label> <span>7</span></li>
-							<li><label>Salles de bain :</label> <span>2</span></li>
-							
-						</ul>
-						<ul>
-							<li><label>Parking :</label> <span>0</span></li>
-							<li><label>Etage :</label> <span>2</span></li>
-							<li><label>Meublé :</label> <span>oui</span></li>
-							<li><label>Statut de la propriété :</label> <span>à vendre
-							</span></li>
-							
-						</ul>
+  <li><i className="fa-solid fa-hashtag" /> <label>Référence :</label> <span>HZ29</span></li>
+  <li><i className="fa-solid fa-ruler-combined" /> <label>Superficie :</label> <span>80 m²</span></li>
+  <li><i className="fa-solid fa-bed" /> <label>Chambres :</label> <span>7</span></li>
+  <li><i className="fa-solid fa-bath" /> <label>Salles de bain :</label> <span>2</span></li>
+</ul>
+<ul>
+  <li><i className="fa-solid fa-car" /> <label>Parking :</label> <span>0</span></li>
+  <li><i className="fa-solid fa-layer-group" /> <label>Etage :</label> <span>2</span></li>
+  <li><i className="fa-solid fa-couch" /> <label>Meublé :</label> <span>oui</span></li>
+  <li><i className="fa-solid fa-sign" /> <label>Statut de la propriété :</label> <span>à vendre</span></li>
+</ul>
+
 						</div>
 						
 		
@@ -221,7 +219,7 @@ const ShopDetails = () => {
 								<li>
 								<div className="ltn__comment-item clearfix">
 									<div className="ltn__commenter-img">
-									<img src={publicUrl+"assets/img/testimonial/2.png"} alt="Image" />
+									<img src={publicUrl+"assets/img/testimonial/1.png"} alt="Image" />
 									</div>
 									<div className="ltn__commenter-comment">
 									<h6><a href="#">Adam Smit</a></h6>
@@ -242,7 +240,7 @@ const ShopDetails = () => {
 								<li>
 								<div className="ltn__comment-item clearfix">
 									<div className="ltn__commenter-img">
-									<img src={publicUrl+"assets/img/testimonial/3.png"} alt="Image" />
+									<img src={publicUrl+"assets/img/testimonial/2.jpg"} alt="Image" />
 									</div>
 									<div className="ltn__commenter-comment">
 									<h6><a href="#">Adam Smit </a></h6>

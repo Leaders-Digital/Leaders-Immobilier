@@ -5,7 +5,10 @@ import Login from './components/login';
 import Register from './components/register';
 import Home from './components/Home';
 import ShopGrid from './components/shop-grid';
+import About from './components/about';
 import Louer from './components/louer';
+import Story from './components/Story';
+import Agence from './components/agence';
 import ProdductDetails from './components/product-details';
 import Contact from './components/contact';
 
@@ -17,9 +20,12 @@ class Root extends Component {
               <Route path="/login" element={<Login />} />
               <Route path="/register" element={<Register />} />
               <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/agence" element={<Agence />} />
               {/* <Route path="/vente" element={<ShopGrid />} /> */}
               <Route path="/louer" element={<Louer />} />
               <Route path="/product-details" element={<ProdductDetails />} />
+              <Route path="/story" element={<Story />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Router>

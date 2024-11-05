@@ -41,7 +41,7 @@ const Sidebar = ({ onPriceRangeChange, onTypeChange, onStateChange , onRoomsChan
                     <h4 className="ltn__widget-title">Type de bien</h4>
                     <ul>
                         {['Tous', 'Appartement', 'Villa', 'Maison',/* 'Terrain'*/, 'Bureau', 'Etage de villa', 'Local commercial'].map((type) => (
-                            <li key={type}>
+                            <li key={type}> 
                                 <label className="radio-item">
                                     <input
                                         type="radio"

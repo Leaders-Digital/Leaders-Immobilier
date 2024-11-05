@@ -63,10 +63,10 @@ class FeaturesV1 extends Component {
 			            <img src={publicUrl+"assets/img/icons/icon-img/4.png"} style={{width:"80px"}} alt="#" />
 			          </div>
 			          <div className="ltn__feature-info">
-			            <h3><Link to="/service-details">VACANCES
+			            <h3><Link to="/service-details">Construction
 						</Link></h3>
 			            <p>Nous proposons une panoplie complète de propriétés en location de courte durée pour tous les budgets.</p>
-			            <Link className="ltn__service-btn" to="/service-details">Partir en vacances						<i className="flaticon-right-arrow" /></Link>
+			            <Link className="ltn__service-btn" to="/service-details">Construction une maison<i className="flaticon-right-arrow" /></Link>
 			          </div>
 			        </div>
 			      </div>

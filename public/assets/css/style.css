@@ -1081,6 +1081,20 @@ margin: 1px 1px !important;
 }
 
 
+.login-form-border {
+  border: 2px solid #E4ECF2;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+
+.register-border {
+  border: 2px solid #E4ECF2;
+  padding: 20px;
+  border-radius: 5px;
+  margin-top: 30px; 
+}
+
 
 
 /* Base styles for radio items */
@@ -1141,6 +1155,18 @@ margin: 1px 1px !important;
   margin-left: auto;
   font-size: 14px;
   color: #999;
+}
+
+
+
+.fa-solid {
+  color:var(--ltn__secondary-color);
+  margin-right: 8px; 
+}
+
+
+ul li label {
+  margin-right: 8px;
 }
 
 
@@ -7784,65 +7810,66 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   animation-name: fadeOutUp;
 }
 .ltn__slide-animation > *:nth-child(1) {
-  -webkit-animation-delay: 0.5s;
-  animation-delay: 0.5s;
-  -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+  -webkit-animation-duration: 0.4s;
+  animation-duration: 0.4s;
 }
 .ltn__slide-animation > *:nth-child(2) {
-  -webkit-animation-delay: 1s;
-  animation-delay: 1s;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  -webkit-animation-duration: 0.6s;
+  animation-duration: 0.6s;
+}
+.ltn__slide-animation > *:nth-child(3) {
+  -webkit-animation-delay: 0.9s;
+  animation-delay: 0.9s;
+  -webkit-animation-duration: 0.8s;
+  animation-duration: 0.8s;
+}
+.ltn__slide-animation > *:nth-child(4) {
+  -webkit-animation-delay: 1.2s;
+  animation-delay: 1.2s;
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
 }
-.ltn__slide-animation > *:nth-child(3) {
+.ltn__slide-animation > *:nth-child(5) {
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
-  -webkit-animation-duration: 1.5s;
-  animation-duration: 1.5s;
+  -webkit-animation-duration: 1.2s;
+  animation-duration: 1.2s;
 }
-.ltn__slide-animation > *:nth-child(4) {
-  -webkit-animation-delay: 2s;
-  animation-delay: 2s;
+.ltn__slide-animation > *:nth-child(6) {
+  -webkit-animation-delay: 1.8s;
+  animation-delay: 1.8s;
+  -webkit-animation-duration: 1.4s;
+  animation-duration: 1.4s;
+}
+.ltn__slide-animation > *:nth-child(7) {
+  -webkit-animation-delay: 2.1s;
+  animation-delay: 2.1s;
+  -webkit-animation-duration: 1.6s;
+  animation-duration: 1.6s;
+}
+.ltn__slide-animation > *:nth-child(8) {
+  -webkit-animation-delay: 2.4s;
+  animation-delay: 2.4s;
+  -webkit-animation-duration: 1.8s;
+  animation-duration: 1.8s;
+}
+.ltn__slide-animation > *:nth-child(9) {
+  -webkit-animation-delay: 2.7s;
+  animation-delay: 2.7s;
   -webkit-animation-duration: 2s;
   animation-duration: 2s;
 }
-.ltn__slide-animation > *:nth-child(5) {
-  -webkit-animation-delay: 2.5s;
-  animation-delay: 2.5s;
-  -webkit-animation-duration: 2.5s;
-  animation-duration: 2.5s;
-}
-.ltn__slide-animation > *:nth-child(6) {
+.ltn__slide-animation > *:nth-child(11) {
   -webkit-animation-delay: 3s;
   animation-delay: 3s;
-  -webkit-animation-duration: 3s;
-  animation-duration: 3s;
+  -webkit-animation-duration: 2.2s;
+  animation-duration: 2.2s;
 }
-.ltn__slide-animation > *:nth-child(7) {
-  -webkit-animation-delay: 3.5s;
-  animation-delay: 3.5s;
-  -webkit-animation-duration: 3.5s;
-  animation-duration: 3.5s;
-}
-.ltn__slide-animation > *:nth-child(8) {
-  -webkit-animation-delay: 4s;
-  animation-delay: 4s;
-  -webkit-animation-duration: 4s;
-  animation-duration: 4s;
-}
-.ltn__slide-animation > *:nth-child(9) {
-  -webkit-animation-delay: 4.5s;
-  animation-delay: 4.5s;
-  -webkit-animation-duration: 4.5s;
-  animation-duration: 4.5s;
-}
-.ltn__slide-animation > *:nth-child(11) {
-  -webkit-animation-delay: 5s;
-  animation-delay: 5s;
-  -webkit-animation-duration: 5s;
-  animation-duration: 5s;
-}
+
 
 .slick-current .ltn__slide-animation > *,
 .ltn__slide-animation-active .ltn__slide-animation > * {
@@ -7946,17 +7973,21 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 @media (max-width: 767px) {
   .slide-title {
-  font-size: 3.5rem !important;
+  font-size: 2.5rem !important;
   }
   .desc p {
-    font-size: 1rem !important;
+    font-size: 0.8rem !important;
+  }
+ 
+  .trouver{
+    margin-bottom: 50px !important;
   }
 }
 
-@media (max-width: 767px) {
-
-
-
+@media (max-width: 1200px) {
+.ltn__slide-item{
+  height: 100vh  !important;
+}
 }
 
 .ltn__slide-item-2 .slide-sub-title span {

@@ -12,7 +12,7 @@ class Login extends Component {
 			 <div className="ltn__login-area pb-65">
 				<div className="container">
 				<div className="row">
-					<div className="col-lg-12">
+					<div className="col-lg-12 contact-form-box">
 					<div className="section-title-area text-center">
 						<h1 className="section-title">Se Connecter	</h1>
 						<p>Accédez à un large choix de biens immobiliers. Trouvez la propriété <br /> de vos rêves en toute simplicité.</p>
@@ -20,30 +20,31 @@ class Login extends Component {
 					</div>
 				</div>
 				<div className="row">
-					<div className="col-lg-6">
-					<div className="account-login-inner">
-						<form  method="GET" className="ltn__form-box contact-form-box">
-						
-						<input type="password" name="password" placeholder="Mot de passe *" />
-						<input type="text" name="number" placeholder="Votre CIN *" />
-						<div className="btn-wrapper mt-0">
-							<button className="theme-btn-1 btn btn-block" type="submit">Se Connecter</button>
-						</div>
-						<div className="go-to-btn mt-20">
-						<a href="#" title="Forgot Password?" data-bs-toggle="modal" data-bs-target="#ltn_forget_password_modal"><small>Mot de passe oublié ?</small></a>
-						</div>
-						</form>
-					</div>
-					</div>
-					<div className="col-lg-6">
-					<div className="account-create text-center pt-50">
-						<h4>Vous n'avez pas de compte ?</h4>
-						<p>Inscrivez-vous dès aujourd'hui pour bénéficier d'un accès exclusif  aux <br /> meilleures offres immobilières.</p>
-						<div className="btn-wrapper go-top">
-							<Link to="/register" className="theme-btn-1 btn black-btn">Créer un compte</Link>
-						</div>
-					</div>
-					</div>
+				<div className="col-lg-6">
+  <div className="account-login-inner login-form-border">
+    <form method="GET" className="ltn__form-box contact-form-box">
+      <input type="password" name="password" placeholder="Mot de passe *" />
+      <input type="text" name="number" placeholder="Votre CIN *" />
+      <div className="btn-wrapper mt-0">
+        <button className="theme-btn-1 btn btn-block" type="submit">Se Connecter</button>
+      </div>
+      <div className="go-to-btn mt-20">
+        <a href="#" title="Forgot Password?" data-bs-toggle="modal" data-bs-target="#ltn_forget_password_modal"><small>Mot de passe oublié ?</small></a>
+      </div>
+    </form>
+  </div>
+</div>
+
+<div className="col-lg-6">
+  <div className="account-create text-center pt-50 register-border">
+    <h4>Vous n'avez pas de compte ?</h4>
+    <p>Inscrivez-vous dès aujourd'hui pour bénéficier d'un accès exclusif aux <br /> meilleures offres immobilières.</p>
+    <div className="btn-wrapper go-top">
+      <Link to="/register" className="theme-btn-1 btn black-btn">Créer un compte</Link>
+    </div>
+  </div>
+</div>
+
 				</div>
 				</div>
 						</div>

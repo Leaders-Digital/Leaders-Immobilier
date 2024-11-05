@@ -25,9 +25,9 @@ class BannerV3 extends Component {
                                                         <i className="fa fa-play" />
                                                     </a>
                                                 </div>
-                                                <h6 className="slide-sub-title white-color--- animated" style={{ fontSize: "1.5rem",marginTop:"100px" }}>
-                                                    <span><i className="fas fa-home" /></span> Agence Immobilière
-                                                </h6>
+                                                    <h6 className="slide-sub-title white-color--- animated" style={{ fontSize: "1.5rem",marginTop:"100px" }}>
+                                                        <span><i className="fas fa-home" /></span> Agence Immobilière
+                                                    </h6>
                                                 <h1 className="slide-title animated" style={{ fontSize: "7rem" }}>
                                                     وين ما تمشي <span style={{ color: "--ltn__secondary-color" }}>تلقانا</span> معاك
                                                 </h1>
@@ -36,7 +36,7 @@ class BannerV3 extends Component {
                                                         Nos agents vous feront visiter les biens et suivront votre dossier pour <br /> saisir les meilleures opportunités.
                                                     </p>
                                                 </div>
-                                                <div className="btn-wrapper animated go-top ">
+                                                <div className="btn-wrapper animated go-top trouver ">
                                                     <Link to="/vente" style={{ padding: '12px 20px' }} className="theme-btn-1 btn btn-effect-1">
                                                         Trouver un bien
                                                     </Link>

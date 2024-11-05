@@ -11,14 +11,14 @@ class Register extends Component {
     return  <div className="ltn__login-area pb-110">
 				<div className="container">
 				<div className="row">
-					<div className="col-lg-12">
+					<div className="col-lg-12 ">
 					<div className="section-title-area text-center">
 						<h1 className="section-title">Créer Un Compte</h1>
 						<p>Accédez à un large choix de biens immobiliers. Trouvez la propriété <br /> de vos rêves en toute simplicité.</p>
 					</div>
 					</div>
 				</div>
-				<div className="row container">
+				<div className="row container register-border">
     <div className="container">
         <div className="account-login-inner">
             <form action="#" className="ltn__form-box contact-form-box">

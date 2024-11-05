@@ -55,7 +55,6 @@ const VideoV2 = () => {
               </ul>
               
               <div className="text-center mt-30">
-            
                 <a
                   className="ltn__video-play-btn bg-white--- ltn__secondary-bg"
                   href={videoCollection[0]}

@@ -55,7 +55,14 @@ class Navbar extends Component {
                                                     <li><Link to="#">Estimation</Link></li>
                                                     <li><Link to="#">Trouvez Acheteur</Link></li>
                                                     <li><Link to="#">Échange Bien</Link></li>
-                                                    <li><Link to="#">À propos</Link></li>
+                                                    <li>
+    <Link to="/about">À propos</Link>
+    <ul>
+        <li><Link to="/events">Événements</Link></li>
+        <li><Link to="/agence">Agences</Link></li>
+    </ul>
+</li>
+
                                                     <li><Link to="/contact">Contactez Nous</Link></li>
                                                     <li className="special-link btn-wrapper">
                                                         <Link className="theme-btn-1 btn btn-effect-1" to="/login">Espace Membre</Link>
@@ -97,8 +104,14 @@ class Navbar extends Component {
                                 <li><Link to="#">Estimation</Link></li>
                                 <li><Link to="#">Trouvez Acheteur</Link></li>
                                 <li><Link to="#">Échange Bien</Link></li>
-                                <li><Link to="#">À propos</Link></li>
-                                <li><Link to="#">Contactez Nous</Link></li>
+                                <li>
+    <Link to="/about">À propos</Link>
+    <ul>
+        <li><Link to="/events">Événements</Link></li>
+        <li><Link to="/agence">Agences</Link></li>
+    </ul>
+</li>
+                                <li><Link to="/contact">Contactez Nous</Link></li>
                             </ul>
                         </div>
                         <div className="ltn__social-media-2">

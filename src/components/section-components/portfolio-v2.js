@@ -35,7 +35,7 @@ class PortfolioV1 extends Component {
 						<div className="ltn__gallery-item-inner">
 							<div className="ltn__gallery-item-img">
 							<a href="#ltn__inline_description_1" data-rel="lightcase:myCollection">
-								<img src={publicUrl+"/assets/img/gallery/2.jpg"} alt="Image" />
+								<img src={publicUrl+"/assets/img/gallery/1.jpg"} alt="Image" />
 								<span className="ltn__gallery-action-icon">
 								<i className="far fa-file-alt" />
 								</span>

@@ -18,7 +18,7 @@ class NavbarV3 extends Component {
 			          <div className="ltn__top-bar-menu">
 			            <ul>
 			              <li><a href="mailto:contact@leaders-immo.com?Subject=Flower%20greetings%20to%20you"><i className="icon-mail" /> contact@leaders-immo.com</a></li>
-			              <li><a href="locations.html"><i className="icon-placeholder" />En face Clinique Hannibal Lac2, Tunisie</a></li>
+			              <li><a href="locations.html"><i className="icon-call" />+216 26 644 400</a></li>
 			            </ul>
 			          </div>
 			        </div>
@@ -67,7 +67,13 @@ class NavbarV3 extends Component {
 			                  <li><a href="#">Estimation</a> </li>
 			                  <li><a href="#">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
-			                  <li><a href="#">À propos</a> </li>
+							  <li>
+    <Link to="/about">À propos</Link>
+    <ul>
+        <li><Link to="/events">Événements</Link></li>
+        <li><Link to="/agence">Agences</Link></li>
+    </ul>
+</li>
 			                  <li><a href="/contact">Contactez Nous</a> </li>
 			                 
 			                 
@@ -113,7 +119,13 @@ class NavbarV3 extends Component {
 			                  <li><a href="#">Estimation</a> </li>
 			                  <li><a href="#">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
-			                  <li><a href="#">À propos</a> </li>
+							  <li>
+    <Link to="/about">À propos</Link>
+    <ul>
+        <li><Link to="/events">Événements</Link></li>
+        <li><Link to="/agence">Agences</Link></li>
+    </ul>
+</li>
 			                  <li><a href="/contactg">Contactez Nous</a> </li>
 						
 				
