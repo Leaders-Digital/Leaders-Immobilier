@@ -41,7 +41,7 @@ class NavbarV3 extends Component {
 			      <div className="row">
 			        <div className="col">
 			          <div className="site-logo-wrap">
-			            <div className="site-logo go-top col ml-5" >
+			            <div className="site-logo-home go-top col ml-5" >
 			              <Link to="/">        <img src={publicUrl + "assets/img/logo-2.png"} alt="Logo" className="logo-home" />
 						  </Link>
 			            </div>
@@ -72,6 +72,7 @@ class NavbarV3 extends Component {
     <ul>
         <li><Link to="/events">Événements</Link></li>
         <li><Link to="/agence">Agences</Link></li>
+		<li><Link to="/histoires">Histoires</Link></li>
     </ul>
 </li>
 			                  <li><a href="/contact">Contactez Nous</a> </li>
@@ -124,6 +125,7 @@ class NavbarV3 extends Component {
     <ul>
         <li><Link to="/events">Événements</Link></li>
         <li><Link to="/agence">Agences</Link></li>
+		<li><Link to="/histoires">Histoires</Link></li>
     </ul>
 </li>
 			                  <li><a href="/contactg">Contactez Nous</a> </li>

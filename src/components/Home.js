@@ -21,7 +21,7 @@ const Home = () => {
         <Category  />
         <ProSlider  />
         <ProSlider2  />
-        <Video  />
+        {/* <Video  /> */}
         <Testimonial  />
         <Sponsor />
         <CallToActionV1 />

@@ -13,42 +13,35 @@ class AboutV4 extends Component {
 				<div className="row">
 					<div className="col-lg-6 align-self-center">
 					<div className="about-us-img-wrap about-img-left">
-						<img src={publicUrl+"assets/img/others/13.png"} alt="About Us Image" />
+						<img src={publicUrl+"assets/img/others/about.jpg"} alt="About Us Image" />
 						<div className="about-us-img-info about-us-img-info-2 about-us-img-info-3">
-						<div className="ltn__video-img ltn__animation-pulse1">
-							<img src={publicUrl+"assets/img/others/8.png"} alt="video popup bg image" />
-							<a className="ltn__video-icon-2 ltn__video-icon-2-border---" href="https://www.youtube.com/embed/X7R-q9rsrtU?autoplay=1&showinfo=0" data-rel="lightcase:myCollection">
-							<i className="fa fa-play" />
-							</a>
-						</div>
+						
 						</div>
 					</div>
 					</div>
 					<div className="col-lg-6 align-self-center">
 					<div className="about-us-info-wrap">
 						<div className="section-title-area ltn__section-title-2--- mb-20">
-						<h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">About Us</h6>
-						<h1 className="section-title">The Leading Real Estate
-							Rental Marketplace<span>.</span></h1>
-						<p>Over 39,000 people work for us in more than 70 countries all over the
-							This breadth of global coverage, combined with specialist services</p>
+						<h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">À propos de nous						</h6>
+						<h1 className="section-title">Lorem ipsum dolor sit amet ipsum<span>.</span></h1>
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Phasellus in fermentum orci, quis dapibus ex.</p>
 						</div>
 						<ul className="ltn__list-item-half clearfix">
 						<li>
 							<i className="flaticon-home-2" />
-							Smart Home Design
+							Lorem ipsum dolor
 						</li>
 						<li>
 							<i className="flaticon-mountain" />
-							Beautiful Scene Around
+							Lorem ipsum dolor
 						</li>
 						<li>
 							<i className="flaticon-heart" />
-							Exceptional Lifestyle
+							Lorem ipsum dolor
 						</li>
 						<li>
 							<i className="flaticon-secure" />
-							Complete 24/7 Security
+							Lorem ipsum dolor
 						</li>
 						</ul>
 						<div className="ltn__callout bg-overlay-theme-05  mt-30">
@@ -56,7 +49,7 @@ class AboutV4 extends Component {
 							llamco laboris. Lorem ipsum dolor sit amet" </p>
 						</div>
 						<div className="btn-wrapper animated">
-						<Link to="/service" className="theme-btn-1 btn btn-effect-1">OUR SERVICES</Link>
+						<Link to="/service" className="theme-btn-1 btn btn-effect-1">NOS PRESTATIONS</Link>
 						</div>
 					</div>
 					</div>

@@ -6,7 +6,6 @@ class ProductSliderV1 extends Component {
     render() {
         const publicUrl = process.env.PUBLIC_URL + '/';
         
-      
         const images = [
             "assets/img/img-slide/1.png",
             "assets/img/img-slide/2.png",
@@ -21,9 +20,20 @@ class ProductSliderV1 extends Component {
                     <div className="row ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
                         {images.map((image, index) => (
                             <div className="col-lg-12" key={index}>
-                                <div className="ltn__img-slide-item-4">
+                                <div 
+                                    className="ltn__img-slide-item-4" 
+                                    style={{
+                                        border: '1px solid white', 
+                                        boxSizing: 'border-box', 
+                                        padding: '1px'
+                                    }}
+                                >
                                     <a href={publicUrl + image} data-rel="lightcase:myCollection">
-                                        <img src={publicUrl + image} alt={`Image ${index + 1}`} />
+                                        <img 
+                                            src={publicUrl + image} 
+                                            alt={`Image ${index + 1}`} 
+                                            style={{ display: 'block', width: '100%', height: 'auto' }}
+                                        />
                                     </a>
                                 </div>
                             </div>

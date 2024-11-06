@@ -9,13 +9,13 @@ class TeamV1 extends Component {
         let publicUrl = process.env.PUBLIC_URL+'/'
         let imagealt = 'image'
 
-    return <div className="ltn__team-area pt-115 pb-90 go-top">
+    return <div className="ltn__team-area pb-90 go-top">
 				<div className="container">
 				<div className="row">
 					<div className="col-lg-12">
 					<div className="section-title-area ltn__section-title-2--- text-center">
-						<h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">Team</h6>
-						<h1 className="section-title">Property Agents</h1>
+						<h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">Équipe</h6>
+						<h1 className="section-title">Agents immobiliers</h1>
 					</div>
 					</div>
 				</div>
@@ -23,11 +23,11 @@ class TeamV1 extends Component {
 					<div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
-						<img src={publicUrl+"assets/img/team/4.jpg"} alt="Image" />
+						<img src={publicUrl+"assets/img/team/1.jpg"} alt="Image" />
 						</div>
 						<div className="team-info">
-						<h4><Link to="/team-details">Rosalina D. William</Link></h4>
-						<h6 className="ltn__secondary-color">Real Estate Broker</h6>
+						<h4><Link to="/team-details">Soren Gallagher</Link></h4>
+						<h6 className="ltn__secondary-color">Agents de vente						</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
@@ -44,8 +44,9 @@ class TeamV1 extends Component {
 						<img src={publicUrl+"assets/img/team/2.jpg"} alt="Image" />
 						</div>
 						<div className="team-info">
-						<h4><Link to="/team-details">Kelian Anderson</Link></h4>
-						<h6 className="ltn__secondary-color">Selling Agents</h6>
+						<h4><Link to="/team-details">Soren Gallagher</Link></h4>
+						<h6 className="ltn__secondary-color">Agents de vente
+						</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
@@ -59,11 +60,12 @@ class TeamV1 extends Component {
 					<div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
-						<img src={publicUrl+"assets/img/team/5.jpg"} alt="Image" />
+						<img src={publicUrl+"assets/img/team/3.jpg"} alt="Image" />
 						</div>
 						<div className="team-info">
-						<h4><Link to="/team-details">Miranda H. Halim</Link></h4>
-						<h6 className="ltn__secondary-color">Property Seller</h6>
+						<h4><Link to="/team-details">Soren Gallagher</Link></h4>
+						<h6 className="ltn__secondary-color">Vendeur de propriété
+						</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>

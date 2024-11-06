@@ -1170,6 +1170,32 @@ ul li label {
 }
 
 
+@media (max-width: 992px) {
+  .ltn__product-item-4, .ltn__product-item-5 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+  }
+  
+  .product-img {
+      order: -1;
+      width: 100%;
+      text-align: center;
+  }
+
+  .product-info {
+      width: 100%;
+  }
+
+  .product-img img {
+      width: 100%;
+      max-width: 300px; /* Adjust as needed */
+      margin-bottom: 15px;
+  }
+}
+
+
+
 /* ----------------------------------------------------
     input and button type focus outline disable
 ---------------------------------------------------- */
@@ -5378,6 +5404,16 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   flex-grow: 1;
   position: static;
 }
+.site-logo-home{
+  
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  white-space: nowrap;
+}
 
 .site-logo {
   min-width: 75px !important ;
@@ -5406,10 +5442,16 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   top: -2px;
 }
 .logo-home {
-  width: 70px; 
+  width: 85px; 
   height: auto; 
   margin-left: 55px; 
 }
+@media (max-width: 1250px) {
+  .logo-home {
+    margin-left: 10px !important;
+  }
+}
+
 
 
 .ltn__header-1 .ltn__header-middle-area {
@@ -12035,6 +12077,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     min-width: 380px;
   }
 }
+
+
 
 /* ----------------------------------------------------
     Blog Area

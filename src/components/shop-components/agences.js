@@ -80,7 +80,7 @@ const ShopGridV1 = () => {
                                             <div className="col-lg-6 col-md-12" key={product.id}>
                                                 <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5">
                                                     <div className="product-img go-top">
-                                                        <Link to="/product-details">
+                                                        <Link to="/product-details" >
                                                             <img style={{width:'70%  '}} src={publicUrl + product.imgSrc} alt={product.title} />
                                                         </Link>
                                                     </div>
