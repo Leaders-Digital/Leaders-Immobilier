@@ -8,6 +8,7 @@ import ShopGrid from './components/shop-grid';
 import About from './components/about';
 import Louer from './components/louer';
 import Story from './components/Story';
+import Events from './components/events';
 import Agence from './components/agence';
 import ProdductDetails from './components/product-details';
 import Contact from './components/contact';
@@ -26,6 +27,7 @@ class Root extends Component {
               <Route path="/louer" element={<Louer />} />
               <Route path="/product-details" element={<ProdductDetails />} />
               <Route path="/histoires" element={<Story />} />
+              <Route path="/events" element={<Events />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Router>

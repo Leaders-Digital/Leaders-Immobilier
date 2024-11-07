@@ -66,7 +66,7 @@ class FeaturesV1 extends Component {
 			            <h3><Link to="/service-details">Construction
 						</Link></h3>
 			            <p>Nous proposons une panoplie complète de propriétés en location de courte durée pour tous les budgets.</p>
-			            <Link className="ltn__service-btn" to="/service-details">Construction une maison<i className="flaticon-right-arrow" /></Link>
+			            <Link className="ltn__service-btn" to="/service-details">Construire une maison<i className="flaticon-right-arrow" /></Link>
 			          </div>
 			        </div>
 			      </div>

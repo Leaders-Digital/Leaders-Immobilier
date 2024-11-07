@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 
-class Neighbour extends Component {
+class 	Neighbour extends Component {
 
     render() {
 
@@ -138,92 +138,8 @@ class Neighbour extends Component {
 			            </div>
 			          </div>
 			        </div>
-			        <div className="ltn__faq-inner ltn__faq-inner-2 ltn__faq-inner-3">
-			          <div className="row">
-			            <div className="col-lg-6">
-			              <div id="accordion_2">
-			                {/* card */}
-			                <div className="card">
-			                  <h6 className="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-1" aria-expanded="false">
-			                    <i className="flaticon-mortarboard" /> University / College
-			                  </h6>
-			                  <div id="faq-item-2-1" className="collapse" data-bs-parent="#accordion_2">
-			                    <div className="card-body">
-			                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
-			                    </div>
-			                  </div>
-			                </div>
-			                {/* card */}
-			                <div className="card">
-			                  <h6 className="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-2" aria-expanded="false"> 
-			                    <i className="flaticon-hospital" /> Medical Hospital
-			                  </h6>
-			                  <div id="faq-item-2-2" className="collapse show---" data-bs-parent="#accordion_2">
-			                    <div className="card-body">
-			                      <div className="ltn__video-img alignleft">
-			                        <img src={publicUrl+"assets/img/bg/17.jpg"} alt="video popup bg image" />
-			                        <a className="ltn__video-icon-2 ltn__video-icon-2-small ltn__video-icon-2-border----" href="https://www.youtube.com/embed/LjCzPp-MK48?autoplay=1&showinfo=0" data-rel="lightcase:myCollection">
-			                          <i className="fa fa-play" />
-			                        </a>
-			                      </div>
-			                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
-			                    </div>
-			                  </div>
-			                </div>                          
-			                {/* card */}
-			                <div className="card">
-			                  <h6 className="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-3" aria-expanded="false">
-			                    <i className="flaticon-metro" /> Railway Station
-			                  </h6>
-			                  <div id="faq-item-2-3" className="collapse" data-bs-parent="#accordion_2">
-			                    <div className="card-body">
-			                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
-			                    </div>
-			                  </div>
-			                </div>
-			                {/*  */}
-			              </div>                                
-			            </div>
-			            <div className="col-lg-6">
-			              <div id="accordion_3">
-			                {/* card */}
-			                <div className="card">
-			                  <h6 className="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-3-4" aria-expanded="false">
-			                    <i className="flaticon-building" /> Shopping Mall
-			                  </h6>
-			                  <div id="faq-item-3-4" className="collapse" data-bs-parent="#accordion_3">
-			                    <div className="card-body">
-			                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
-			                    </div>
-			                  </div>
-			                </div>
-			                {/* card */}
-			                <div className="card">
-			                  <h6 className="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-3-5" aria-expanded="false">
-			                    <i className="flaticon-airplane" /> Airport/Biman
-			                  </h6>
-			                  <div id="faq-item-3-5" className="collapse" data-bs-parent="#accordion_3">
-			                    <div className="card-body">
-			                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
-			                    </div>
-			                  </div>
-			                </div>
-			                {/* card */}
-			                <div className="card">
-			                  <h6 className="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-3-6" aria-expanded="false">
-			                    <i className="flaticon-slider" /> Children Playland
-			                  </h6>
-			                  <div id="faq-item-3-6" className="collapse" data-bs-parent="#accordion_3">
-			                    <div className="card-body">
-			                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Scelerisque eleifend donec pretium vulputate sapien nec sagittis.</p>
-			                    </div>
-			                  </div>
-			                </div>
-			                {/*  */}
-			              </div>                                
-			            </div>
-			          </div>
-			        </div>
+			       
+			          
 			      </div>
 			    </div>
 			  </div>
