@@ -14,9 +14,9 @@ class 	Neighbour extends Component {
 			    <div className="row">
 			      <div className="col-lg-12">
 			        <div className="section-title-area ltn__section-title-2--- text-center---">
-			          <h6 className="section-subtitle section-subtitle-2--- ltn__secondary-color">Explore Neighbour</h6>
-			          <h1 className="section-title">What’s In Neighbour <br />
-			            Explore Below</h1>
+			          <h6 className="section-subtitle section-subtitle-2--- ltn__secondary-color">  <span><i className="far fa-calendar" /></span> Notre événement</h6>
+			          <h1 className="section-title">Evènement tirage au sort  <br />
+					 By Leaders Immobilier </h1>
 			        </div>
 			      </div>
 			    </div>
@@ -42,23 +42,19 @@ class 	Neighbour extends Component {
 			                  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link to="/product-details"><img src={publicUrl+"assets/img/product-3/3.jpg"} alt="#" /></Link>
-			                        <div className="search-by-place-badge">
-			                          <ul>
-			                            <li>9 Properties</li>
-			                          </ul>
-			                        </div>
+			                        <Link to="/product-details"><img src={publicUrl+"assets/img/neighbour/3.jpg"} alt="#" /></Link>
+			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
-			                        <h4><Link to="/product-details">Shopping Center</Link></h4>
-			                        <label><span className="ltn__secondary-color">1,500m </span>/ 21 min. walk</label>
+			                        <h4><Link to="/product-details">Lorem Lorem</Link></h4>
+			                        <label><span className="ltn__secondary-color">18 Octobre</span> / 2023</label>
 			                        <div className="search-by-place-brief">
 			                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
 			                            elit, sed do eiusmod tempor incididunt ut labore Enim
 			                            ullamco laboris.</p>
 			                        </div>
 			                        <div className="search-by-place-btn ">
-			                          <Link to="/product-details">View Property <i className="flaticon-right-arrow" /></Link>
+			                          <Link to="/">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
 			                        </div>
 			                      </div>
 			                    </div>

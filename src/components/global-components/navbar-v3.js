@@ -64,8 +64,8 @@ class NavbarV3 extends Component {
 			                  <li><a href="/">Accueil</a> </li>
 			                  <li><a href="/vente">Vente</a> </li>
 			                  <li><a href="/louer">Location</a> </li>
-			                  <li><a href="#">Estimation</a> </li>
-			                  <li><a href="#">Trouvez Acheteur</a> </li>
+			                  <li><a href="/estimation">Estimation</a> </li>
+			                  <li><a href="/acheteur">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
 							  <li>
     <Link to="/about">À propos</Link>
@@ -117,8 +117,8 @@ class NavbarV3 extends Component {
 					<li><a href="/">Accueil</a> </li>
 			                  <li><a href="/vente">Vente</a> </li>
 			                  <li><a href="/louer">Location</a> </li>
-			                  <li><a href="#">Estimation</a> </li>
-			                  <li><a href="#">Trouvez Acheteur</a> </li>
+			                  <li><a href="/estimation">Estimation</a> </li>
+			                  <li><a href="/acheteur">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
 							  <li>
     <Link to="/about">À propos</Link>
@@ -135,7 +135,7 @@ class NavbarV3 extends Component {
 					</div>
 					<div className="ltn__social-media-2">
 					<ul>
-						<li><a href="#" title="Facebook"><i className="fab fa-facebook-f" /></a></li>
+						<li><a href="https://www.facebook.com/leadersimmobilier/?locale=fr_FR" title="Facebook"><i className="fab fa-facebook-f" /></a></li>
 						<li><a href="#" title="Twitter"><i className="fab fa-twitter" /></a></li>
 						<li><a href="#" title="Linkedin"><i className="fab fa-linkedin" /></a></li>
 						<li><a href="#" title="Instagram"><i className="fab fa-instagram" /></a></li>

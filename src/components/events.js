@@ -22,8 +22,8 @@ const Home_V2 = () => {
         <Navbar />
         <PageHeader headertitle="Événements" /> 
         <Banner  />   
-        {/* <Neighbour />
-        <UpComingProduct /> */}
+        <Neighbour />
+        {/* <UpComingProduct /> */}
        
         <CallToActionV1 />
         <Footer />

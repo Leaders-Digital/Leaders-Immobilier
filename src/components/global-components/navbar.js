@@ -51,8 +51,8 @@ class Navbar extends Component {
                                                     <li><Link to="/">Accueil</Link></li>
                                                     <li><Link to="/vente">Vente</Link></li>
                                                     <li><Link to="/louer">Location</Link></li>
-                                                    <li><Link to="#">Estimation</Link></li>
-                                                    <li><Link to="#">Trouvez Acheteur</Link></li>
+                                                    <li><Link to="/estimation">Estimation</Link></li>
+                                                    <li><Link to="/acheteur">Trouvez Acheteur</Link></li>
                                                     <li><Link to="#">Échange Bien</Link></li>
                                                     <li>
     <Link to="/about">À propos</Link>
@@ -101,8 +101,8 @@ class Navbar extends Component {
                                 <li><Link to="/">Accueil</Link></li>
                                 <li><Link to="/vente">Vente</Link></li>
                                 <li><Link to="/louer">Location</Link></li>
-                                <li><Link to="#">Estimation</Link></li>
-                                <li><Link to="#">Trouvez Acheteur</Link></li>
+                                <li><Link to="/estimation">Estimation</Link></li>
+                                <li><Link to="/acheteur">Trouvez Acheteur</Link></li>
                                 <li><Link to="#">Échange Bien</Link></li>
                                 <li>
     <Link to="/about">À propos</Link>
@@ -117,8 +117,8 @@ class Navbar extends Component {
                         </div>
                         <div className="ltn__social-media-2">
                             <ul>
-                                <li><a href="#" title="Facebook"><i className="fab fa-facebook-f" /></a></li>
-                                <li><a href="#" title="Twitter"><i className="fab fa-twitter" /></a></li>
+                                <li><a href="https://www.facebook.com/leadersimmobilier/?locale=fr_FR" target='blank' title="Facebook"><i className="fab fa-facebook-f" /></a></li>
+                                <li><a href="/" title="Twitter"><i className="fab fa-twitter" /></a></li>
                                 <li><a href="#" title="Linkedin"><i className="fab fa-linkedin" /></a></li>
                                 <li><a href="#" title="Instagram"><i className="fab fa-instagram" /></a></li>
                             </ul>

@@ -9,6 +9,8 @@ import About from './components/about';
 import Louer from './components/louer';
 import Story from './components/Story';
 import Events from './components/events';
+import Estimation from './components/estimation';
+import TrouverAcheteur from './components/trouvez-acheteur';
 import Agence from './components/agence';
 import ProdductDetails from './components/product-details';
 import Contact from './components/contact';
@@ -28,6 +30,8 @@ class Root extends Component {
               <Route path="/product-details" element={<ProdductDetails />} />
               <Route path="/histoires" element={<Story />} />
               <Route path="/events" element={<Events />} />
+              <Route path="/estimation" element={<Estimation />} />
+              <Route path="/acheteur" element={<TrouverAcheteur />} />
               <Route path="/contact" element={<Contact />} />
             </Routes>
           </Router>

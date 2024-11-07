@@ -1225,6 +1225,7 @@ code {
     Form input box
 ---------------------------------------------------- */
 input[type="text"],
+input[type="number"],
 input[type="email"],
 input[type="password"],
 input[type="submit"],
