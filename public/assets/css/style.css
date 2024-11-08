@@ -1189,7 +1189,7 @@ ul li label {
 
   .product-img img {
       width: 100%;
-      max-width: 300px; /* Adjust as needed */
+      max-width: 300px; 
       margin-bottom: 15px;
   }
 }
@@ -9002,6 +9002,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .ltn__product-item {
   position: relative;
   margin-bottom: 50px;
+  height: 2;
 }
 
 .product-img {
@@ -9014,6 +9015,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   -webkit-transition: all 3.5s ease 0s;
   -o-transition: all 3.5s ease 0s;
   transition: all 3.5s ease 0s;
+ 
 }
 
 .product-img:before {

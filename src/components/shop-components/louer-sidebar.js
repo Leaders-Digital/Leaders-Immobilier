@@ -33,7 +33,7 @@ const ShopGridV1 = () => {
         {
             id: 2,
             title: 'Villa à LA SOUKRA',
-            imgSrc: 'assets/img/product-3/2.png',
+            imgSrc: 'https://expert.leaders-immo.com/upload/Leaders Immobilier/biens/NABEUL/HAMMAMET SUD/Bâtiment/Villa/NA2402/image-0-672c79cd9f9da7-672c9d718204e1.27940720.jpg',
             location: 'Soukra, Tunisie',
             State: 'Tunis',
             beds: 3,
@@ -234,7 +234,8 @@ const ShopGridV1 = () => {
                                                     <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                                                         <div className="product-img go-top">
                                                             <Link to="/product-details">
-                                                                <img src={publicUrl + product.imgSrc} alt={product.title} />
+                                                                <img   src={product.imgSrc.startsWith('http') ? product.imgSrc : publicUrl + product.imgSrc}
+ />
                                                             </Link>
                                                         </div>
                                                         <div className="product-info">
@@ -294,7 +295,7 @@ const ShopGridV1 = () => {
                                                     <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5">
                                                         <div className="product-img go-top">
                                                             <Link to="/product-details">
-                                                                <img src={publicUrl + product.imgSrc} alt={product.title} />
+                                                                <img src={publicUrl  + product.imgSrc} alt={product.title} />
                                                             </Link>
                                                         </div>
                                                         <div className="product-info">

@@ -8,7 +8,7 @@ import Footer from './global-components/footer';
 const ShopRightSidebarPage = () => {
     return <div>
         <Navbar />
-        <PageHeader />
+        <PageHeader  headertitle="Liste des biens à vendre" subheader="Vente"/>
         <ShopRightSidebar />
         <CallToActionV1 />
         <Footer />

@@ -1,7 +1,6 @@
 import React from 'react';
 import Navbar from './global-components/navbar';
 import PageHeader from './global-components/page-header';
-
 import Banner from './section-components/banner-v2';
 import Aboutv3 from './section-components/about-v3';
 import Video from './section-components/video-v2';
