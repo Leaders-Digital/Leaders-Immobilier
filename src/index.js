@@ -13,6 +13,7 @@ import Estimation from './components/estimation';
 import TrouverAcheteur from './components/trouvez-acheteur';
 import Agence from './components/agence';
 import ProdductDetails from './components/product-details';
+import ProdductDetailsTest from './components/product-details-test';
 import Contact from './components/contact';
 
 class Root extends Component {
@@ -27,7 +28,8 @@ class Root extends Component {
               <Route path="/agence" element={<Agence />} />
               <Route path="/vente" element={<ShopGrid />} />
               <Route path="/louer" element={<Louer />} />
-              <Route path="/product-details" element={<ProdductDetails />} />
+              <Route path="/product-details/:id" element={<ProdductDetails />} />
+              <Route path="/product-details/test" element={<ProdductDetailsTest />} />
               <Route path="/histoires" element={<Story />} />
               <Route path="/events" element={<Events />} />
               <Route path="/estimation" element={<Estimation />} />

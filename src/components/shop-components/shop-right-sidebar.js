@@ -7,24 +7,26 @@ const ShopGridV1 = () => {
     const [searchTerm, setSearchTerm] = useState('');
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(6);
+    const [itemsPerPage] = useState(6); 
     const [totalItems, setTotalItems] = useState(0);
     const [viewMode, setViewMode] = useState('grid');       
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_API_URL}api/biens`, {
-            params: {
-                page: currentPage,
-                itemsPerPage: itemsPerPage,
-                type: 'vente'
+        axios.post(`${process.env.REACT_APP_API_URL}api/v2/biens`, {
+            page: currentPage,
+            itemPerPage: itemsPerPage,
+            type: 'vente'
+        }, {
+            headers: {
+                Authorization: 'jkaAVXs852ZPOnlop795'
             }
         })
         .then((response) => {
-            const fetchedProducts = response.data.items || response.data; 
+            const fetchedProducts = Array.isArray(response.data.resultat) ? response.data.resultat : [];
             setProducts(fetchedProducts);
             
-            const total = response.data.total || fetchedProducts.length; 
-            setTotalItems(total); 
+            const total = response.data.totalItems || fetchedProducts.length;
+            setTotalItems(total);
         })
         .catch((error) => {
             console.error('Error fetching products:', error);
@@ -32,7 +34,43 @@ const ShopGridV1 = () => {
         });
     }, [currentPage, itemsPerPage]);
 
-    const totalPages = 20;
+    const totalPages = Math.ceil(totalItems / itemsPerPage);
+
+
+   const getPaginationPages = () => {
+    const pages = [];
+    const delta = 1; // Number of pages to show before and after the current page
+    let startPage = Math.max(1, currentPage - delta);
+    let endPage = Math.min(totalPages, currentPage + delta);
+
+    // Add the first page if it's not already in the range
+    if (startPage > 1) {
+        pages.push(1);
+    }
+
+    // Show '...' if there's a gap before the start page
+    if (startPage > 2) {
+        pages.push('...');
+    }
+
+    // Add pages within the calculated range
+    for (let i = startPage; i <= endPage; i++) {
+        pages.push(i);
+    }
+
+    // Show '...' if there's a gap after the end page
+    if (endPage < totalPages - 1) {
+        pages.push('...');
+    }
+
+    // Add the last page if it's not already in the range
+    if (endPage < totalPages) {
+        pages.push(totalPages);
+    }
+
+    return pages;
+};
+
 
     const filteredProducts = products.filter(product =>
         product.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
@@ -89,7 +127,7 @@ const ShopGridV1 = () => {
                                     </li>
                                     <li>
                                         <div className="showing-product-number text-right">
-                                            <span>Showing {filteredProducts.length} of {totalItems} results</span>
+                                            <span>Affichage de {filteredProducts.length} résultats sur  {totalItems} </span>
                                         </div>
                                     </li>
                                     <li>
@@ -127,60 +165,57 @@ const ShopGridV1 = () => {
                                                 </div>
                                                 {/* Product Items (Grid View) */}
                                                 {filteredProducts.length > 0 ? (
-                                                    filteredProducts.map(product => {
-                                                        return (
-                                                            <div className="col-xl-6 col-sm-6 col-12" key={product.id}>
-                                                                <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-                                                                    <div className="product-img go-top">
-                                                                    <Link to={`/product-details/${product.id}`}>
-    <img 
-        src={`${process.env.REACT_APP_API_URL}${product.listImages?.[0]?.version_web}`} 
-        onError={(e) => e.target.src = 'https://placehold.co/600x400/png'}  
-    />  
-</Link>
+    filteredProducts.map(product => (
+        <div className="col-xl-6 col-sm-6 col-12" key={product.id}>
+            <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+                <div className="product-img go-top">
+                    <Link to={`/product-details/${product.id}`}>
+                        <img 
+                            src={`${process.env.REACT_APP_API_URL}${product.listImages?.[0]?.version_web}`} 
+                            onError={(e) => e.target.src = 'https://placehold.co/600x400/png'}  
+                        />  
+                    </Link>
+                </div>
+                <div className="product-info">
+                    <div className="product-badge">
+                        <ul>
+                            <li className="sale-badge">{product.type}</li>
+                        </ul>
+                    </div>
+                    <h2 className="product-title">
+                        <Link to={`/product-details/${product.id}`}>{product.type_categorie} à {product.delegation}</Link>
+                    </h2>
+                    <div className="product-img-location go-top">
+                        <ul>
+                            <li>
+                                <Link to="#"><i className="flaticon-pin" /> {product.ville}, {product.delegation}</Link>
+                            </li>
+                        </ul>
+                    </div>
+                    <ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+                        {product.caracteristiqueBien?.nbr_chambre && (
+                            <li><span>{product.caracteristiqueBien.nbr_chambre}</span> Lits</li>
+                        )}
+                        {product.caracteristiqueBien?.nbr_salle_bain && (
+                            <li><span>{product.caracteristiqueBien.nbr_salle_bain}</span> Salles de bains</li>
+                        )}
+                        {product.caracteristiqueBien?.superficieTotal && (
+                            <li><span>{product.caracteristiqueBien.superficieTotal}</span> m²</li>
+                        )}
+                    </ul>
+                </div>
+                <div className="product-info-bottom">
+                    <div className="product-price">
+                        <span>{product.prixVente} <label>TND</label></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    ))
+) : (
+    <p>Aucun bien trouvé</p>
+)}
 
-                                                                    </div>
-                                                                    <div className="product-info">
-                                                                        <div className="product-badge">
-                                                                            <ul>
-                                                                                <li className="sale-badge">{product.type}</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <h2 className="product-title">
-                                                                            <Link to={`/product-details/${product.id}`}>{product.type_categorie} à {product.delegation}</Link>
-                                                                        </h2>
-                                                                        <div className="product-img-location go-top">
-                                                                            <ul>
-                                                                                <li>
-                                                                                    <Link to="#"><i className="flaticon-pin" /> {product.ville}, {product.delegation}</Link>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-    {product.caracteristiqueBien.nbr_chambre && (
-        <li><span>{product.caracteristiqueBien.nbr_chambre}</span> Lits</li>
-    )}
-    {product.caracteristiqueBien.nbr_salle_bain && (
-        <li><span>{product.caracteristiqueBien.nbr_salle_bain}</span> Salles de bains</li>
-    )}
-    {product.caracteristiqueBien.superficieTotal && (
-        <li><span>{product.caracteristiqueBien.superficieTotal}</span> m²</li>
-    )}
-</ul>
-
-                                                                    </div>
-                                                                    <div className="product-info-bottom">
-                                                                        <div className="product-price">
-                                                                            <span>{product.prixVente} <label>TND</label></span>
-                                                                        </div>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        );
-                                                    })
-                                                ) : (
-                                                    <p>Aucun bien trouvé</p>
-                                                )}
                                             </div>
                                         </div>
                                     </div>
@@ -200,22 +235,17 @@ const ShopGridV1 = () => {
                                                                     <Link to={`/product-details/${product.id}`}>
                                                                         <img 
                                                                                src={`${process.env.REACT_APP_API_URL}${product.listImages?.[0]?.version_web}`} 
-                                                                               onError={(e) => e.target.src = 'https://placehold.co/600x400/png'} 
+                                                                               onError={(e) => e.target.src = 'https://placehold.co/600x400/png'}
                                                                         />
                                                                     </Link>
                                                                 </div>
                                                                 <div className="product-info">
-                                                                    <div className="product-badge-price">
-                                                                        <div className="product-badge">
-                                                                            <ul>
-                                                                                <li className="sale-badge">à louer</li>
-                                                                            </ul>
-                                                                        </div>
-                                                                        <div className="product-price">
-                                                                            <span>{product.prixVente} <label>/Mois</label></span>
-                                                                        </div>
+                                                                    <div className="product-badge">
+                                                                        <ul>
+                                                                            <li className="sale-badge">{product.type}</li>
+                                                                        </ul>
                                                                     </div>
-                                                                    <h2 className="product-title go-top">
+                                                                    <h2 className="product-title">
                                                                         <Link to={`/product-details/${product.id}`}>{product.type_categorie} à {product.delegation}</Link>
                                                                     </h2>
                                                                     <div className="product-img-location go-top">
@@ -226,10 +256,21 @@ const ShopGridV1 = () => {
                                                                         </ul>
                                                                     </div>
                                                                     <ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-                                                                        <li><span>{product.caracteristiqueBien.nbr_chambre}</span> Lits</li>
-                                                                        <li><span>{product.caracteristiqueBien.nbr_salle_bain}</span> Salles de bains</li>
-                                                                        <li><span>{product.caracteristiqueBien.superficieTotal}</span> m²</li>
+                                                                        {product.caracteristiqueBien.nbr_chambre && (
+                                                                            <li><span>{product.caracteristiqueBien.nbr_chambre}</span> Lits</li>
+                                                                        )}
+                                                                        {product.caracteristiqueBien.nbr_salle_bain && (
+                                                                            <li><span>{product.caracteristiqueBien.nbr_salle_bain}</span> Salles de bains</li>
+                                                                        )}
+                                                                        {product.caracteristiqueBien.superficieTotal && (
+                                                                            <li><span>{product.caracteristiqueBien.superficieTotal}</span> m²</li>
+                                                                        )}
                                                                     </ul>
+                                                                </div>
+                                                                <div className="product-info-bottom">
+                                                                    <div className="product-price">
+                                                                        <span>{product.prixVente} <label>TND</label></span>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -252,9 +293,16 @@ const ShopGridV1 = () => {
                                         >
                                             <Link to="#"><i className="fas fa-angle-double-left" /></Link>
                                         </li>
-                                        {[...Array(totalPages).keys()].map((page) => (
-                                            <li key={page + 1} className={page + 1 === currentPage ? 'active' : ''}>
-                                                <Link to="#" onClick={() => setCurrentPage(page + 1)}>{page + 1}</Link>
+                                        {getPaginationPages().map((page, index) => (
+                                            <li
+                                                key={index}
+                                                className={page === currentPage ? 'active' : ''}
+                                            >
+                                                {page === '...' ? (
+                                                    <span>...</span>
+                                                ) : (
+                                                    <Link to="#" onClick={() => setCurrentPage(page)}>{page}</Link>
+                                                )}
                                             </li>
                                         ))}
                                         <li

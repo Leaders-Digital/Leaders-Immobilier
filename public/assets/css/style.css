@@ -9011,6 +9011,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .product-img img {
+  width: 100%;
+  height:250px; 
+  object-fit: cover;
   position: relative;
   -webkit-transition: all 3.5s ease 0s;
   -o-transition: all 3.5s ease 0s;
