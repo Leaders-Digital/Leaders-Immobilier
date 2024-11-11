@@ -52,7 +52,7 @@ class EstimationForm extends Component {
   <div className="input-item input-item-phone ltn__custom-icon">
     <select name="propertyType" className="form-control" >
       <option value="">Type de bien</option>
-      <option value="">Appartement</option>
+      <option value="Appartement">Appartement</option>
       <option value="villa">Villa</option>
 	  <option value="maison">Maison</option>
       <option value="terrain">Terrain</option>

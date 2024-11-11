@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import $ from 'jquery'; // Assuming jQuery is available if using Slick
-import 'slick-carousel'; // Import slick-carousel if needed
+import Slider from 'react-slick';
+
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -31,37 +31,6 @@ const ProductDetail = () => {
         fetchProductDetails();
     }, [id]);
 
-    // Reinitialize Slick after product images are loaded
-    useEffect(() => {
-        if (!loading && product) {
-            setTimeout(() => {
-                $('.ltn__image-slider-5-active').slick({
-                    slidesToShow: 3, // Show three images if there's enough space
-                    slidesToScroll: 1,
-                    arrows: true,
-                    autoplay: false,
-                    prevArrow: '<button type="button" class="slick-prev">←</button>',
-                    nextArrow: '<button type="button" class="slick-next">→</button>',
-                    dots: false,
-                    responsive: [
-                        {
-                            breakpoint: 1024,
-                            settings: {
-                                slidesToShow: 2,
-                            },
-                        },
-                        {
-                            breakpoint: 600,
-                            settings: {
-                                slidesToShow: 1,
-                            },
-                        },
-                    ],
-                });
-            }, 100);
-        }
-    }, [loading, product]);
-
     if (loading) return <p>Loading...</p>;
     if (!product) return <p>Product not found.</p>;
 
@@ -69,10 +38,34 @@ const ProductDetail = () => {
         (image) => `${process.env.REACT_APP_API_URL}${image.version_web}`
     );
 
+    // Slick slider settings for react-slick
+    const sliderSettings = {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: false,
+        prevArrow: <button type="button" className="slick-prev">←</button>,
+        nextArrow: <button type="button" className="slick-next">→</button>,
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    slidesToShow: 2,
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                },
+            },
+        ],
+    };
+
     return (
         <div className="ltn__img-slider-area mb-90">
             <div className="container-fluid">
-                <div className="row ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
+                <Slider {...sliderSettings} className="ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
                     {images.map((image, index) => (
                         <div className="col-lg-4" key={index}>
                             <div
@@ -92,12 +85,13 @@ const ProductDetail = () => {
                                             width: '100%',
                                             height: '400px', 
                                         }}
+                                        onError={(e) => e.target.src = 'https://placehold.co/1920x1080/png'}  
                                     />
                                 </a>
                             </div>
                         </div>
                     ))}
-                </div>
+                </Slider>
             </div>
         </div>
     );

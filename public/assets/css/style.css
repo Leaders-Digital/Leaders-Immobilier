@@ -16231,6 +16231,24 @@ input.cart-plus-minus-box {
   content: "\f225";
 }
 
+.ltn__car-dealer-form-box .ltn__custom-icon.ltn__icon-building .nice-select::before {
+content: "\f1ad";
+
+
+}
+
+.ltn__car-dealer-form-box .ltn__custom-icon.ltn__icon-city .nice-select::before {
+content: "\f64f";
+}
+
+.ltn__car-dealer-form-box .ltn__custom-icon.ltn__icon-bed .nice-select::before {
+content: "\f236";
+}
+
+.ltn__car-dealer-form-box .ltn__custom-icon.ltn__icon-mark .nice-select::before {
+content: "\f3c5";
+}
+
 .car-price-filter-range .price_filter .ui-widget-content {
   height: 8px;
   background-color: var(--white);

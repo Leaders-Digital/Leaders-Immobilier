@@ -1,45 +1,73 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState,useRef  } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
-
+import Slick from 'react-slick';
+                                                                                                                                                                                                                                                                                          
 const ShopDetails = () => {
 	const { id } = useParams(); // Get the product ID from URL
 	const [product, setProduct] = useState(null);
 	const [loading, setLoading] = useState(true);
 	const [rating, setRating] = useState(0);  // State for rating moved here
 	const publicUrl = process.env.PUBLIC_URL + '/';
+	const [similarProducts, setSimilarProducts] = useState([]); // State for similar products
+
+	
+
+	const slickRef = useRef(null);
 
 	useEffect(() => {
 		const fetchProductDetails = async () => {
-			setLoading(true); // Set loading to true while data is fetched
+			setLoading(true);
 			try {
 				const response = await axios.post(
 					`${process.env.REACT_APP_API_URL}api/v2/biens/detail`,
-					{ id: id }, // Pass id in the body of the request
-					{
-						headers: { Authorization: 'jkaAVXs852ZPOnlop795' },
-					}
+					{ id },
+					{ headers: { Authorization: 'jkaAVXs852ZPOnlop795' } }
 				);
 
-				const productData = response.data?.resultat?.[0]; // Access the first item in the 'resultat' array
+				const productData = response.data?.resultat?.[0];
 				if (productData) {
-					setProduct(productData); // Save product details
+					setProduct(productData);
+					fetchSimilarProducts(productData.type_categorie, productData.type); // Fetch similar products
+					console.log(productData.type_categorie, productData.type);
+					
 				} else {
 					console.error("No product data found.");
 				}
 			} catch (error) {
 				console.error('Error fetching product details:', error);
 			} finally {
-				setLoading(false); // Ensure loading is set to false after fetching
+				setLoading(false);
+			}
+		};
+
+		const fetchSimilarProducts = async (type_categorie, type) => {
+			try {
+				const response = await axios.post(
+					`${process.env.REACT_APP_API_URL}api/v2/biens`,
+					{ type_categorie, type, exclude_id: id }, 
+					{ headers: { Authorization: 'jkaAVXs852ZPOnlop795' } }
+				);
+				setSimilarProducts(response.data?.resultat?.slice(0, 3) || []);
+			} catch (error) {
+				console.error('Error fetching similar products:', error);
 			}
 		};
 
 		fetchProductDetails();
 	}, [id]);
 
-	if (loading) return <p>Loading...</p>;
-	if (!product) return <p>Product not found.</p>;
+	const sliderSettings = {
+        dots: true,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+    };
+	
 
+	if (loading) return <p>Loading...</p>;
+	if (!product) return <p>Produits non trouvé</p>;
 
 	return <div className="ltn__shop-details-area pb-10">
 		<div className="container">
@@ -52,11 +80,17 @@ const ShopDetails = () => {
 									<Link to="#">À VENDRE</Link>
 								</li>
 								<li className="ltn__blog-date">
-									<i className="far fa-calendar-alt" /> {new Date(product.date).toLocaleDateString()}
+									<i className="far fa-calendar-alt" /> {new Date(product.date_creation).toLocaleDateString()}
 								</li>
 							</ul>
 						</div>
-						<h1>{product.type_categorie} à {product.delegation}</h1>
+						<h1 style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+    <span>{product.type_categorie} à {product.delegation}</span>
+    <span className='ltn__secondary-color' style={{ fontSize: '1.5rem', fontWeight: 'bold'}}>
+        {product.prixVente} <label>TND</label>
+    </span>
+</h1>
+
 						<label>
 							<span className="ltn__secondary-color">
 								<i className="flaticon-pin" />
@@ -67,25 +101,40 @@ const ShopDetails = () => {
 						<p>{product.description}</p>
 						<h4 className="title-2">Caractéristiques</h4>
 						<div className="property-detail-info-list section-bg-1 clearfix mb-60">
-							<ul>
-								<li><i className="fa-solid fa-hashtag" /> <label>Référence :</label> <span>{product.ref || 'N/A'}</span></li>
-								<li><i className="fa-solid fa-ruler-combined" /> <label>Superficie :</label> <span>{product.caracteristiqueBien?.superficieTotal || 'N/A'} m²</span></li>
-								<li><i className="fa-solid fa-bed" /> <label>Chambres :</label> <span>{product.caracteristiqueBien?.nbr_chambre || 'N/A'}</span></li>
-								<li><i className="fa-solid fa-bath" /> <label>Salles de bain :</label> <span>{product.caracteristiqueBien?.nbr_salle_bain || 'N/A'}</span></li>
-							</ul>
-							<ul>
-								<li><i className="fa-solid fa-car" /> <label>Parking :</label> <span>{product.caracteristiqueBien?.parking || 'N/A'}</span></li>
-								<li><i className="fa-solid fa-layer-group" /> <label>Etage :</label> <span>{product.caracteristiqueBien?.etage || 'N/A'}</span></li>
-								<li><i className="fa-solid fa-couch" /> <label>Meublé :</label> <span>{product.caracteristiqueBien?.meuble ? 'Oui' : 'Non'}</span></li>
-								<li><i className="fa-solid fa-sign" /> <label>Statut de la propriété :</label> <span>{product.type || 'N/A'}</span></li>
-							</ul>
-						</div>
+  <ul>
+    {product.ref && (
+      <li><i className="fa-solid fa-hashtag" /> <label>Référence :</label> <span>{product.ref}</span></li>
+    )}
+    {product.caracteristiqueBien?.superficieTotal && (
+      <li><i className="fa-solid fa-ruler-combined" /> <label>Superficie :</label> <span>{product.caracteristiqueBien.superficieTotal} m²</span></li>
+    )}
+    {product.caracteristiqueBien?.nbr_chambre && (
+      <li><i className="fa-solid fa-bed" /> <label>Chambres :</label> <span>{product.caracteristiqueBien.nbr_chambre}</span></li>
+    )}
+    {product.caracteristiqueBien?.nbr_salle_bain && (
+      <li><i className="fa-solid fa-bath" /> <label>Salles de bain :</label> <span>{product.caracteristiqueBien.nbr_salle_bain}</span></li>
+    )}
+  </ul>
+  <ul>
+    {product.caracteristiqueBien?.parking && (
+      <li><i className="fa-solid fa-car" /> <label>Parking :</label> <span>{product.caracteristiqueBien.parking}</span></li>
+    )}
+    {product.caracteristiqueBien?.etage && (
+      <li><i className="fa-solid fa-layer-group" /> <label>Etage :</label> <span>{product.caracteristiqueBien.etage}</span></li>
+    )}
+    {product.caracteristiqueBien?.meuble !== undefined && (
+      <li><i className="fa-solid fa-couch" /> <label>Meublé :</label> <span>{product.caracteristiqueBien.meuble ? 'Oui' : 'Non'}</span></li>
+    )}
+    {product.type && (
+      <li><i className="fa-solid fa-sign" /> <label>Statut de la propriété :</label> <span>{product.type}</span></li>
+    )}
+  </ul>
+</div>
 
 
 
 
-
-						<h4 className="title-2">Location</h4>
+						<h4 className="title-2">localisation</h4>
 						<div className="property-details-google-map mb-60">
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1596.5755999114247!2d11.086171631258225!3d36.83885474574435!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x131d3354eaddf7f3%3A0xb6c66ff6c6ef2045!2sAppartement%20Bensaid!5e0!3m2!1sfr!2stn!4v1730535085481!5m2!1sfr!2stn" width="100%" height="100%" frameBorder={0} allowFullScreen aria-hidden="false" tabIndex={0} />
 						</div>
@@ -327,91 +376,13 @@ const ShopDetails = () => {
 							</div>
 
 						</div>
-						<h4 className="title-2">BIENS SIMILAIRES :</h4>
-						<div className="row">
-							{/* ltn__product-item */}
-							<div className="col-xl-6 col-sm-6 col-12 go-top">
-								<div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-									<div className="product-img">
-										<Link to="/shop"><img src={publicUrl + "assets/img/product-3/1.png"} alt="#" /></Link>
+					
+			
+		
 
-									</div>
-									<div className="product-info">
-										<div className="product-badge">
-											<ul>
-												<li className="sale-badg">À VENDRE</li>
-											</ul>
-										</div>
-										<h2 className="product-title"><Link to="/shop">Villa à LA SOUKRA</Link></h2>
-										<div className="product-img-location">
-											<ul>
-												<li>
-													<Link to="/shop"><i className="flaticon-pin" /> Soukra, Tunisie</Link>
-												</li>
-											</ul>
-										</div>
-										<ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-											<li><span>3 </span>
-												Lits
-											</li>
-											<li><span>2 </span>
-												Salles de bains
-											</li>
-											<li><span>3450 </span>
-												Carrés
-											</li>
-										</ul>
 
-									</div>
-									<div className="product-info-bottom">
-										<div className="product-price">
-											<span>349,000DT</span>
-										</div>
-									</div>
-								</div>
-							</div>
-							{/* ltn__product-item */}
-							<div className="col-xl-6 col-sm-6 col-12 go-top">
-								<div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
-									<div className="product-img">
-										<Link to="/shop"><img src={publicUrl + "assets/img/product-3/4.png"} alt="#" /></Link>
-
-									</div>
-									<div className="product-info">
-										<div className="product-badge">
-											<ul>
-												<li className="sale-badg">À VENDRE</li>
-											</ul>
-										</div>
-										<h2 className="product-title"><Link to="/shop">Etage de villa à ENNASR</Link></h2>
-										<div className="product-img-location">
-											<ul>
-												<li>
-													<Link to="/shop"><i className="flaticon-pin" /> Ariana, Tunisie</Link>
-												</li>
-											</ul>
-										</div>
-										<ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
-											<li><span>3 </span>
-												Lits
-											</li>
-											<li><span>2 </span>
-												Salles de bains
-											</li>
-											<li><span>3450 </span>
-												Carrés
-											</li>
-										</ul>
-
-									</div>
-									<div className="product-info-bottom">
-										<div className="product-price">
-											<span>349,000DT</span>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+						
+					
 					</div>
 				</div>
 				<div className="col-lg-4">
@@ -446,7 +417,72 @@ const ShopDetails = () => {
 							<Link to="/shop"><img src={publicUrl + "assets/img/banner/2.jpg"} alt="#" /></Link>
 						</div>
 					</aside>
+
+					
 				</div>
+								
+				<div className="ltn__shop-details-area pb-10">
+			<div className="container">
+				{/* Product details code here */}
+				<h4 className="title-2">BIENS SIMILAIRES :</h4>
+				<div className="row">
+					{similarProducts.length > 0 ? (
+						similarProducts.map((similarProduct) => (
+							<div key={similarProduct.id} className="col-xl-4 col-md -6 col-12 go-top">
+								<div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
+									<div className="product-img go-top">
+										<Link to={`/product-details/${similarProduct.id}`}>
+											<img 
+												src={`${process.env.REACT_APP_API_URL}${similarProduct.listImages?.[0]?.version_web}`}
+												onError={(e) => e.target.src = 'https://placehold.co/600x400/png'} 
+												alt={similarProduct.type_categorie}
+											/>
+										</Link>
+									</div>
+									<div className="product-info">
+										<div className="product-badge">
+											<ul>
+												<li className="sale-badge">{similarProduct.type}</li>
+											</ul>
+										</div>
+										<h2 className="product-title">
+											<Link to={`/product-details/${similarProduct.id}`}>
+												{similarProduct.type_categorie} à {similarProduct.delegation}
+											</Link>
+										</h2>
+										<div className="product-img-location go-top">
+											<ul>
+												<li>
+													<Link to="#"><i className="flaticon-pin" /> {similarProduct.ville}, {similarProduct.delegation}</Link>
+												</li>
+											</ul>
+										</div>
+										<ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
+											{similarProduct.caracteristiqueBien?.nbr_chambre && (
+												<li><span>{similarProduct.caracteristiqueBien.nbr_chambre}</span> Lits</li>
+											)}
+											{similarProduct.caracteristiqueBien?.nbr_salle_bain && (
+												<li><span>{similarProduct.caracteristiqueBien.nbr_salle_bain}</span> Salles de bains</li>
+											)}
+											{similarProduct.caracteristiqueBien?.superficieTotal && (
+												<li><span>{similarProduct.caracteristiqueBien.superficieTotal}</span> m²</li>
+											)}
+										</ul>
+									</div>
+									<div className="product-info-bottom">
+										<div className="product-price">
+											<span>{similarProduct.prixVente} <label>TND</label></span>
+										</div>
+									</div>
+								</div>
+							</div>
+						))
+					) : (
+						<p>Aucun bien similaire trouvé</p>
+					)}
+				</div>
+			</div>
+		</div>
 			</div>
 		</div>
 	</div>
