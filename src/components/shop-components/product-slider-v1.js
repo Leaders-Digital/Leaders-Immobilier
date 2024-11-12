@@ -3,12 +3,10 @@ import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Slider from 'react-slick';
 
-
 const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
-    const publicUrl = process.env.PUBLIC_URL + '/';
 
     useEffect(() => {
         const fetchProductDetails = async () => {
@@ -34,9 +32,14 @@ const ProductDetail = () => {
     if (loading) return <p>Loading...</p>;
     if (!product) return <p>Product not found.</p>;
 
-    const images = product.listImages.map(
-        (image) => `${process.env.REACT_APP_API_URL}${image.version_web}`
-    );
+    // Ensure listImages exists and is an array, then filter and map
+    const images = (product?.listImages || []).filter(image => image.version_web)
+        .map(image => `${process.env.REACT_APP_API_URL}${image.version_web}`);
+
+    // Use placeholder images if no valid images are available
+    const finalImages = images.length > 0 
+        ? images 
+        : new Array(4).fill('https://placehold.co/1920x1080/png');
 
     // Slick slider settings for react-slick
     const sliderSettings = {
@@ -47,27 +50,18 @@ const ProductDetail = () => {
         prevArrow: <button type="button" className="slick-prev">←</button>,
         nextArrow: <button type="button" className="slick-next">→</button>,
         responsive: [
-            {
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 2,
-                },
-            },
-            {
-                breakpoint: 600,
-                settings: {
-                    slidesToShow: 1,
-                },
-            },
+            { breakpoint: 1024, settings: { slidesToShow: 3 } },
+            { breakpoint: 600, settings: { slidesToShow: 1 } },
         ],
     };
 
     return (
         <div className="ltn__img-slider-area mb-90">
             <div className="container-fluid">
+                {/* Render Slider only if there are images to display */}
                 <Slider {...sliderSettings} className="ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
-                    {images.map((image, index) => (
-                        <div className="col-lg-4" key={index}>
+                    {finalImages.map((image, index) => (
+                        <div className="col-lg-3" key={index}>
                             <div
                                 className="ltn__img-slide-item-4"
                                 style={{
@@ -83,9 +77,9 @@ const ProductDetail = () => {
                                         style={{
                                             display: 'block',
                                             width: '100%',
-                                            height: '400px', 
+                                            height: '400px',
                                         }}
-                                        onError={(e) => e.target.src = 'https://placehold.co/1920x1080/png'}  
+                                        onError={(e) => e.target.src = 'https://placehold.co/1920x1080/png'}
                                     />
                                 </a>
                             </div>
