@@ -351,31 +351,41 @@
           /* --------------------------------------------------------
               15. Slider One Active 
           --------------------------------------------------------- */
-          $('.ltn__slide-one-active').slick({
-              autoplay: false,
-              autoplaySpeed: 2000,
-              arrows: true,
-              dots: true,
-              fade: true,
-              cssEase: 'linear',
-              infinite: true,
-              speed: 300,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-              nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
-              responsive: [
-                  {
-                      breakpoint: 1200,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                      }
-                  }
-              ]
-          }).on('afterChange', function(){
-              new WOW().init();
-          });
+          $(document).ready(function() {
+            const $slider = $('.ltn__slide-one-active');
+            if ($slider.length && !$slider.hasClass('slick-initialized')) {
+                console.log("Initializing slick slider...");
+                $slider.slick({
+                    autoplay: false,
+                    autoplaySpeed: 2000,
+                    arrows: true,
+                    dots: true,
+                    fade: true,
+                    cssEase: 'linear',
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                    nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                    responsive: [
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                arrows: false,
+                                dots: true,
+                            }
+                        }
+                    ]
+                }).on('afterChange', function() {
+                    new WOW().init();
+                });
+            } else {
+                console.warn('Slider element already initialized or not found: .ltn__slide-one-active');
+            }
+        });
+        
+        
           /* --------------------------------------------------------
               15-2. Slider Active 2
           --------------------------------------------------------- */
@@ -642,74 +652,78 @@
           /* --------------------------------------------------------
               16-2. Product Slider Item Four
           --------------------------------------------------------- */
-          $('.ltn__product-slider-item-four-active-full-width').slick({
-              arrows: true,
-              dots: true,
-              infinite: true,
-              speed: 300,
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-              nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
-              responsive: [
-                  {
-                      breakpoint: 1800,
-                      settings: {
-                          slidesToShow: 3,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 1600,
-                      settings: {
-                          slidesToShow: 3,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 1400,
-                      settings: {
-                          slidesToShow: 3,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 1200,
-                      settings: {
-                          slidesToShow: 2,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 992,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 2,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 768,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 2,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 575,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 1,
-                          slidesToScroll: 1
-                      }
-                  }
-              ]
-          });
-  
+          if ($('.ltn__product-slider-item-four-active-full-width').length && !$('.ltn__product-slider-item-four-active-full-width').hasClass('slick-initialized')) {
+            $('.ltn__product-slider-item-four-active-full-width').slick({
+                arrows: true,
+                dots: true,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                responsive: [
+                    {
+                        breakpoint: 1800,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1600,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1400,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 575,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        } else {
+            console.warn('Slider element already initialized or not found: .ltn__product-slider-item-four-active-full-width');
+        }
+        
   
           /* --------------------------------------------------------
               16-3. Related Product Slider One
@@ -1106,57 +1120,62 @@
           /* --------------------------------------------------------
               21. Testimonial Slider - 5
           --------------------------------------------------------- */
-          $('.ltn__testimonial-slider-5-active').slick({
-              arrows: true,
-              centerMode: false,
-              centerPadding: '80px',
-              dots: false,
-              infinite: true,
-              speed: 300,
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-              nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
-              responsive: [
-                  {
-                      breakpoint: 1200,
-                      settings: {
-                          slidesToShow: 3,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 992,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          centerMode: false,
-                          slidesToShow: 2,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 768,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          centerMode: false,
-                          slidesToShow: 2,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 580,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          centerMode: false,
-                          slidesToShow: 1,
-                          slidesToScroll: 1
-                      }
-                  }
-              ]
-          });
+          if ($('.ltn__testimonial-slider-5-active').length && !$('.ltn__testimonial-slider-5-active').hasClass('slick-initialized')) {
+            $('.ltn__testimonial-slider-5-active').slick({
+                arrows: true,
+                centerMode: false,
+                centerPadding: '80px',
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                            centerMode: false,
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                            centerMode: false,
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 580,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                            centerMode: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        } else {
+            console.warn('Slider element already initialized or not found: .ltn__testimonial-slider-5-active');
+        }
+        
           
           /* --------------------------------------------------------
               21. Testimonial Slider - 6
@@ -1534,44 +1553,46 @@
           /* --------------------------------------------------------
               27. Brand Logo
           --------------------------------------------------------- */
-          if($('.ltn__brand-logo-active').length){
-              $('.ltn__brand-logo-active').slick({
-                  rtl: false,
-                  arrows: false,
-                  dots: false,
-                  infinite: true,
-                  speed: 300,
-                  slidesToShow: 5,
-                  slidesToScroll: 1,
-                  prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-                  nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
-                  responsive: [
-                      {
-                          breakpoint: 992,
-                          settings: {
-                              slidesToShow: 4,
-                              slidesToScroll: 1
-                          }
-                      },
-                      {
-                          breakpoint: 768,
-                          settings: {
-                              slidesToShow: 3,
-                              slidesToScroll: 1,
-                              arrows: false,
-                          }
-                      },
-                      {
-                          breakpoint: 580,
-                          settings: {
-                              slidesToShow: 2,
-                              slidesToScroll: 1
-                          }
-                      }
-                  ]
-              });
-          };
-  
+          if ($('.ltn__brand-logo-active').length && !$('.ltn__brand-logo-active').hasClass('slick-initialized')) {
+            $('.ltn__brand-logo-active').slick({
+                rtl: false,
+                arrows: false,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                responsive: [
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 4,
+                            slidesToScroll: 1
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 3,
+                            slidesToScroll: 1,
+                            arrows: false,
+                        }
+                    },
+                    {
+                        breakpoint: 580,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        } else {
+            console.warn('Slider element already initialized or not found: .ltn__brand-logo-active');
+        }
+        
   
           /* --------------------------------------------------------
               # upcoming-project-slider-1
