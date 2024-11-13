@@ -1,113 +1,124 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Select, MenuItem, FormControl, InputLabel, Button } from '@mui/material';
 
-class SearchForm extends Component {
+const SearchForm = () => {
+  // State hooks for each dropdown
+  const [type, setType] = useState('');
+  const [ville, setVille] = useState('');
+  const [typeCategorie, setTypeCategorie] = useState('');
 
-    render() {
+  const navigate = useNavigate();  // Hook to programmatically navigate
 
-        let publicUrl = process.env.PUBLIC_URL+'/'
-        let imagealt = 'image'
+  // Handlers to update state when dropdown values change
+  const handleTypeChange = (event) => setType(event.target.value);
+  const handlevilleChange = (event) => setVille(event.target.value);
+  const handlePropertyTypeChange = (event) => setTypeCategorie(event.target.value);
 
-    return <div className="ltn__car-dealer-form-area mt--65 mt-120 ">
-			  <div className="container">
-			    <div className="row">
-			      <div className="col-lg-12">
-			        <div className="ltn__car-dealer-form-tab">
-			          <div className="ltn__tab-menu  text-uppercase d-none">
-			            <div className="nav">
-			              <a className="active show" data-bs-toggle="tab" href="#ltn__form_tab_1_1"><i className="fas fa-car" />Find A Car</a>
-			              <a data-bs-toggle="tab" href="#ltn__form_tab_1_2" ><i className="far fa-user" />Get a Dealer</a>
-			            </div>
-			          </div>
-			          <div className="tab-content bg-white box-shadow-1 position-relative pb-10">
-			            <div className="tab-pane fade active show" id="ltn__form_tab_1_1">
-			              <div className="car-dealer-form-inner">
-			                <form action="#" className="ltn__car-dealer-form-box row">
-			                  <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-car---- col-lg-3 col-md-6">
-			                    <select className="nice-select">
-			                      <option>Type</option>
-			                      <option>Vente</option>
-			                      <option>Location annuelle</option>
-			                      <option>Location estival</option>
-			                     
-			                    </select>
-			                  </div> 
-			                  <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-meter---- col-lg-3 col-md-6">
-			                    <select className="nice-select">
-			                      <option>Catégorie</option>
-			                      <option>Bâtiment</option>
-			                      <option>Terrain</option>
-			                    </select>
-			                  </div> 
-			                  <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-3 col-md-6">
-			                    <select className="nice-select">
-			                      <option>Type de bien</option>
-			                      <option>Appartement</option>
-			                      <option>Villa	</option>
-			                      <option>Maison</option>
-			                      <option>Terrain</option>
-			                      <option>Bureau</option>
-			                      <option>Etage de villa</option>
-			                      <option>Local commercial</option>
-			                    </select>
-			                  </div>
-			                  <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">
-			                    <div className="btn-wrapper text-center mt-0 go-top">
-			                      {/* <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> */}
-			                      <Link to="/shop" className="btn theme-btn-1 btn-effect-1 text-uppercase">Recherche</Link>
-			                    </div>
-			                  </div>
-			                </form>
-			              </div>
-			            </div>
-			            <div className="tab-pane fade" id="ltn__form_tab_1_2">
-			              <div className="car-dealer-form-inner">
-			                <form action="#" className="ltn__car-dealer-form-box row">
-			                  <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-car---- col-lg-3 col-md-6">
-			                    <select className="nice-select">
-			                      <option>Choose Area</option>
-			                      <option>chicago</option>
-			                      <option>London</option>
-			                      <option>Los Angeles</option>
-			                      <option>New York</option>
-			                      <option>New Jersey</option>
-			                    </select>
-			                  </div> 
-			                  <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-meter---- col-lg-3 col-md-6">
-			                    <select className="nice-select">
-			                      <option>Property Status</option>
-			                      <option>Open house</option>
-			                      <option>Rent</option>
-			                      <option>Sale</option>
-			                      <option>Sold</option>
-			                    </select>
-			                  </div> 
-			                  <div className="ltn__car-dealer-form-item ltn__custom-icon---- ltn__icon-calendar---- col-lg-3 col-md-6">
-			                    <select className="nice-select">
-			                      <option>Property Type</option>
-			                      <option>Apartment</option>
-			                      <option>Co-op</option>
-			                      <option>Condo</option>
-			                      <option>Single Family Home</option>
-			                    </select>
-			                  </div>
-			                  <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-calendar col-lg-3 col-md-6">
-			                    <div className="btn-wrapper text-center mt-0 go-top">
-			                      {/* <button type="submit" class="btn theme-btn-1 btn-effect-1 text-uppercase">Search Inventory</button> */}
-			                      <Link to="/go-top" className="btn theme-btn-1 btn-effect-1 text-uppercase">Search Properties</Link>
-			                    </div>
-			                  </div>
-			                </form>
-			              </div>
-			            </div>
-			          </div>
-			        </div>
-			      </div>
-			    </div>
-			  </div>
-			</div>
-        }
-}
+  // Form submission handler
+  const handleSearch = (e) => {
+    e.preventDefault();
+	console.log("Search Params:", { type, ville, typeCategorie }); 
 
-export default SearchForm
+    // Navigate to /vente with the selected values in the state
+    navigate('/vente', {
+      state: {
+        type,
+        ville,
+        typeCategorie
+      }
+    });
+	 window.location.reload();
+  };
+
+  
+
+  return (
+    <div className="ltn__car-dealer-form-area mt--65 mt-120">
+      <div className="container">
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="ltn__car-dealer-form-tab">
+              <div className="tab-content bg-white box-shadow-1 position-relative pb-10">
+                <div className="tab-pane fade active show" id="ltn__form_tab_1_1">
+                  <div className="car-dealer-form-inner">
+                    <form onSubmit={handleSearch} className="ltn__car-dealer-form-box row">
+                      <div className="ltn__car-dealer-form-item col-lg-3 col-md-6">
+
+						
+                        <FormControl fullWidth>
+                          <InputLabel>Type</InputLabel>
+                          <Select value={type}  onChange={handleTypeChange}       >
+                            <MenuItem value="Vente">Vente</MenuItem>
+                            <MenuItem value="Location annuelle">Location annuelle</MenuItem>
+                            <MenuItem value="Location estival">Location estival</MenuItem>
+                          </Select>
+                        </FormControl>
+                      </div>
+               
+                      <div className="ltn__car-dealer-form-item col-lg-3 col-md-6">
+                        <FormControl fullWidth>
+                          <InputLabel>Type de bien</InputLabel>
+                          <Select value={typeCategorie} onChange={handlePropertyTypeChange} MenuProps={{
+            PaperProps: {
+                style: {
+                    position: 'absolute',
+                    top: 'auto', 
+                    bottom: '0',  
+                    maxHeight: '200px', 
+                    overflowY: 'auto'   
+                }
+            }
+        }}>
+                            <MenuItem value="Appartement">Appartement</MenuItem>
+                            <MenuItem value="Villa">Villa</MenuItem>
+                            <MenuItem value="Maison">Maison</MenuItem>
+                            <MenuItem value="Terrain constructible">Terrain</MenuItem>
+                            <MenuItem value="Bureau">Bureau</MenuItem>
+                            <MenuItem value="Etage de villa">Etage de villa</MenuItem>
+                            <MenuItem value="Local commercial">Local commercial</MenuItem>
+                          </Select>
+                        </FormControl>
+                      </div>
+
+					  <div className="ltn__car-dealer-form-item col-lg-3 col-md-6">
+                        <FormControl fullWidth>
+                          <InputLabel>Ville</InputLabel>
+                          <Select value={ville} onChange={handlevilleChange} MenuProps={{
+            PaperProps: {
+                style: {
+                    position: 'absolute',
+                    top: 'auto', 
+                    bottom: '0',  
+                    maxHeight: '200px', 
+                    overflowY: 'auto'   
+                }
+            }
+        }}> 
+					         <MenuItem value="">Ville</MenuItem>
+                                                    <MenuItem value="ariana">Ariana</MenuItem>
+                                                    <MenuItem value="beja">Béja</MenuItem>
+                                                    <MenuItem value="tunis">Tunis</MenuItem>
+                          </Select>
+                        </FormControl>
+                      </div>
+                      <div className="ltn__car-dealer-form-item col-lg-3 col-md-6">
+                        <div className="btn-wrapper text-center mt-0 go-top">
+                          <Button type="submit" className="btn theme-btn-1 btn-effect-1 text-uppercase">
+                            Recherche
+                          </Button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default SearchForm;

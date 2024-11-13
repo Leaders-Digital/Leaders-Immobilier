@@ -71,7 +71,7 @@ class NavbarV3 extends Component {
     <Link to="/about">À propos</Link>
     <ul>
         <li><Link to="/events">Événements</Link></li>
-        <li><Link to="/agence">Agences</Link></li>
+        <li><Link to="/agence">Nos Agences</Link></li>
 		<li><Link to="/histoires">Histoires</Link></li>
     </ul>
 </li>
@@ -124,7 +124,7 @@ class NavbarV3 extends Component {
     <Link to="/about">À propos</Link>
     <ul>
         <li><Link to="/events">Événements</Link></li>
-        <li><Link to="/agence">Agences</Link></li>
+        <li><Link to="/agence">Nos Agences</Link></li>
 		<li><Link to="/histoires">Histoires</Link></li>
     </ul>
 </li>

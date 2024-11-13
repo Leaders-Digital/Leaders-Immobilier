@@ -25,9 +25,9 @@ class 	Neighbour extends Component {
 			        <div className="ltn__neighbour-tab-wrap">
 			          <div className="ltn__tab-menu ltn__tab-menu-3--- ltn__tab-menu-4 ltn__tab-menu-top-right-- text-uppercase--- text-center">
 			            <div className="nav">
-			              <a className="active show" data-bs-toggle="tab" href="#liton_tab_4_1"><img src={publicUrl+"assets/img/neighbour/1.jpg"} alt="#" /></a>
-			              <a data-bs-toggle="tab" href="#liton_tab_4_2" ><img src={publicUrl+"assets/img/neighbour/2.jpg"} alt="#" /></a>
-			              <a data-bs-toggle="tab" href="#liton_tab_4_3" ><img src={publicUrl+"assets/img/neighbour/3.jpg"} alt="#" /></a>
+			              <a className="active show" data-bs-toggle="tab" href="#liton_tab_4_1"><img src={publicUrl+"assets/img/events/car1/1.jpg"} alt="#" /></a>
+			              <a data-bs-toggle="tab" href="#liton_tab_4_2" ><img src={publicUrl+"assets/img/events/car1/2.jpg"} alt="#" /></a>
+			              <a data-bs-toggle="tab" href="#liton_tab_4_3" ><img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" /></a>
 			            </div>
 			          </div>
 			          <div className="tab-content">
@@ -36,13 +36,13 @@ class 	Neighbour extends Component {
 			                <div className="row">
 			                  <div className="col-lg-8">
 			                    <div className="neighbour-apartments-img">
-			                      <img src={publicUrl+"assets/img/neighbour/1.jpg"} alt="#" />
+			                      <img src={publicUrl+"assets/img/events/car1/1.jpg"} alt="#" />
 			                    </div>
 			                  </div>
 			                  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link to="/product-details"><img src={publicUrl+"assets/img/neighbour/3.jpg"} alt="#" /></Link>
+			                        <Link to="/product-details"><img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" /></Link>
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
@@ -67,13 +67,13 @@ class 	Neighbour extends Component {
 			                <div className="row">
 			                  <div className="col-lg-8">
 			                    <div className="neighbour-apartments-img">
-			                      <img src={publicUrl+"assets/img/neighbour/2.jpg"} alt="#" />
+			                      <img src={publicUrl+"assets/img/events/car1/2.jpg"} alt="#" />
 			                    </div>
 			                  </div>
 			                  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link to="/product-details"><img src={publicUrl+"assets/img/product-3/2.jpg"} alt="#" /></Link>
+			                        <Link to="/product-details"><img src={publicUrl+"assets/img/events/car1/2.jpg"} alt="#" /></Link>
 			                        <div className="search-by-place-badge">
 			                          <ul>
 			                            <li>9 Properties</li>
@@ -102,13 +102,13 @@ class 	Neighbour extends Component {
 			                <div className="row">
 			                  <div className="col-lg-8">
 			                    <div className="neighbour-apartments-img">
-			                      <img src={publicUrl+"assets/img/neighbour/3.jpg"} alt="#" />
+			                      <img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" />
 			                    </div>
 			                  </div>
 			                  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link to="/product-details"><img src={publicUrl+"assets/img/product-3/4.jpg"} alt="#" /></Link>
+			                        <Link to="/product-details"><img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" /></Link>
 			                        <div className="search-by-place-badge">
 			                          <ul>
 			                            <li>9 Properties</li>

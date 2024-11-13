@@ -419,112 +419,119 @@
           /*----------------------
               Slider 11 active
           -----------------------*/
-          $('.ltn__slider-11-active').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide){
-              var i = (currentSlide ? currentSlide : 0) + 1;
-              $('.ltn__slider-11-pagination-count .count').text('0'+i);
-              $('.ltn__slider-11-pagination-count .total').text('0' + slick.slideCount);
-  
-              $('.ltn__slider-11-slide-item-count .count').text('0'+i);
-              $('.ltn__slider-11-slide-item-count .total').text('/0' + slick.slideCount);
-              new WOW().init();
-          }).slick({
-              dots: false, /* slider left or right side pagination count with line */
-              arrows: false, /* slider arrow  */
-              appendDots: '.ltn__slider-11-pagination-count',
-              infinite: true,
-              autoplay: false,
-              autoplaySpeed: 10000,
-              speed: 500,
-              asNavFor: '.ltn__slider-11-img-slide-arrow-active',
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-              nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
-              responsive: [
-                  {
-                      breakpoint: 1600,
-                      settings: {
-                          slidesToShow: 1,
-                          slidesToScroll: 1,
-                          arrows: false,
-                          dots: false
-                      }
-                  },
-                  {
-                      breakpoint: 992,
-                      settings: {
-                          slidesToShow: 1,
-                          slidesToScroll: 1,
-                          arrows: false,
-                          dots: false
-                      }
-                  },
-                  {
-                      breakpoint: 768,
-                      settings: {
-                          slidesToShow: 1,
-                          slidesToScroll: 1,
-                          arrows: false,
-                          dots: false
-                      }
-                  },
-                  {
-                      breakpoint: 575,
-                      settings: {
-                          arrows: false,
-                          dots: false,
-                          slidesToShow: 1,
-                          slidesToScroll: 1
-                      }
-                  }
-              ]
-          });
-  
-          $('.ltn__slider-11-img-slide-arrow-active').slick({
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              initialSlide: 2,
-              centerMode: false,
-              centerPadding: '0px',
-              asNavFor: '.ltn__slider-11-active',
-              dots: false, /* image slide dots */
-              arrows: false, /* image slide arrow */
-              centerMode: true,
-              focusOnSelect: true,
-              prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-              nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
-              responsive: [
-                  {
-                      breakpoint: 1600,
-                      settings: {
-                          arrows: false,
-                          dots: false
-                      }
-                  },
-                  {
-                      breakpoint: 1200,
-                      settings: {
-                          arrows: true,
-                          dots: false
-                      }
-                  },
-                  {
-                      breakpoint: 768,
-                      settings: {
-                          arrows: true,
-                          dots: false
-                      }
-                  },
-                  {
-                      breakpoint: 575,
-                      settings: {
-                          arrows: true,
-                          dots: false,
-                      }
-                  }
-              ]
-          });
-  
+          if ($('.ltn__slider-11-active').length && !$('.ltn__slider-11-active').hasClass('slick-initialized')) {
+            $('.ltn__slider-11-active').on('init reInit afterChange', function(event, slick, currentSlide, nextSlide) {
+                var i = (currentSlide ? currentSlide : 0) + 1;
+                $('.ltn__slider-11-pagination-count .count').text('0' + i);
+                $('.ltn__slider-11-pagination-count .total').text('0' + slick.slideCount);
+        
+                $('.ltn__slider-11-slide-item-count .count').text('0' + i);
+                $('.ltn__slider-11-slide-item-count .total').text('/0' + slick.slideCount);
+                new WOW().init();
+            }).slick({
+                dots: false,
+                arrows: false,
+                appendDots: '.ltn__slider-11-pagination-count',
+                infinite: true,
+                autoplay: false,
+                autoplaySpeed: 10000,
+                speed: 500,
+                asNavFor: '.ltn__slider-11-img-slide-arrow-active',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                responsive: [
+                    {
+                        breakpoint: 1600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 575,
+                        settings: {
+                            arrows: false,
+                            dots: false,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        } else {
+            console.warn('Slider element already initialized or not found: .ltn__slider-11-active');
+        }
+        
+        if ($('.ltn__slider-11-img-slide-arrow-active').length && !$('.ltn__slider-11-img-slide-arrow-active').hasClass('slick-initialized')) {
+            $('.ltn__slider-11-img-slide-arrow-active').slick({
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                initialSlide: 2,
+                centerMode: true,
+                centerPadding: '0px',
+                asNavFor: '.ltn__slider-11-active',
+                dots: false, 
+                arrows: false,
+                focusOnSelect: true,
+                prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                responsive: [
+                    {
+                        breakpoint: 1600,
+                        settings: {
+                            arrows: false,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            arrows: true,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: true,
+                            dots: false
+                        }
+                    },
+                    {
+                        breakpoint: 575,
+                        settings: {
+                            arrows: true,
+                            dots: false
+                        }
+                    }
+                ]
+            });
+        } else {
+            console.warn('Slider element already initialized or not found: .ltn__slider-11-img-slide-arrow-active');
+        }
+        
           /* --------------------------------------------------------
               16-1. Product Slider One
           --------------------------------------------------------- */
@@ -923,54 +930,59 @@
           /* --------------------------------------------------------
               18. Blog Slider One
           --------------------------------------------------------- */
-          $('.ltn__blog-slider-one-active').slick({
-              arrows: true,
-              dots: false,
-              infinite: true,
-              speed: 300,
-              slidesToShow: 3,
-              slidesToScroll: 1,
-              prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-              nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
-              responsive: [
-                  {
-                      breakpoint: 1200,
-                      settings: {
-                          slidesToShow: 2,
-                          slidesToScroll: 1,
-                          arrows: false,
-                          dots: true
-                      }
-                  },
-                  {
-                      breakpoint: 992,
-                      settings: {
-                          slidesToShow: 2,
-                          slidesToScroll: 1,
-                          arrows: false,
-                          dots: true
-                      }
-                  },
-                  {
-                      breakpoint: 768,
-                      settings: {
-                          slidesToShow: 2,
-                          slidesToScroll: 1,
-                          arrows: false,
-                          dots: true
-                      }
-                  },
-                  {
-                      breakpoint: 575,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 1,
-                          slidesToScroll: 1
-                      }
-                  }
-              ]
-          });
+          if ($('.ltn__blog-slider-one-active').length && !$('.ltn__blog-slider-one-active').hasClass('slick-initialized')) {
+            $('.ltn__blog-slider-one-active').slick({
+                arrows: true,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 3,
+                slidesToScroll: 1,
+                prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                responsive: [
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            slidesToShow: 2,
+                            slidesToScroll: 1,
+                            arrows: false,
+                            dots: true
+                        }
+                    },
+                    {
+                        breakpoint: 575,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1
+                        }
+                    }
+                ]
+            });
+        } else {
+            console.warn('Slider element already initialized or not found: .ltn__blog-slider-one-active');
+        }
+        
   
           /* --------------------------------------------------------
               19. Testimonial Slider - 1
@@ -1482,72 +1494,77 @@
           /* --------------------------------------------------------
               ## Image Slide - 5
           --------------------------------------------------------- */
-          $('.ltn__image-slider-5-active').slick({
-              rtl: false,
-              arrows: true,
-              dots: false,
-              infinite: true,
-              speed: 300,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              centerMode: true,
-              centerPadding: '450px',
-              prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-              nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
-              responsive: [
-                  {
-                      breakpoint: 1600,
-                      settings: {
-                          slidesToShow: 1,
-                          slidesToScroll: 1,
-                          centerMode: true,
-                          centerPadding: '250px',
-                      }
-                  },
-                  {
-                      breakpoint: 1200,
-                      settings: {
-                          slidesToShow: 1,
-                          slidesToScroll: 1,
-                          centerMode: true,
-                          centerPadding: '200px',
-                      }
-                  },
-                  {
-                      breakpoint: 992,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 1,
-                          slidesToScroll: 1,
-                          centerMode: true,
-                          centerPadding: '150px',
-                      }
-                  },
-                  {
-                      breakpoint: 768,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 1,
-                          slidesToScroll: 1,
-                          centerMode: false,
-                          centerPadding: '0px',
-                      }
-                  },
-                  {
-                      breakpoint: 580,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 1,
-                          slidesToScroll: 1,
-                          centerMode: false,
-                          centerPadding: '0px',
-                      }
-                  }
-              ]
-          });
+          if ($('.ltn__image-slider-5-active').length && !$('.ltn__image-slider-5-active').hasClass('slick-initialized')) {
+            $('.ltn__image-slider-5-active').slick({
+                rtl: false,
+                arrows: true,
+                dots: false,
+                infinite: true,
+                speed: 300,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                centerMode: true,
+                centerPadding: '450px',
+                prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                responsive: [
+                    {
+                        breakpoint: 1600,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: true,
+                            centerPadding: '250px',
+                        }
+                    },
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: true,
+                            centerPadding: '200px',
+                        }
+                    },
+                    {
+                        breakpoint: 992,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: true,
+                            centerPadding: '150px',
+                        }
+                    },
+                    {
+                        breakpoint: 768,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: false,
+                            centerPadding: '0px',
+                        }
+                    },
+                    {
+                        breakpoint: 580,
+                        settings: {
+                            arrows: false,
+                            dots: true,
+                            slidesToShow: 1,
+                            slidesToScroll: 1,
+                            centerMode: false,
+                            centerPadding: '0px',
+                        }
+                    }
+                ]
+            });
+        } else {
+            console.warn('Slider element already initialized or not found: .ltn__image-slider-5-active');
+        }
+        
   
   
           /* --------------------------------------------------------

@@ -30,7 +30,7 @@ const ProductDetail = () => {
     }, [id]);
 
     if (loading) return <p>Loading...</p>;
-    if (!product) return <p>Product not found.</p>;
+    if (!product) return <p>Aucune propriété trouvée</p>;
 
     // Ensure listImages exists and is an array, then filter and map
     const images = (product?.listImages || []).filter(image => image.version_web)
