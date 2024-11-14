@@ -175,11 +175,44 @@ const ShopGridV1 = () => {
                                                     value={ville}
                                                     onChange={(e) => setVille(e.target.value)}
                                                     label="Ville"
+                                                    MenuProps={{
+                                                        PaperProps: {
+                                                            style: {
+                                                                position: 'absolute',
+                                                                top: 'auto',
+                                                                bottom: '0',
+                                                                maxHeight: '200px',
+                                                                overflowY: 'auto'
+                                                            }
+                                                        }
+                                                    }}
                                                 >
-                                                    <MenuItem value="">Ville</MenuItem>
-                                                    <MenuItem value="ariana">Ariana</MenuItem>
-                                                    <MenuItem value="beja">Béja</MenuItem>
-                                                    <MenuItem value="tunis">Tunis</MenuItem>
+                                    
+    <MenuItem value="Ariana">Ariana</MenuItem>
+    <MenuItem value="Beja">Beja</MenuItem>
+    <MenuItem value="Ben Arous">Ben Arous</MenuItem>
+    <MenuItem value="kelibia">kelibia</MenuItem>
+    <MenuItem value="Bizerte">Bizerte</MenuItem>
+    <MenuItem value="Gabès">Gabès</MenuItem>
+    <MenuItem value="Gafsa">Gafsa</MenuItem>
+    <MenuItem value="Jendouba">Jendouba</MenuItem>
+    <MenuItem value="Kairouan">Kairouan</MenuItem>
+    <MenuItem value="Kasserine">Kasserine</MenuItem>
+    <MenuItem value="Kébili">Kébili</MenuItem>
+    <MenuItem value="Le Kef">Le Kef</MenuItem>
+    <MenuItem value="Mahdia">Mahdia</MenuItem>
+    <MenuItem value="La Manouba">La Manouba</MenuItem>
+    <MenuItem value="Médenine">Médenine</MenuItem>
+    <MenuItem value="Monastir">Monastir</MenuItem>
+    <MenuItem value="Nabeul">Nabeul</MenuItem>
+    <MenuItem value="Sfax">Sfax</MenuItem>
+    <MenuItem value="Sidi Bouzid">Sidi Bouzid</MenuItem>
+    <MenuItem value="Siliana">Siliana</MenuItem>
+    <MenuItem value="Sousse">Sousse</MenuItem>
+    <MenuItem value="Tataouine">Tataouine</MenuItem>
+    <MenuItem value="Tozeur">Tozeur</MenuItem>
+    <MenuItem value="Tunis">Tunis</MenuItem>
+    <MenuItem value="Zaghouan">Zaghouan</MenuItem>
                                                     {/* Add other cities here */}
                                                 </Select>
                                             </FormControl>

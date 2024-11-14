@@ -181,6 +181,7 @@ const getPaginationPages = () => {
                                                     <MenuItem value="ariana">Ariana</MenuItem>
                                                     <MenuItem value="beja">Béja</MenuItem>
                                                     <MenuItem value="tunis">Tunis</MenuItem>
+                                                    <MenuItem value="Nabeul">Nabeul</MenuItem>
                                                     {/* Add other cities here */}
                                                 </Select>
                                             </FormControl>

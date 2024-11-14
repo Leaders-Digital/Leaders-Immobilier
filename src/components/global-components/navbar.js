@@ -16,7 +16,7 @@ class Navbar extends Component {
                                     <div className="ltn__top-bar-menu">
                                         <ul>
                                             <li><a href="mailto:contact@leaders-immo.com?Subject=Flower%20greetings%20to%20you"><i className="icon-mail" /> contact@leaders-immo.com</a></li>
-                                            <li><a href="locations.html"><i className="icon-call" />+216 26 644 400</a></li>                                        </ul>
+                                            <li><a href="#"><i className="icon-call" />+216 26 644 400</a></li>                                        </ul>
                                     </div>
                                 </div>
                                 <div className="col-md-5">

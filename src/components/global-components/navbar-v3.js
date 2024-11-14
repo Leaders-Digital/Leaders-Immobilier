@@ -18,7 +18,7 @@ class NavbarV3 extends Component {
 			          <div className="ltn__top-bar-menu">
 			            <ul>
 			              <li><a href="mailto:contact@leaders-immo.com?Subject=Flower%20greetings%20to%20you"><i className="icon-mail" /> contact@leaders-immo.com</a></li>
-			              <li><a href="locations.html"><i className="icon-call" />+216 26 644 400</a></li>
+			              <li><a href="#"><i className="icon-call" />+216 26 644 400</a></li>
 			            </ul>
 			          </div>
 			        </div>
@@ -54,7 +54,7 @@ class NavbarV3 extends Component {
 			                <h4><a href="tel:+123456789">123-456-789-10</a></h4>
 			              </div>
 			            </div>
-			          </div>
+			          </div>	
 			        </div>
 			        <div className="col header-menu-column menu-color-white">
 			          <div className="header-menu d-none d-xl-block go-top">
