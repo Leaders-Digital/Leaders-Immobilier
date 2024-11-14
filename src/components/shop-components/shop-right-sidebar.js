@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import axios from 'axios';
-import { Select, MenuItem, FormControl, InputLabel, Slider, Typography } from '@mui/material';
+import { Select, MenuItem, FormControl, InputLabel, Typography, Input, InputAdornment } from '@mui/material';
 
 const ShopGridV1 = () => {
     const location = useLocation();
-    const [type, setType] = useState('vente');  
+    const [type, setType] = useState('vente');
     const [searchTerm, setSearchTerm] = useState('');
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
@@ -16,12 +16,11 @@ const ShopGridV1 = () => {
     const [ville, setVille] = useState(location.state?.ville || "");
     const [delegation, setDelegation] = useState('');
     const [nbrChambre, setNbrChambre] = useState('');
-    const [prixMin, setPrixMin] = useState(1000);
-    const [prixMax, setPrixMax] = useState(300000);
+    const [prixMin, setPrixMin] = useState(10000);
+    const [prixMax, setPrixMax] = useState(30000000);
 
     // Update state based on location if values exist
-    console.log(products);
-    console.log(location.state);
+
 
     // Function to fetch products based on the current filters
     const fetchProducts = () => {
@@ -134,38 +133,38 @@ const ShopGridV1 = () => {
                                 <div className="car-dealer-form-inner">
                                     <div className="ltn__car-dealer-form-box row">
 
-                                     
-<div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-building col-lg-4 col-md-6">
 
-                                        <FormControl fullWidth>
-    <InputLabel>Type de bien</InputLabel>
-    <Select
-        value={typeCategorie}
-        onChange={(e) => setTypeCategorie(e.target.value)}
-        label="Type de bien"
-        MenuProps={{
-            PaperProps: {
-                style: {
-                    position: 'absolute',
-                    top: 'auto', 
-                    bottom: '0', 
-                    maxHeight: '200px',  
-                    overflowY: 'auto'   
-                }
-            }
-        }}
-    >
-        <MenuItem value="">Type de bien</MenuItem>
-        <MenuItem value="Appartement">Appartement</MenuItem>
-        <MenuItem value="Villa">Villa</MenuItem>
-        <MenuItem value="Maison">Maison</MenuItem>
-        <MenuItem value="Terrain constructible">Terrain</MenuItem>
-        <MenuItem value="Bureau">Bureau</MenuItem>
-        <MenuItem value="Etage de villa">Etage de villa</MenuItem>
-        <MenuItem value="Local commercial">Local commercial</MenuItem>
-        
-    </Select>
-</FormControl>
+                                        <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-building col-lg-4 col-md-6">
+
+                                            <FormControl fullWidth>
+                                                <InputLabel>Type de bien</InputLabel>
+                                                <Select
+                                                    value={typeCategorie}
+                                                    onChange={(e) => setTypeCategorie(e.target.value)}
+                                                    label="Type de bien"
+                                                    MenuProps={{
+                                                        PaperProps: {
+                                                            style: {
+                                                                position: 'absolute',
+                                                                top: 'auto',
+                                                                bottom: '0',
+                                                                maxHeight: '200px',
+                                                                overflowY: 'auto'
+                                                            }
+                                                        }
+                                                    }}
+                                                >
+                                                    <MenuItem value="">Type de bien</MenuItem>
+                                                    <MenuItem value="Appartement">Appartement</MenuItem>
+                                                    <MenuItem value="Villa">Villa</MenuItem>
+                                                    <MenuItem value="Maison">Maison</MenuItem>
+                                                    <MenuItem value="Terrain constructible">Terrain</MenuItem>
+                                                    <MenuItem value="Bureau">Bureau</MenuItem>
+                                                    <MenuItem value="Etage de villa">Etage de villa</MenuItem>
+                                                    <MenuItem value="Local commercial">Local commercial</MenuItem>
+
+                                                </Select>
+                                            </FormControl>
 
                                         </div>
 
@@ -197,10 +196,10 @@ const ShopGridV1 = () => {
                                                         PaperProps: {
                                                             style: {
                                                                 position: 'absolute',
-                                                                top: 'auto',  
-                                                                bottom: '0',  
-                                                                maxHeight: '200px',  
-                                                                overflowY: 'auto'  
+                                                                top: 'auto',
+                                                                bottom: '0',
+                                                                maxHeight: '200px',
+                                                                overflowY: 'auto'
                                                             }
                                                         }
                                                     }}
@@ -233,10 +232,10 @@ const ShopGridV1 = () => {
                                                         PaperProps: {
                                                             style: {
                                                                 position: 'absolute',
-                                                                top: 'auto',  
-                                                                bottom: '0', 
-                                                                maxHeight: '200px',  
-                                                                overflowY: 'auto'  
+                                                                top: 'auto',
+                                                                bottom: '0',
+                                                                maxHeight: '200px',
+                                                                overflowY: 'auto'
                                                             }
                                                         }
                                                     }}
@@ -252,28 +251,33 @@ const ShopGridV1 = () => {
                                                     <MenuItem value="8">8 Chambres</MenuItem>
                                                 </Select>
                                             </FormControl>
+
                                         </div>
 
-                                        <div className="ltn__car-dealer-form-item col-lg-4 col-md-6">
-                                            <Typography gutterBottom>Price Range</Typography>
-                                            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                                <Typography style={{ marginRight: '10px' }} variant="body2">{prixMin}  TND</Typography> {/* Min price label */}
-                                                <Slider
-                                                    value={[prixMin, prixMax]}
-                                                    onChange={(e, newValue) => {
-                                                        setPrixMin(newValue[0]);
-                                                        setPrixMax(newValue[1]);
-                                                    }}
-                                                    valueLabelDisplay="auto"
-                                                    valueLabelFormat={(value) => `${value} TND`}
-                                                    min={1000}  // Dynamic min price from fetched products
-                                                    max={300000}  // Dynamic max price from fetched products
-                                                    step={50000}
-                                                    style={{ flex: 1, margin: '0 10px' }}  // To allow the slider to stretch and leave space for labels
-                                                />
-                                                <Typography style={{ marginLeft: '10px' }}  variant="body2">{prixMax} TND</Typography> {/* Max price label */}
-                                            </div>
-                                        </div>
+                                        <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-bed col-lg-4 col-md-6">
+  <input
+    type="number"
+    value={prixMin}
+    onChange={(e) => setPrixMin(Number(e.target.value))}
+    placeholder="Prix Min"
+    className="form-control"
+    style={{height: '58px'}}
+  />
+</div>
+
+<div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-bed col-lg-4 col-md-6">
+  <input
+    type="number"
+    value={prixMax}
+    onChange={(e) => setPrixMax(Number(e.target.value))}
+    placeholder="Prix Max"
+    className="form-control"  
+    style={{height: '58px'}}
+  />
+</div>
+
+
+
 
 
                                     </div>

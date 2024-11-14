@@ -1614,46 +1614,56 @@
           /* --------------------------------------------------------
               # upcoming-project-slider-1
           --------------------------------------------------------- */
-          $('.ltn__upcoming-project-slider-1-active').slick({
-              arrows: true,
-              dots: false,
-              infinite: true,
-              speed: 300,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-              nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
-              responsive: [
-                  {
-                      breakpoint: 992,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 1,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 768,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 1,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 580,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 1,
-                          slidesToScroll: 1
-                      }
-                  }
-              ]
-          });
-  
+          $(document).ready(function() {
+            const $slider = $('.ltn__upcoming-project-slider-1-active');
+            if ($slider.length && !$slider.hasClass('slick-initialized')) {
+                console.log("Initializing upcoming project slider...");
+                $slider.slick({
+                    arrows: true,
+                    dots: false,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                    nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                    responsive: [
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                arrows: false,
+                                dots: true,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                arrows: false,
+                                dots: true,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 580,
+                            settings: {
+                                arrows: false,
+                                dots: true,
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                            }
+                        }
+                    ]
+                }).on('afterChange', function() {
+                    new WOW().init(); // Re-initialize animations after each slide change if necessary
+                });
+            } else {
+                console.warn('Slider element already initialized or not found: .ltn__upcoming-project-slider-1-active');
+            }
+        });
+        
   
           /* --------------------------------------------------------
               # ltn__search-by-place-slider-1-active

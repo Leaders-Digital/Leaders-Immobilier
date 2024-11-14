@@ -36,10 +36,9 @@ const ProductDetail = () => {
     const images = (product?.listImages || []).filter(image => image.version_web)
         .map(image => `${process.env.REACT_APP_API_URL}${image.version_web}`);
 
-    // Use placeholder images if no valid images are available
-    const finalImages = images.length > 0 
-        ? images 
-        : new Array(4).fill('https://placehold.co/1920x1080/png');
+    // Fill with placeholders if less than 4 images
+    const placeholdersNeeded = Math.max(0, 4 - images.length);
+    const finalImages = [...images, ...new Array(placeholdersNeeded).fill('https://placehold.co/1920x1080/png')];
 
     // Slick slider settings for react-slick
     const sliderSettings = {

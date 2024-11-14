@@ -21,13 +21,14 @@ const SearchForm = () => {
 	console.log("Search Params:", { type, ville, typeCategorie }); 
 
     // Navigate to /vente with the selected values in the state
-    navigate('/vente', {
-      state: {
-        type,
-        ville,
-        typeCategorie
-      }
-    });
+
+    if (type === "Vente") {
+      navigate('/vente', { state: { type, ville, typeCategorie } });
+    } else if (type === "Location") {
+      navigate('/louer', { state: { type, ville, typeCategorie } });
+    }
+
+
 	 window.location.reload();
   };
 
@@ -48,10 +49,10 @@ const SearchForm = () => {
 						
                         <FormControl fullWidth>
                           <InputLabel>Type</InputLabel>
-                          <Select value={type}  onChange={handleTypeChange}       >
+                          <Select label="Type"  value={type}  onChange={handleTypeChange}       >
                             <MenuItem value="Vente">Vente</MenuItem>
-                            <MenuItem value="Location annuelle">Location annuelle</MenuItem>
-                            <MenuItem value="Location estival">Location estival</MenuItem>
+                            <MenuItem value="Location">Location</MenuItem>
+                      
                           </Select>
                         </FormControl>
                       </div>
@@ -59,7 +60,7 @@ const SearchForm = () => {
                       <div className="ltn__car-dealer-form-item col-lg-3 col-md-6">
                         <FormControl fullWidth>
                           <InputLabel>Type de bien</InputLabel>
-                          <Select value={typeCategorie} onChange={handlePropertyTypeChange} MenuProps={{
+                          <Select label="Type de bien" value={typeCategorie} onChange={handlePropertyTypeChange} MenuProps={{
             PaperProps: {
                 style: {
                     position: 'absolute',
@@ -83,8 +84,8 @@ const SearchForm = () => {
 
 					  <div className="ltn__car-dealer-form-item col-lg-3 col-md-6">
                         <FormControl fullWidth>
-                          <InputLabel>Ville</InputLabel>
-                          <Select value={ville} onChange={handlevilleChange} MenuProps={{
+                          <InputLabel >Ville</InputLabel>
+                          <Select  label="ville" value={ville} onChange={handlevilleChange} MenuProps={{
             PaperProps: {
                 style: {
                     position: 'absolute',
@@ -102,6 +103,8 @@ const SearchForm = () => {
                           </Select>
                         </FormControl>
                       </div>
+
+                      
                       <div className="ltn__car-dealer-form-item col-lg-3 col-md-6">
                         <div className="btn-wrapper text-center mt-0 go-top">
                           <Button type="submit" className="btn theme-btn-1 btn-effect-1 text-uppercase">

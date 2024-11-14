@@ -70,7 +70,7 @@ font-family: 'Poppins', sans-serif;
 /* ====================================================
     Gutter Code 
 ==================================================== */
-body, html {
+body {
   overflow-x: hidden;
 
 }

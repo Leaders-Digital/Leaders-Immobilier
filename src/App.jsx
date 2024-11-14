@@ -3,7 +3,12 @@ import Login from './components/login';
 import Register from './components/register';
 import Home from './components/Home';
 import ShopGrid from './components/shop-grid';
-import About from './components/about';
+import AboutLac from './components/about-lac';
+import AboutHammamet from './components/about-hammamet';
+import AboutMrezga from './components/about-mrezga';
+import AboutKelibia from './components/about-kelibia';
+import AboutAouina from './components/about-aouina';
+import AboutMilano from './components/about-milano';
 import Louer from './components/louer';
 import Story from './components/Story';
 import Events from './components/events';
@@ -22,7 +27,12 @@ const App = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
+          <Route path="/about/lac" element={<AboutLac  />} />
+          <Route path="/about/hammamet" element={<AboutHammamet  />} />
+          <Route path="/about/mrezga" element={<AboutMrezga  />} />
+          <Route path="/about/kelibia" element={<AboutKelibia  />} />
+          <Route path="/about/aouina" element={<AboutAouina  />} />
+          <Route path="/about/milano" element={<AboutMilano  />} />
           <Route path="/agence" element={<Agence />} />
           <Route path="/vente" element={<ShopGrid />} />
           <Route path="/louer" element={<Louer />} />

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 
-class BannerV2 extends Component {
+class Event2 extends Component {
 
     render() {
 
@@ -30,21 +30,21 @@ class BannerV2 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                        Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
+                                                    Evènement tirage au  <br />  sort <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="theme-btn-1 btn btn-effect-1">Lorem Lorem</Link>
-                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
+                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
 												<div className="slide-item-img">
-													<img src={publicUrl + "assets/img/events/elu/1.jpg"} alt={imagealt} />
+													<img src={publicUrl + "assets/img/events/car2/1.jpg"} alt={imagealt} />
 												</div>
                                         </div>
                                     </div>
@@ -69,21 +69,21 @@ class BannerV2 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                        Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
+                                                    Evènement tirage au  <br />  sort <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="theme-btn-1 btn btn-effect-1">Lorem Lorem</Link>
-                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
+                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="slide-item-img">
-                                                <img src={publicUrl + "assets/img/events/elu/2.jpg"} alt={imagealt} />
+                                                <img src={publicUrl + "assets/img/events/car2/2.jpg"} alt={imagealt} />
                                             </div>
                                         </div>
                                     </div>
@@ -108,21 +108,21 @@ class BannerV2 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                        Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
+                                                    Evènement tirage au  <br />  sort <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="theme-btn-1 btn btn-effect-1">Lorem Lorem</Link>
-                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
+                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="slide-item-img">
-                                                <img src={publicUrl + "assets/img/events/elu/3.jpg"} alt={imagealt} />
+                                                <img src={publicUrl + "assets/img/events/car2/3.jpg"} alt={imagealt} />
                                             </div>
                                         </div>
                                     </div>
@@ -146,21 +146,21 @@ class BannerV2 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                        Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
+                                                    Evènement tirage au  <br />  sort <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="theme-btn-1 btn btn-effect-1">Lorem Lorem</Link>
-                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
+                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>	
                                             <div className="slide-item-img">
-                                                <img src={publicUrl + "assets/img/events/elu/5.jpg"} alt={imagealt} />
+                                                <img src={publicUrl + "assets/img/events/car2/4.jpg"} alt={imagealt} />
                                             </div>
                                         </div>
                                     </div>
@@ -180,16 +180,16 @@ class BannerV2 extends Component {
                         <div className="ltn__slider-11-img-slide-arrow-inner">
                             <div className="ltn__slider-11-img-slide-arrow-active">
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/elu/1.jpg"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/1.jpg"} alt="Flower Image" />
                                 </div>
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/elu/2.jpg"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/2.jpg"} alt="Flower Image" />
                                 </div>
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/elu/3.jpg"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/3.jpg"} alt="Flower Image" />
                                 </div>
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/elu/5.jpg"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/4.jpg"} alt="Flower Image" />
                                 </div>
                             </div>
                             {/* slider-4-slide-item-count */}
@@ -205,4 +205,4 @@ class BannerV2 extends Component {
     }
 }
 
-export default BannerV2;
+export default Event2;

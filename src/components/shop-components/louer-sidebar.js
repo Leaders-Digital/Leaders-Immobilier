@@ -1,38 +1,66 @@
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import Sidebar from './shop-sidebar';
+import { Link ,useLocation} from 'react-router-dom';
 import axios from 'axios';
+import { Select, MenuItem, FormControl, InputLabel, Typography, Input, InputAdornment } from '@mui/material';
+
 
 const ShopGridV1 = () => {
+    const location = useLocation();
+    const [type, setType] = useState('');
     const [searchTerm, setSearchTerm] = useState('');
     const [products, setProducts] = useState([]);
     const [currentPage, setCurrentPage] = useState(1);
-    const [itemsPerPage] = useState(6); 
+    const [itemsPerPage] = useState(6);
     const [totalItems, setTotalItems] = useState(0);
-    const [viewMode, setViewMode] = useState('grid');       
+    const [viewMode, setViewMode] = useState('grid');
+    const [typeCategorie, setTypeCategorie] = useState(location.state?.typeCategorie || "");
+    const [ville, setVille] = useState(location.state?.ville || "");
+    const [delegation, setDelegation] = useState('');
+    const [nbrChambre, setNbrChambre] = useState('');
+    const [prixMin, setPrixMin] = useState(10);
+    const [prixMax, setPrixMax] = useState(100000);  
 
-    useEffect(() => {
-        axios.post(`${process.env.REACT_APP_API_URL}api/v2/biens`, {
+    const fetchProducts = () => {
+        const body = {
             page: currentPage,
             itemPerPage: itemsPerPage,
-            type: ['location annuelle', 'location estival']
-        }, {
+            type: ['location annuelle', 'location estival'],
+            typeCategorie: typeCategorie ? [typeCategorie] : [],  
+            ville: ville ? [ville] : [],
+            delegation: delegation ? [delegation] : [],
+            chambre: nbrChambre ? parseInt(nbrChambre) : null,
+            prixMin,
+            prixMax
+        };
+
+
+
+        axios.post(`${process.env.REACT_APP_API_URL}api/v2/biens`, body, {
             headers: {
                 Authorization: 'jkaAVXs852ZPOnlop795'
             }
         })
-        .then((response) => {
-            const fetchedProducts = Array.isArray(response.data.resultat) ? response.data.resultat : [];
-            setProducts(fetchedProducts);
-            
-            const total = response.data.totalItems || fetchedProducts.length;
-            setTotalItems(total);
-        })
-        .catch((error) => {
-            console.error('Error fetching products:', error);
-            setProducts([]);
-        });
-    }, [currentPage, itemsPerPage]);
+            .then((response) => {
+                const fetchedProducts = Array.isArray(response.data.resultat) ? response.data.resultat : [];
+                setProducts(fetchedProducts);
+                const total = response.data.totalItems || fetchedProducts.length;
+                setTotalItems(total);
+            })
+            .catch((error) => {
+                console.error('Error fetching products:', error);
+                setProducts([]);
+            });
+    };
+
+    useEffect(() => {
+        fetchProducts();
+    }, [currentPage, type, typeCategorie, ville, delegation, nbrChambre, prixMin, prixMax]);  // Ensure all states are part of the dependency array
+
+    const handleSearch = (e) => {
+        e.preventDefault();
+        setCurrentPage(1);
+        fetchProducts();
+    };
 
     const totalPages = Math.ceil(totalItems / itemsPerPage);
 
@@ -100,7 +128,162 @@ const getPaginationPages = () => {
             <div className="ltn__product-area ltn__product-gutter">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-8 mb-100">
+                        <div className="">
+                        <div className="tab-content">
+                            <div className="tab-pane fade active show" id="ltn__form_tab_1_1">
+                                <div className="car-dealer-form-inner">
+                                    <div className="ltn__car-dealer-form-box row">
+
+
+                                        <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-building col-lg-4 col-md-6">
+
+                                            <FormControl fullWidth>
+                                                <InputLabel>Type de bien</InputLabel>
+                                                <Select
+                                                    value={typeCategorie}
+                                                    onChange={(e) => setTypeCategorie(e.target.value)}
+                                                    label="Type de bien"
+                                                    MenuProps={{
+                                                        PaperProps: {
+                                                            style: {
+                                                                position: 'absolute',
+                                                                top: 'auto',
+                                                                bottom: '0',
+                                                                maxHeight: '200px',
+                                                                overflowY: 'auto'
+                                                            }
+                                                        }
+                                                    }}
+                                                >
+                                                    <MenuItem value="">Type de bien</MenuItem>
+                                                    <MenuItem value="Appartement">Appartement</MenuItem>
+                                                    <MenuItem value="Villa">Villa</MenuItem>
+                                                    <MenuItem value="Maison">Maison</MenuItem>
+                                                    <MenuItem value="Terrain constructible">Terrain</MenuItem>
+                                                    <MenuItem value="Bureau">Bureau</MenuItem>
+                                                    <MenuItem value="Etage de villa">Etage de villa</MenuItem>
+                                                    <MenuItem value="Local commercial">Local commercial</MenuItem>
+
+                                                </Select>
+                                            </FormControl>
+
+                                        </div>
+
+                                        <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-city col-lg-4 col-md-6">
+                                            <FormControl fullWidth>
+                                                <InputLabel>Ville</InputLabel>
+                                                <Select
+                                                    value={ville}
+                                                    onChange={(e) => setVille(e.target.value)}
+                                                    label="Ville"
+                                                >
+                                                    <MenuItem value="">Ville</MenuItem>
+                                                    <MenuItem value="ariana">Ariana</MenuItem>
+                                                    <MenuItem value="beja">Béja</MenuItem>
+                                                    <MenuItem value="tunis">Tunis</MenuItem>
+                                                    {/* Add other cities here */}
+                                                </Select>
+                                            </FormControl>
+                                        </div>
+
+                                        <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-mark col-lg-4 col-md-6">
+                                            <FormControl fullWidth>
+                                                <InputLabel>Délégation</InputLabel>
+                                                <Select
+                                                    value={delegation}
+                                                    onChange={(e) => setDelegation(e.target.value)}
+                                                    label="Délégation"
+                                                    MenuProps={{
+                                                        PaperProps: {
+                                                            style: {
+                                                                position: 'absolute',
+                                                                top: 'auto',
+                                                                bottom: '0',
+                                                                maxHeight: '200px',
+                                                                overflowY: 'auto'
+                                                            }
+                                                        }
+                                                    }}
+                                                >
+                                                    <MenuItem value="">Délégation</MenuItem>
+                                                    <MenuItem value="La Marsa">La Marsa</MenuItem>
+                                                    <MenuItem value="HAMMAMET">Hammamet</MenuItem>
+                                                    <MenuItem value="HAMMAMET CENTRE">Hammamet Centre</MenuItem>
+                                                    <MenuItem value="MREZGA">Mrezga</MenuItem>
+                                                    <MenuItem value="ARIANA VILLE">Ariana Ville</MenuItem>
+                                                    <MenuItem value="La Soukra">La Soukra</MenuItem>
+                                                    <MenuItem value="Le Kram">Le Kram</MenuItem>
+                                                    <MenuItem value="Nabeul">Nabeul</MenuItem>
+                                                    <MenuItem value="Lac 1">Lac 1</MenuItem>
+                                                    <MenuItem value="Lac 2">Lac 2</MenuItem>
+                                                </Select>
+                                            </FormControl>
+
+
+                                        </div>
+
+                                        <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-bed col-lg-4 col-md-6">
+                                            <FormControl fullWidth>
+                                                <InputLabel>Nombre de chambres</InputLabel>
+                                                <Select
+                                                    value={nbrChambre}
+                                                    onChange={(e) => setNbrChambre(e.target.value)}
+                                                    label="Nombre de chambres"
+                                                    MenuProps={{
+                                                        PaperProps: {
+                                                            style: {
+                                                                position: 'absolute',
+                                                                top: 'auto',
+                                                                bottom: '0',
+                                                                maxHeight: '200px',
+                                                                overflowY: 'auto'
+                                                            }
+                                                        }
+                                                    }}
+                                                >
+                                                    <MenuItem value="">Nombre de chambres</MenuItem>
+                                                    <MenuItem value="1">1 Chambre</MenuItem>
+                                                    <MenuItem value="2">2 Chambres</MenuItem>
+                                                    <MenuItem value="3">3 Chambres</MenuItem>
+                                                    <MenuItem value="4">4 Chambres</MenuItem>
+                                                    <MenuItem value="5">5 Chambres</MenuItem>
+                                                    <MenuItem value="6">6 Chambres</MenuItem>
+                                                    <MenuItem value="7">7 Chambres</MenuItem>
+                                                    <MenuItem value="8">8 Chambres</MenuItem>
+                                                </Select>
+                                            </FormControl>
+
+                                        </div>
+
+                                        <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-bed col-lg-4 col-md-6">
+  <input
+    type="number"
+    value={prixMin}
+    onChange={(e) => setPrixMin(Number(e.target.value))}
+    placeholder="Prix Min"
+    className="form-control"
+    style={{height: '58px'}}
+  />
+</div>
+
+<div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-bed col-lg-4 col-md-6">
+  <input
+    type="number"
+    value={prixMax}
+    onChange={(e) => setPrixMax(Number(e.target.value))}
+    placeholder="Prix Max"
+    className="form-control"  
+    style={{height: '58px'}}
+  />
+</div>
+
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
                             <div className="ltn__shop-options">
                                 <ul className="justify-content-start">
                                     <li>
@@ -130,16 +313,7 @@ const getPaginationPages = () => {
                                             <span>Affichage de {filteredProducts.length} résultats sur  {totalItems} </span>
                                         </div>
                                     </li>
-                                    <li>
-                                        <div className="short-by text-center">
-                                            <select className="nice-select">
-                                                <option>Tri par défaut</option>
-                                                <option>Trier par nouveautés</option>
-                                                <option>Trier par prix : croissant</option>
-                                                <option>Trier par prix : décroissant</option>
-                                            </select>
-                                        </div>
-                                    </li>
+                               
                                 </ul>
                             </div>
                             <div className="tab-content">
@@ -166,7 +340,7 @@ const getPaginationPages = () => {
                                                 {/* Product Items (Grid View) */}
                                                 {filteredProducts.length > 0 ? (
     filteredProducts.map(product => (
-        <div className="col-xl-6 col-sm-6 col-12" key={product.id}>
+        <div className="col-xl-4 col-md-6 col-12" key={product.id}>
             <div className="ltn__product-item ltn__product-item-4 ltn__product-item-5 text-center---">
                 <div className="product-img go-top">
                     <Link to={`/product-details/${product.id}`}>
@@ -315,7 +489,7 @@ const getPaginationPages = () => {
                                 </div>
                             </div>
                         </div>
-                        <Sidebar />
+                 
                     </div>
                 </div>
             </div>

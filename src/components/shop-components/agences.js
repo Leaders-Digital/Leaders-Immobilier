@@ -12,6 +12,7 @@ const ShopGridV1 = () => {
             imgSrc: 'assets/img/logo.png',
             location: 'Cité les Pins, En face clinique Hannibal, Tunis',
             phone: '27 246 301',
+            link: '/about/lac', 
         },
         {
             id: 2,
@@ -19,6 +20,7 @@ const ShopGridV1 = () => {
             imgSrc: 'assets/img/logo.png',
             location: 'Barreket sahel Manaret hammamet, 8056, Tunisie',
             phone: '27 246 301',
+            link: '/about/hammamet',
         },
         {
             id: 3,
@@ -26,6 +28,7 @@ const ShopGridV1 = () => {
             imgSrc: 'assets/img/logo.png',
             location: 'Rue Abu Dhabi 8050 Hammamet, Tunisie',
             phone: '27 246 309',
+            link: '/about/mrezga',
         },
         {
             id: 4,
@@ -33,6 +36,7 @@ const ShopGridV1 = () => {
             imgSrc: 'assets/img/logo.png',
             location: 'El Aouina, résidence RANIA , Tunis, 4216, Tunisie',
             phone: '27 246 321',
+            link: '/about/aouina',
         },
         {
             id: 5,
@@ -40,6 +44,7 @@ const ShopGridV1 = () => {
             imgSrc: 'assets/img/logo.png',
             location: 'Kélibia, Tunisia, 8090, Tunisie',
             phone: '27 246 316',
+            link: '/about/kelibia',
         },
     ];
 
@@ -52,51 +57,76 @@ const ShopGridV1 = () => {
         imgSrc: 'assets/img/logo.png',
         location: 'Via Accademia 22, Milan, Italie',
         phone: '+39 346 860 9857',
+        link: '/about/milano',
     };
 
     const renderAgencyCard = (agency) => (
         <Grid item xs={12} sm={6} md={4} key={agency.id}>
-            <Card sx={{ display: 'flex', flexDirection: 'column', mb: 2, boxShadow: 3, paddingTop: 2, paddingBottom: 2 }}>  
-                {/* Added paddingTop and paddingBottom to add space */}
-                <CardMedia
-                    component="img"
-                    image={publicUrl + agency.imgSrc}
-                    alt={agency.title}
-                    sx={{ objectFit: 'cover', height: 120, width: 'auto', margin: '0 auto' }}  
-                />
-                <CardContent>
-                    <Typography variant="h6" component="h2" gutterBottom sx={{ textAlign: 'center', lineHeight: '1.6' }}>
-                        <Link to="/product-details">{agency.title}</Link>
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center', lineHeight: '1.6' }}>
-                        <i className="flaticon-pin" /> {agency.location}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center', lineHeight: '1.6' }}>
-                        <i className="fa fa-phone" /> {agency.phone}
-                    </Typography>
-                </CardContent>
-            </Card>
+            <Link to={agency.link} style={{ textDecoration: 'none' }}>
+                <Card
+                    sx={{
+                        display: 'flex',
+                        flexDirection: 'column',
+                        mb: 2,
+                        boxShadow: 3,
+                        paddingTop: 2,
+                        paddingBottom: 2,
+                        transition: 'transform 0.3s ease',  
+                        '&:hover': {
+                            transform: 'scale(1.02)',     
+                        },
+                    }}
+                >
+                    <CardMedia
+                        component="img"
+                        image={publicUrl + agency.imgSrc}
+                        alt={agency.title}
+                        sx={{ objectFit: 'cover', height: 120, width: 'auto', margin: '0 auto' }}
+                    />
+                    <CardContent>
+                        <Typography variant="h6" component="h2" gutterBottom sx={{ textAlign: 'center', lineHeight: '1.6' }}>
+                            {agency.title}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center', lineHeight: '1.6' }}>
+                            <i className="flaticon-pin" /> {agency.location}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary" sx={{ textAlign: 'center', lineHeight: '1.6' }}>
+                            <i className="fa fa-phone" /> {agency.phone}
+                        </Typography>
+                    </CardContent>
+                </Card>
+            </Link>
         </Grid>
     );
 
     return (
         <div className="product-area">
             <div className="container">
-                <Typography variant="h4" align="center" gutterBottom sx={{ lineHeight: '1.8' }}>
-                    Agences en Tunisie
-                </Typography>
-                <Grid container justifyContent="center" sx={{ mb: 2 }}>
-                    <img src={publicUrl + TunisiaFlag} alt="Tunisie Flag" width={100} />
+                {/* Tunisia Agencies */}
+                <Grid container alignItems="center" sx={{ mb: 4 }}>
+                    <Grid item>
+                        <Typography variant="h4" sx={{ mr: 2 }}>
+                            Agences en Tunisie
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <img src={publicUrl + TunisiaFlag} alt="Tunisie Flag" width={50} />
+                    </Grid>
                 </Grid>
                 <Grid container spacing={3}>
                     {tunisiaAgencies.map(renderAgencyCard)}
                 </Grid>
 
-                <Typography variant="h4" align="center" sx={{ mt: 5, lineHeight: '1.8' }} gutterBottom>
-                    Agences en Italie
-                </Typography>
-                <Grid container justifyContent="center" sx={{ mb: 2 }}>
-                    <img src={publicUrl + ItalyFlag} alt="Italy Flag" width={100} />
+                {/* Italy Agencies */}
+                <Grid container alignItems="center" sx={{ mt: 5, mb: 4 }}>
+                    <Grid item>
+                        <Typography variant="h4" sx={{ mr: 2 }}>
+                            Agences en Italie
+                        </Typography>
+                    </Grid>
+                    <Grid item>
+                        <img src={publicUrl + ItalyFlag} alt="Italy Flag" width={50} />
+                    </Grid>
                 </Grid>
                 <Grid container spacing={3}>
                     {renderAgencyCard(italyAgency)}

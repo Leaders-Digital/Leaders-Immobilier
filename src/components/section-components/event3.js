@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 
-class 	Neighbour extends Component {
+class 	Event3 extends Component {
 
     render() {
 
@@ -15,7 +15,7 @@ class 	Neighbour extends Component {
 			      <div className="col-lg-12">
 			        <div className="section-title-area ltn__section-title-2--- text-center---">
 			          <h6 className="section-subtitle section-subtitle-2--- ltn__secondary-color">  <span><i className="far fa-calendar" /></span> Notre événement</h6>
-			          <h1 className="section-title">Evènement tirage au sort  <br />
+			          <h1 className="section-title">Evènement le grand jeu   <br />
 					 By Leaders Immobilier </h1>
 			        </div>
 			      </div>
@@ -27,7 +27,7 @@ class 	Neighbour extends Component {
 			            <div className="nav">
 			              <a className="active show" data-bs-toggle="tab" href="#liton_tab_4_1"><img src={publicUrl+"assets/img/events/car1/1.jpg"} alt="#" /></a>
 			              <a data-bs-toggle="tab" href="#liton_tab_4_2" ><img src={publicUrl+"assets/img/events/car1/2.jpg"} alt="#" /></a>
-			              <a data-bs-toggle="tab" href="#liton_tab_4_3" ><img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" /></a>
+			              <a data-bs-toggle="tab" href="#liton_tab_4_3" ><img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" /></a>	
 			            </div>
 			          </div>
 			          <div className="tab-content">
@@ -42,11 +42,11 @@ class 	Neighbour extends Component {
 			                  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link to="/product-details"><img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" /></Link>
+			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/car1/4.jpg"} alt="#" /></Link>
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
-			                        <h4><Link to="/product-details">Lorem Lorem</Link></h4>
+			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Lorem Lorem</Link></h4>
 			                        <label><span className="ltn__secondary-color">18 Octobre</span> / 2023</label>
 			                        <div className="search-by-place-brief">
 			                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
@@ -54,7 +54,7 @@ class 	Neighbour extends Component {
 			                            ullamco laboris.</p>
 			                        </div>
 			                        <div className="search-by-place-btn ">
-			                          <Link to="/">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
+			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
 			                        </div>
 			                      </div>
 			                    </div>
@@ -70,26 +70,22 @@ class 	Neighbour extends Component {
 			                      <img src={publicUrl+"assets/img/events/car1/2.jpg"} alt="#" />
 			                    </div>
 			                  </div>
-			                  <div className="col-lg-4">
+							  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link to="/product-details"><img src={publicUrl+"assets/img/events/car1/2.jpg"} alt="#" /></Link>
-			                        <div className="search-by-place-badge">
-			                          <ul>
-			                            <li>9 Properties</li>
-			                          </ul>
-			                        </div>
+			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/car1/5.jpg"} alt="#" /></Link>
+			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
-			                        <h4><Link to="/product-details">Medical Hospital</Link></h4>
-			                        <label><span className="ltn__secondary-color">1,500m </span>/ 21 min. walk</label>
+			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Lorem Lorem</Link></h4>
+			                        <label><span className="ltn__secondary-color">18 Octobre</span> / 2023</label>
 			                        <div className="search-by-place-brief">
 			                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
 			                            elit, sed do eiusmod tempor incididunt ut labore Enim
 			                            ullamco laboris.</p>
 			                        </div>
 			                        <div className="search-by-place-btn ">
-			                          <Link to="/product-details">View Property <i className="flaticon-right-arrow" /></Link>
+			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
 			                        </div>
 			                      </div>
 			                    </div>
@@ -105,30 +101,26 @@ class 	Neighbour extends Component {
 			                      <img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" />
 			                    </div>
 			                  </div>
-			                  <div className="col-lg-4">
+							  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link to="/product-details"><img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" /></Link>
-			                        <div className="search-by-place-badge">
-			                          <ul>
-			                            <li>9 Properties</li>
-			                          </ul>
-			                        </div>
+			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/car1/6.jpg"} alt="#" /></Link>
+			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
-			                        <h4><Link to="/product-details">Children Playland</Link></h4>
-			                        <label><span className="ltn__secondary-color">1,500m </span>/ 21 min. walk</label>
+			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Lorem Lorem</Link></h4>
+			                        <label><span className="ltn__secondary-color">18 Octobre</span> / 2023</label>
 			                        <div className="search-by-place-brief">
 			                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
 			                            elit, sed do eiusmod tempor incididunt ut labore Enim
 			                            ullamco laboris.</p>
 			                        </div>
 			                        <div className="search-by-place-btn ">
-			                          <Link to="/product-details">View Property <i className="flaticon-right-arrow" /></Link>
+			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
 			                        </div>
 			                      </div>
 			                    </div>
-			                  </div>
+			                  </div>	
 			                </div>
 			              </div>
 			            </div>
@@ -143,4 +135,4 @@ class 	Neighbour extends Component {
         }
 }
 
-export default Neighbour
+export default Event3
