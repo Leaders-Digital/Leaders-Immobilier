@@ -1189,7 +1189,7 @@ ul li label {
 
   .product-img img {
       width: 100%;
-      max-width: 300px; 
+      
       margin-bottom: 15px;
   }
 }
@@ -18141,7 +18141,7 @@ transition: 0.5s;
   font-size: 16px;
   font-weight: 400;
   font-family: var(--ltn__heading-font);
-  padding: 17px 40px;
+  padding: 14px 40px;
   text-align: center;
   cursor: pointer;
   -webkit-transition: all 0.3s ease 0s;

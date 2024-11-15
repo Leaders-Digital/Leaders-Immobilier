@@ -17,8 +17,8 @@ const ShopGridV1 = () => {
     const [ville, setVille] = useState(location.state?.ville || "");
     const [delegation, setDelegation] = useState('');
     const [nbrChambre, setNbrChambre] = useState('');
-    const [prixMin, setPrixMin] = useState(10);
-    const [prixMax, setPrixMax] = useState(100000);  
+    const [prixMin, setPrixMin] = useState();
+    const [prixMax, setPrixMax] = useState();  
 
     const fetchProducts = () => {
         const body = {
@@ -170,18 +170,49 @@ const getPaginationPages = () => {
                                         </div>
 
                                         <div className="ltn__car-dealer-form-item ltn__custom-icon ltn__icon-city col-lg-4 col-md-6">
-                                            <FormControl fullWidth>
+                                        <FormControl fullWidth>
                                                 <InputLabel>Ville</InputLabel>
                                                 <Select
                                                     value={ville}
                                                     onChange={(e) => setVille(e.target.value)}
                                                     label="Ville"
+                                                    MenuProps={{
+                                                        PaperProps: {
+                                                            style: {
+                                                                position: 'absolute',
+                                                                top: 'auto',
+                                                                bottom: '0',
+                                                                maxHeight: '200px',
+                                                                overflowY: 'auto'
+                                                            }
+                                                        }
+                                                    }}
                                                 >
-                                                    <MenuItem value="">Ville</MenuItem>
-                                                    <MenuItem value="ariana">Ariana</MenuItem>
-                                                    <MenuItem value="beja">Béja</MenuItem>
-                                                    <MenuItem value="tunis">Tunis</MenuItem>
-                                                    <MenuItem value="Nabeul">Nabeul</MenuItem>
+                                    
+    <MenuItem value="Ariana">Ariana</MenuItem>
+    <MenuItem value="Beja">Beja</MenuItem>
+    <MenuItem value="Ben Arous">Ben Arous</MenuItem>
+    <MenuItem value="Bizerte">Bizerte</MenuItem>
+    <MenuItem value="Gabès">Gabès</MenuItem>
+    <MenuItem value="Gafsa">Gafsa</MenuItem>
+    <MenuItem value="Jendouba">Jendouba</MenuItem>
+    <MenuItem value="Kairouan">Kairouan</MenuItem>
+    <MenuItem value="Kasserine">Kasserine</MenuItem>
+    <MenuItem value="Kébili">Kébili</MenuItem>
+    <MenuItem value="Le Kef">Le Kef</MenuItem>
+    <MenuItem value="Mahdia">Mahdia</MenuItem>
+    <MenuItem value="La Manouba">La Manouba</MenuItem>
+    <MenuItem value="Médenine">Médenine</MenuItem>
+    <MenuItem value="Monastir">Monastir</MenuItem>
+    <MenuItem value="Nabeul">Nabeul</MenuItem>
+    <MenuItem value="Sfax">Sfax</MenuItem>
+    <MenuItem value="Sidi Bouzid">Sidi Bouzid</MenuItem>
+    <MenuItem value="Siliana">Siliana</MenuItem>
+    <MenuItem value="Sousse">Sousse</MenuItem>
+    <MenuItem value="Tataouine">Tataouine</MenuItem>
+    <MenuItem value="Tozeur">Tozeur</MenuItem>
+    <MenuItem value="Tunis">Tunis</MenuItem>
+    <MenuItem value="Zaghouan">Zaghouan</MenuItem>
                                                     {/* Add other cities here */}
                                                 </Select>
                                             </FormControl>
@@ -347,7 +378,7 @@ const getPaginationPages = () => {
                     <Link to={`/product-details/${product.id}`}>
                         <img 
                             src={`${process.env.REACT_APP_API_URL}${product.listImages?.[0]?.version_web}`} 
-                            onError={(e) => e.target.src = 'https://placehold.co/600x400/png'}  
+                            onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'}  
                         />  
                     </Link>
                 </div>
@@ -410,7 +441,7 @@ const getPaginationPages = () => {
                                                                     <Link to={`/product-details/${product.id}`}>
                                                                         <img 
                                                                             src={`${process.env.REACT_APP_API_URL}${product.listImages?.[0]?.version_web}`} 
-                                                                            onError={(e) => e.target.src = 'https://placehold.co/600x400/png'}
+                                                                            onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'}
                                                                         />
                                                                     </Link>
                                                                 </div>

@@ -97,9 +97,30 @@ const SearchForm = () => {
             }
         }}> 
 					         <MenuItem value="">Ville</MenuItem>
-                                                    <MenuItem value="ariana">Ariana</MenuItem>
-                                                    <MenuItem value="beja">Béja</MenuItem>
-                                                    <MenuItem value="tunis">Tunis</MenuItem>
+                   <MenuItem value="Ariana">Ariana</MenuItem>
+    <MenuItem value="Beja">Beja</MenuItem>
+    <MenuItem value="Ben Arous">Ben Arous</MenuItem>
+    <MenuItem value="Bizerte">Bizerte</MenuItem>
+    <MenuItem value="Gabès">Gabès</MenuItem>
+    <MenuItem value="Gafsa">Gafsa</MenuItem>
+    <MenuItem value="Jendouba">Jendouba</MenuItem>
+    <MenuItem value="Kairouan">Kairouan</MenuItem>
+    <MenuItem value="Kasserine">Kasserine</MenuItem>
+    <MenuItem value="Kébili">Kébili</MenuItem>
+    <MenuItem value="Le Kef">Le Kef</MenuItem>
+    <MenuItem value="Mahdia">Mahdia</MenuItem>
+    <MenuItem value="La Manouba">La Manouba</MenuItem>
+    <MenuItem value="Médenine">Médenine</MenuItem>
+    <MenuItem value="Monastir">Monastir</MenuItem>
+    <MenuItem value="Nabeul">Nabeul</MenuItem>
+    <MenuItem value="Sfax">Sfax</MenuItem>
+    <MenuItem value="Sidi Bouzid">Sidi Bouzid</MenuItem>
+    <MenuItem value="Siliana">Siliana</MenuItem>
+    <MenuItem value="Sousse">Sousse</MenuItem>
+    <MenuItem value="Tataouine">Tataouine</MenuItem>
+    <MenuItem value="Tozeur">Tozeur</MenuItem>
+    <MenuItem value="Tunis">Tunis</MenuItem>
+    <MenuItem value="Zaghouan">Zaghouan</MenuItem>
                           </Select>
                         </FormControl>
                       </div>
@@ -107,9 +128,9 @@ const SearchForm = () => {
                       
                       <div className="ltn__car-dealer-form-item col-lg-3 col-md-6">
                         <div className="btn-wrapper text-center mt-0 go-top">
-                          <Button type="submit" className="btn theme-btn-1 btn-effect-1 text-uppercase">
+                          <button type="submit" className="btn theme-btn-1 btn-effect-1 text-uppercase">
                             Recherche
-                          </Button>
+                          </button>
                         </div>
                       </div>
                     </form>

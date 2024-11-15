@@ -16,8 +16,8 @@ const ShopGridV1 = () => {
     const [ville, setVille] = useState(location.state?.ville || "");
     const [delegation, setDelegation] = useState('');
     const [nbrChambre, setNbrChambre] = useState('');
-    const [prixMin, setPrixMin] = useState(10000);
-    const [prixMax, setPrixMax] = useState(30000000);
+    const [prixMin, setPrixMin] = useState();
+    const [prixMax, setPrixMax] = useState();
 
     // Update state based on location if values exist
 
@@ -191,7 +191,6 @@ const ShopGridV1 = () => {
     <MenuItem value="Ariana">Ariana</MenuItem>
     <MenuItem value="Beja">Beja</MenuItem>
     <MenuItem value="Ben Arous">Ben Arous</MenuItem>
-    <MenuItem value="kelibia">kelibia</MenuItem>
     <MenuItem value="Bizerte">Bizerte</MenuItem>
     <MenuItem value="Gabès">Gabès</MenuItem>
     <MenuItem value="Gafsa">Gafsa</MenuItem>
@@ -381,7 +380,7 @@ const ShopGridV1 = () => {
                                                                     <Link to={`/product-details/${product.id}`}>
                                                                         <img
                                                                             src={`${process.env.REACT_APP_API_URL}${product.listImages?.[0]?.version_web}`}
-                                                                            onError={(e) => e.target.src = 'https://placehold.co/600x400/png'}
+                                                                            onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'}
                                                                         />
                                                                     </Link>
                                                                 </div>
@@ -443,7 +442,7 @@ const ShopGridV1 = () => {
                                                                     <Link to={`/product-details/${product.id}`}>
                                                                         <img
                                                                             src={`${process.env.REACT_APP_API_URL}${product.listImages?.[0]?.version_web}`}
-                                                                            onError={(e) => e.target.src = 'https://placehold.co/600x400/png'}
+                                                                            onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'}
                                                                         />
                                                                     </Link>
                                                                 </div>

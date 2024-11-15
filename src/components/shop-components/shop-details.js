@@ -77,7 +77,14 @@ const ShopDetails = () => {
 						<div className="ltn__blog-meta">
 							<ul>
 								<li className="ltn__blog-category">
-									<Link to="#">À VENDRE</Link>
+								<Link to="#">
+    {product.type === 'Location annuelle'
+        ? 'À LOUER'
+        : product.type === 'Location estival'
+        ? 'À LOUER'
+        : 'À VENDRE'}
+</Link>
+
 								</li>
 								<li className="ltn__blog-date">
 									<i className="far fa-calendar-alt" /> {new Date(product.date_creation).toLocaleDateString()}
@@ -434,7 +441,7 @@ const ShopDetails = () => {
 										<Link to={`/product-details/${similarProduct.id}`}>
 											<img 
 												src={`${process.env.REACT_APP_API_URL}${similarProduct.listImages?.[0]?.version_web}`}
-												onError={(e) => e.target.src = 'https://placehold.co/600x400/png'} 
+												onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'} 
 												alt={similarProduct.type_categorie}
 											/>
 										</Link>

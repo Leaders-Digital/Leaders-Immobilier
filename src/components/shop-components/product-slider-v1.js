@@ -38,7 +38,7 @@ const ProductDetail = () => {
 
     // Fill with placeholders if less than 4 images
     const placeholdersNeeded = Math.max(0, 4 - images.length);
-    const finalImages = [...images, ...new Array(placeholdersNeeded).fill('https://placehold.co/1920x1080/png')];
+    const finalImages = [...images, ...new Array(placeholdersNeeded).fill('https://workingat.vu.nl/static/images/placeholder-image.jpg')];
 
     // Slick slider settings for react-slick
     const sliderSettings = {
@@ -78,7 +78,7 @@ const ProductDetail = () => {
                                             width: '100%',
                                             height: '400px',
                                         }}
-                                        onError={(e) => e.target.src = 'https://placehold.co/1920x1080/png'}
+                                        onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'}
                                     />
                                 </a>
                             </div>
