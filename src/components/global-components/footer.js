@@ -108,7 +108,7 @@ class Footer_v1 extends Component {
 				                    <i className="icon-call" />
 				                  </div>
 				                  <div className="footer-address-info">
-				                    <p><a href="tel:+0123-456789">(+216) 27 246 300</a></p>
+				                    <p><a href="tel:+216 27246300">(+216) 27 246 300</a></p>
 				                  </div>
 				                </li>
 				                <li>
@@ -116,7 +116,7 @@ class Footer_v1 extends Component {
 				                    <i className="icon-mail" />
 				                  </div>
 				                  <div className="footer-address-info">
-				                    <p><a href="mailto:contact@leaders-immo.com">contact@leaders-immo.com</a></p>
+				                    <p><a href="contact@leaders-immo.com">contact@leaders-immo.com</a></p>
 				                  </div>
 				                </li>
 				              </ul>

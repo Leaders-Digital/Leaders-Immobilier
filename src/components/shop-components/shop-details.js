@@ -16,6 +16,9 @@ const ShopDetails = () => {
 	const slickRef = useRef(null);
 
 	useEffect(() => {
+		window.scrollTo(0, 0);
+
+
 		const fetchProductDetails = async () => {
 			setLoading(true);
 			try {
@@ -257,7 +260,7 @@ const ShopDetails = () => {
 						</div>
 						{/* APARTMENTS PLAN AREA END */}
 						<h4 className="title-2">Vidéo de la propriété</h4>
-						<div className="ltn__video-bg-img ltn__video-popup-height-500 bg-overlay-black-50 bg-image mb-60" data-bs-bg={publicUrl + "assets/img/img-slide/1.png"}>
+						<div className="ltn__video-bg-img ltn__video-popup-height-500 bg-overlay-black-50 bg-image mb-60" data-bs-bg={`${process.env.REACT_APP_API_URL}${product.listImages?.[0]?.version_web}`}>
 						<a
   className="ltn__video-icon-2 ltn__video-icon-2-border---"
   href={product.video ? product.video : "https://www.youtube.com/embed/3RcwJbTTaJs"}

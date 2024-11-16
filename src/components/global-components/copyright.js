@@ -13,7 +13,7 @@ class CopyRight extends Component {
 				<div className="row">
 				<div className="text-center">
 					<div className="ltn__copyright-design clearfix">
-					<p>All Rights Reserved @ Leaders Immobilier <span className="current-year" /></p>
+					<p>All Rights Reserved @ Leaders Digital <span className="current-year" /></p>
 					</div>
 				</div>
 				

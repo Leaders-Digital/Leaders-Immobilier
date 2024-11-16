@@ -18,6 +18,7 @@ import Agence from './components/agence';
 import ProdductDetails from './components/product-details';
 import ProdductDetailsTest from './components/product-details-test';
 import Contact from './components/contact';
+import Location from './components/location';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -43,6 +44,7 @@ const App = () => {
           <Route path="/estimation" element={<Estimation />} />
           <Route path="/acheteur" element={<TrouverAcheteur />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/map" element={<Location />} />
         </Routes>
       </Router>
     )

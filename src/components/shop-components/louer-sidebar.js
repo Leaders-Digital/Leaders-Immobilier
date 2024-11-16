@@ -123,6 +123,16 @@ const getPaginationPages = () => {
         setViewMode(mode);
     };
 
+
+    const villeDelegations = {
+        "Ariana": ["La Soukra", "Ariana Ville"],
+        "Tunis": ["Le Kram", "La Marsa","Lac 1","Lac 2"],
+        "Sfax": ["Sfax Ville", "Sidi Mansour"],
+        "Nabeul": ["Hammamet", "Hammamet Centre", "Mrezga"],
+       
+    };
+    const availableDelegations = villeDelegations[ville] || []; 
+
     return (
         <div>
             <div className="ltn__product-area ltn__product-gutter">
@@ -225,31 +235,20 @@ const getPaginationPages = () => {
                                                     value={delegation}
                                                     onChange={(e) => setDelegation(e.target.value)}
                                                     label="Délégation"
-                                                    MenuProps={{
-                                                        PaperProps: {
-                                                            style: {
-                                                                position: 'absolute',
-                                                                top: 'auto',
-                                                                bottom: '0',
-                                                                maxHeight: '200px',
-                                                                overflowY: 'auto'
-                                                            }
-                                                        }
-                                                    }}
+                                                  
+                                                    disabled={ville === ''} 
                                                 >
-                                                    <MenuItem value="">Délégation</MenuItem>
-                                                    <MenuItem value="La Marsa">La Marsa</MenuItem>
-                                                    <MenuItem value="HAMMAMET">Hammamet</MenuItem>
-                                                    <MenuItem value="HAMMAMET CENTRE">Hammamet Centre</MenuItem>
-                                                    <MenuItem value="MREZGA">Mrezga</MenuItem>
-                                                    <MenuItem value="ARIANA VILLE">Ariana Ville</MenuItem>
-                                                    <MenuItem value="La Soukra">La Soukra</MenuItem>
-                                                    <MenuItem value="Le Kram">Le Kram</MenuItem>
-                                                    <MenuItem value="Nabeul">Nabeul</MenuItem>
-                                                    <MenuItem value="Lac 1">Lac 1</MenuItem>
-                                                    <MenuItem value="Lac 2">Lac 2</MenuItem>
-                                                </Select>
-                                            </FormControl>
+                                                    {availableDelegations.length > 0 ? (
+                        availableDelegations.map((del, index) => (
+                            <MenuItem key={index} value={del}>
+                                {del}
+                            </MenuItem>
+                        ))
+                    ) : (
+                        <MenuItem value="">Aucune délégation disponible</MenuItem> // Placeholder if no delegations
+                    )}
+                </Select>
+            </FormControl>
 
 
                                         </div>

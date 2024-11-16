@@ -22,7 +22,7 @@ class Sponsor extends Component {
 			        </div>
 			      </div>
 			      <div className="col-lg-12">
-			        <div className="ltn__brand-logo-item" style={{width:"65%",marginTop:"20px"}}>
+			        <div className="ltn__brand-logo-item" >
 			          <img src={publicUrl+"assets/img/brand-logo/2.png"} alt="Brand Logo" />
 			        </div>
 			      </div>
@@ -32,7 +32,7 @@ class Sponsor extends Component {
 			        </div>
 			      </div>
 			      <div className="col-lg-12">
-			        <div className="ltn__brand-logo-item">
+			        <div className="ltn__brand-logo-item" style={{width:"65%",marginTop:"25px"}}>
 			          <img src={publicUrl+"assets/img/brand-logo/4.png"} alt="Brand Logo" />
 			        </div>
 			      </div>

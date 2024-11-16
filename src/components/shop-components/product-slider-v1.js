@@ -7,6 +7,8 @@ const ProductDetail = () => {
     const { id } = useParams();
     const [product, setProduct] = useState(null);
     const [loading, setLoading] = useState(true);
+    const [modalOpen, setModalOpen] = useState(false);
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
     useEffect(() => {
         const fetchProductDetails = async () => {
@@ -29,6 +31,25 @@ const ProductDetail = () => {
         fetchProductDetails();
     }, [id]);
 
+    const openModal = (index) => {
+        setCurrentImageIndex(index);
+        setModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setModalOpen(false);
+    };
+
+    const nextImage = () => {
+        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % finalImages.length);
+    };
+
+    const prevImage = () => {
+        setCurrentImageIndex(
+            (prevIndex) => (prevIndex - 1 + finalImages.length) % finalImages.length
+        );
+    };
+
     if (loading) return <p>Loading...</p>;
     if (!product) return <p>Aucune propriété trouvée</p>;
 
@@ -46,8 +67,8 @@ const ProductDetail = () => {
         slidesToScroll: 1,
         arrows: true,
         autoplay: false,
-        prevArrow: <button type="button" className="slick-prev">←</button>,
-        nextArrow: <button type="button" className="slick-next">→</button>,
+        prevArrow: <button type="button" ><i className="fas fa-chevron-left"></i></button>,
+        nextArrow: <button type="button"><i className="fas fa-chevron-right"></i></button>,
         responsive: [
             { breakpoint: 1024, settings: { slidesToShow: 3 } },
             { breakpoint: 600, settings: { slidesToShow: 1 } },
@@ -69,14 +90,14 @@ const ProductDetail = () => {
                                     padding: '1px',
                                 }}
                             >
-                                <a href={image} data-rel="lightcase:myCollection">
+                                <a href="#" onClick={(e) => { e.preventDefault(); openModal(index); }}>
                                     <img
                                         src={image}
                                         alt={`Product image ${index + 1}`}
                                         style={{
                                             display: 'block',
                                             width: '100%',
-                                            height: '400px',
+                                            height: '440px',
                                         }}
                                         onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'}
                                     />
@@ -86,6 +107,33 @@ const ProductDetail = () => {
                     ))}
                 </Slider>
             </div>
+
+            {/* Modal for Image Sliding */}
+            {modalOpen && (
+                <div className="modal-overlay" onClick={closeModal}>
+                    <div
+                      
+                        onClick={(e) => e.stopPropagation()}  // Prevent click event from closing the modal when clicked inside
+                    >
+                     <button className="close-button" onClick={closeModal}>
+    <i className="fas fa-times"></i> {/* Font Awesome close icon */}
+</button>
+                        <div className="modal-image-container">
+                            <button className="prev-button" onClick={prevImage}> <i className="fas fa-chevron-left"></i> </button>
+                            <img
+                                src={finalImages[currentImageIndex]}
+                                alt={`Modal image ${currentImageIndex + 1}`}
+                                style={{
+                                    maxWidth: '100%',
+                                    maxHeight: '80vh',
+                                    objectFit: 'contain',
+                                }}
+                            />
+                            <button className="next-button" onClick={nextImage}> <i className="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
