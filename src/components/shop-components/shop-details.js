@@ -258,9 +258,14 @@ const ShopDetails = () => {
 						{/* APARTMENTS PLAN AREA END */}
 						<h4 className="title-2">Vidéo de la propriété</h4>
 						<div className="ltn__video-bg-img ltn__video-popup-height-500 bg-overlay-black-50 bg-image mb-60" data-bs-bg={publicUrl + "assets/img/img-slide/1.png"}>
-							<a className="ltn__video-icon-2 ltn__video-icon-2-border---" href="https://www.youtube.com/embed/3RcwJbTTaJs" data-rel="lightcase">
-								<i className="fa fa-play" />
-							</a>
+						<a
+  className="ltn__video-icon-2 ltn__video-icon-2-border---"
+  href={product.video ? product.video : "https://www.youtube.com/embed/3RcwJbTTaJs"}
+  data-rel="lightcase"
+>
+  <i className="fa fa-play" />
+</a>
+
 						</div>
 						<div className="ltn__shop-details-tab-content-inner--- ltn__shop-details-tab-inner-2 ltn__product-details-review-inner mb-60">
 							<h4 className="title-2">Avis des clients</h4>
