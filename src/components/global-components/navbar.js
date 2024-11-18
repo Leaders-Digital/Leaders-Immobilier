@@ -55,8 +55,8 @@ class Navbar extends Component {
                                                     <li><Link to="/acheteur">Trouvez Acheteur</Link></li>
                                                     <li><Link to="#">Échange Bien</Link></li>
                                                     <li>
-    <Link to="/about">À propos</Link>
-    <ul>
+                                                    <Link style={{ pointerEvents: 'none' }}>À propos</Link>
+                                                    <ul>
         <li><Link to="/events">Événements</Link></li>
         <li><Link to="/agence">Nos Agences</Link></li>
         <li><Link to="/histoires">Histoires</Link></li>
@@ -105,7 +105,8 @@ class Navbar extends Component {
                                 <li><Link to="/acheteur">Trouvez Acheteur</Link></li>
                                 <li><Link to="#">Échange Bien</Link></li>
                                 <li>
-    <Link to="/about">À propos</Link>
+                                    
+                                <Link style={{ pointerEvents: 'none' }}>À propos</Link>
     <ul>
         <li><Link to="/events">Événements</Link></li>
         <li><Link to="/agence">Nos Agences</Link></li>

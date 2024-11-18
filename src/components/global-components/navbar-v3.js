@@ -68,7 +68,7 @@ class NavbarV3 extends Component {
 			                  <li><a href="/acheteur">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
 							  <li>
-    <Link to="/about">À propos</Link>
+							  <Link style={{ pointerEvents: 'none' }}>À propos</Link>
     <ul>
         <li><Link to="/events">Événements</Link></li>
         <li><Link to="/agence">Nos Agences</Link></li>
@@ -121,7 +121,7 @@ class NavbarV3 extends Component {
 			                  <li><a href="/acheteur">Trouvez Acheteur</a> </li>
 			                  <li><a href="#">Échange Bien</a> </li>
 							  <li>
-    <Link to="/about">À propos</Link>
+							  <Link style={{ pointerEvents: 'none' }}>À propos</Link>
     <ul>
         <li><Link to="/events">Événements</Link></li>
         <li><Link to="/agence">Nos Agences</Link></li>
