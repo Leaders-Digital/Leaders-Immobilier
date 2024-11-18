@@ -13,10 +13,8 @@ class AboutV4 extends Component {
 				<div className="row">
 					<div className="col-lg-6 align-self-center">
 					<div className="about-us-img-wrap about-img-left">
-						<img src={publicUrl+"assets/img/others/about.jpg"} alt="About Us Image" />
-						<div className="about-us-img-info about-us-img-info-2 about-us-img-info-3">
-						
-						</div>
+						<img src={publicUrl+"assets/img/agence/lac.jpeg"} style={{height:"80vh"}} alt="About Us Image" />
+					
 					</div>
 					</div>
 					<div className="col-lg-6 align-self-center">

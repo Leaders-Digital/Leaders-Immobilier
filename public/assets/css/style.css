@@ -70,6 +70,19 @@ font-family: 'Poppins', sans-serif;
 /* ====================================================
     Gutter Code 
 ==================================================== */
+
+
+.ltn__google-map-locations-area {
+  position: relative; /* Ensure map is positioned correctly in its section */
+  display: block; /* Ensure it stretches to full width */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
 body {
   overflow-x: hidden;
 
