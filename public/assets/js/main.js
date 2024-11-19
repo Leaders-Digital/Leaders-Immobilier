@@ -1875,14 +1875,11 @@
               34. scrollUp active
           -------------------------------------------------------- */
           $.scrollUp({
-              scrollText: '<i class="fa fa-angle-up"></i>',
-              easingType: 'linear',
-              scrollSpeed: 1200,
-              animation: 'fade',
- 
-              
-          });
-  
+            scrollText: '<i class="fa fa-angle-up"></i>',
+            easingType: 'easeInOutQuad',
+            scrollSpeed: 900,
+            animation: 'fade'
+        });
   
           /* --------------------------------------------------------
               35. Parallax active ( About Section  )

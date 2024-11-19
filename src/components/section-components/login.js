@@ -26,10 +26,10 @@ class Login extends Component {
       <input type="password" name="password" placeholder="Mot de passe *" />
       <input type="text" name="number" placeholder="Votre CIN *" />
       <div className="btn-wrapper mt-0">
-        <button className="theme-btn-1 btn btn-block" type="submit">Se Connecter</button>
+        <button className="btn theme-btn-1 btn-effect-1" type="submit">Se Connecter</button>
       </div>
       <div className="go-to-btn mt-20">
-        <a href="#" title="Forgot Password?" data-bs-toggle="modal" data-bs-target="#ltn_forget_password_modal"><small>Mot de passe oublié ?</small></a>
+        <a href="#" title="Mot de passe oublié" data-bs-toggle="modal" data-bs-target="#ltn_forget_password_modal"><small>Mot de passe oublié ?</small></a>
       </div>
     </form>
   </div>
@@ -40,7 +40,7 @@ class Login extends Component {
     <h4>Vous n'avez pas de compte ?</h4>
     <p>Inscrivez-vous dès aujourd'hui pour bénéficier d'un accès exclusif aux <br /> meilleures offres immobilières.</p>
     <div className="btn-wrapper go-top">
-      <Link to="/register" className="theme-btn-1 btn black-btn">Créer un compte</Link>
+      <Link to="/register" className="btn theme-btn-1 btn-effect-1">Créer un compte</Link>
     </div>
   </div>
 </div>
@@ -63,22 +63,17 @@ class Login extends Component {
 						<div className="row">
 							<div className="col-12">
 							<div className="modal-product-info text-center">
-								<h4>FORGET PASSWORD?</h4>
-								<p className="added-cart"> Enter you register email.</p>
+								<h4>Mot de passe oublié</h4>
+								<p className="added-cart"> Entrez l'e-mail de votre inscription.</p>
 								<form action="#" className="ltn__form-box">
-								<input type="text" name="email" placeholder="Type your register email*" />
+								<input type="text" name="email" placeholder="Entrez l'e-mail de votre inscription.*" />
 								<div className="btn-wrapper mt-0">
-									<button className="theme-btn-1 btn btn-full-width-2" type="submit">Submit</button>
+									<button className="theme-btn-1 btn btn-full-width-2" type="submit">Envoyer</button>
 								</div>
 								</form>
 							</div>
 							{/* additional-info */}
-							<div className="additional-info d-none">
-								<p>We want to give you <b>10% discount</b> for your first order, <br />  Use discount code at checkout</p>
-								<div className="payment-method">
-								<img src={publicUrl+"assets/img/icons/payment.png"} alt="#" />
-								</div>
-							</div>
+					
 							</div>
 						</div>
 						</div>

@@ -1,16 +1,26 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
+import React from 'react';
 
-class Map extends Component {
-    render() {
+const Map = () => {
+      let publicUrl = process.env.PUBLIC_URL+'/'
+    return (
+        <div className="container my-5 ">
+            <div className="row align-items-center mb-5">
+                {/* Left Column: Image */}
+                <div className="col-md-8">
+                <img src={publicUrl+"assets/img/map.png"} alt="Map" />
+                </div>
 
-        let publicUrl = process.env.PUBLIC_URL+'/'
+                {/* Right Column: Title, Paragraph, and Button */}
+                <div className="col-md-4">
+                    <h4 className="mb-3">Découvrez les prix de l'immobilier en Tunisie</h4>
+                    <p className="mb-4">
+                    Explorez la carte des prix de Leaders Immobiliers pour accéder rapidement à des informations clés sur le marché immobilier en Tunisie. Consultez le prix moyen des biens et le nombre de propriétés disponibles dans chaque région.
+                    </p>
+                    <button className="btn theme-btn-1 btn-effect-1 ">Explorer la carte des prix                    </button>
+                </div>
+            </div>
+        </div>
+    );
+};
 
-    return <div className="google-map mb-120">
-			<   iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3192.884743325253!2d10.283321094930583!3d36.845236296195075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12fd4badf1c8d0bd%3A0xd5909ee45877f3c1!2sLEADERS%20IMMOBILIER!5e0!3m2!1sen!2stn!4v1730717268034!5m2!1sen!2stn" width="100%" height="100%" frameBorder={0} allowFullScreen aria-hidden="false" tabIndex={0} />
-		</div>
-        }
-}
-
-export default Map
+export default Map;

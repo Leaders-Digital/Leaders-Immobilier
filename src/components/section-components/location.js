@@ -130,7 +130,7 @@ const Location = () => {
                                 [
                                     'case',
                                     ['==', ['get', 'gouv_fr'], stateName],
-                                    '#ff0000', // Highlight selected state
+                                    'green', 
                                     '#888888',
                                 ]
                             );
@@ -150,7 +150,7 @@ const Location = () => {
                                     .setHTML(`
                                         <strong>${stateName}</strong><br/>
                                         Prix moyen: ${averagePrice.toLocaleString()} TND<br/>
-                                        Total items: ${totalItems}
+                                        Nombre des bien: ${totalItems}
                                     `)
                                     .addTo(mapInstance);
                             } else {

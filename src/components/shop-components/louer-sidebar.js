@@ -354,7 +354,7 @@ const getPaginationPages = () => {
                                         <div className="ltn__product-tab-content-inner ltn__product-grid-view">
                                             <div className="row">
                                                 {/* Search Widget */}
-                                                <div className="col-lg-12">
+                                                {/* <div className="col-lg-12">
                                                     <div className="ltn__search-widget mb-30">
                                                         <form action="#">
                                                             <input 
@@ -367,7 +367,7 @@ const getPaginationPages = () => {
                                                             <button type="submit"><i className="fas fa-search" /></button>
                                                         </form>
                                                     </div>
-                                                </div>
+                                                </div> */}
                                                 {/* Product Items (Grid View) */}
                                                 {filteredProducts.length > 0 ? (
     filteredProducts.map(product => (

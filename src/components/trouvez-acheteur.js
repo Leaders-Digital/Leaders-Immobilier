@@ -8,7 +8,7 @@ import Footer from './global-components/footer';
 const TrouverAcheteurV1 = () => {
     return <div>
         <Navbar />
-        <PageHeader headertitle="Estimation" />
+        <PageHeader headertitle="Trouver un acheteur " />
         <TrouverAcheteur />
         <CallToActionV1 />
         <Footer />

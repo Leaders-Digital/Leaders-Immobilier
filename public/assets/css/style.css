@@ -1,54 +1,5 @@
-/*
-    Template Name: Quarter
-    Description: Real Estate HTML Template
-    Version: 1.0.0
-*/
-/* Single side border-radius  */
-/* BORDER RADIUS */
-/* user select */
-/* box sizing  */
-/* placeholder */
-/* transition  */
-/* transform */
-/* rotate */
-/* scale */
-/* translate */
-/* translate rotate */
-/* skew */
-/* ============================================================
->>> TABLE OF CONTENTS:
-===============================================================
-# Google fonts
-# Gutter Code 
-# Normalize
-# Typography
-# Custom Class
-# input and button type focus outline disable
-# Form input box
-# Text meant only for screen readers.
-# Transition
 
-# Accessibility
-# Globals
 
-# Alignments
-# Clearings
-# Posts and pages
-# Captions
-# Galleries
-# Unit test
-# ScrollUp
-# Owl Carousel 
-# Slick Slider
-# Background Overlay
-# Scrollbar
-# Padding Top
-# Padding Bottom
-# Margin Top
-# Margin Bottom
-# Custom margin Padding
-
-============================================================= */
 /* -------------------------------------
     Google fonts
 ------------------------------------- */
@@ -1791,8 +1742,8 @@ ul {
     ScrollUp
 ---------------------------------------------------- */
 #scrollUp {
-  background-color: var(--section-bg-1);
-  color: var(--ltn__heading-color);
+  background-color: #fff;
+  color: var(--ltn__secondary-color);
   bottom: 70px;
   font-size: 20px;
   font-weight: bold;
@@ -7230,9 +7181,11 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   font-weight: 700;
 }
 .ltn__utilize-menu-head .ltn__utilize-close {
-  background-color: transparent;
-  font-size: 30px;
+  color: var(--ltn__secondary-color);
+  font-size: 45px;
   padding: 0 15px;
+  top: 45px ;
+  right: 0;
 }
 
 .ltn__utilize-buttons {
@@ -12947,6 +12900,10 @@ blockquote::before {
 .ltn__blog-tags-social-media .ltn__social-media ul li {
   color: var(--ltn__color-1);
 }
+.ltn__social-media ul li a i:hover{
+  color: var(--ltn__secondary-color);
+}
+
 
 .ltn__prev-next-btn {
   position: relative;
@@ -14181,6 +14138,7 @@ input.cart-plus-minus-box {
 
 .product-details-content .product-details-buy-btn .theme-btn-1 {
   padding: 10px 100px 9px;
+
 }
 
 /* ----------------------------------------------------
@@ -17892,6 +17850,7 @@ transition: 0.5s;
   font-weight: 600;
 }
 
+
 /* ----------------------------------------------------
     Footer Newsletter Widget
 ---------------------------------------------------- */
@@ -18249,11 +18208,24 @@ transition: 0.5s;
 .theme-btn-1 {
   background-color: var(--ltn__secondary-color);
   color: var(--white);
+  margin-top: 26px;
 }
 .theme-btn-1:hover {
   background-color: var(--ltn__primary-color);
   color: var(--white);
 }
+.news {
+  background-color: var(--ltn__secondary-color);
+  color: var(--white);
+  margin-top: 0.3px;
+}
+.news:hover {
+  background-color: var(--ltn__primary-color);
+  color: var(--white);
+}
+
+
+
 
 .theme-btn-2 {
   background-color: var(--ltn__primary-color);
@@ -18458,6 +18430,7 @@ transition: 0.5s;
   display: none;
   background: #222;
 }
+
 .cv-spinner {
   height: 100%;
   display: flex;

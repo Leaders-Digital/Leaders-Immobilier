@@ -271,7 +271,7 @@ const ShopDetails = () => {
 
 						</div>
 						<div className="ltn__shop-details-tab-content-inner--- ltn__shop-details-tab-inner-2 ltn__product-details-review-inner mb-60">
-							<h4 className="title-2">Avis des clients</h4>
+							{/* <h4 className="title-2">Avis des clients</h4>
 							<div className="product-ratting">
 								<ul>
 									<li><a href="#"><i className="fas fa-star" /></a></li>
@@ -283,7 +283,7 @@ const ShopDetails = () => {
 								</ul>
 							</div>
 							<hr />
-							{/* comment-area */}
+						
 							<div className="ltn__comment-area mb-30">
 								<div className="ltn__comment-inner">
 									<ul>
@@ -352,9 +352,9 @@ const ShopDetails = () => {
 										</li>
 									</ul>
 								</div>
-							</div>
+							</div> */}
 							{/* comment-reply */}
-							<div className="ltn__comment-reply-area ltn__form-box mb-30">
+							{/* <div className="ltn__comment-reply-area ltn__form-box mb-30">
 								<form action="#">
 									<h4>Ajouter un avis</h4>
 									<div className="mb-30">
@@ -388,7 +388,7 @@ const ShopDetails = () => {
 										<button className="btn theme-btn-1" type="submit">Envoyer</button>
 									</div>
 								</form>
-							</div>
+							</div> */}
 
 						</div>
 					
@@ -405,7 +405,7 @@ const ShopDetails = () => {
 
 
 						{/* Form Widget */}
-						<div className="widget ltn__form-widget">
+					 <div className="widget ltn__form-widget">
 							<h4 className="ltn__widget-title ltn__widget-title-border-2">Contactez-nous à propos ce bien</h4>
 							<form action="#">
 								<input

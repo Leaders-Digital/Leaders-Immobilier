@@ -3,7 +3,7 @@ import Navbar from './global-components/navbar';
 import PageHeader from './global-components/page-header';
 import AboutV4 from './about/about-hammamet';
 import MapHammamet from './about/map-hammamet';
-import Team from './section-components/team-v1';
+import Team from './section-components/team-hammamet';
 import Testimonial from './section-components/testimonial-v1';
 
 import CallToActionV1 from './section-components/call-to-action-v1';

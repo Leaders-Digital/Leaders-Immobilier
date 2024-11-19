@@ -54,7 +54,7 @@ class Register extends Component {
 
 
                 <div className="btn-wrapper">
-                    <button className="theme-btn-1 btn reverse-color btn-block" type="submit">Créer Un Compte</button>
+                    <button className="btn theme-btn-1 btn-effect-1" type="submit">Créer Un Compte</button>
                 </div>
             </form>
                 <div className="go-to-btn go-top text-center">

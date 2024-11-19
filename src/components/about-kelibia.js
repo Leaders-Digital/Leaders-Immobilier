@@ -3,7 +3,7 @@ import Navbar from './global-components/navbar';
 import PageHeader from './global-components/page-header';
 import AboutV4 from './about/about-kelibia';
 import MapKelibia from './about/map-kelibia';
-import Team from './section-components/team-v1';
+import Team from './section-components/team-Kelibia';
 import Testimonial from './section-components/testimonial-v1';
 
 import CallToActionV1 from './section-components/call-to-action-v1';

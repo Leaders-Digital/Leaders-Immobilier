@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import Slider from 'react-slick';
+import CircularProgress from '@mui/material/CircularProgress';
+import Box from '@mui/material/Box';
 
 const ProductDetail = () => {
     const { id } = useParams();
@@ -50,18 +52,29 @@ const ProductDetail = () => {
         );
     };
 
-    if (loading) return <p>Loading...</p>;
+    if (loading) {
+        return (
+            <Box
+                sx={{
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    height: '100vh',
+                }}
+            >
+                <CircularProgress />
+            </Box>
+        );
+    }
+
     if (!product) return <p>Aucune propriété trouvée</p>;
 
-    // Ensure listImages exists and is an array, then filter and map
     const images = (product?.listImages || []).filter(image => image.version_web)
         .map(image => `${process.env.REACT_APP_API_URL}${image.version_web}`);
 
-    // Fill with placeholders if less than 4 images
     const placeholdersNeeded = Math.max(0, 4 - images.length);
     const finalImages = [...images, ...new Array(placeholdersNeeded).fill('https://workingat.vu.nl/static/images/placeholder-image.jpg')];
 
-    // Slick slider settings for react-slick
     const sliderSettings = {
         slidesToShow: 3,
         slidesToScroll: 1,
@@ -78,7 +91,6 @@ const ProductDetail = () => {
     return (
         <div className="ltn__img-slider-area mb-90">
             <div className="container-fluid">
-                {/* Render Slider only if there are images to display */}
                 <Slider {...sliderSettings} className="ltn__image-slider-5-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
                     {finalImages.map((image, index) => (
                         <div className="col-lg-3" key={index}>
@@ -108,16 +120,14 @@ const ProductDetail = () => {
                 </Slider>
             </div>
 
-            {/* Modal for Image Sliding */}
             {modalOpen && (
                 <div className="modal-overlay" onClick={closeModal}>
                     <div
-                      
-                        onClick={(e) => e.stopPropagation()}  // Prevent click event from closing the modal when clicked inside
+                        onClick={(e) => e.stopPropagation()}
                     >
-                     <button className="close-button" onClick={closeModal}>
-    <i className="fas fa-times"></i> {/* Font Awesome close icon */}
-</button>
+                        <button className="close-button" onClick={closeModal}>
+                            <i className="fas fa-times"></i>
+                        </button>
                         <div className="modal-image-container">
                             <button className="prev-button" onClick={prevImage}> <i className="fas fa-chevron-left"></i> </button>
                             <img
