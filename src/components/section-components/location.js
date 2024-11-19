@@ -3,9 +3,11 @@ import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import tunisiaGeoJSON from './states.geojson'; // Import your Tunisia GeoJSON file
 import axios from 'axios'; // Import axios for making API calls
+import { CircularProgress, Box } from '@mui/material'; // Import CircularProgress and Box from Material-UI
 
 const Location = () => {
     const [averagePriceByState, setAveragePriceByState] = useState({});
+    const [loading, setLoading] = useState(true); // Add a loading state
     const hoveredStateRef = useRef(null);
     const mapContainerRef = useRef(null);
     const mapRef = useRef(null);  // Ref to store map instance
@@ -13,7 +15,11 @@ const Location = () => {
 
     const fetchAllProducts = async () => {
         try {
-            const body = { ville: ['Ariana'] };
+            const body = { 
+                ville: ['ARIANA', "TUNIS", "NABEUL", "BEN AROUS", "SOUSSE", "MANOUBA", "MAHDIA", "SFAX", "GABES", "KEF", "KAIROUAN", "BIZERTE", "GAFSA", "TOZEUR", "TATAOUINE", "MEDNINE", "JENDOUBA", "ZAGHOUAN", "SILIANA", "KASSERINE", "MONASTIR", "KEBILI", 'BEJA', 'SIDI BOUZID'],
+                type: "Vente",
+                itemPerPage: "3000"
+            };
             const response = await axios.post(`${process.env.REACT_APP_API_URL}api/v2/biens`, body, {
                 headers: {
                     Authorization: 'jkaAVXs852ZPOnlop795',
@@ -21,6 +27,7 @@ const Location = () => {
             });
 
             const fetchedProducts = Array.isArray(response.data.resultat) ? response.data.resultat : [];
+            console.log(response.data.resultat);
 
             const stateData = fetchedProducts.reduce((acc, product) => {
                 const state = product.ville;
@@ -40,8 +47,10 @@ const Location = () => {
             );
 
             setAveragePriceByState(averages);
+            setLoading(false);  // Set loading to false once data is fetched
         } catch (error) {
             console.error('Error fetching all products:', error);
+            setLoading(false);  // Also set loading to false if there's an error
         }
     };
 
@@ -54,6 +63,8 @@ const Location = () => {
     }, []); // Fetch data on mount
 
     useEffect(() => {
+        if (loading) return; // Do not initialize the map if data is still loading
+
         mapboxgl.accessToken = 'pk.eyJ1IjoibGVhZGVyc2RldiIsImEiOiJjbTNtcXBzbWcwdjNnMmtwZTZ1YXNlb3ZwIn0.KjNcvhpCJUxUgZx-I54ppg';
 
         if (!mapInitialized.current && mapContainerRef.current) {
@@ -174,7 +185,23 @@ const Location = () => {
                 mapInitialized.current = false;
             }
         };
-    }, [averagePriceByState]);
+    }, [averagePriceByState, loading]);  // Re-run map initialization when averagePriceByState or loading changes
+
+    // Return the loading spinner centered in the section
+    if (loading) {
+        return (
+            <Box 
+                sx={{ 
+                    display: 'flex', 
+                    justifyContent: 'center', 
+                    alignItems: 'center', 
+                    height: '700px' 
+                }}
+            >
+                <CircularProgress />
+            </Box>
+        );
+    }
 
     return (
         <div>

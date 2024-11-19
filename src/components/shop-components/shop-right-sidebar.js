@@ -211,7 +211,7 @@ const ShopGridV1 = () => {
     <MenuItem value="Kébili">Kébili</MenuItem>
     <MenuItem value="Le Kef">Le Kef</MenuItem>
     <MenuItem value="Mahdia">Mahdia</MenuItem>
-    <MenuItem value="La Manouba">La Manouba</MenuItem>
+    <MenuItem value="Manouba">Manouba</MenuItem>
     <MenuItem value="Médenine">Médenine</MenuItem>
     <MenuItem value="Monastir">Monastir</MenuItem>
     <MenuItem value="Nabeul">Nabeul</MenuItem>
