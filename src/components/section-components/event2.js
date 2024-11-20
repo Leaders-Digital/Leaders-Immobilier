@@ -36,7 +36,7 @@ class Event2 extends Component {
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="theme-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
@@ -75,7 +75,7 @@ class Event2 extends Component {
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="theme-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
@@ -114,7 +114,7 @@ class Event2 extends Component {
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="theme-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
@@ -152,7 +152,7 @@ class Event2 extends Component {
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="theme-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>

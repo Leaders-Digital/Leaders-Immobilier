@@ -1441,56 +1441,64 @@
           /* --------------------------------------------------------
               26. Image Slide - 4 
           --------------------------------------------------------- */
-          $('.ltn__image-slider-4-active').slick({
-              rtl: false,
-              arrows: true,
-              dots: false,
-              infinite: true,
-              speed: 300,
-              slidesToShow: 4,
-              slidesToScroll: 1,
-              centerMode: true,
-              centerPadding: '0px',
-              prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
-              nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
-              responsive: [
-                  {
-                      breakpoint: 1200,
-                      settings: {
-                          slidesToShow: 3,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 992,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 2,
-                          slidesToScroll: 1
-                      }
-                  },
-                  {
-                      breakpoint: 768,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 2,
-                          slidesToScroll: 1,
-                      }
-                  },
-                  {
-                      breakpoint: 580,
-                      settings: {
-                          arrows: false,
-                          dots: true,
-                          slidesToShow: 1,
-                          slidesToScroll: 1,
-                      }
-                  }
-              ]
-          });
-  
+          $(document).ready(function () {
+            const $slider4 = $('.ltn__image-slider-4-active');
+            if ($slider4.length && !$slider4.hasClass('slick-initialized')) {
+                console.log("Initializing .ltn__image-slider-4-active slider...");
+                $slider4.slick({
+                    rtl: false,
+                    arrows: true,
+                    dots: false,
+                    infinite: true,
+                    speed: 300,
+                    slidesToShow: 4,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: '0px',
+                    prevArrow: '<a class="slick-prev"><i class="fas fa-arrow-left" alt="Arrow Icon"></i></a>',
+                    nextArrow: '<a class="slick-next"><i class="fas fa-arrow-right" alt="Arrow Icon"></i></a>',
+                    responsive: [
+                        {
+                            breakpoint: 1200,
+                            settings: {
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                arrows: false,
+                                dots: true,
+                                slidesToShow: 2,
+                                slidesToScroll: 1
+                            }
+                        },
+                        {
+                            breakpoint: 768,
+                            settings: {
+                                arrows: false,
+                                dots: true,
+                                slidesToShow: 2,
+                                slidesToScroll: 1,
+                            }
+                        },
+                        {
+                            breakpoint: 580,
+                            settings: {
+                                arrows: false,
+                                dots: true,
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                            }
+                        }
+                    ]
+                });
+            } else {
+                console.warn('Slider element already initialized or not found: .ltn__image-slider-4-active');
+            }
+        });
+        
           /* --------------------------------------------------------
               ## Image Slide - 5
           --------------------------------------------------------- */

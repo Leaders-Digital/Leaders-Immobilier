@@ -18204,6 +18204,10 @@ transition: 0.5s;
 .btn:last-child {
   margin-right: 0;
 }
+.event-btn-1 {
+  background-color: var(--ltn__secondary-color);
+  color: var(--white);
+}
 
 .theme-btn-1 {
   background-color: var(--ltn__secondary-color);

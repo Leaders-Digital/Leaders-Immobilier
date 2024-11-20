@@ -33,7 +33,7 @@ const BannerV3 = () => {
                         style={{ height: '90vh' }}
                     >
                         <div className="ltn__slide-item-inner text-center" style={{ height: '100%' }}>
-                            <div className="container" style={{ height: '100%' }}>
+                            <div className="container" >
                                 <div className="row" style={{ height: '100%' }}>
                                     <div className="col-lg-12 align-self-center" style={{ height: '100%' }}>
                                         <div className="slide-item-info" style={{ height: '100%' }}>

@@ -55,6 +55,8 @@ const Location = () => {
     };
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+
         const fetchData = async () => {
             await fetchAllProducts();
         };
@@ -81,6 +83,20 @@ const Location = () => {
                 mapInstance.addSource('tunisia-states', {
                     type: 'geojson',
                     data: tunisiaGeoJSON,
+                });
+
+                mapInstance.addLayer({
+                    id: '3d-buildings',
+                    source: 'composite',
+                    'source-layer': 'building',
+                    type: 'fill-extrusion',
+                    minzoom: 15,
+                    paint: {
+                        'fill-extrusion-color': '#aaa',
+                        'fill-extrusion-height': ['get', 'height'],
+                        'fill-extrusion-base': ['get', 'min_height'],
+                        'fill-extrusion-opacity': 0.6,
+                    },
                 });
 
                 mapInstance.addLayer({
