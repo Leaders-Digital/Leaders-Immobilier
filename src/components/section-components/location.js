@@ -1,13 +1,13 @@
 import React, { useEffect, useState, useRef } from 'react';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import tunisiaGeoJSON from './states.geojson'; // Import your Tunisia GeoJSON file
-import axios from 'axios'; // Import axios for making API calls
-import { CircularProgress, Box } from '@mui/material'; // Import CircularProgress and Box from Material-UI
+import tunisiaGeoJSON from './states.geojson'; 
+import axios from 'axios'; 
+import { CircularProgress, Box } from '@mui/material'; 
 
 const Location = () => {
     const [averagePriceByState, setAveragePriceByState] = useState({});
-    const [loading, setLoading] = useState(true); // Add a loading state
+    const [loading, setLoading] = useState(true); 
     const hoveredStateRef = useRef(null);
     const mapContainerRef = useRef(null);
     const mapRef = useRef(null);  // Ref to store map instance

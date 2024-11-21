@@ -67,8 +67,9 @@ class Footer_v1 extends Component {
 				            <div className="footer-menu go-top">
 				              <ul>
 				                <li><Link to="/Accueil">Accueil</Link></li>
-				                <li><Link to="/about">À propos</Link></li>
-								<li><Link to="/Estimation">Estimation</Link></li>
+				                <li><Link to="/agence">À propos</Link></li>
+								<li><a href="/map">Carte De Prix</a> </li>
+								
 								<li><Link to="/Contact">Contactez Nous</Link></li>
 				               
 				              </ul>
@@ -82,10 +83,9 @@ class Footer_v1 extends Component {
 				              <ul>    
 								<li><Link to="/Vente">Vente</Link></li>
 				                <li><Link to="/louer">Location</Link></li>
+							
+								<li><Link to="/Estimation">Estimation</Link></li>
 								<li><Link to="/Acheteur">Trouvez Acheteur</Link></li>
-				                <li><Link to="/Exchange">Échange Bien</Link></li>
-				           
-				              
 				              </ul>
 				            </div>
 				          </div>

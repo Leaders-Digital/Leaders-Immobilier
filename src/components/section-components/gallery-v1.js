@@ -9,53 +9,53 @@ class Gallery extends Component {
         const imageData = [
             {
                 imgSrc: publicUrl + "assets/img/events/elu/5.jpg",
-                title: "Heart of NYC",
-                location: "Manhattan",
-                detailsLink: "/portfolio-details",
+                title: "Festival National Brands",
+                location: "Tunisie",
+                detailsLink: "/events",
             },
             {
                 imgSrc: publicUrl + "assets/img/events/car1/4.jpg",
-                title: "The luxury crib",
-                location: "Upper East Side",
-                detailsLink: "/portfolio-details",
+                title: "Evènement Grand Jeu",
+                location: "Tunisie",
+                detailsLink: "/events",
             },
         
             {
                 imgSrc: publicUrl + "assets/img/events/car2/2.jpg",
-                title: "The perfect city",
-                location: "Greenville",
-                detailsLink: "/portfolio-details",
+                title: "Evènement Tirage Au Sort",
+                location: "Tunisie",
+                detailsLink: "/events",
             },
             {
                 imgSrc: publicUrl + "assets/img/events/car2/3.jpg",
-                title: "The perfect city",
-                location: "Greenville",
-                detailsLink: "/portfolio-details",
+                title: "Evènement Tirage Au Sort",
+                location: "Tunisie",
+                detailsLink: "/events",
             },
 			{
                 imgSrc: publicUrl + "assets/img/events/elu/1.jpg",
-                title: "The Best City",
-                location: "Jersey City",
-                detailsLink: "/portfolio-details",
+                title: "Festival National Brands",
+                location: "Tunisie",
+                detailsLink: "/events",
             },
             {
                 imgSrc: publicUrl + "assets/img/events/car1/2.jpg",
-                title: "Friendly neighborhood",
-                location: "Queens",
-                detailsLink: "/portfolio-details",
+                title: "Evènement  Grand Jeu",
+                location: "Tunisie",
+                detailsLink: "/events",
             },
 			
             {
                 imgSrc: publicUrl + "assets/img/events/elu/8.jpg",
-                title: "The perfect city",
-                location: "Greenville",
-                detailsLink: "/portfolio-details",
+                title: "Festival National Brands",
+                location: "Tunisie",
+                detailsLink: "/events",
             },
         ];
 
         return (
             <div className="ltn__img-slider-area">
-                <div className="container-fluid " style={{margin:"150px 0"}}>
+                <div className="container-fluid " style={{margin:"100px 0"}}>
 				<div className="section-title-area ltn__section-title-2--- text-center">
                             <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">ÉVÉNEMENTS</h6>
                             <h1 className="section-title">EXPLOREZ NOS ÉVÉNEMENTS							</h1>

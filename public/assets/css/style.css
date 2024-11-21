@@ -18214,7 +18214,21 @@ transition: 0.5s;
   color: var(--white);
   margin-top: 26px;
 }
+
 .theme-btn-1:hover {
+  background-color: var(--ltn__primary-color);
+  color: var(--white);
+}
+
+.voirplus {
+  background-color: var(--ltn__secondary-color);
+  color: var(--white);
+
+}
+
+
+
+.voirplus:hover {
   background-color: var(--ltn__primary-color);
   color: var(--white);
 }

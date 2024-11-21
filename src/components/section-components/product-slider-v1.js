@@ -103,7 +103,7 @@ const ProductSliderV1 = () => {
                                             <p>{product.description}</p>
                                         </div>
                                         <ul className="ltn__list-item-2 ltn__list-item-2-before">
-                                            <li><span>{product.caracteristiqueBien.nbr_chambre} <i className="flaticon-bed" /></span> Lit</li>
+                                            <li><span>{product.caracteristiqueBien.nbr_chambre} <i className="flaticon-bed" /></span> Chambres</li>
                                             <li><span>{product.caracteristiqueBien.nbr_salle_bain} <i className="flaticon-clean" /></span> salles de bains</li>
                                             <li><span>{product.caracteristiqueBien.superficieTotal} <i className="flaticon-square-shape-design-interface-tool-symbol" /></span> carrés</li>
                                         </ul>
@@ -113,7 +113,7 @@ const ProductSliderV1 = () => {
                         ))}
                     </div>
                     <div className="text-center mt-4">
-                        <Link to="/vente" className="btn theme-btn-1 btn-effect-1 ">
+                        <Link to="/vente" className="btn voirplus btn-effect-1 ">
                             Voir Plus
                         </Link>
                     </div>

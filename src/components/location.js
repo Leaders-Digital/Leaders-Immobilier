@@ -8,7 +8,7 @@ import Footer from './global-components/footer';
 const LocationPage = () => {
     return <div>
         <Navbar />
-        <PageHeader headertitle="Prix de l'immobilier en tunisie" customclass="mb-0" />
+        <PageHeader headertitle=" La Carte Des Prix" customclass="mb-0" />
         <Location  />
         <CallToActionV1 />
         <Footer />

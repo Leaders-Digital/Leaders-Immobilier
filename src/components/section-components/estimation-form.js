@@ -81,29 +81,10 @@ class EstimationForm extends Component {
     <select name="propertyCity" className="form-control">
       <option value="">Sélectionner une ville</option>
       <option value="ariana">Ariana</option>
-      <option value="beja">Béja</option>
       <option value="ben-arous">Ben Arous</option>
-      <option value="bizerte">Bizerte</option>
-      <option value="gabes">Gabès</option>
-      <option value="gafsa">Gafsa</option>
-      <option value="jendouba">Jendouba</option>
-      <option value="kairouan">Kairouan</option>
-      <option value="kasserine">Kasserine</option>
-      <option value="kebili">Kébili</option>
-      <option value="le-kef">Le Kef</option>
-      <option value="mahdia">Mahdia</option>
-      <option value="manouba">Manouba</option>
-      <option value="medenine">Médenine</option>
-      <option value="monastir">Monastir</option> 
+      <option value="manouba">Manouba</option> 
       <option value="nabeul">Nabeul</option>
-      <option value="sfax">Sfax</option>
-      <option value="sidi-bouzid">Sidi Bouzid</option>
-      <option value="siliana">Siliana</option>
-      <option value="sousse">Sousse</option>
-      <option value="tataouine">Tataouine</option>
-      <option value="tozeur">Tozeur</option>
       <option value="tunis">Tunis</option>
-      <option value="zaghouan">Zaghouan</option>
     </select>
   </div>
 </div>
@@ -112,8 +93,19 @@ class EstimationForm extends Component {
   <div className="input-item input-item-phone ltn__custom-icon">
     <select name="propertyType" className="form-control">
       <option value="">Délégation</option>
-   
-    </select>
+  
+  
+
+  <option value="La Soukra">La Soukra</option>
+  <option value="Le Kram">Le Kram</option>
+  <option value="La Marsa">La Marsa</option>
+  <option value="Lac 1">Lac 1</option>
+  <option value="Lac 2">Lac 2</option>
+  <option value="Hammamet">Hammamet</option>
+  <option value="Hammamet Centre">Hammamet Centre</option>
+  <option value="Mrezga">Mrezga</option>
+</select>
+    
   </div>
 </div>
 

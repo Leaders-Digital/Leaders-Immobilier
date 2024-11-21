@@ -116,7 +116,7 @@ const ProductSliderV1 = () => {
                         ))}
                     </div>
                     <div className="text-center mt-4">
-                        <Link to="/louer" className="btn theme-btn-1 btn-effect-1 ">
+                        <Link to="/louer" className="btn voirplus btn-effect-1 ">
                             Voir Plus
                         </Link>
                     </div>
