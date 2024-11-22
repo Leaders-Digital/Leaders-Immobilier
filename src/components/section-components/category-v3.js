@@ -47,7 +47,7 @@ const CategoryV3 = () => {
                             style={{ cursor: 'pointer' }}
                         >
                             <div className="ltn__banner-info">
-                                <h3>Local Commercial</h3>
+                                <h3>Locaux Commerciaux                                </h3>
                                 <p>Offres exceptionnelles disponibles</p>
                                 <mark>Offres disponibles</mark>
                             </div>
@@ -61,7 +61,7 @@ const CategoryV3 = () => {
                             style={{ cursor: 'pointer' }}
                         >
                             <div className="ltn__banner-info">
-                                <h3>Terrain</h3>
+                                <h3>Terrains</h3>
                                 <p>Offres exceptionnelles disponibles</p>
                                 <mark>Offres disponibles</mark>
                             </div>
@@ -75,7 +75,7 @@ const CategoryV3 = () => {
                             style={{ cursor: 'pointer' }}
                         >
                             <div className="ltn__banner-info">
-                                <h3>Maison</h3>
+                                <h3>Maisons</h3>
                                 <p>Offres exceptionnelles disponibles</p>
                                 <mark>Offres disponibles</mark>
                             </div>

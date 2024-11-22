@@ -9,46 +9,46 @@ class Gallery extends Component {
         const imageData = [
             {
                 imgSrc: publicUrl + "assets/img/events/elu/5.jpg",
-                title: "Festival National Brands",
-                location: "Tunisie",
+                title: " Hôtel Laico Tunis",
+                location: "Festival National Brands",
                 detailsLink: "/events",
             },
             {
                 imgSrc: publicUrl + "assets/img/events/car1/4.jpg",
-                title: "Evènement Grand Jeu",
-                location: "Tunisie",
+                title: "Golden Carthage Hotel ",
+                location: "Evènement Grand Jeu 2éme Edition",
                 detailsLink: "/events",
             },
         
             {
                 imgSrc: publicUrl + "assets/img/events/car2/2.jpg",
-                title: "Evènement Tirage Au Sort",
-                location: "Tunisie",
+                title: "Tunisie",
+                location: "Evènement Grand Jeu 1ére Edition",
                 detailsLink: "/events",
             },
             {
                 imgSrc: publicUrl + "assets/img/events/car2/3.jpg",
-                title: "Evènement Tirage Au Sort",
-                location: "Tunisie",
+                title: "Tunisie",
+                location: " Evènement Grand Jeu 1ére Edition",
                 detailsLink: "/events",
             },
 			{
                 imgSrc: publicUrl + "assets/img/events/elu/1.jpg",
-                title: "Festival National Brands",
-                location: "Tunisie",
+                title: "Hôtel Laico Tunis",
+                location: " Festival National Brands",
                 detailsLink: "/events",
             },
             {
                 imgSrc: publicUrl + "assets/img/events/car1/2.jpg",
-                title: "Evènement  Grand Jeu",
-                location: "Tunisie",
+                title: "Golden Carthage Hotel",
+                location: " Evènement  Grand Jeu 2éme Edition",
                 detailsLink: "/events",
             },
 			
             {
                 imgSrc: publicUrl + "assets/img/events/elu/8.jpg",
-                title: "Festival National Brands",
-                location: "Tunisie",
+                title: "Hôtel Laico Tunis",
+                location: " Festival National Brands",
                 detailsLink: "/events",
             },
         ];

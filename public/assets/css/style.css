@@ -6724,18 +6724,21 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   color: var(--white);
 }
 
-.special-link {
+.espa {
   margin-left: 15px;
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   align-self: center;
 }
-.special-link a {
-  background-color: var(--ltn__secondary-color);
-  color: var(--white) !important;
+
+
+.espa a{
+color: white !important;
   padding: 10px 20px !important;
   font-size: 12px !important;
 }
+
+
 .special-link a:hover {
   background-color: var(--white);
   color: var(--ltn__primary-color) !important;
@@ -7152,16 +7155,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   stroke-dasharray: 240px 240px;
 }
 
-.mobile-menu-toggle .close svg path#top,
-.mobile-menu-toggle .close svg path#bottom {
-  stroke-dasharray: -650px;
-  stroke-dashoffset: -650px;
-}
 
-.mobile-menu-toggle .close svg path#middle {
-  stroke-dasharray: 1px 220px;
-  stroke-dashoffset: -115px;
-}
 
 .ltn__utilize-menu-head {
   display: -webkit-box;

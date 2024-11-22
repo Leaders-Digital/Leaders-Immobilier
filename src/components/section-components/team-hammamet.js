@@ -23,11 +23,11 @@ class TeamV1 extends Component {
 					<div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
-						<img src={publicUrl+"assets/img/team/1.jpg"} alt="Image" />
+						<img src={publicUrl+"assets/img/team/hammamet/1.jpg"} alt="Image" />
 						</div>
 						<div className="team-info">
-						<h4><Link to="/team-details">Soren Gallagher</Link></h4>
-						<h6 className="ltn__secondary-color">Agents de vente						</h6>
+						<h4><Link to="/team-details">Kout Elkouloub Ben Romdhane</Link></h4>
+						<h6 className="ltn__secondary-color"> Chef d'agence</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
@@ -41,11 +41,11 @@ class TeamV1 extends Component {
 					<div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
-						<img src={publicUrl+"assets/img/team/2.jpg"} alt="Image" />
+						<img src={publicUrl+"assets/img/team/hammamet/2.jpg"} alt="Image" />
 						</div>
 						<div className="team-info">
-						<h4><Link to="/team-details">Soren Gallagher</Link></h4>
-						<h6 className="ltn__secondary-color">Agents de vente
+						<h4><Link to="/team-details">Sabrine Moussi</Link></h4>
+						<h6 className="ltn__secondary-color">Agente du bureau
 						</h6>
 						<div className="ltn__social-media">
 							<ul>
@@ -57,7 +57,7 @@ class TeamV1 extends Component {
 						</div>
 					</div>
 					</div>
-					<div className="col-lg-4 col-sm-6">
+					{/* <div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
 						<img src={publicUrl+"assets/img/team/3.jpg"} alt="Image" />
@@ -75,7 +75,7 @@ class TeamV1 extends Component {
 						</div>
 						</div>
 					</div>
-					</div>
+					</div> */}
 				</div>
 				</div>
 			</div>

@@ -36,7 +36,7 @@ const ShopGridV1 = () => {
             imgSrc: 'assets/img/logo.png',
             location: 'El Aouina, résidence RANIA , Tunis, 4216, Tunisie',
             phone: '27 246 321',
-            link: '/about/aouina',
+          
         },
         {
             id: 5,

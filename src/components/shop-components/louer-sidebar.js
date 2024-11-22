@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link ,useLocation} from 'react-router-dom';
 import axios from 'axios';
 import { Select, MenuItem, FormControl, InputLabel, Typography, Input, InputAdornment } from '@mui/material';
+import stateMunicipalities from './state-municipality.json';
 
 
 const ShopGridV1 = () => {
@@ -19,6 +20,21 @@ const ShopGridV1 = () => {
     const [nbrChambre, setNbrChambre] = useState('');
     const [prixMin, setPrixMin] = useState();
     const [prixMax, setPrixMax] = useState();  
+
+    const getAvailableDelegations = (selectedVille) => {
+        const state = stateMunicipalities.find(
+            (item) => item.Name.toUpperCase() === selectedVille.toUpperCase()
+        );
+        return state ? state.Delegations.map((del) => del.Name) : [];
+    };
+
+    const availableDelegations = getAvailableDelegations(ville);
+    useEffect(() => {
+        setDelegation('');
+    }, [ville]);
+
+
+
 
     const fetchProducts = () => {
         const body = {
@@ -122,17 +138,10 @@ const getPaginationPages = () => {
     const handleViewModeChange = (mode) => {
         setViewMode(mode);
     };
+    
+	window.scrollTo(0, 0);
 
-
-    const villeDelegations = {
-        "Ariana": ["La Soukra", "Ariana Ville"],
-        "Tunis": ["Le Kram", "La Marsa","Lac 1","Lac 2"],
-        "Sfax": ["Sfax Ville", "Sidi Mansour"],
-        "Nabeul": ["Hammamet", "Hammamet Centre", "Mrezga"],
-       
-    };
-    const availableDelegations = villeDelegations[ville] || []; 
-
+   
     return (
         <div>
             <div className="ltn__product-area ltn__product-gutter">

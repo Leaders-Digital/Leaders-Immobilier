@@ -23,7 +23,7 @@ class EstimationForm extends Component {
 					<div className="col-lg-12">
 					<div className="ltn__form-box contact-form-box box-shadow white-bg">
 						
-						<form id="contact-form" action={publicUrl+"mail.php"} method="post">
+						<form id="contact-form" >
 						<div className="row">
 							<div className="col-md-6">
 							<div className="input-item input-item-name ltn__custom-icon">

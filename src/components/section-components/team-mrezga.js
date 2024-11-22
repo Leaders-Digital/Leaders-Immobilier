@@ -38,7 +38,7 @@ class TeamV1 extends Component {
 						</div>
 					</div>
 					</div>
-					<div className="col-lg-4 col-sm-6">
+					{/* <div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
 						<img src={publicUrl+"assets/img/team/mrezga/2.jpg"} alt="Image" />
@@ -56,7 +56,7 @@ class TeamV1 extends Component {
 						</div>
 						</div>
 					</div>
-					</div>
+					</div> */}
 					{/* <div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">

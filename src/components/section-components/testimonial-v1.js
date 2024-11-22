@@ -14,8 +14,8 @@ class Testimonial extends Component {
 			    <div className="row">
 			      <div className="col-lg-12">
 			        <div className="section-title-area ltn__section-title-2--- text-center">	
-			          <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">Notre témoignage</h6>
-			          <h1 className="section-title">Avis Des Clients </h1>
+			          <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">Nos témoignages</h6>
+			          <h1 className="section-title">Avis clients </h1>
 			        </div>
 			      </div>
 			    </div>
@@ -42,8 +42,7 @@ class Testimonial extends Component {
 			        <div className="ltn__testimonial-item ltn__testimonial-item-7">
 			          <div className="ltn__testimoni-info">
 			            <p><i className="flaticon-left-quote-1" /> 
-						Merci beaucoup agence Leaders Immobilier l'aouina Je suis tres satisfaite par le service. Une excellente equipe je remercie hasna. Bonne continuation et bravo  encore.
-
+						Merci beaucoup agence Leaders Immobilier l'aouina Je suis tres satisfaite par le service. Une excellente equipe je remercie hasna. Bonne continuation et bravo  encore. 
 						</p>
 			            <div className="ltn__testimoni-info-inner mt-5">
 			              <div className="ltn__testimoni-img mt-2">
