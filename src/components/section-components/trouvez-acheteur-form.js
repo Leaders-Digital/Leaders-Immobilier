@@ -27,23 +27,23 @@ class TrouverAcheteurForm extends Component {
 						<div className="row">
 							<div className="col-md-6">
 							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" name="lastname" placeholder="Entrez votre nom" />
+								<input type="text" name="lastname" placeholder="Entrez votre nom" required />
 							</div>
 							</div>
 							<div className="col-md-6">
 							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" name="firstname" placeholder="Entrez votre prénom" />
+								<input type="text" name="firstname" placeholder="Entrez votre prénom" required />
 							</div>
 							</div>
 							
 							<div className="col-md-6">
 							<div className="input-item input-item-phone ltn__custom-icon">
-								<input type="text" name="email" placeholder="Entrez votre numéro" />
+								<input type="text" name="email" placeholder="Entrez votre numéro" required/>
 							</div>
 							</div>
 							<div className="col-md-6">
 							<div className="input-item input-item-email ltn__custom-icon">
-								<input type="text" name="phone" placeholder="Entrez votre email" />
+								<input type="email" name="phone" placeholder="Entrez votre email"  required/>
 							</div>
 							</div>
 
@@ -109,8 +109,8 @@ class TrouverAcheteurForm extends Component {
 
 							
 <div className="col-md-12">
-							<div className="input-item input-item-phone ltn__custom-icon">
-								<input type="number" name="email" placeholder="Prix de vente" />
+							<div className="input-item  ">
+								<input type="number" name="prix" placeholder="Prix de vente" />
 							</div>
 							</div>
 							

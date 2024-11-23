@@ -23,8 +23,8 @@ class Login extends Component {
 				<div className="col-lg-6">
   <div className="account-login-inner login-form-border">
     <form method="GET" className="ltn__form-box contact-form-box">
-      <input type="password" name="password" placeholder="Mot de passe *" />
-      <input type="text" name="number" placeholder="Votre CIN *" />
+      <input type="password" name="password" placeholder="Mot de passe *" required/>
+      <input type="text" name="number" placeholder="Votre CIN *" required />
       <div className="btn-wrapper mt-0">
         <button className="btn theme-btn-1 btn-effect-1" type="submit">Se Connecter</button>
       </div>

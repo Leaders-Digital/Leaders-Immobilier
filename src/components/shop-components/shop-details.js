@@ -11,7 +11,6 @@ const ShopDetails = () => {
 	const publicUrl = process.env.PUBLIC_URL + '/';
 	const [similarProducts, setSimilarProducts] = useState([]); // State for similar products
 
-	
 
 	const slickRef = useRef(null);
 
@@ -31,7 +30,7 @@ const ShopDetails = () => {
 				const productData = response.data?.resultat?.[0];
 				if (productData) {
 					setProduct(productData);
-					fetchSimilarProducts(productData.type_categorie, productData.type); // Fetch similar products
+					fetchSimilarProducts(productData.type_categorie, productData.type); 
 					console.log(productData.type_categorie, productData.type);
 					
 				} else {
@@ -65,6 +64,16 @@ const ShopDetails = () => {
 		
 		fetchProductDetails();
 	}, [id]);
+
+	const bg = product?.listImages?.[0]?.version_web 
+	? `${process.env.REACT_APP_API_URL}${product.listImages[0].version_web}` 
+	: 'default-image-url';  
+  
+  console.log(bg);
+  
+
+
+
 
 	const sliderSettings = {
         dots: true,
@@ -166,25 +175,18 @@ const ShopDetails = () => {
 						<div
   className="ltn__video-bg-img ltn__video-popup-height-500 bg-overlay-black-50 bg-image mb-60"
   style={{
-	backgroundImage: `url(${product.listImages?.[0]?.version_web ? `${process.env.REACT_APP_API_URL}${product.listImages[0].version_web}` : 'https://workingat.vu.nl/static/images/placeholder-image.jpg'})`
-   
+    backgroundImage: `url(${bg})`
   }}
 >
   <a
     className="ltn__video-icon-2 ltn__video-icon-2-border---"
-    href={product.video || "https://www.youtube.com/embed/3RcwJbTTaJs"}
+    href={product.video }
     data-rel="lightcase"
   >
     <i className="fa fa-play" />
   </a>
 </div>
-
-
-					</div>
-
-
-
-					
+					</div>					
 				</div>
 				<div className="col-lg-4">
 					<aside className="sidebar ltn__shop-sidebar ltn__right-sidebar---">

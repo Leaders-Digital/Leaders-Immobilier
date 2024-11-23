@@ -17,7 +17,7 @@ class CopyRight extends Component {
                             </div>
                             <div className="ltn__copyright-links text-white">
                                 <Link to="/Mentions " className="footer-link">Mentions légales |</Link>
-                                <Link to="/Politique" className="footer-link">  Politique de confidentialité |</Link>
+                                <Link to="/Confidentialite" className="footer-link">  Politique de confidentialité |</Link>
                                 <Link to="/Cookies" className="footer-link">  Politique de cookies </Link>
                             </div>
                         </div>

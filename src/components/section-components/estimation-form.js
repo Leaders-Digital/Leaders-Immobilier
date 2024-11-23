@@ -27,30 +27,30 @@ class EstimationForm extends Component {
 						<div className="row">
 							<div className="col-md-6">
 							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" name="lastname" placeholder="Entrez votre nom" />
+								<input type="text" name="lastname" placeholder="Entrez votre nom" required />
 							</div>
 							</div>
 							<div className="col-md-6">
 							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" name="firstname" placeholder="Entrez votre prénom" />
+								<input type="text" name="firstname" placeholder="Entrez votre prénom" required />
 							</div>
 							</div>
 							
 							<div className="col-md-6">
 							<div className="input-item input-item-phone ltn__custom-icon">
-								<input type="text" name="email" placeholder="Entrez votre numéro" />
+								<input type="text" name="email" placeholder="Entrez votre numéro" required />
 							</div>
 							</div>
 							<div className="col-md-6">
 							<div className="input-item input-item-email ltn__custom-icon">
-								<input type="text" name="phone" placeholder="Entrez votre email" />
+								<input type="text" name="phone" placeholder="Entrez votre email" required/>
 							</div>
 							</div>
 
 							
 							<div className="col-md-6">
-  <div className="input-item input-item-phone ltn__custom-icon">
-    <select name="propertyType" className="form-control" >
+  <div className="input-item input-item-phone ltn__custom-icon" >
+    <select name="propertyType" className="form-control"   >
       <option value="">Type de bien</option>
       <option value="Appartement">Appartement</option>
       <option value="villa">Villa</option>
@@ -116,9 +116,10 @@ class EstimationForm extends Component {
     <select name="propertyType" className="form-control" 	>
 	<option value="">Agence le plus proche </option>
       <option value="lac">Agence Lac2 </option>
-      <option value="borj-cedria">Agence Borj Cedria</option>
+      <option value="kelibia">Agence Kelibia</option>
       <option value="mrezga">Agence El Mrezga </option>
       <option value="hammamet">Agence Hammamet </option>
+      <option value="aouina">Agence l'aouina </option>
    
     </select>
   </div>

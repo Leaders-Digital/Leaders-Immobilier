@@ -207,7 +207,7 @@ const getPaginationPages = () => {
                                                         }
                                                     }}
                                                 >
-                                    
+                                    <MenuItem value="">Ville</MenuItem>
     <MenuItem value="Ariana">Ariana</MenuItem>
     <MenuItem value="Beja">Beja</MenuItem>
     <MenuItem value="Ben Arous">Ben Arous</MenuItem>
@@ -408,7 +408,7 @@ const getPaginationPages = () => {
                     </div>
                     <ul className="ltn__list-item-2--- ltn__list-item-2-before--- ltn__plot-brief">
                         {product.caracteristiqueBien?.nbr_chambre && (
-                            <li><span>{product.caracteristiqueBien.nbr_chambre}</span> Lits</li>
+                            <li><span>{product.caracteristiqueBien.nbr_chambre}</span> Chambres</li>
                         )}
                         {product.caracteristiqueBien?.nbr_salle_bain && (
                             <li><span>{product.caracteristiqueBien.nbr_salle_bain}</span> Salles de bains</li>

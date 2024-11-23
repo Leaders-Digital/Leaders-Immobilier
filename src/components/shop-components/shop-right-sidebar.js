@@ -206,6 +206,7 @@ const ShopGridV1 = () => {
                                                     }}
                                                 >
                                     
+    <MenuItem value="">Ville</MenuItem>
     <MenuItem value="Ariana">Ariana</MenuItem>
     <MenuItem value="Beja">Beja</MenuItem>
     <MenuItem value="Ben Arous">Ben Arous</MenuItem>

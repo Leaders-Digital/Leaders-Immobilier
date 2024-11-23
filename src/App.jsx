@@ -19,6 +19,9 @@ import ProdductDetails from './components/product-details';
 import ProdductDetailsTest from './components/product-details-test';
 import Contact from './components/contact';
 import Location from './components/location';
+import Mentions from './components/mentions';
+import Cookies from './components/cookies';
+import Confidentialite from './components/confidentialité';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
@@ -45,6 +48,9 @@ const App = () => {
           <Route path="/acheteur" element={<TrouverAcheteur />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/map" element={<Location />} />
+          <Route path="/mentions" element={<Mentions />} />
+          <Route path="/cookies" element={<Cookies />} />
+          <Route path="/Confidentialite" element={<Confidentialite />} />
         </Routes>
       </Router>
     )

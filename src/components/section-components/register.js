@@ -24,16 +24,16 @@ class Register extends Component {
             <form action="#" className="ltn__form-box contact-form-box">
                 <div className="row">
                     <div className="col-md-6">
-                        <input type="text" name="firstname" placeholder="Nom" className="form-control" />
+                        <input type="text" name="firstname" placeholder="Nom" className="form-control" required/>
                     </div>
                     <div className="col-md-6">
-                        <input type="text" name="lastname" placeholder="Prénom" className="form-control" />
+                        <input type="text" name="lastname" placeholder="Prénom" className="form-control" required />
                     </div>
                 </div>
-                <input type="text" name="email" placeholder="Votre Email*" className="form-control" />
+                <input type="email" name="email" placeholder="Votre Email*" className="form-control" required/>
 				<div className="row">
 				<div className="col-md-6">
-                <input type="password" name="password" placeholder="Mot de passe *" className="form-control" />
+                <input type="password" name="password" placeholder="Mot de passe *" className="form-control" required />
 				</div>
 				<div className="col-md-6">
                 <input type="password" name="confirmpassword" placeholder="Confirmer Mot de passe *" className="form-control" />
@@ -43,10 +43,10 @@ class Register extends Component {
 
 				<div className="row">
 				<div className="col-md-6">
-                <input type="text" name="telephone" placeholder="Téléphone  *" className="form-control" />
+                <input type="text" name="telephone" placeholder="Téléphone  *" className="form-control" required />
 				</div>
 				<div className="col-md-6">
-                <input type="text" name="cin" placeholder="CIN *" className="form-control" />
+                <input type="text" name="cin" placeholder="CIN *" className="form-control"  required/>
 				</div>
 				</div>
 

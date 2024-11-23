@@ -981,7 +981,7 @@ margin: 1px 1px !important;
   }
   @media (max-width: 767px) {
     .ltn__custom-gutter--- {
-  margin: 0 60px !important;
+  margin: 0  !important;
     }
   }
 
@@ -1204,6 +1204,19 @@ button {
 .next-button {
   right: 200px;
 }
+
+
+@media (max-width: 767px) {
+  .prev-button {
+    left: 0 !important;
+  }
+  .next-button {
+    right: 0 !important;
+  }
+  
+}
+
+
 .prev-button:hover { 
   color: var(--ltn__secondary-color);
 }
