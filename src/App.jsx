@@ -21,6 +21,10 @@ import Contact from './components/contact';
 import Location from './components/location';
 import Mentions from './components/mentions';
 import Cookies from './components/cookies';
+import ServiceVendre from './components/service-details-Vente';
+import ServiceLocation from './components/service-details-location';
+import ServiceAchat from './components/service-details-achat';
+import ServiceConstruction from './components/service-details-construction';
 import Confidentialite from './components/confidentialité';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -51,6 +55,10 @@ const App = () => {
           <Route path="/mentions" element={<Mentions />} />
           <Route path="/cookies" element={<Cookies />} />
           <Route path="/Confidentialite" element={<Confidentialite />} />
+          <Route path="/ServiceVente" element={<ServiceVendre />} />
+          <Route path="/ServiceLocation" element={<ServiceLocation />} />
+          <Route path="/ServiceAchat" element={<ServiceAchat />} />
+          <Route path="/ServiceConstruction" element={<ServiceConstruction />} />
         </Routes>
       </Router>
     )

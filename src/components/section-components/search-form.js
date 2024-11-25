@@ -50,7 +50,7 @@ const SearchForm = () => {
                         <FormControl fullWidth>
                           <InputLabel>Type</InputLabel>
                           <Select label="Type"  value={type}  onChange={handleTypeChange}       >
-                            <MenuItem value="Vente">Vente</MenuItem>
+                            <MenuItem value="Vente">Achat</MenuItem>
                             <MenuItem value="Location">Location</MenuItem>
                       
                           </Select>

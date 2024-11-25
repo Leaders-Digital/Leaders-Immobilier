@@ -1,23 +1,32 @@
 import React, { useEffect, useState, useRef } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 import mapboxgl from 'mapbox-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
+import { Select, MenuItem, FormControl, InputLabel, CircularProgress, Box } from '@mui/material';
 import tunisiaGeoJSON from './states.geojson'; 
-import axios from 'axios'; 
-import { CircularProgress, Box } from '@mui/material'; 
+import axios from 'axios';
 
-const Location = () => {
+const CartePrix = ({ headertitle, subheader, customclass }) => {
+    const location = useLocation();
+    const [typeCategorie, setTypeCategorie] = useState(location.state?.typeCategorie || '');
     const [averagePriceByState, setAveragePriceByState] = useState({});
-    const [loading, setLoading] = useState(true); 
+    const [loading, setLoading] = useState(true);
     const hoveredStateRef = useRef(null);
     const mapContainerRef = useRef(null);
-    const mapRef = useRef(null);  // Ref to store map instance
+    const mapRef = useRef(null);
     const mapInitialized = useRef(false);
+
+    const HeaderTitle = headertitle;
+    const publicUrl = process.env.PUBLIC_URL + '/';
+    const Subheader = subheader || HeaderTitle;
+    const Img = '24.jpg';
 
     const fetchAllProducts = async () => {
         try {
-            const body = { 
+            const body = {
                 ville: ['ARIANA', "TUNIS", "NABEUL", "BEN AROUS", "SOUSSE", "MANOUBA", "MAHDIA", "SFAX", "GABES", "KEF", "KAIROUAN", "BIZERTE", "GAFSA", "TOZEUR", "TATAOUINE", "MEDNINE", "JENDOUBA", "ZAGHOUAN", "SILIANA", "KASSERINE", "MONASTIR", "KEBILI", 'BEJA', 'SIDI BOUZID'],
                 type: "Vente",
+                typeCategorie: typeCategorie === "" ? [] : [typeCategorie], 
                 itemPerPage: "3000"
             };
             const response = await axios.post(`${process.env.REACT_APP_API_URL}api/v2/biens`, body, {
@@ -27,8 +36,6 @@ const Location = () => {
             });
 
             const fetchedProducts = Array.isArray(response.data.resultat) ? response.data.resultat : [];
-            console.log(response.data.resultat);
-
             const stateData = fetchedProducts.reduce((acc, product) => {
                 const state = product.ville;
                 if (!acc[state]) {
@@ -47,22 +54,17 @@ const Location = () => {
             );
 
             setAveragePriceByState(averages);
-            setLoading(false);  // Set loading to false once data is fetched
+            setLoading(false);
         } catch (error) {
             console.error('Error fetching all products:', error);
-            setLoading(false);  // Also set loading to false if there's an error
+            setLoading(false);
         }
     };
 
     useEffect(() => {
         window.scrollTo(0, 0);
-
-        const fetchData = async () => {
-            await fetchAllProducts();
-        };
-
-        fetchData();
-    }, []); // Fetch data on mount
+        fetchAllProducts();
+    }, [typeCategorie]);
 
     useEffect(() => {
         if (loading) return; // Do not initialize the map if data is still loading
@@ -221,15 +223,59 @@ const Location = () => {
 
     return (
         <div>
+            <div className={`ltn__breadcrumb-area-map text-left   `}
+             style={{
+                backgroundImage: `url(${publicUrl}assets/img/bg/${Img})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+            }}>
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-12">
+                            <div className="ltn__breadcrumb-inner">
+                                <h1 className="page-title">La Carte Des Prix</h1>
+                                <div className="ltn__breadcrumb-list">
+                                    <ul>
+                                        <li>
+                                            <Link to="/">
+                                                <span className="ltn__secondary-color">
+                                                    <i className="fas fa-home" />
+                                                </span>
+                                                Accueil
+                                            </Link>
+                                        </li>
+                                        <li>La Carte Des Prix</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div className="ltn__car-dealer-form-item ltn__icon-building col-lg-4 col-md-6 mt-4">
+                                <FormControl fullWidth>
+                                    <InputLabel>Type de bien</InputLabel>
+                                    <Select
+                                        value={typeCategorie}
+                                        onChange={(e) => setTypeCategorie(e.target.value)}
+                                        label="Type de bien"
+                                    >
+                                        <MenuItem value="">Type de bien</MenuItem>
+                                        <MenuItem value="Appartement">Appartement</MenuItem>
+                                        <MenuItem value="Villa">Villa</MenuItem>
+                                        <MenuItem value="Maison">Maison</MenuItem>
+                                        <MenuItem value="Terrain constructible">Terrain</MenuItem>
+                                        <MenuItem value="Bureau">Bureau</MenuItem>
+                                        <MenuItem value="Etage de villa">Etage de villa</MenuItem>
+                                        <MenuItem value="Local commercial">Local commercial</MenuItem>
+                                    </Select>
+                                </FormControl>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="ltn__google-map-locations-area">
-                <div
-                    id="map"
-                    ref={mapContainerRef}
-                    style={{ height: '700px', width: '100%' }}
-                />
+                <div id="map" ref={mapContainerRef} style={{ height: '700px', width: '100%' }} />
             </div>
         </div>
     );
 };
 
-export default Location;
+export default CartePrix;

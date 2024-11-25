@@ -24,7 +24,7 @@ class AboutV4 extends Component {
 						<h1 className="section-title"> Leaders Immobilier Les berges du lac 2<span>.</span></h1>
 						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Phasellus in fermentum orci, quis dapibus ex.</p>
 						</div>
-						<img src={publicUrl+"assets/img/agence/lac/2.jpeg"}  alt="About Us Image" />
+						<img src={publicUrl+"assets/img/agence/lac/2.jpg"}  alt="About Us Image" />
 
 					</div>
 					</div>

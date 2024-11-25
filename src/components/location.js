@@ -1,6 +1,5 @@
 import React from 'react';
 import Navbar from './global-components/navbar';
-import PageHeader from './global-components/page-header';
 import Location from './section-components/location';
 import CallToActionV1 from './section-components/call-to-action-v1';
 import Footer from './global-components/footer';
@@ -8,7 +7,6 @@ import Footer from './global-components/footer';
 const LocationPage = () => {
     return <div>
         <Navbar />
-        <PageHeader headertitle=" La Carte Des Prix" customclass="mb-0" />
         <Location  />
         <CallToActionV1 />
         <Footer />

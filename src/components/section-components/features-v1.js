@@ -27,9 +27,9 @@ class FeaturesV1 extends Component {
 			            <img src={publicUrl+"assets/img/icons/icon-img/3.png"} style={{width:"80px"}} alt="#" />
 			          </div>
 			          <div className="ltn__feature-info">
-			            <h3><Link to="/service-details">ACHAT</Link></h3>
+			            <h3><Link to="/serviceAchat">ACHAT</Link></h3>
 			            <p>Nous cherchons et dénichons pour vous le bien immobilier le plus conforme à vos besoins dans les meuilleurs délais.</p>
-			            <Link className="ltn__service-btn" to="/vente">Acheter une maison <i className="flaticon-right-arrow" /></Link>
+			            <Link className="ltn__service-btn" to="/serviceAchat">Acheter une maison <i className="flaticon-right-arrow" /></Link>
 			          </div>
 			        </div>
 			      </div>
@@ -39,9 +39,9 @@ class FeaturesV1 extends Component {
 			            <img src={publicUrl+"assets/img/icons/icon-img/2.png"} style={{width:"80px"}} alt="#" />
 			          </div>
 			          <div className="ltn__feature-info">
-			            <h3><Link to="/service-details">VENTE</Link></h3>
+			            <h3><Link to="/serviceVente">VENTE</Link></h3>
 			            <p>Nous nous tenons à vos cotés jusqu'à la concrétisation de l'acte de vente de votre bien immobilier.</p>
-			            <Link className="ltn__service-btn" to="/acheteur">Vendre une maison <i className="flaticon-right-arrow" /></Link>
+			            <Link className="ltn__service-btn" to="/serviceVente">Vendre une maison <i className="flaticon-right-arrow" /></Link>
 			          </div>
 			        </div>
 			      </div>
@@ -51,9 +51,9 @@ class FeaturesV1 extends Component {
 			            <img src={publicUrl+"assets/img/icons/icon-img/1.png"} style={{width:"80px"}} alt="#" />
 			          </div>
 			          <div className="ltn__feature-info">
-			            <h3><Link to="/service-details">LOCATION</Link></h3>
+			            <h3><Link to="/serviceLocation">LOCATION</Link></h3>
 			            <p>Nos agents immobiliers mettent tout en oeuvre pour trouver le bon locataire ou la location qui vous convient.</p>
-			            <Link className="ltn__service-btn" to="/louer">Louer une maison <i className="flaticon-right-arrow" /></Link>
+			            <Link className="ltn__service-btn" to="/serviceLocation">Louer une maison <i className="flaticon-right-arrow" /></Link>
 			          </div>
 			        </div>
 			      </div>
@@ -63,10 +63,10 @@ class FeaturesV1 extends Component {
 			            <img src={publicUrl+"assets/img/icons/icon-img/4.png"} style={{width:"80px"}} alt="#" />
 			          </div>
 			          <div className="ltn__feature-info">
-			            <h3><Link to="/service-details">Construction
+			            <h3><Link to="/serviceConstruction">Construction
 						</Link></h3>
 			            <p>Nous proposons une panoplie complète de propriétés en location de courte durée pour tous les budgets.</p>
-			            <Link className="ltn__service-btn" to="#">Construire une maison<i className="flaticon-right-arrow" /></Link>
+			            <Link className="ltn__service-btn" to="/serviceConstruction">Construire une maison<i className="flaticon-right-arrow" /></Link>
 			          </div>
 			        </div>
 			      </div>
