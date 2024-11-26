@@ -311,7 +311,7 @@ const ShopGridV1 = () => {
     onChange={(e) => setPrixMin(Number(e.target.value))}
     placeholder="Prix Min"
     className="form-control"
-    style={{height: '58px'}}
+    style={{height: '58px',borderColor:"#e4ecf2"}}
   />
 </div>
 
@@ -322,7 +322,7 @@ const ShopGridV1 = () => {
     onChange={(e) => setPrixMax(Number(e.target.value))}
     placeholder="Prix Max"
     className="form-control"  
-    style={{height: '58px'}}
+    style={{height: '58px',borderColor:"#e4ecf2"}}
   />
 </div>
 

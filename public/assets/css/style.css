@@ -819,12 +819,14 @@ ol li {
 .box-shadow {
   -webkit-box-shadow: var(--ltn__box-shadow-2);
   box-shadow: var(--ltn__box-shadow-2);
+  border: 1px solid #a4aaad;
 }
 
 .box-shadow-1 {
   -webkit-box-shadow: var(--ltn__box-shadow-1);
   box-shadow: var(--ltn__box-shadow-1);
 }
+
 
 .ltn__custom-icon {
   position: relative;
@@ -1279,7 +1281,7 @@ input[type="submit"],
 textarea {
   background-color: var(--white);
   border: 2px solid;
-  border-color: var(--border-color-9);
+  border-color: #a4aaad ;
   height: 65px;
   -webkit-box-shadow: none;
   box-shadow: none;
@@ -16154,7 +16156,7 @@ input.cart-plus-minus-box {
 
 .input-item .nice-select {
   border: 2px solid;
-  border-color: var(--border-color-1);
+  border-color: #a4aaad  ;
   border-radius: 0;
   font-size: 14px;
   font-weight: 400;
