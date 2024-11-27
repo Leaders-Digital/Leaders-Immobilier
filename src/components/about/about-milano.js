@@ -22,9 +22,9 @@ class AboutV4 extends Component {
 						<div className="section-title-area ltn__section-title-2--- mb-20">
 						<h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">À propos de nous						</h6>
 						<h1 className="section-title"> Leaders Immobilier Milano<span>.</span></h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Phasellus in fermentum orci, quis dapibus ex.</p>
+						<p>Notre agence à Milan a pour mission de rapprocher nos clients européens du marché immobilier tunisien. Nous offrons des services de vente, achat et investissement adaptés aux besoins des investisseurs et particuliers résidant en Europe. Grâce à notre expertise et à notre réseau, nous facilitons les démarches immobilières et vous offrons un accompagnement personnalisé pour concrétiser vos projets en toute sérénité</p>
 						</div>
-						<img src={publicUrl+"assets/img/agence/lac/2.jpeg"}  alt="About Us Image" />
+						<img src={publicUrl+"assets/img/agence/lac/2.jpg"}  alt="About Us Image" />
 
 					</div>
 					</div>

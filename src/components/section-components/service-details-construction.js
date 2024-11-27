@@ -21,7 +21,6 @@ class ServiceDetails extends Component {
 						<div className="row">
 						<div className="col-lg-6">
 							<img src={publicUrl+"assets/img/service/5.jpg"} alt="image" />
-							<label>Image caption here.</label>
 						</div>
 						<div className="col-lg-6">
 							<img src={publicUrl+"assets/img/service/3.jpg"} alt="image" />

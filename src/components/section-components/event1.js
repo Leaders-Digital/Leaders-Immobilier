@@ -33,7 +33,8 @@ class Event1 extends Component {
                                                         Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                                                        <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023
+                                                        </p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
@@ -72,7 +73,7 @@ class Event1 extends Component {
                                                         Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                                                        <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
@@ -111,7 +112,7 @@ class Event1 extends Component {
                                                         Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                                                        <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
@@ -149,7 +150,7 @@ class Event1 extends Component {
                                                         Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                                                        <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>

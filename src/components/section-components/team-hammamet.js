@@ -15,7 +15,7 @@ class TeamV1 extends Component {
 					<div className="col-lg-12">
 					<div className="section-title-area ltn__section-title-2--- text-center">
 						<h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">Équipe</h6>
-						<h1 className="section-title">Agents immobiliers</h1>
+						<h1 className="section-title">Conseiller immobiliers</h1>
 					</div>
 					</div>
 				</div>
@@ -31,8 +31,8 @@ class TeamV1 extends Component {
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-twitter" /></a></li>
 							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246301"><i className="fa fa-phone" /></a></li>
 							</ul>
 						</div>
 						</div>
@@ -45,37 +45,75 @@ class TeamV1 extends Component {
 						</div>
 						<div className="team-info">
 						<h4><Link to="/team-details">Sabrine Moussi</Link></h4>
-						<h6 className="ltn__secondary-color">Agente du bureau
+						<h6 className="ltn__secondary-color">Agent du bureau
 						</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-twitter" /></a></li>
 							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246302"><i className="fa fa-phone" /></a></li>
 							</ul>
 						</div>
 						</div>
 					</div>
 					</div>
-					{/* <div className="col-lg-4 col-sm-6">
+					<div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
-						<img src={publicUrl+"assets/img/team/3.jpg"} alt="Image" />
+						<img src={publicUrl+"assets/img/team/hammamet/3.jpg"} alt="Image" />
 						</div>
 						<div className="team-info">
-						<h4><Link to="/team-details">Soren Gallagher</Link></h4>
-						<h6 className="ltn__secondary-color">Vendeur de propriété
+						<h4><Link to="/team-details">Ghada Boughanmi</Link></h4>
+						<h6 className="ltn__secondary-color">Agent de bureau
 						</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-twitter" /></a></li>
 							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246305 "><i className="fa fa-phone" /></a></li>
 							</ul>
 						</div>
 						</div>
 					</div>
-					</div> */}
+					</div>
+					<div className="col-lg-4 col-sm-6">
+					<div className="ltn__team-item ltn__team-item-3---">
+						<div className="team-img">
+						<img src={publicUrl+"assets/img/team/hammamet/4.jpg"} alt="Image" />
+						</div>
+						<div className="team-info">
+						<h4><Link to="/team-details">Wiem amal Ammar</Link></h4>
+						<h6 className="ltn__secondary-color">Agent de bureau
+						</h6>
+						<div className="ltn__social-media">
+							<ul>
+							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
+							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246303"><i className="fa fa-phone" /></a></li>
+							</ul>
+						</div>
+						</div>
+					</div>
+					</div>
+					<div className="col-lg-4 col-sm-6">
+					<div className="ltn__team-item ltn__team-item-3---">
+						<div className="team-img">
+						<img src={publicUrl+"assets/img/team/hammamet/5.jpg"} alt="Image" />
+						</div>
+						<div className="team-info">
+						<h4><Link to="/team-details">Marwa Nasri </Link></h4>
+						<h6 className="ltn__secondary-color">Agent de bureau
+						</h6>
+						<div className="ltn__social-media">
+							<ul>
+							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
+							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246326"><i className="fa fa-phone" /></a></li>
+							</ul>
+						</div>
+						</div>
+					</div>
+					</div>
 				</div>
 				</div>
 			</div>

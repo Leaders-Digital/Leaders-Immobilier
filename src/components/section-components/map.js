@@ -20,7 +20,7 @@ const Map = () => {
                 <div className="col-md-5 mt-4">
                     <h4 className="mb-3">Découvrez les prix de l'immobilier en Tunisie avec Leaders immobilier</h4>
                     <p className="mb-4">
-                    Explorez la carte des prix de Leaders Immobiliers pour accéder rapidement à des informations clés sur le marché immobilier en Tunisie. Consultez le prix moyen des biens et le nombre de propriétés disponibles dans chaque région.
+                    Consultez notre carte interactive pour accéder aux moyennes des prix immobiliers par région. Un outil performant, conçu pour vous offrir une vision claire et fiable du marché afin d’orienter vos décisions immobilières en toute confiance.
                     </p>
                  
                     <Link to="/map" className="btn voirplus btn-effect-1 ">

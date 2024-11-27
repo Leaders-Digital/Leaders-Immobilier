@@ -44,7 +44,8 @@ const PortfolioV1 = () => {
         <div className="row">
 		<div className="text-center">
 						<h1 className="section-title">Hkeytek Maa Leaders Immobilier	</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut <br/>labore et dolore magna aliqua.</p>
+						<p>Découvrez les témoignages de nos clients satisfaits, qui partagent leur expérience  <br/>  réussie avec Leaders Immobilier.
+            </p>
 					</div>
           {videoCollection.slice(0, visibleVideos).map((videoUrl, index) => (
             <div key={index} className="ltn__gallery-item filter_category_1 col-lg-4 col-sm-6 col-12">

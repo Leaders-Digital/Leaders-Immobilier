@@ -22,7 +22,7 @@ class AboutV4 extends Component {
 						<div className="section-title-area ltn__section-title-2--- mb-20">
 						<h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">À propos de nous						</h6>
 						<h1 className="section-title"> Leaders Immobilier Les berges du lac 2<span>.</span></h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Phasellus in fermentum orci, quis dapibus ex.</p>
+						<p>Située à la Cité des Pins, notre agence au Lac 2 vous offre des services immobiliers personnalisés à Tunis. Spécialisés en conseil immobilier, nous vous aidons à trouver le bien qui correspond à vos besoins, que ce soit pour l'achat, la vente ou la location.</p>
 						</div>
 						<img src={publicUrl+"assets/img/agence/lac/2.jpg"}  alt="About Us Image" />
 

@@ -27,36 +27,37 @@ class TeamV1 extends Component {
 						</div>
 						<div className="team-info">
 						<h4><Link to="/team-details">Nour Bouabdallah</Link></h4>
-						<h6 className="ltn__secondary-color">Agente du bureau</h6>
+						<h6 className="ltn__secondary-color">Chef d'agence</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-twitter" /></a></li>
 							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246309 "><i className="fa fa-phone" /></a></li>
 							</ul>
 						</div>
 						</div>
 					</div>
 					</div>
-					{/* <div className="col-lg-4 col-sm-6">
+					<div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
 						<img src={publicUrl+"assets/img/team/mrezga/2.jpg"} alt="Image" />
 						</div>
 						<div className="team-info">
-						<h4><Link to="/team-details">Sabrine Moussi</Link></h4>
-						<h6 className="ltn__secondary-color">Agente du bureau
+						<h4><Link to="/team-details">Najeh Ben Nasr</Link></h4>
+						<h6 className="ltn__secondary-color">Agent du bureau
 						</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-twitter" /></a></li>
+						
 							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246313"><i className="fa fa-phone" /></a></li>
 							</ul>
 						</div>
 						</div>
 					</div>
-					</div> */}
+					</div>
 					{/* <div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">

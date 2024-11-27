@@ -22,7 +22,7 @@ class AboutV4 extends Component {
 						<div className="section-title-area ltn__section-title-2--- mb-20">
 						<h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">À propos de nous						</h6>
 						<h1 className="section-title"> Leaders Immobilier Hammamet<span>.</span></h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Phasellus in fermentum orci, quis dapibus ex.</p>
+						<p>L’agence Hammamet Barraket Sahel couvre les zones de Nabeul et Hammamet, offrant des solutions immobilières adaptées pour l'achat, la vente et la location dans ces régions en pleine croissance.</p>
 						</div>
 						<img src={publicUrl+"assets/img/agence/hammamet/3.jpg"}  alt="About Us Image" />
 

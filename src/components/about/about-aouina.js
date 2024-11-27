@@ -22,7 +22,7 @@ class AboutV4 extends Component {
 						<div className="section-title-area ltn__section-title-2--- mb-20">
 						<h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">À propos de nous						</h6>
 						<h1 className="section-title"> Leaders Immobilier Aouina<span>.</span></h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Phasellus in fermentum orci, quis dapibus ex.</p>
+						<p>Notre agence à Aouina, située dans la capitale, couvre la région de Tunis et ses environs. Nous vous offrons des services de vente, location et estimation de biens immobiliers, ainsi que des conseils personnalisés pour vous accompagner dans tous vos projets immobiliers à Tunis.</p>
 						</div>
 						<img src={publicUrl+"assets/img/agence/lac/2.jpeg"}  alt="About Us Image" />
 

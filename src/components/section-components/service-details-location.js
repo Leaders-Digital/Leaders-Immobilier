@@ -20,8 +20,7 @@ class ServiceDetails extends Component {
 						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut   </p>
 						<div className="row">
 						<div className="col-lg-6">
-							<img src={publicUrl+"assets/img/service/13.jpg"} alt="image" />
-							<label>Image caption here.</label>
+							<img src={publicUrl+"assets/img/service/22.jpg"} alt="image" />
 						</div>
 						<div className="col-lg-6">
 							<img src={publicUrl+"assets/img/service/14.jpg"} alt="image" />
@@ -46,7 +45,7 @@ class ServiceDetails extends Component {
 				
 						{/* Banner Widget */}
 						<div className="widget ltn__banner-widget go-top">
-						<Link to="/shop"><img src={publicUrl+"assets/img/service/14.jpg"} alt="Banner Image" /></Link>
+						<Link to="/shop"><img src={publicUrl+"assets/img/service/23.jpg"} alt="Banner Image" /></Link>
 						</div>
 					</aside>
 					</div>

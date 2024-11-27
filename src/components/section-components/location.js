@@ -24,7 +24,8 @@ const CartePrix = ({ headertitle, subheader, customclass }) => {
     const fetchAllProducts = async () => {
         try {
             const body = {
-                ville: ['ARIANA', "TUNIS", "NABEUL", "BEN AROUS", "SOUSSE", "MANOUBA", "MAHDIA", "SFAX", "GABES", "KEF", "KAIROUAN", "BIZERTE", "GAFSA", "TOZEUR", "TATAOUINE", "MEDNINE", "JENDOUBA", "ZAGHOUAN", "SILIANA", "KASSERINE", "MONASTIR", "KEBILI", 'BEJA', 'SIDI BOUZID'],
+                ville: [],
+                delegation:[],
                 type: "Vente",
                 typeCategorie: typeCategorie === "" ? [] : [typeCategorie], 
                 itemPerPage: "3000"
@@ -37,21 +38,47 @@ const CartePrix = ({ headertitle, subheader, customclass }) => {
 
             const fetchedProducts = Array.isArray(response.data.resultat) ? response.data.resultat : [];
             const stateData = fetchedProducts.reduce((acc, product) => {
-                const state = product.ville;
+                const state = product.delegation.charAt(0).toUpperCase() + product.delegation.slice(1).toLowerCase();
+                
+                // Initialize state if it doesn't exist
                 if (!acc[state]) {
                     acc[state] = { totalPrice: 0, totalCount: 0 };
                 }
+            
+                // Safely access 'superficieTotal' and handle cases where it might be missing
+                // Ensure superficieTotal is a valid number (fallback to 0 if null or not a number)
+                const superficieTotal = Number(product.caracteristiqueBien?.superficieTotal) || 0; // Convert to number
+                
+                // Debug logging to check what we're adding
+                console.log(`Product: ${product.title}, SuperficieTotal: ${superficieTotal}`);
+                
+                // Add price, using 0 as default for missing price
                 acc[state].totalPrice += product.prixVente || 0;
-                acc[state].totalCount += 1;
+            
+                // Add superficieTotal to totalCount only if it's valid (greater than 0)
+                if (superficieTotal > 0) {
+                    console.log(`Adding superficieTotal for ${state}: ${superficieTotal}`);
+                    acc[state].totalCount += superficieTotal;
+                } else {
+                    console.log(`Skipping invalid superficieTotal for ${state}`);
+                }
+            
                 return acc;
             }, {});
-
+            
+            console.log(stateData);
+            
+            
+            
             const averages = Object.fromEntries(
                 Object.entries(stateData).map(([state, data]) => [
                     state,
-                    { averagePrice: data.totalPrice / data.totalCount, totalItems: data.totalCount },
+                    {
+                        averagePrice: data.totalCount > 0 ? data.totalPrice / data.totalCount : 0, // Prevent division by zero
+                    },
                 ])
             );
+            
 
             setAveragePriceByState(averages);
             setLoading(false);
@@ -134,7 +161,7 @@ const CartePrix = ({ headertitle, subheader, customclass }) => {
                     });
 
                     if (features.length > 0) {
-                        const stateName = features[0].properties.gouv_fr;
+                        const stateName = features[0].properties.del_fr;
 
                         if (hoveredStateRef.current !== stateName) {
                             hoveredStateRef.current = stateName;
@@ -147,7 +174,7 @@ const CartePrix = ({ headertitle, subheader, customclass }) => {
                                 'fill-color',
                                 [
                                     'case',
-                                    ['==', ['get', 'gouv_fr'], stateName],
+                                    ['==',  ['get', 'del_fr'], stateName],
                                     'green', 
                                     '#888888',
                                 ]
@@ -167,8 +194,8 @@ const CartePrix = ({ headertitle, subheader, customclass }) => {
                                     .setLngLat(center)
                                     .setHTML(`
                                         <strong>${stateName}</strong><br/>
-                                        Prix moyen: ${averagePrice.toLocaleString()} TND<br/>
-                                        Nombre des bien: ${totalItems}
+                                        Prix moyen M2: ${averagePrice.toLocaleString()} TND<br/>
+                                
                                     `)
                                     .addTo(mapInstance);
                             } else {

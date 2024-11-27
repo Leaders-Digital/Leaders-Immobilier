@@ -15,7 +15,8 @@ class EstimationForm extends Component {
 				<div className="col-lg-12">
 					<div className=" text-center">
 						<h1 className="section-title">Estimer la valeur de votre Bien</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur. Proin vehicula <br /> nibh vitae placerat facilisis.</p>
+						<p>Découvrez rapidement la valeur réelle de votre bien grâce à notre expertise et à des outils fiables. <br/> Simple, précis et gratuit !
+            </p>
 
 					</div>
 					</div>

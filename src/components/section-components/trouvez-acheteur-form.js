@@ -15,7 +15,8 @@ class TrouverAcheteurForm extends Component {
 				<div className="col-lg-12">
 					<div className=" text-center">
 						<h1 className="section-title">Trouver un acheteur pour votre bien</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur. Proin vehicula <br /> nibh vitae placerat facilisis.</p>
+						<p>Grâce à notre large clientèle, Leaders Immobilier vous aide à trouver rapidement le bon acheteur pour  <br/>  votre bien immobilier,garantissant une vente réussie.
+						</p>
 
 					</div>
 					</div>

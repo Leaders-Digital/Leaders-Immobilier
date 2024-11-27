@@ -22,7 +22,8 @@ class AboutV4 extends Component {
 						<div className="section-title-area ltn__section-title-2--- mb-20">
 						<h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">À propos de nous						</h6>
 						<h1 className="section-title"> Leaders Immobilier Mrezga<span>.</span></h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Phasellus in fermentum orci, quis dapibus ex.</p>
+						<p>Située à Mrezga, notre agence couvre les zones de Nabeul et Hammamet, offrant un accompagnement personnalisé pour tous vos projets immobiliers dans ces secteurs prisés.
+						</p>
 						</div>
 						<img src={publicUrl+"assets/img/agence/mrezga/1.jpg"}  alt="About Us Image" />
 
