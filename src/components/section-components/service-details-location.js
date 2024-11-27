@@ -16,8 +16,7 @@ class ServiceDetails extends Component {
 						<div className="ltn__blog-img">
 						<img src={publicUrl+"assets/img/service/9.jpg"} alt="Image" />
 						</div>
-						<p> <span className="ltn__first-letter">L</span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc itation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut   </p>
+						<p> <span className="ltn__first-letter">L</span>Le service de location de Leaders Immobilier offre un accompagnement complet et sur mesure pour tous vos besoins en matière de location immobilière. Que vous soyez propriétaire cherchant à louer votre bien ou locataire en quête de la propriété idéale, notre équipe d'experts est là pour faciliter chaque étape de la transaction. Grâce à une connaissance approfondie du marché local et une analyse précise des tendances de location, nous vous aidons à fixer un prix compétitif et attractif pour votre bien ou à trouver une location qui correspond parfaitement à vos attentes.</p>
 						<div className="row">
 						<div className="col-lg-6">
 							<img src={publicUrl+"assets/img/service/22.jpg"} alt="image" />
@@ -26,7 +25,9 @@ class ServiceDetails extends Component {
 							<img src={publicUrl+"assets/img/service/14.jpg"} alt="image" />
 						</div>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione. </p>
+						<p>Pour les propriétaires, nous nous chargeons de la gestion de la mise en location, en veillant à présenter votre bien sous son meilleur jour. Nous gérons également la recherche de locataires sérieux et qualifiés, effectuons les visites, et assurons la rédaction des contrats de location en conformité avec la législation en vigueur. Notre équipe veille à ce que toutes les démarches administratives soient respectées, pour vous garantir une transaction sécurisée et sereine. <br/>
+Pour les locataires, nous vous accompagnons dans la recherche du bien qui répond à vos critères, en vous offrant un large choix de propriétés disponibles. Notre objectif est de vous fournir un service personnalisé et rapide, pour que vous trouviez la location idéale en toute confiance. Grâce à Leaders Immobilier, la location devient un processus simple, transparent et efficace.
+</p>
 				
 					</div>
 					</div>

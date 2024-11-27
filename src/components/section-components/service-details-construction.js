@@ -16,9 +16,9 @@ class ServiceDetails extends Component {
 						<div className="ltn__blog-img">
 						<img src={publicUrl+"assets/img/service/2.jpg"} alt="Image" />
 						</div>
-						<p> <span className="ltn__first-letter">C</span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc itation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut   </p>
-						<div className="row">
+						<p> <span className="ltn__first-letter">C</span>Proposition 2
+Le service de construction de Leaders Immobilier bénéficie d’une collaboration étroite avec Leaders Building, une entité spécialisée dans la gestion de projets de construction. Ensemble, nous vous offrons une approche intégrée, garantissant une exécution parfaite de votre projet, de la conception à la réalisation. Grâce à l’expertise de Leaders Building, nous assurons une gestion optimisée des travaux, un suivi rigoureux du chantier et un respect strict des délais et des normes de qualité.
+</p>						<div className="row">
 						<div className="col-lg-6">
 							<img src={publicUrl+"assets/img/service/5.jpg"} alt="image" />
 						</div>
@@ -26,7 +26,9 @@ class ServiceDetails extends Component {
 							<img src={publicUrl+"assets/img/service/3.jpg"} alt="image" />
 						</div>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione. </p>
+						<p>Cette collaboration nous permet de vous proposer des solutions innovantes et personnalisées, adaptées à vos besoins spécifiques, tout en veillant à la maîtrise des coûts et à la conformité des constructions aux réglementations locales. Nous vous accompagnons dans toutes les étapes du projet, de la sélection du terrain à la remise des clés, en passant par la conception architecturale et l'obtention des permis nécessaires. <br/>
+Grâce à Leaders Building, nous bénéficions d’un réseau de professionnels qualifiés et de partenaires de confiance, ce qui garantit des résultats à la hauteur de vos attentes. Avec Leaders Immobilier et Leaders Building, votre projet de construction est entre de bonnes mains, pour une réalisation de qualité, dans les meilleurs délais et avec une approche transparente et professionnelle.
+ </p>
 				
 					</div>
 					</div>

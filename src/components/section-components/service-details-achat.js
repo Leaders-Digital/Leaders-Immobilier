@@ -16,8 +16,8 @@ class ServiceDetails extends Component {
 						<div className="ltn__blog-img">
 						<img src={publicUrl+"assets/img/service/7.jpg"} alt="Image" />
 						</div>
-						<p> <span className="ltn__first-letter">A</span>orem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exerc itation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut  Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut   </p>
+						<p> <span className="ltn__first-letter">A</span>Le service de vente de Leaders Immobilier se distingue par son approche professionnelle et personnalisée, visant à offrir une expérience fluide et réussie à chaque client. Que vous soyez vendeur ou acheteur, notre équipe met tout en œuvre pour garantir une transaction immobilière optimale. Nous commençons par une évaluation précise de votre bien, basée sur une connaissance approfondie du marché local et des tendances actuelles. Grâce à notre réseau étendu et à une base de clients diversifiée, nous identifions rapidement les acheteurs potentiels pour votre propriété.
+						</p>
 						<div className="row">
 						<div className="col-lg-6">
 							<img src={publicUrl+"assets/img/service/8.jpg"} alt="image" />
@@ -26,7 +26,9 @@ class ServiceDetails extends Component {
 							<img src={publicUrl+"assets/img/service/10.jpg"} alt="image" />
 						</div>
 						</div>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione. </p>
+						<p>Nous vous accompagnons à chaque étape de la vente, en vous conseillant sur la mise en valeur de votre bien pour attirer les acheteurs, en optimisant sa présentation et en vous proposant des solutions adaptées. Leaders Immobilier prend en charge l’aspect administratif et juridique de la transaction, vous assurant une vente sans tracas. Notre équipe s’occupe de la rédaction des contrats, de la gestion des démarches légales et de la négociation des prix, afin de vous garantir une vente réussie et sereine. <br/>
+En outre, nous privilégions la communication transparente, vous tenant informé à chaque étape du processus. Notre objectif est de vous aider à vendre votre bien dans les meilleures conditions possibles, en vous offrant un accompagnement de confiance, efficace et sur mesure. Grâce à Leaders Immobilier, vendre votre bien devient un projet simple et sans stress.
+</p>
 				
 					</div>
 					</div>

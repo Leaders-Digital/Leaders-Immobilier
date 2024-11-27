@@ -60,6 +60,7 @@ const ShopGridV1 = () => {
         link: '/about/milano',
     };
 
+
     const renderAgencyCard = (agency) => (
         <Grid item xs={12} sm={6} md={4} key={agency.id}>
             <Link to={agency.link} style={{ textDecoration: 'none' }}>

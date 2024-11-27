@@ -25,7 +25,7 @@ class AboutV4 extends Component {
 						<p>Notre agence à Kélibia couvre la région de Kélibia, offrant des services de vente, location et estimation de biens immobiliers. Nous vous aidons à trouver le bien qui correspond à vos besoins dans cette zone.
 						</p>
 						</div>
-						<img src={publicUrl+"assets/img/agence/lac/2.jpeg"}  alt="About Us Image" />
+						<img src={publicUrl+"assets/img/agence/lac/2.jpg"}  alt="About Us Image" />
 
 					</div>
 					</div>
