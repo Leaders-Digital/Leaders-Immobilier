@@ -37,7 +37,7 @@ class Event1 extends Component {
                                                         </p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
@@ -76,7 +76,7 @@ class Event1 extends Component {
                                                         <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
@@ -115,7 +115,7 @@ class Event1 extends Component {
                                                         <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
@@ -153,7 +153,7 @@ class Event1 extends Component {
                                                         <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>

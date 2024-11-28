@@ -15,7 +15,7 @@ class 	Event3 extends Component {
 			      <div className="col-lg-12">
 			        <div className="section-title-area ltn__section-title-2--- text-center---">
 			          <h6 className="section-subtitle section-subtitle-2--- ltn__secondary-color">  <span><i className="far fa-calendar" /></span> Notre événement</h6>
-			          <h1 className="section-title">Evènement le grand jeu   <br />
+			          <h1 className="section-title">Evènement Grand Jeu 2éme Edition<br />
 					 By Leaders Immobilier </h1>
 			        </div>
 			      </div>
@@ -46,12 +46,11 @@ class 	Event3 extends Component {
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
-			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Lorem Lorem</Link></h4>
+			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Grand Jeu 2éme Edition</Link></h4>
 			                        <label><span className="ltn__secondary-color">18 Octobre</span> / 2023</label>
 			                        <div className="search-by-place-brief">
-			                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-			                            elit, sed do eiusmod tempor incididunt ut labore Enim
-			                            ullamco laboris.</p>
+			                          <p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !
+									  </p>
 			                        </div>
 			                        <div className="search-by-place-btn ">
 			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
@@ -77,15 +76,14 @@ class 	Event3 extends Component {
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
-			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Lorem Lorem</Link></h4>
+			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Grand Jeu 2éme Edition</Link></h4>
 			                        <label><span className="ltn__secondary-color">18 Octobre</span> / 2023</label>
 			                        <div className="search-by-place-brief">
-			                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-			                            elit, sed do eiusmod tempor incididunt ut labore Enim
-			                            ullamco laboris.</p>
+									<p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !
+									</p>
 			                        </div>
 			                        <div className="search-by-place-btn ">
-			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
+			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement<i className="flaticon-right-arrow" /></Link>
 			                        </div>
 			                      </div>
 			                    </div>
@@ -108,12 +106,10 @@ class 	Event3 extends Component {
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
-			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Lorem Lorem</Link></h4>
+			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Grand Jeu 2éme Edition</Link></h4>
 			                        <label><span className="ltn__secondary-color">18 Octobre</span> / 2023</label>
 			                        <div className="search-by-place-brief">
-			                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-			                            elit, sed do eiusmod tempor incididunt ut labore Enim
-			                            ullamco laboris.</p>
+									<p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !</p>
 			                        </div>
 			                        <div className="search-by-place-btn ">
 			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>

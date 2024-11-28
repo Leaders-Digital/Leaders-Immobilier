@@ -114,6 +114,29 @@ class TeamV1 extends Component {
 						</div>
 					</div>
 					</div>
+
+
+					<div className="col-lg-4 col-sm-6">
+					<div className="ltn__team-item ltn__team-item-3---">
+						<div className="team-img">
+						<img src={publicUrl+"assets/img/team/hammamet/6.jpg"} alt="Image" />
+						</div>
+						<div className="team-info">
+						<h4><Link to="/team-details">Marame bourannen </Link></h4>
+						<h6 className="ltn__secondary-color">Agent de bureau
+						</h6>
+						<div className="ltn__social-media">
+							<ul>
+							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
+							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246304"><i className="fa fa-phone" /></a></li>
+							</ul>
+						</div>
+						</div>
+					</div>
+					</div>
+
+
 				</div>
 				</div>
 			</div>

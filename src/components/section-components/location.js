@@ -47,8 +47,9 @@ const CartePrix = ({ headertitle, subheader, customclass }) => {
             
                 // Safely access 'superficieTotal' and handle cases where it might be missing
                 // Ensure superficieTotal is a valid number (fallback to 0 if null or not a number)
-                const superficieTotal = Number(product.caracteristiqueBien?.superficieTotal) || 0; // Convert to number
+                const superficieTotal = Number(product.caracteristiqueBien?.superficieTotal) || (product.caracteristiqueTerrain?.superficie_terrain_totale) ; // Convert to number
                 
+                console.log(superficieTotal)
                 // Debug logging to check what we're adding
                 console.log(`Product: ${product.title}, SuperficieTotal: ${superficieTotal}`);
                 

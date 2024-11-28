@@ -15,7 +15,7 @@ class 	Event4 extends Component {
 			      <div className="col-lg-12">
 			        <div className="section-title-area ltn__section-title-2--- text-center---">
 			          <h6 className="section-subtitle section-subtitle-2--- ltn__secondary-color">  <span><i className="far fa-calendar" /></span> Notre événement</h6>
-			          <h1 className="section-title">Evènement le grand jeu   <br />
+			          <h1 className="section-title">Evènement Grand Jeu 1ére Edition   <br />
 					 By Leaders Immobilier </h1>
 			        </div>
 			      </div>

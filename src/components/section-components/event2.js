@@ -30,13 +30,12 @@ class Event2 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                    Evènement tirage au  <br />  sort <span> 18 Octobre</span><br /> By Leaders Immobilier
+                                                    Evènement Grand Jeu   <br />  1ére Edition <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                                                    </div>
+                                                    <p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !</p>                                                    </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
@@ -69,13 +68,12 @@ class Event2 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                    Evènement tirage au  <br />  sort <span> 18 Octobre</span><br /> By Leaders Immobilier
+                                                    Evènement Grand Jeu   <br />  1ére Edition <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
-                                                    </div>
+                                                    <p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !</p>                                                    </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
@@ -108,13 +106,13 @@ class Event2 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                    Evènement tirage au  <br />  sort <span> 18 Octobre</span><br /> By Leaders Immobilier
+                                                    Evènement Grand Jeu   <br />  1ére Edition <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
+                                                        <p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
@@ -152,7 +150,7 @@ class Event2 extends Component {
                                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
-                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Lorem Lorem</Link>
+                                                        <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
                                                         <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
