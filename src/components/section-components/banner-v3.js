@@ -5,17 +5,17 @@ const BannerV3 = () => {
     const slides = [
         {
             image: 'assets/img/slider/11.jpg',
-            title: 'وين ما تمشي',
+            title: 'Votre avenir immobilier ',
             description: 'Nos agents vous feront visiter les biens et suivront votre dossier pour saisir les meilleures opportunités.',
         },
         {
             image: 'assets/img/slider/12.jpg',
-            title: 'وين ما تمشي',
+            title: 'Votre avenir immobilier ',
             description: 'Nos agents vous feront visiter les biens et suivront votre dossier pour saisir les meilleures opportunités.',
         },
         {
             image: 'assets/img/slider/13.jpg',
-            title: 'وين ما تمشي',
+            title: 'Votre avenir immobilier ',
             description: 'Nos agents vous feront visiter les biens et suivront votre dossier pour saisir les meilleures opportunités.',
         }
     ];
@@ -39,10 +39,12 @@ const BannerV3 = () => {
                                         <div className="slide-item-info" style={{ height: '100%' }}>
                                             <div className="slide-item-info-inner ltn__slide-animation" style={{ height: '100%' }}>
                                                 <h6 className="slide-sub-title white-color--- animated" style={{ fontSize: "1.5rem", marginTop: "100px" }}>
-                                                    <span><i className="fas fa-home" /></span> Agence Immobilière
+                                                    <span><i className="fas fa-check" /></span> 100% EXPERT
                                                 </h6>
-                                                <h1 className="slide-title animated" style={{ fontSize: "7rem" }}>
-                                                    {slide.title} <span style={{ color: "--ltn__secondary-color" }}>تلقانا</span> معاك
+                                                <h1 className="slide-title animated" style={{ fontSize: "5rem" }}>
+                                                    {slide.title} <span style={{ color: "--ltn__secondary-color" }}>à chaque</span>  étape
+
+                                                   
                                                 </h1>
                                                 <div className="animated">
                                                     <p style={{ fontSize: "1.2rem" }}>

@@ -23,16 +23,16 @@ class TeamV1 extends Component {
 					<div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
-						<img src={publicUrl+"assets/img/team/1.jpg"} alt="Image" />
+						<img src={publicUrl+"assets/img/team/kelibia/1.jpg"} alt="Image" />
 						</div>
 						<div className="team-info">
-						<h4><Link to="/team-details">Soren Gallagher</Link></h4>
-						<h6 className="ltn__secondary-color">Agents de vente						</h6>
+						<h4><Link to="/team-details">Maha beltaeif</Link></h4>
+						<h6 className="ltn__secondary-color">Agent de bureau					</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-twitter" /></a></li>
 							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246304"><i className="fa fa-phone" /></a></li>
 							</ul>
 						</div>
 						</div>
@@ -41,17 +41,18 @@ class TeamV1 extends Component {
 					<div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
-						<img src={publicUrl+"assets/img/team/2.jpg"} alt="Image" />
+						<img src={publicUrl+"assets/img/team/kelibia/2.jpg"} alt="Image" />
 						</div>
 						<div className="team-info">
-						<h4><Link to="/team-details">Soren Gallagher</Link></h4>
-						<h6 className="ltn__secondary-color">Agents de vente
+						<h4><Link to="/team-details">Hana Refai</Link></h4>
+						<h6 className="ltn__secondary-color">Agent de bureau
 						</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-twitter" /></a></li>
 							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246304"><i className="fa fa-phone" /></a></li>
+
 							</ul>
 						</div>
 						</div>
@@ -60,17 +61,17 @@ class TeamV1 extends Component {
 					<div className="col-lg-4 col-sm-6">
 					<div className="ltn__team-item ltn__team-item-3---">
 						<div className="team-img">
-						<img src={publicUrl+"assets/img/team/3.jpg"} alt="Image" />
+						<img src={publicUrl+"assets/img/team/kelibia/3.jpg"} alt="Image" />
 						</div>
 						<div className="team-info">
-						<h4><Link to="/team-details">Soren Gallagher</Link></h4>
-						<h6 className="ltn__secondary-color">Vendeur de propriété
+						<h4><Link to="/team-details">Rana Baccouche</Link></h4>
+						<h6 className="ltn__secondary-color">Chef d'agence
 						</h6>
 						<div className="ltn__social-media">
 							<ul>
 							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-twitter" /></a></li>
 							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
+							<li>  <a href="tel:+21627246304"><i className="fa fa-phone" /></a></li>
 							</ul>
 						</div>
 						</div>
