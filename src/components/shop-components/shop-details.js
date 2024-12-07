@@ -2,17 +2,33 @@ import React, { useEffect, useState,useRef  } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Slick from 'react-slick';
-                                                                                                                                                                                                                                                                                          
+import { toast, Toaster } from 'sonner';
+                                                                                                                                                                                                                                                                               
 const ShopDetails = () => {
 	const { id } = useParams(); // Get the product ID from URL
 	const [product, setProduct] = useState(null);
 	const [loading, setLoading] = useState(true);
-	const [rating, setRating] = useState(0);  // State for rating moved here
+
 	const publicUrl = process.env.PUBLIC_URL + '/';
 	const [similarProducts, setSimilarProducts] = useState([]); // State for similar products
 
 
-	const slickRef = useRef(null);
+
+
+
+
+const [formData, setFormData] = useState({
+    nomComplet: '',
+    tel: '',
+    message: '',
+    source: 'site web', 
+    ref: '', 
+    date: '',
+    heure: '',
+    societe: 'Leaders Immobilier'
+  });
+
+  const slickRef = useRef(null);
 
 	useEffect(() => {
 		window.scrollTo(0, 0);
@@ -65,12 +81,66 @@ const ShopDetails = () => {
 		fetchProductDetails();
 	}, [id]);
 
+
+	useEffect(() => {
+		if (product) {
+		  setFormData((prevFormData) => ({
+			...prevFormData,
+			ref: `NA${product.ref || ''}`, 
+		  }));
+		}
+	  }, [product]); //
+
 	const bg = product?.listImages?.[0]?.version_web 
 	? `${process.env.REACT_APP_API_URL}${product.listImages[0].version_web}` 
 	: 'default-image-url';  
   
-  console.log(bg);
-  
+
+
+
+	const handleInputChange = (e) => {
+		const { name, value } = e.target;
+		setFormData((prev) => ({
+		  ...prev,
+		  [name]: value,
+		}));
+	  };
+	
+	  // Form submission handler
+	  const handleSubmit = async (e) => {
+		e.preventDefault();
+		try {
+		  console.log("Envoi des données du formulaire:", formData);
+		  const response = await axios.post(
+			`${process.env.REACT_APP_API_URL}api/v2/visite/demande`,
+			formData,
+			{ headers: { Authorization: 'jkaAVXs852ZPOnlop795' } }
+		  );
+		  console.log("Réponse de l'API:", response.data);
+		  // Afficher le toast de succès
+		  toast.success('Formulaire envoyé avec succès !');
+	  
+		  // Reset form data after successful submission
+		  setFormData({
+			nomComplet: '',
+			tel: '',
+			message: '',
+			source: 'site web', 
+			ref: '', 
+			date: '',
+			heure: '',
+			societe: 'Leaders Immobilier'
+		  });
+	  
+		} catch (error) {
+		  console.error("Erreur lors de l'envoi des données du formulaire:", error);
+		  // Afficher le toast d'erreur
+		  toast.error('Erreur lors de l\'envoi du formulaire. Veuillez réessayer.');
+		}
+	  };
+	  
+	  
+
 
 
 
@@ -195,21 +265,54 @@ const ShopDetails = () => {
 						{/* Form Widget */}
 					 <div className="widget ltn__form-widget">
 							<h4 className="ltn__widget-title ltn__widget-title-border-2">Contactez-nous à propos ce bien</h4>
-							<form action="#">
-								<input
-									type="text"
-									name="référence"
-									value={product.ref || ''}
-									placeholder={product.ref || 'Référence'}
-									disabled
-								/>
-								<input type="text" name="name" placeholder="Nom Et Prénom *" />
-								<input type="text" name="phone" placeholder="Téléphone *" />
-								<input type="text" name="date" placeholder="Date *" />
-								<input type="text" name="time" placeholder="Temps *" />
-								<textarea name="yourmessage" placeholder="Écrire un message..." defaultValue={""} />
-								<button type="submit" className="btn theme-btn-1">Envoyer</button>
-							</form>
+						   <form onSubmit={handleSubmit}>
+                  <input
+                    type="text"
+                    name="ref"
+					value={`NA${product.ref}`}
+                    placeholder="Référence"
+                    disabled
+                  />
+                  <input
+                    type="text"
+                    name="nomComplet"
+                    value={formData.nomComplet}
+                    placeholder="Nom Et Prénom *"
+                    onChange={handleInputChange}
+                    required
+                  />
+                  <input
+                    type="number"
+                    name="tel"
+                    value={formData.tel}
+                    placeholder="Téléphone *"
+                    onChange={handleInputChange}
+                    required
+                  />
+                  <input
+                    type="date"
+                    name="date"
+                    value={formData.date}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  <input
+                    type="time"
+                    name="heure"
+                    value={formData.heure}
+                    onChange={handleInputChange}
+                    required
+                  />
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    placeholder="Écrire un message..."
+                    onChange={handleInputChange}
+                    required
+                  />
+                  <button type="submit" className="btn theme-btn-1">Envoyer</button>
+                </form>
+				
 						</div>
 
 
@@ -289,6 +392,7 @@ const ShopDetails = () => {
 		</div>
 			</div>
 		</div>
+		<Toaster richColors/>
 	</div>
 }
 

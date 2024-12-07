@@ -1,133 +1,235 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
+import React, { useState } from 'react';
+import axios from 'axios';
+import {
+  Container,
+  Grid,
+  TextField,
+  Select,
+  MenuItem,
+  Button,
+  Typography,
+  FormControl,
+  InputLabel,
+  Paper,
+  Box,
+} from '@mui/material';
 
-class TrouverAcheteurForm extends Component {
+const TrouverAcheteurForm = () => {
+  const [formData, setFormData] = useState({
+    nom: '',
+    prenom: '',
+    tel: '',
+    email: '',
+    categorieBiens: '',
+    typebiens: '',
+    ville: '',
+    delegation: '',
+    prix: '',
+  });
 
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [responseMessage, setResponseMessage] = useState('');
 
-    render() {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+  
+  const handleSubmit = async (e) => {
+	e.preventDefault();
+  
+	console.log("Form data being sent:", formData);
+  
+	const url = `${process.env.REACT_APP_API_URL}api/acheteur/biens`;
+	const headers = {
+	  'Authorization': 'jkaAVXs852ZPOnlop795',
+	  'Content-Type': 'application/json',
+	};
+  
+	try {
+	  const response = await axios.post(url, formData, { headers });
+	  console.log("Axios response:", response);
+  
+	  if (response.status === 200) {
+		setResponseMessage(response.data.message);
+		setIsSubmitted(true);
+	  }
+	} catch (error) {
+	  console.error("Error submitting form:", error);
+	  setResponseMessage('Error submitting form. Please try again later.');
+	  setIsSubmitted(true);
+	}
+  };
+  
 
-	let publicUrl = process.env.PUBLIC_URL+'/'
+  return (
+    <Container maxWidth="md">
+      <Paper elevation={3} sx={{ padding: 4, marginTop: 4 }}>
+        <Box textAlign="center" mb={4}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            Trouver un acheteur pour votre bien
+          </Typography>
+          <Typography variant="body1" color="textSecondary">
+            Grâce à notre large clientèle, Leaders Immobilier vous aide à trouver rapidement le bon acheteur pour
+            votre bien immobilier, garantissant une vente réussie.
+          </Typography>
+        </Box>
 
-    return <div className="ltn__contact-message-area mb-120" style={{backgroundColor:" "}}>
-				<div className="container">
-				<div className="row">
-				<div className="col-lg-12">
-					<div className=" text-center">
-						<h1 className="section-title">Trouver un acheteur pour votre bien</h1>
-						<p>Grâce à notre large clientèle, Leaders Immobilier vous aide à trouver rapidement le bon acheteur pour  <br/>  votre bien immobilier,garantissant une vente réussie.
-						</p>
+        {!isSubmitted ? (
+          <form onSubmit={handleSubmit}>
+            <Grid container spacing={3}>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  label="Nom"
+                  name="nom"
+            
+                  fullWidth
+                  required
+                  value={formData.nom}
+                  onChange={handleInputChange}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  label="Prénom"
+                  name="prenom"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  value={formData.prenom}
+                  onChange={handleInputChange}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  label="Téléphone"
+                  name="tel"
+                  type="number"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  value={formData.tel}
+                  onChange={handleInputChange}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <TextField
+                  label="Email"
+                  name="email"
+                  type="email"
+                  variant="outlined"
+                  fullWidth
+                  required
+                  value={formData.email}
+                  onChange={handleInputChange}
+                />
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <FormControl fullWidth>
+                  <InputLabel id="categorieBiens-label">Catégorie de bien</InputLabel>
+                  <Select
+                    labelId="categorieBiens-label"
+                    name="categorieBiens"
+                    value={formData.categorieBiens}
+                    onChange={handleInputChange}
+                  >
+                    <MenuItem value="">Sélectionnez</MenuItem>
+                    <MenuItem value="bâtiment">Bâtiment</MenuItem>
+                    <MenuItem value="Terrain">Terrain</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <FormControl fullWidth>
+                  <InputLabel id="typebiens-label">Type de bien</InputLabel>
+                  <Select
+                    labelId="typebiens-label"
+                    name="typebiens"
+                    value={formData.typebiens}
+                    onChange={handleInputChange}
+                  >
+                    <MenuItem value="">Sélectionnez</MenuItem>
+                    <MenuItem value="Appartement">Appartement</MenuItem>
+                    <MenuItem value="villa">Villa</MenuItem>
+                    <MenuItem value="maison">Maison</MenuItem>
+                    <MenuItem value="terrain">Terrain</MenuItem>
+                    <MenuItem value="bureau">Bureau</MenuItem>
+                    <MenuItem value="etage">Étage de villa</MenuItem>
+                    <MenuItem value="local-commercial">Local commercial</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <FormControl fullWidth>
+                  <InputLabel id="ville-label">Ville</InputLabel>
+                  <Select
+                    labelId="ville-label"
+                    name="ville"
+                    value={formData.ville}
+                    onChange={handleInputChange}
+                  >
+                    <MenuItem value="">Sélectionnez</MenuItem>
+                    <MenuItem value="ariana">Ariana</MenuItem>
+                    <MenuItem value="ben-arous">Ben Arous</MenuItem>
+                    <MenuItem value="manouba">Manouba</MenuItem>
+                    <MenuItem value="nabeul">Nabeul</MenuItem>
+                    <MenuItem value="Tunis">Tunis</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12} sm={6}>
+                <FormControl fullWidth>
+                  <InputLabel id="delegation-label">Délégation</InputLabel>
+                  <Select
+                    labelId="delegation-label"
+                    name="delegation"
+                    value={formData.delegation}
+                    onChange={handleInputChange}
+                  >
+                    <MenuItem value="">Sélectionnez</MenuItem>
+                    <MenuItem value="la-soukra">La Soukra</MenuItem>
+                    <MenuItem value="L AOUINA">L Aouina</MenuItem>
+                    <MenuItem value="le-kram">Le Kram</MenuItem>
+                    <MenuItem value="la-marsa">La Marsa</MenuItem>
+                    <MenuItem value="Lac 1">Lac 1</MenuItem>
+                    <MenuItem value="lac 2">Lac 2</MenuItem>
+                    <MenuItem value="hammamet">Hammamet</MenuItem>
+                    <MenuItem value="hammamet-centre">Hammamet Centre</MenuItem>
+                    <MenuItem value="mrezga">Mrezga</MenuItem>
+                  </Select>
+                </FormControl>
+              </Grid>
+              <Grid item xs={12}>
+                <TextField
+                  label="Prix de vente"
+                  name="prix"
+                  type="number"
+             
+                  fullWidth
+                  value={formData.prix}
+                  onChange={handleInputChange}
+                />
+              </Grid>
+            </Grid>
+            <Box mt={4} textAlign="center">
+              <Button variant="contained" color="primary" type="submit" size="large">
+                Envoyer
+              </Button>
+            </Box>
+          </form>
+        ) : (
+          <Box textAlign="center">
+            <Typography variant="h5" color="primary">
+              {responseMessage}
+            </Typography>
+          </Box>
+        )}
+      </Paper>
+    </Container>
+  );
+};
 
-					</div>
-					</div>
-
-					<div className="col-lg-12">
-					<div className="ltn__form-box contact-form-box box-shadow white-bg">
-						
-						<form id="contact-form" >
-						<div className="row">
-							<div className="col-md-6">
-							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" name="lastname" placeholder="Entrez votre nom" required />
-							</div>
-							</div>
-							<div className="col-md-6">
-							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" name="firstname" placeholder="Entrez votre prénom" required />
-							</div>
-							</div>
-							
-							<div className="col-md-6">
-							<div className="input-item input-item-phone ltn__custom-icon">
-								<input type="text" name="email" placeholder="Entrez votre numéro" required/>
-							</div>
-							</div>
-							<div className="col-md-6">
-							<div className="input-item input-item-email ltn__custom-icon">
-								<input type="email" name="phone" placeholder="Entrez votre email"  required/>
-							</div>
-							</div>
-
-							
-							<div className="col-md-6">
-  <div className="input-item input-item-phone ltn__custom-icon">
-    <select name="propertyType" className="form-control" >
-      <option value="">Type de bien</option>
-      <option value="">Appartement</option>
-      <option value="villa">Villa</option>
-	  <option value="maison">Maison</option>
-      <option value="terrain">Terrain</option>
-      <option value="bureau">Bureau</option>
-      <option value="etage">Etage de villa</option>
-      <option value="etage">Local commercial</option>
-
-    </select>
-  </div>
-</div>
-
-
-
-<div className="col-md-6">
-  <div className="input-item input-item-phone ltn__custom-icon">
-    <select name="propertyType" className="form-control">
-      <option value="">Categorie de bien</option>
-      <option value="location">Location</option>
-      <option value="vente">Vente</option>
-    </select>
-  </div>
-</div>
-
-<div className="col-md-6">
-  <div className="input-item input-item-phone ltn__custom-icon">
-      <select name="propertyCity" className="form-control">
-      <option value="">Sélectionner une ville</option>
-      <option value="ariana">Ariana</option>
-      <option value="ben-arous">Ben Arous</option>
-      <option value="manouba">Manouba</option> 
-      <option value="nabeul">Nabeul</option>
-      <option value="tunis">Tunis</option>
-    </select>
- 
-  </div>
-</div>
-
-<div className="col-md-6">
-  <div className="input-item input-item-phone ltn__custom-icon">
-    <select name="propertyType" className="form-control">
-      <option value="">Délégation</option>
-      <option value="La Soukra">La Soukra</option>
-  <option value="Le Kram">Le Kram</option>
-  <option value="La Marsa">La Marsa</option>
-  <option value="Lac 1">Lac 1</option>
-  <option value="Lac 2">Lac 2</option>
-  <option value="Hammamet">Hammamet</option>
-  <option value="Hammamet Centre">Hammamet Centre</option>
-  <option value="Mrezga">Mrezga</option>
-    </select>
-  </div>
-</div>
-
-
-							
-<div className="col-md-12">
-							<div className="input-item  ">
-								<input type="number" name="prix" placeholder="Prix de vente" />
-							</div>
-							</div>
-							
-						</div>
-						
-						<div className="btn-wrapper mt-0">
-							<button className="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Envoyer</button>
-						</div>
-						<p className="form-messege mb-0 mt-20" />
-						</form>
-					</div>
-					</div>
-				</div>
-				</div>
-			</div>
-        }
-}
-
-export default TrouverAcheteurForm	
+export default TrouverAcheteurForm;

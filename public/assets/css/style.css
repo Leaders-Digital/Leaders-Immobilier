@@ -1255,6 +1255,8 @@ input[type="password"]:focus,
 input[type="search"]:focus,
 input[type="tel"]:focus,
 input[type="number"]:focus,
+input[type="date"]:focus,
+input[type="time"]:focus,
 textarea:focus,
 input[type="button"]:focus,
 input[type="reset"]:focus,
@@ -1276,13 +1278,15 @@ code {
 input[type="text"],
 input[type="number"],
 input[type="email"],
+input[type="date"],
+input[type="time"],
 input[type="password"],
 input[type="submit"],
 textarea {
   background-color: var(--white);
-  border: 2px solid;
-  border-color: #a4aaad ;
-  height: 65px;
+  /* border: 2px solid;
+  border-color: #a4aaad ; */
+  height: 5px;
   -webkit-box-shadow: none;
   box-shadow: none;
   padding-left: 20px;

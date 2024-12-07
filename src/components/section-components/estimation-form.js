@@ -1,147 +1,219 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import parse from 'html-react-parser';
+import React from 'react';
+import {
+  Container,
+  Grid,
+  TextField,
+  Select,
+  MenuItem,
+  FormControl,
+  InputLabel,
+  TextareaAutosize,
+  Button,
+  Typography,
+  Paper,
+  Box,
+} from '@mui/material';
 
-class EstimationForm extends Component {
+const EstimationForm = () => {
+  const [formData, setFormData] = React.useState({
+    lastname: '',
+    firstname: '',
+    email: '',
+    phone: '',
+    propertyType: '',
+    propertyCategory: '',
+    propertyCity: '',
+    delegation: '',
+    agency: '',
+    message: '',
+  });
 
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
 
-    render() {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Form Submitted:', formData);
+    // Add form submission logic here (e.g., API call)
+  };
 
-	let publicUrl = process.env.PUBLIC_URL+'/'
+  return (
+    <Container maxWidth="md">
+      <Paper elevation={3} sx={{ padding: 4, marginTop: 4 }}>
+        <Box textAlign="center" mb={4}>
+          <Typography variant="h4" component="h1" gutterBottom>
+            Estimer la valeur de votre Bien
+          </Typography>
+          <Typography variant="body1" color="textSecondary">
+            Découvrez rapidement la valeur réelle de votre bien grâce à notre expertise et à des outils fiables. Simple, précis et gratuit !
+          </Typography>
+        </Box>
 
-    return <div className="ltn__contact-message-area mb-120">
-				<div className="container">
-				<div className="row">
-				<div className="col-lg-12">
-					<div className=" text-center">
-						<h1 className="section-title">Estimer la valeur de votre Bien</h1>
-						<p>Découvrez rapidement la valeur réelle de votre bien grâce à notre expertise et à des outils fiables. <br/> Simple, précis et gratuit !
-            </p>
+        <form onSubmit={handleSubmit}>
+          <Grid container spacing={3}>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                label="Nom"
+                name="lastname"
+                variant="outlined"
+                fullWidth
+                required
+                value={formData.lastname}
+                onChange={handleInputChange}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                label="Prénom"
+                name="firstname"
+                variant="outlined"
+                fullWidth
+                required
+                value={formData.firstname}
+                onChange={handleInputChange}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                label="Email"
+                name="email"
+                type="email"
+                variant="outlined"
+                fullWidth
+                required
+                value={formData.email}
+                onChange={handleInputChange}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <TextField
+                label="Téléphone"
+                name="phone"
+                type="tel"
+                variant="outlined"
+                fullWidth
+                required
+                value={formData.phone}
+                onChange={handleInputChange}
+              />
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <FormControl fullWidth>
+                <InputLabel id="propertyType-label">Type de bien</InputLabel>
+                <Select
+                  labelId="propertyType-label"
+                  name="propertyType"
+                  value={formData.propertyType}
+                  onChange={handleInputChange}
+                >
+                  <MenuItem value="">Sélectionnez</MenuItem>
+                  <MenuItem value="Appartement">Appartement</MenuItem>
+                  <MenuItem value="Villa">Villa</MenuItem>
+                  <MenuItem value="Maison">Maison</MenuItem>
+                  <MenuItem value="Terrain">Terrain</MenuItem>
+                  <MenuItem value="Bureau">Bureau</MenuItem>
+                  <MenuItem value="Etage de villa">Étage de villa</MenuItem>
+                  <MenuItem value="Local commercial">Local commercial</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <FormControl fullWidth>
+                <InputLabel id="propertyCategory-label">Catégorie de bien</InputLabel>
+                <Select
+                  labelId="propertyCategory-label"
+                  name="propertyCategory"
+                  value={formData.propertyCategory}
+                  onChange={handleInputChange}
+                >
+                  <MenuItem value="">Sélectionnez</MenuItem>
+                  <MenuItem value="Location">Location</MenuItem>
+                  <MenuItem value="Vente">Vente</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <FormControl fullWidth>
+                <InputLabel id="propertyCity-label">Ville</InputLabel>
+                <Select
+                  labelId="propertyCity-label"
+                  name="propertyCity"
+                  value={formData.propertyCity}
+                  onChange={handleInputChange}
+                >
+                  <MenuItem value="">Sélectionnez</MenuItem>
+                  <MenuItem value="Ariana">Ariana</MenuItem>
+                  <MenuItem value="Ben Arous">Ben Arous</MenuItem>
+                  <MenuItem value="Manouba">Manouba</MenuItem>
+                  <MenuItem value="Nabeul">Nabeul</MenuItem>
+                  <MenuItem value="Tunis">Tunis</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12} sm={6}>
+              <FormControl fullWidth>
+                <InputLabel id="delegation-label">Délégation</InputLabel>
+                <Select
+                  labelId="delegation-label"
+                  name="delegation"
+                  value={formData.delegation}
+                  onChange={handleInputChange}
+                >
+                  <MenuItem value="">Sélectionnez</MenuItem>
+                  <MenuItem value="La Soukra">La Soukra</MenuItem>
+                  <MenuItem value="Le Kram">Le Kram</MenuItem>
+                  <MenuItem value="La Marsa">La Marsa</MenuItem>
+                  <MenuItem value="Lac 1">Lac 1</MenuItem>
+                  <MenuItem value="Lac 2">Lac 2</MenuItem>
+                  <MenuItem value="Hammamet">Hammamet</MenuItem>
+                  <MenuItem value="Hammamet Centre">Hammamet Centre</MenuItem>
+                  <MenuItem value="Mrezga">Mrezga</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12}>
+              <FormControl fullWidth>
+                <InputLabel id="agency-label">Agence la plus proche</InputLabel>
+                <Select
+                  labelId="agency-label"
+                  name="agency"
+                  value={formData.agency}
+                  onChange={handleInputChange}
+                >
+                  <MenuItem value="">Sélectionnez</MenuItem>
+                  <MenuItem value="Lac 2">Agence Lac 2</MenuItem>
+                  <MenuItem value="Kelibia">Agence Kelibia</MenuItem>
+                  <MenuItem value="El Mrezga">Agence El Mrezga</MenuItem>
+                  <MenuItem value="Hammamet">Agence Hammamet</MenuItem>
+                  <MenuItem value="L'Aouina">Agence l'Aouina</MenuItem>
+                </Select>
+              </FormControl>
+            </Grid>
+            <Grid item xs={12}>
+              <TextareaAutosize
+                name="message"
+                placeholder="Entrez votre message"
+                minRows={1}
+                style={{ width: '100%' }}
+                value={formData.message}
+                onChange={handleInputChange}
+              />
+            </Grid>
+          </Grid>
+          <Box mt={4} textAlign="center">
+            <Button variant="contained" color="primary" type="submit" size="large">
+              Envoyer
+            </Button>
+          </Box>
+        </form>
+      </Paper>
+    </Container>
+  );
+};
 
-					</div>
-					</div>
-
-					<div className="col-lg-12">
-					<div className="ltn__form-box contact-form-box box-shadow white-bg">
-						
-						<form id="contact-form" >
-						<div className="row">
-							<div className="col-md-6">
-							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" name="lastname" placeholder="Entrez votre nom" required />
-							</div>
-							</div>
-							<div className="col-md-6">
-							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" name="firstname" placeholder="Entrez votre prénom" required />
-							</div>
-							</div>
-							
-							<div className="col-md-6">
-							<div className="input-item input-item-phone ltn__custom-icon">
-								<input type="text" name="email" placeholder="Entrez votre numéro" required />
-							</div>
-							</div>
-							<div className="col-md-6">
-							<div className="input-item input-item-email ltn__custom-icon">
-								<input type="text" name="phone" placeholder="Entrez votre email" required/>
-							</div>
-							</div>
-
-							
-							<div className="col-md-6">
-  <div className="input-item input-item-phone ltn__custom-icon" >
-    <select name="propertyType" className="form-control"   >
-      <option value="">Type de bien</option>
-      <option value="Appartement">Appartement</option>
-      <option value="villa">Villa</option>
-	  <option value="maison">Maison</option>
-      <option value="terrain">Terrain</option>
-      <option value="bureau">Bureau</option>
-      <option value="etage">Etage de villa</option>
-      <option value="etage">Local commercial</option>
-
-    </select>
-  </div>
-</div>
-
-
-
-<div className="col-md-6">
-  <div className="input-item input-item-phone ltn__custom-icon">
-    <select name="propertyType" className="form-control">
-      <option value="">Categorie de bien</option>
-      <option value="location">Location</option>
-      <option value="vente">Vente</option>
-    </select>
-  </div>
-</div>
-
-<div className="col-md-6">
-  <div className="input-item input-item-phone ltn__custom-icon">
-    <select name="propertyCity" className="form-control">
-      <option value="">Sélectionner une ville</option>
-      <option value="ariana">Ariana</option>
-      <option value="ben-arous">Ben Arous</option>
-      <option value="manouba">Manouba</option> 
-      <option value="nabeul">Nabeul</option>
-      <option value="tunis">Tunis</option>
-    </select>
-  </div>
-</div>
-
-<div className="col-md-6">
-  <div className="input-item input-item-phone ltn__custom-icon">
-    <select name="propertyType" className="form-control">
-      <option value="">Délégation</option>
-  
-  
-
-  <option value="La Soukra">La Soukra</option>
-  <option value="Le Kram">Le Kram</option>
-  <option value="La Marsa">La Marsa</option>
-  <option value="Lac 1">Lac 1</option>
-  <option value="Lac 2">Lac 2</option>
-  <option value="Hammamet">Hammamet</option>
-  <option value="Hammamet Centre">Hammamet Centre</option>
-  <option value="Mrezga">Mrezga</option>
-</select>
-    
-  </div>
-</div>
-
-
-							
-<div className="col-md-12">
-  <div className="input-item input-item-phone ltn__custom-icon ">
-    <select name="propertyType" className="form-control" 	>
-	<option value="">Agence le plus proche </option>
-      <option value="lac">Agence Lac2 </option>
-      <option value="kelibia">Agence Kelibia</option>
-      <option value="mrezga">Agence El Mrezga </option>
-      <option value="hammamet">Agence Hammamet </option>
-      <option value="aouina">Agence l'aouina </option>
-   
-    </select>
-  </div>
-</div>
-
-							
-						</div>
-						<div className="input-item input-item-textarea ltn__custom-icon">
-							<textarea name="message" placeholder="Entrez Votre Message" defaultValue={""} />
-						</div>
-						<div className="btn-wrapper mt-0">
-							<button className="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Envoyer</button>
-						</div>
-						<p className="form-messege mb-0 mt-20" />
-						</form>
-					</div>
-					</div>
-				</div>
-				</div>
-			</div>
-        }
-}
-
-export default EstimationForm	
+export default EstimationForm;
