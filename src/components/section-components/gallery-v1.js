@@ -58,7 +58,7 @@ class Gallery extends Component {
                 <div className="container-fluid " style={{margin:"100px 0"}}>
 				<div className="section-title-area ltn__section-title-2--- text-center">
                             <h6 className="section-subtitle section-subtitle-2 ltn__secondary-color">ÉVÉNEMENTS</h6>
-                            <h1 className="section-title">EXPLOREZ NOS ÉVÉNEMENTS							</h1>
+                            <h1 className="section-title">EXPLOREZ NOS ÉVÉNEMENTS   </h1>
                         </div>
                     <div className="row ltn__image-slider-4-active slick-arrow-1 slick-arrow-1-inner ltn__no-gutter-all">
                         {imageData.map((item, index) => (
@@ -77,7 +77,7 @@ class Gallery extends Component {
                                         <div className="btn-wrapper go-top">
                                             <Link
                                                to="/events"
-                                                className="btn theme-btn-1 btn-effect-1 text-uppercase"
+                                                className="btn theme-btn-1  text-uppercase"
                                             >
                                                 Détails
                                             </Link>

@@ -14,7 +14,7 @@ const About_v1 = () => {
         <Navbar />
         <PageHeader headertitle="À PROPOS" />
         <AboutV4 />
-        <Team />
+        {/* <Team /> */}
         <MapLac />
         {/* <Testimonial /> */}
         <CallToActionV1 />

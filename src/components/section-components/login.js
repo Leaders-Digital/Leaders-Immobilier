@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
+import { height } from '@mui/system';
 
 class Login extends Component {
 
@@ -23,9 +24,9 @@ class Login extends Component {
 				<div className="col-lg-6">
   <div className="account-login-inner login-form-border">
     <form method="GET" className="ltn__form-box contact-form-box">
-      <input type="password" name="password" placeholder="Mot de passe *" required/>
-      <input type="text" name="number" placeholder="Votre CIN *" required />
-      <div className="btn-wrapper mt-0">
+      <input id = "inputs-contactez-nous" type="password" name="password" placeholder="Mot de passe *" required/>
+      <input id = "inputs-contactez-nous" className='mt-4' type="text" name="number" placeholder="Votre CIN *" required />
+      <div className="btn-wrapper mt-4">
         <button className="btn theme-btn-1 btn-effect-1" type="submit">Se Connecter</button>
       </div>
       <div className="go-to-btn mt-20">

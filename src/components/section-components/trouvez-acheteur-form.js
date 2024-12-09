@@ -12,7 +12,18 @@ import {
   InputLabel,
   Paper,
   Box,
+  InputAdornment,
 } from '@mui/material';
+import {
+  AccountCircle,
+  Email,
+  Phone,
+  AttachMoney,
+  LocationCity,
+  Home,
+  Category,
+} from '@mui/icons-material';
+import stateMunicipalities from '../shop-components/state-municipality.json';
 
 const TrouverAcheteurForm = () => {
   const [formData, setFormData] = useState({
@@ -27,43 +38,54 @@ const TrouverAcheteurForm = () => {
     prix: '',
   });
 
+  const [delegations, setDelegations] = useState([]);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [responseMessage, setResponseMessage] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+
     setFormData({
       ...formData,
       [name]: value,
     });
+
+    if (name === 'ville') {
+      const selectedVille = stateMunicipalities.find(
+        (ville) => ville.Name === value
+      );
+      setDelegations(selectedVille ? selectedVille.Delegations : []);
+      setFormData((prev) => ({
+        ...prev,
+        delegation: '',
+      }));
+    }
   };
-  
+
   const handleSubmit = async (e) => {
-	e.preventDefault();
-  
-	console.log("Form data being sent:", formData);
-  
-	const url = `${process.env.REACT_APP_API_URL}api/acheteur/biens`;
-	const headers = {
-	  'Authorization': 'jkaAVXs852ZPOnlop795',
-	  'Content-Type': 'application/json',
-	};
-  
-	try {
-	  const response = await axios.post(url, formData, { headers });
-	  console.log("Axios response:", response);
-  
-	  if (response.status === 200) {
-		setResponseMessage(response.data.message);
-		setIsSubmitted(true);
-	  }
-	} catch (error) {
-	  console.error("Error submitting form:", error);
-	  setResponseMessage('Error submitting form. Please try again later.');
-	  setIsSubmitted(true);
-	}
+    e.preventDefault();
+    console.log('Form data being sent:', formData);
+
+    const url = `${process.env.REACT_APP_API_URL}api/acheteur/biens`;
+    const headers = {
+      Authorization: 'jkaAVXs852ZPOnlop795',
+      'Content-Type': 'application/json',
+    };
+
+    try {
+      const response = await axios.post(url, formData, { headers });
+      if (response.status === 200) {
+        setResponseMessage(response.data.message);
+        setIsSubmitted(true);
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setResponseMessage('Error submitting form. Please try again later.');
+      setIsSubmitted(true);
+    }
   };
-  
+
+  const iconColor = { color: '#059AD7' };
 
   return (
     <Container maxWidth="md">
@@ -73,8 +95,9 @@ const TrouverAcheteurForm = () => {
             Trouver un acheteur pour votre bien
           </Typography>
           <Typography variant="body1" color="textSecondary">
-            Grâce à notre large clientèle, Leaders Immobilier vous aide à trouver rapidement le bon acheteur pour
-            votre bien immobilier, garantissant une vente réussie.
+            Grâce à notre large clientèle, Leaders Immobilier vous aide à
+            trouver rapidement le bon acheteur pour votre bien immobilier,
+            garantissant une vente réussie.
           </Typography>
         </Box>
 
@@ -85,11 +108,17 @@ const TrouverAcheteurForm = () => {
                 <TextField
                   label="Nom"
                   name="nom"
-            
                   fullWidth
                   required
                   value={formData.nom}
                   onChange={handleInputChange}
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <AccountCircle sx={iconColor} />
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -101,6 +130,13 @@ const TrouverAcheteurForm = () => {
                   required
                   value={formData.prenom}
                   onChange={handleInputChange}
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <AccountCircle sx={iconColor} />
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -113,6 +149,13 @@ const TrouverAcheteurForm = () => {
                   required
                   value={formData.tel}
                   onChange={handleInputChange}
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <Phone sx={iconColor} />
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
@@ -125,16 +168,26 @@ const TrouverAcheteurForm = () => {
                   required
                   value={formData.email}
                   onChange={handleInputChange}
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <Email sx={iconColor} />
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
               <Grid item xs={12} sm={6}>
                 <FormControl fullWidth>
-                  <InputLabel id="categorieBiens-label">Catégorie de bien</InputLabel>
+                  <InputLabel id="categorieBiens-label">
+                    Catégorie de bien
+                  </InputLabel>
                   <Select
-                    labelId="categorieBiens-label"
+                    label="Catégorie de bien"
                     name="categorieBiens"
                     value={formData.categorieBiens}
                     onChange={handleInputChange}
+                 
                   >
                     <MenuItem value="">Sélectionnez</MenuItem>
                     <MenuItem value="bâtiment">Bâtiment</MenuItem>
@@ -146,10 +199,25 @@ const TrouverAcheteurForm = () => {
                 <FormControl fullWidth>
                   <InputLabel id="typebiens-label">Type de bien</InputLabel>
                   <Select
-                    labelId="typebiens-label"
+
+MenuProps={{
+  PaperProps: {
+    style: {
+      position: 'absolute',
+      top: 'auto',
+      bottom: '0',
+      maxHeight: '200px',
+      overflowY: 'auto',
+    },
+  },
+}}
+
+
+                    label="Type de bien"
                     name="typebiens"
                     value={formData.typebiens}
                     onChange={handleInputChange}
+               
                   >
                     <MenuItem value="">Sélectionnez</MenuItem>
                     <MenuItem value="Appartement">Appartement</MenuItem>
@@ -158,7 +226,9 @@ const TrouverAcheteurForm = () => {
                     <MenuItem value="terrain">Terrain</MenuItem>
                     <MenuItem value="bureau">Bureau</MenuItem>
                     <MenuItem value="etage">Étage de villa</MenuItem>
-                    <MenuItem value="local-commercial">Local commercial</MenuItem>
+                    <MenuItem value="local-commercial">
+                      Local commercial
+                    </MenuItem>
                   </Select>
                 </FormControl>
               </Grid>
@@ -166,17 +236,31 @@ const TrouverAcheteurForm = () => {
                 <FormControl fullWidth>
                   <InputLabel id="ville-label">Ville</InputLabel>
                   <Select
-                    labelId="ville-label"
+
+MenuProps={{
+  PaperProps: {
+    style: {
+      position: 'absolute',
+      top: 'auto',
+      bottom: '0',
+      maxHeight: '200px',
+      overflowY: 'auto',
+    },
+  },
+}}
+
+
+                    label="Ville"
                     name="ville"
                     value={formData.ville}
                     onChange={handleInputChange}
                   >
                     <MenuItem value="">Sélectionnez</MenuItem>
-                    <MenuItem value="ariana">Ariana</MenuItem>
-                    <MenuItem value="ben-arous">Ben Arous</MenuItem>
-                    <MenuItem value="manouba">Manouba</MenuItem>
-                    <MenuItem value="nabeul">Nabeul</MenuItem>
-                    <MenuItem value="Tunis">Tunis</MenuItem>
+                    {stateMunicipalities.map((ville) => (
+                      <MenuItem key={ville.Value} value={ville.Name}>
+                        {ville.Name}
+                      </MenuItem>
+                    ))}
                   </Select>
                 </FormControl>
               </Grid>
@@ -184,21 +268,32 @@ const TrouverAcheteurForm = () => {
                 <FormControl fullWidth>
                   <InputLabel id="delegation-label">Délégation</InputLabel>
                   <Select
-                    labelId="delegation-label"
+
+MenuProps={{
+  PaperProps: {
+    style: {
+      position: 'absolute',
+      top: 'auto',
+      bottom: '0',
+      maxHeight: '200px',
+      overflowY: 'auto',
+    },
+  },
+}}
+
+
+                    label="Délégation"
                     name="delegation"
                     value={formData.delegation}
                     onChange={handleInputChange}
+                    disabled={!delegations.length}
                   >
                     <MenuItem value="">Sélectionnez</MenuItem>
-                    <MenuItem value="la-soukra">La Soukra</MenuItem>
-                    <MenuItem value="L AOUINA">L Aouina</MenuItem>
-                    <MenuItem value="le-kram">Le Kram</MenuItem>
-                    <MenuItem value="la-marsa">La Marsa</MenuItem>
-                    <MenuItem value="Lac 1">Lac 1</MenuItem>
-                    <MenuItem value="lac 2">Lac 2</MenuItem>
-                    <MenuItem value="hammamet">Hammamet</MenuItem>
-                    <MenuItem value="hammamet-centre">Hammamet Centre</MenuItem>
-                    <MenuItem value="mrezga">Mrezga</MenuItem>
+                    {delegations.map((delegation) => (
+                      <MenuItem key={delegation.Value} value={delegation.Value}>
+                        {delegation.Name}
+                      </MenuItem>
+                    ))}
                   </Select>
                 </FormControl>
               </Grid>
@@ -207,15 +302,21 @@ const TrouverAcheteurForm = () => {
                   label="Prix de vente"
                   name="prix"
                   type="number"
-             
                   fullWidth
                   value={formData.prix}
                   onChange={handleInputChange}
+                  InputProps={{
+                    endAdornment: (
+                      <InputAdornment position="end">
+                        <AttachMoney sx={iconColor} />
+                      </InputAdornment>
+                    ),
+                  }}
                 />
               </Grid>
             </Grid>
             <Box mt={4} textAlign="center">
-              <Button variant="contained" color="primary" type="submit" size="large">
+              <Button className="theme-btn-1 btn" type="submit">
                 Envoyer
               </Button>
             </Box>

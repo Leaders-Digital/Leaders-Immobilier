@@ -129,7 +129,7 @@ class Footer_v1 extends Component {
 				            <p>Abonnez-vous à notre newsletter hebdomadaire et recevez mises à jour par e-mail.</p>
 				            <div className="footer-newsletter">
 				              <form action="#">
-				                <input type="email" name="email" placeholder="Email*" />
+				                <input type="email"  className='newsletter' name="email" placeholder="Email*" />
 				                <div className="btn-wrapper">
 				                  <button className="news btn" type="submit"><i className="fas fa-location-arrow" /></button>
 				                </div>

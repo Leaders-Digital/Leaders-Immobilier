@@ -57,7 +57,7 @@ const ShopGridV1 = () => {
         imgSrc: 'assets/img/logo.png',
         location: 'Via Accademia 22, Milan, Italie',
         phone: '+39 346 860 9857',
-        link: '/about/milano',
+        // link: '/about/milano',
     };
 
 

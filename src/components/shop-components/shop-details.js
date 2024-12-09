@@ -3,6 +3,7 @@ import { Link, useParams } from 'react-router-dom';
 import axios from 'axios';
 import Slick from 'react-slick';
 import { toast, Toaster } from 'sonner';
+import { Button, Grid, TextField } from '@mui/material';
                                                                                                                                                                                                                                                                                
 const ShopDetails = () => {
 	const { id } = useParams(); // Get the product ID from URL
@@ -10,7 +11,7 @@ const ShopDetails = () => {
 	const [loading, setLoading] = useState(true);
 
 	const publicUrl = process.env.PUBLIC_URL + '/';
-	const [similarProducts, setSimilarProducts] = useState([]); // State for similar products
+	const [similarProducts, setSimilarProducts] = useState([]); 
 
 
 
@@ -120,7 +121,6 @@ const [formData, setFormData] = useState({
 		  // Afficher le toast de succès
 		  toast.success('Formulaire envoyé avec succès !');
 	  
-		  // Reset form data after successful submission
 		  setFormData({
 			nomComplet: '',
 			tel: '',
@@ -263,57 +263,96 @@ const [formData, setFormData] = useState({
 
 
 						{/* Form Widget */}
-					 <div className="widget ltn__form-widget">
-							<h4 className="ltn__widget-title ltn__widget-title-border-2">Contactez-nous à propos ce bien</h4>
-						   <form onSubmit={handleSubmit}>
-                  <input
-                    type="text"
-                    name="ref"
-					value={`NA${product.ref}`}
-                    placeholder="Référence"
-                    disabled
-                  />
-                  <input
-                    type="text"
-                    name="nomComplet"
-                    value={formData.nomComplet}
-                    placeholder="Nom Et Prénom *"
-                    onChange={handleInputChange}
-                    required
-                  />
-                  <input
-                    type="number"
-                    name="tel"
-                    value={formData.tel}
-                    placeholder="Téléphone *"
-                    onChange={handleInputChange}
-                    required
-                  />
-                  <input
-                    type="date"
-                    name="date"
-                    value={formData.date}
-                    onChange={handleInputChange}
-                    required
-                  />
-                  <input
-                    type="time"
-                    name="heure"
-                    value={formData.heure}
-                    onChange={handleInputChange}
-                    required
-                  />
-                  <textarea
-                    name="message"
-                    value={formData.message}
-                    placeholder="Écrire un message..."
-                    onChange={handleInputChange}
-                    required
-                  />
-                  <button type="submit" className="btn theme-btn-1">Envoyer</button>
-                </form>
-				
-						</div>
+						<div className="widget ltn__form-widget">
+  <h4 className="ltn__widget-title ltn__widget-title-border-2">Contactez-nous à propos de ce bien</h4>
+  <form onSubmit={handleSubmit}>
+    <Grid container spacing={2}>
+      <Grid item xs={12}>
+        <TextField
+          fullWidth
+          label="Référence"
+          name="ref"
+          value={`NA${product.ref}`}
+          disabled
+          variant="outlined"
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <TextField
+          fullWidth
+          label="Nom Et Prénom"
+          name="nomComplet"
+          value={formData.nomComplet}
+          onChange={handleInputChange}
+          variant="outlined"
+          required
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <TextField
+          fullWidth
+          label="Téléphone"
+          name="tel"
+          type="number"
+          value={formData.tel}
+          onChange={handleInputChange}
+          variant="outlined"
+          required
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <TextField
+          fullWidth
+          label="Date"
+          name="date"
+          type="date"
+          value={formData.date}
+          onChange={handleInputChange}
+          variant="outlined"
+          InputLabelProps={{ shrink: true }}
+          required
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <TextField
+          fullWidth
+          label="Heure"
+          name="heure"
+          type="time"
+          value={formData.heure}
+          onChange={handleInputChange}
+          variant="outlined"
+          InputLabelProps={{ shrink: true }}
+          required
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <TextField
+          fullWidth
+          label="Écrire un message..."
+          name="message"
+          value={formData.message}
+          onChange={handleInputChange}
+          variant="outlined"
+          multiline
+          rows={1}
+          required
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <Button
+          fullWidth
+          type="submit"
+          variant="contained"
+          color="primary"
+		  className="theme-btn-1 btn"
+        >
+          Envoyer
+        </Button>
+      </Grid>
+    </Grid>
+  </form>
+</div>
 
 
 

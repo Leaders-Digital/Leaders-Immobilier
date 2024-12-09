@@ -24,29 +24,29 @@ class Register extends Component {
             <form action="#" className="ltn__form-box contact-form-box">
                 <div className="row">
                     <div className="col-md-6">
-                        <input type="text" name="firstname" placeholder="Nom" className="form-control" required/>
+                        <input id = "inputs-contactez-nous" type="text" name="firstname" placeholder="Nom" className="form-control" required/>
                     </div>
                     <div className="col-md-6">
-                        <input type="text" name="lastname" placeholder="Prénom" className="form-control" required />
+                        <input id = "inputs-contactez-nous" type="text" name="lastname" placeholder="Prénom" className="form-control" required />
                     </div>
                 </div>
-                <input type="email" name="email" placeholder="Votre Email*" className="form-control" required/>
-				<div className="row">
-				<div className="col-md-6">
-                <input type="password" name="password" placeholder="Mot de passe *" className="form-control" required />
+                <input id = "inputs-contactez-nous" type="email" name="email" placeholder="Votre Email*" className="form-control mt-5" required/>
+				<div className="row mt-5">
+				<div className="col-md-6 ">
+                <input id = "inputs-contactez-nous" type="password" name="password" placeholder="Mot de passe *" className="form-control" required />
 				</div>
 				<div className="col-md-6">
-                <input type="password" name="confirmpassword" placeholder="Confirmer Mot de passe *" className="form-control" />
+                <input id = "inputs-contactez-nous" type="password" name="confirmpassword" placeholder="Confirmer Mot de passe *" className="form-control" />
 				</div>
 				</div>
 
 
-				<div className="row">
+				<div className="row mt-5">
 				<div className="col-md-6">
-                <input type="text" name="telephone" placeholder="Téléphone  *" className="form-control" required />
+                <input id = "inputs-contactez-nous" type="text" name="telephone" placeholder="Téléphone  *" className="form-control" required />
 				</div>
 				<div className="col-md-6">
-                <input type="text" name="cin" placeholder="CIN *" className="form-control"  required/>
+                <input id = "inputs-contactez-nous" type="text" name="cin" placeholder="CIN *" className="form-control"  required/>
 				</div>
 				</div>
 

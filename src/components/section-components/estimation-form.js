@@ -39,7 +39,7 @@ const EstimationForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     console.log('Form Submitted:', formData);
-    // Add form submission logic here (e.g., API call)
+ 
   };
 
   return (
@@ -106,7 +106,7 @@ const EstimationForm = () => {
               <FormControl fullWidth>
                 <InputLabel id="propertyType-label">Type de bien</InputLabel>
                 <Select
-                  labelId="propertyType-label"
+                  label="propertyType"
                   name="propertyType"
                   value={formData.propertyType}
                   onChange={handleInputChange}
@@ -126,7 +126,7 @@ const EstimationForm = () => {
               <FormControl fullWidth>
                 <InputLabel id="propertyCategory-label">Catégorie de bien</InputLabel>
                 <Select
-                  labelId="propertyCategory-label"
+                  label="propertyCategory"
                   name="propertyCategory"
                   value={formData.propertyCategory}
                   onChange={handleInputChange}
@@ -141,7 +141,7 @@ const EstimationForm = () => {
               <FormControl fullWidth>
                 <InputLabel id="propertyCity-label">Ville</InputLabel>
                 <Select
-                  labelId="propertyCity-label"
+                  label="propertyCity"
                   name="propertyCity"
                   value={formData.propertyCity}
                   onChange={handleInputChange}
@@ -159,7 +159,7 @@ const EstimationForm = () => {
               <FormControl fullWidth>
                 <InputLabel id="delegation-label">Délégation</InputLabel>
                 <Select
-                  labelId="delegation-label"
+                  label="delegation"
                   name="delegation"
                   value={formData.delegation}
                   onChange={handleInputChange}
@@ -180,7 +180,7 @@ const EstimationForm = () => {
               <FormControl fullWidth>
                 <InputLabel id="agency-label">Agence la plus proche</InputLabel>
                 <Select
-                  labelId="agency-label"
+                  label="Agence la plus proche"
                   name="agency"
                   value={formData.agency}
                   onChange={handleInputChange}
@@ -206,7 +206,7 @@ const EstimationForm = () => {
             </Grid>
           </Grid>
           <Box mt={4} textAlign="center">
-            <Button variant="contained" color="primary" type="submit" size="large">
+            <Button  className="theme-btn-1 btn"  type="submit" size="large">
               Envoyer
             </Button>
           </Box>

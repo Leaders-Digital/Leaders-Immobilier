@@ -68,27 +68,27 @@ class ContactForm extends Component {
 						<div className="row">
 							<div className="col-md-6">
 							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" name="lastname" placeholder="Entrez votre nom" />
+								<input type="text" name="lastname" id = "inputs-contactez-nous" placeholder="Entrez votre nom" />
 							</div>
 							</div>
 							<div className="col-md-6">
 							<div className="input-item input-item-name ltn__custom-icon">
-								<input type="text" name="firstname" placeholder="Entrez votre prénom" />
+								<input type="text" name="firstname" id = "inputs-contactez-nous" placeholder="Entrez votre prénom" />
 							</div>
 							</div>
-							<div className="col-md-6">
-							<div className="input-item input-item-email ltn__custom-icon">
-								<input type="email" name="email" placeholder="Entrez l'adresse e-mail" />
+							<div className="col-md-6 mt-5">
+							<div  className="input-item input-item-email ltn__custom-icon">
+								<input  type="email" name="email" id = "inputs-contactez-nous"  placeholder="Entrez l'adresse e-mail" />
 							</div>
 							</div>
-							<div className="col-md-6">
+							<div className="col-md-6  mt-5">
 							<div className="input-item input-item-phone ltn__custom-icon">
-								<input type="text" name="phone" placeholder="Téléphone" />
+								<input type="text" name="phone"  id = "inputs-contactez-nous" placeholder="Téléphone" />
 							</div>
 							</div>
 						</div>
-						<div className="input-item input-item-textarea ltn__custom-icon">
-							<textarea name="message" placeholder="Entrez Votre Message" defaultValue={""} />
+						<div className="input-item input-item-textarea ltn__custom-icon mt-5">
+							<textarea name="message" id = "inputs-contactez-nous" placeholder="Entrez Votre Message" defaultValue={""} />
 						</div>
 						<div className="btn-wrapper mt-0">
 							<button className="btn theme-btn-1 btn-effect-1 text-uppercase" type="submit">Envoyer</button>

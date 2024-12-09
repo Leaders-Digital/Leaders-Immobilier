@@ -1265,7 +1265,7 @@ select:focus {
   outline: none;
   -webkit-box-shadow: none;
   box-shadow: none;
-  border: 1px solid #ddd;
+
 }
 
 code {
@@ -1282,11 +1282,35 @@ input[type="date"],
 input[type="time"],
 input[type="password"],
 input[type="submit"],
-textarea {
+textarea { 
   background-color: var(--white);
   /* border: 2px solid;
   border-color: #a4aaad ; */
-  height: 5px;
+
+  -webkit-box-shadow: none;
+  box-shadow: none;
+  padding-left: 20px;
+  font-size: 16px;
+  color: var(--ltn__paragraph-color);
+  width: 100%;
+  border-radius: 0;
+  padding-right: 40px;
+}
+
+
+#inputs-contactez-nous { 
+  background-color: var(--white);
+  border: 1px solid;
+  border-color: #a4aaad ;
+padding: 20px;
+}
+
+
+.newsletter{
+  background-color: var(--white);
+  /* border: 2px solid;
+  border-color: #a4aaad ; */
+  height: 55px !important;
   -webkit-box-shadow: none;
   box-shadow: none;
   padding-left: 20px;
@@ -1376,7 +1400,7 @@ button:focus {
 }
 .input-item.ltn__custom-icon::before {
   position: absolute;
-  top: 35%;
+  top: 50%;
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
@@ -17894,7 +17918,7 @@ transition: 0.5s;
 }
 .footer-newsletter .btn-wrapper .btn {
   padding: 0 18px;
-  height: 100%;
+  height: 97%;
 }
 
 /* ----------------------------------------------------
@@ -18225,6 +18249,7 @@ transition: 0.5s;
 }
 .btn:last-child {
   margin-right: 0;
+  padding: 10px 30px;
 }
 .event-btn-1 {
   background-color: var(--ltn__secondary-color);
@@ -18232,14 +18257,14 @@ transition: 0.5s;
 }
 
 .theme-btn-1 {
-  background-color: var(--ltn__secondary-color);
-  color: var(--white);
-  margin-top: 26px;
+  background-color: var(--ltn__secondary-color) !important;
+  color: var(--white)  !important;
+  margin-top: 26px  !important;
 }
 
 .theme-btn-1:hover {
-  background-color: var(--ltn__primary-color);
-  color: var(--white);
+  background-color: var(--ltn__primary-color)  !important;
+  color: var(--white)  !important;
 }
 
 .voirplus {
@@ -18375,7 +18400,7 @@ transition: 0.5s;
 }
 
 .btn-effect-1:hover {
-  color: var(--ltn__heading-color);
+  color: var(--ltn__heading-color) !important;
 }
 .btn-effect-1:hover::after {
   width: 100%;
