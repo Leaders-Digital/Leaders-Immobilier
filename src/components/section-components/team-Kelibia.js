@@ -30,9 +30,8 @@ class TeamV1 extends Component {
 						<h6 className="ltn__secondary-color">Agent de bureau					</h6>
 						<div className="ltn__social-media">
 							<ul>
-							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
-							<li>  <a href="tel:+21627246304"><i className="fa fa-phone" /></a></li>
+						
+							<li>  <a href="tel:+21627246304"><i className="fa fa-phone" /> 27246304</a></li>
 							</ul>
 						</div>
 						</div>
@@ -49,9 +48,8 @@ class TeamV1 extends Component {
 						</h6>
 						<div className="ltn__social-media">
 							<ul>
-							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
-							<li>  <a href="tel:+21627246304"><i className="fa fa-phone" /></a></li>
+						
+							<li>  <a href="tel:+21627246304"><i className="fa fa-phone" /> 27246304</a></li>
 
 							</ul>
 						</div>
@@ -69,9 +67,8 @@ class TeamV1 extends Component {
 						</h6>
 						<div className="ltn__social-media">
 							<ul>
-							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
-							<li>  <a href="tel:+21627246304"><i className="fa fa-phone" /></a></li>
+					
+							<li>  <a href="tel:+21627246304"><i className="fa fa-phone" /> 27246304</a></li>
 							</ul>
 						</div>
 						</div>

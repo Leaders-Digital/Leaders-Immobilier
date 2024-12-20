@@ -30,9 +30,8 @@ class TeamV1 extends Component {
 						<h6 className="ltn__secondary-color">Chef d'agence</h6>
 						<div className="ltn__social-media">
 							<ul>
-							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
-							<li>  <a href="tel:+21627246309 "><i className="fa fa-phone" /></a></li>
+			
+							<li>  <a href="tel:+21627246309 "><i className="fa fa-phone" /> 27246309</a></li>
 							</ul>
 						</div>
 						</div>
@@ -49,10 +48,8 @@ class TeamV1 extends Component {
 						</h6>
 						<div className="ltn__social-media">
 							<ul>
-							<li><a href="#"><i className="fab fa-facebook-f" /></a></li>
-						
-							<li><a href="#"><i className="fab fa-linkedin" /></a></li>
-							<li>  <a href="tel:+21627246313"><i className="fa fa-phone" /></a></li>
+					
+							<li>  <a href="tel:+21627246313"><i className="fa fa-phone" /> 27246313</a></li>
 							</ul>
 						</div>
 						</div>

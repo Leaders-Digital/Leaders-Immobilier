@@ -16,7 +16,7 @@ class Confidentialité extends Component {
                     <div id="accordion_2">
                     {/* card */}
                     <div className="card">
-                        <h6 className="collapsed ltn__card-title" data-bs-toggle="collapse " data-bs-target="#faq-item-2-1" aria-expanded="true">
+                        <h6 className="collapsed ltn__card-title" data-bs-toggle="collapse" data-bs-target="#faq-item-2-1" aria-expanded="true">
                         Introduction
                         </h6>
                         <div id="faq-item-2-1" className="collapse show" data-bs-parent="#accordion_2">

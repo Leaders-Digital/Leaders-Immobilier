@@ -68,7 +68,7 @@ const TrouverAcheteurForm = () => {
 
     const url = `${process.env.REACT_APP_API_URL}api/acheteur/biens`;
     const headers = {
-      Authorization: 'jkaAVXs852ZPOnlop795',
+      Authorization: process.env.REACT_APP_API_KEY,
       'Content-Type': 'application/json',
     };
 
@@ -258,6 +258,8 @@ MenuProps={{
                     <MenuItem value="">Sélectionnez</MenuItem>
                     {stateMunicipalities.map((ville) => (
                       <MenuItem key={ville.Value} value={ville.Name}>
+                        
+
                         {ville.Name}
                       </MenuItem>
                     ))}

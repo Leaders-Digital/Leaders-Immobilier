@@ -41,7 +41,11 @@ const [formData, setFormData] = useState({
 				const response = await axios.post(
 					`${process.env.REACT_APP_API_URL}api/v2/biens/detail`,
 					{ id },
-					{ headers: { Authorization: 'jkaAVXs852ZPOnlop795' } }
+					{
+						headers: {
+							Authorization: process.env.REACT_APP_API_KEY,
+						},
+					}
 				);
 
 				const productData = response.data?.resultat?.[0];
@@ -65,7 +69,11 @@ const [formData, setFormData] = useState({
 				const response = await axios.post(
 					`${process.env.REACT_APP_API_URL}api/v2/biens`,
 					{ type_categorie, type, exclude_id: id },
-					{ headers: { Authorization: 'jkaAVXs852ZPOnlop795' } }
+					{
+						headers: {
+							Authorization: process.env.REACT_APP_API_KEY, 
+						},
+					}
 				);
 				
 				const fetchedProducts = response.data?.resultat || [];
@@ -115,7 +123,11 @@ const [formData, setFormData] = useState({
 		  const response = await axios.post(
 			`${process.env.REACT_APP_API_URL}api/v2/visite/demande`,
 			formData,
-			{ headers: { Authorization: 'jkaAVXs852ZPOnlop795' } }
+			{
+                headers: {
+                    Authorization: process.env.REACT_APP_API_KEY, 
+                },
+            }
 		  );
 		  console.log("Réponse de l'API:", response.data);
 		  // Afficher le toast de succès

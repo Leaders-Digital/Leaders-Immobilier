@@ -18262,6 +18262,12 @@ transition: 0.5s;
   margin-top: 26px  !important;
 }
 
+.theme-btn-2 {
+  background-color: var(--ltn__secondary-color) !important;
+  color: var(--white)  !important;
+  margin-top: 15px  !important;
+}
+
 .theme-btn-1:hover {
   background-color: var(--ltn__primary-color)  !important;
   color: var(--white)  !important;

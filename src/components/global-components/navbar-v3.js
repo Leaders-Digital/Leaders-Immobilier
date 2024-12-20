@@ -81,7 +81,7 @@ const NavbarV3 = () => {
                       </li>
                       <li><a href="/contact">Contactez Nous</a></li>
                       <li className="espa btn-wrapper">
-                        <Link className="theme-btn-1 btn btn-effect-1" to="/login">Espace Membre</Link>
+                        <Link className="theme-btn-2 btn btn-effect-1" to="/login">Espace Membre</Link>
                       </li>
                     </ul>
                   </div>

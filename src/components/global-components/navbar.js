@@ -75,7 +75,7 @@ const Navbar = () => {
                                                 </li>
                                                 <li><Link to="/contact">Contactez Nous</Link></li>
                                                 <li className="espa btn-wrapper">
-                                                    <Link className="theme-btn-1 btn btn-effect-1" to="/login">
+                                                    <Link className="theme-btn-2 btn btn-effect-1" to="/login">
                                                         Espace Membre
                                                     </Link>
                                                 </li>
