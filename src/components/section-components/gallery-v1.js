@@ -46,7 +46,7 @@ class Gallery extends Component {
             },
 			
             {
-                imgSrc: publicUrl + "assets/img/events/elu/8.jpg",
+                imgSrc: publicUrl + "assets/img/events/elu/1.jpg",
                 title: "Hôtel Laico Tunis",
                 location: " Festival National Brands",
                 detailsLink: "/events",
