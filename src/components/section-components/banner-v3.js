@@ -42,7 +42,7 @@ const BannerV3 = () => {
                                                     <span><i className="fas fa-check" /></span> 100% EXPERT
                                                 </h6>
                                                 <h1 className="slide-title animated" style={{ fontSize: "5rem" }}>
-                                                    {slide.title} <span style={{ color: "--ltn__secondary-color" }}>à chaque</span>  étape
+                                                    {slide.title} <br/> <span style={{ color: "--ltn__secondary-color" }}>à chaque</span>  étape
 
                                                    
                                                 </h1>
