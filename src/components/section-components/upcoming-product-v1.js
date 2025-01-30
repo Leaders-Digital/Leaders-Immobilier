@@ -25,12 +25,12 @@ class UpcomingProductV1 extends Component {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="ltn__upcoming-project-img">
-                                            <img src={publicUrl+"assets/img/events/car2/1.jpg"} alt="Project Image 1" />
+                                            <img src={publicUrl+"assets/img/events/car2/1.webp"} alt="Project Image 1" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="ltn__upcoming-project-img">
-                                            <img src={publicUrl+"assets/img/events/car2/1.jpg"} alt="Project Image 2" />
+                                            <img src={publicUrl+"assets/img/events/car2/1.webp"} alt="Project Image 2" />
                                         </div>
                                     </div>
                                 </div>
@@ -42,12 +42,12 @@ class UpcomingProductV1 extends Component {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="ltn__upcoming-project-img">
-										<img src={publicUrl+"assets/img/events/car2/1.jpg"} alt="Project Image 2" />
+										<img src={publicUrl+"assets/img/events/car2/1.webp"} alt="Project Image 2" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="ltn__upcoming-project-img">
-										<img src={publicUrl+"assets/img/events/car2/1.jpg"} alt="Project Image 2" />
+										<img src={publicUrl+"assets/img/events/car2/1.webp"} alt="Project Image 2" />
                                         </div>
                                     </div>
                                 </div>
@@ -58,12 +58,12 @@ class UpcomingProductV1 extends Component {
                                 <div className="row">
                                     <div className="col-lg-6">
                                         <div className="ltn__upcoming-project-img">
-										<img src={publicUrl+"assets/img/events/car2/1.jpg"} alt="Project Image 2" />
+										<img src={publicUrl+"assets/img/events/car2/1.webp"} alt="Project Image 2" />
                                         </div>
                                     </div>
                                     <div className="col-lg-6">
                                         <div className="ltn__upcoming-project-img">
-										<img src={publicUrl+"assets/img/events/car2/1.jpg"} alt="Project Image 2" />
+										<img src={publicUrl+"assets/img/events/car2/1.webp "} alt="Project Image 2" />
                                         </div>
                                     </div>
                                 </div>

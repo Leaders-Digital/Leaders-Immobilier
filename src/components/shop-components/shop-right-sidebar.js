@@ -55,7 +55,7 @@ const ShopGridV1 = () => {
 
         axios.post(`${process.env.REACT_APP_API_URL}api/v2/biens`, body, {
             headers: {
-                Authorization: 'jkaAVXs852ZPOnlop795'
+                Authorization: process.env.REACT_APP_API_KEY
             }
         })
             .then((response) => {

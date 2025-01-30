@@ -19,7 +19,7 @@ const ProductDetail = () => {
                 const response = await axios.post(
                     `${process.env.REACT_APP_API_URL}api/v2/biens/detail`,
                     { id: id },
-                    { headers: { Authorization: 'jkaAVXs852ZPOnlop795' } }
+                    { headers: { Authorization: process.env.REACT_APP_API_KEY } }
                 );
                 const productData = response.data?.resultat?.[0];
                 if (productData) setProduct(productData);

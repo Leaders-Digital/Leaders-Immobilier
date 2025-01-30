@@ -43,7 +43,7 @@ class Event2 extends Component {
                                                 </div>
                                             </div>
 												<div className="slide-item-img">
-													<img src={publicUrl + "assets/img/events/car2/1.jpg"} alt={imagealt} />
+													<img src={publicUrl + "assets/img/events/car2/1.webp"} alt={imagealt} />
 												</div>
                                         </div>
                                     </div>
@@ -81,7 +81,7 @@ class Event2 extends Component {
                                                 </div>
                                             </div>
                                             <div className="slide-item-img">
-                                                <img src={publicUrl + "assets/img/events/car2/2.jpg"} alt={imagealt} />
+                                                <img src={publicUrl + "assets/img/events/car2/2.webp"} alt={imagealt} />
                                             </div>
                                         </div>
                                     </div>
@@ -120,7 +120,7 @@ class Event2 extends Component {
                                                 </div>
                                             </div>
                                             <div className="slide-item-img">
-                                                <img src={publicUrl + "assets/img/events/car2/3.jpg"} alt={imagealt} />
+                                                <img src={publicUrl + "assets/img/events/car2/3.webp"} alt={imagealt} />
                                             </div>
                                         </div>
                                     </div>
@@ -158,7 +158,7 @@ class Event2 extends Component {
                                                 </div>
                                             </div>	
                                             <div className="slide-item-img">
-                                                <img src={publicUrl + "assets/img/events/car2/4.jpg"} alt={imagealt} />
+                                                <img src={publicUrl + "assets/img/events/car2/4.webp"} alt={imagealt} />
                                             </div>
                                         </div>
                                     </div>
@@ -178,16 +178,16 @@ class Event2 extends Component {
                         <div className="ltn__slider-11-img-slide-arrow-inner">
                             <div className="ltn__slider-11-img-slide-arrow-active">
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/car2/1.jpg"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/1.webp"} alt="Flower Image" />
                                 </div>
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/car2/2.jpg"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/2.webp"} alt="Flower Image" />
                                 </div>
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/car2/3.jpg"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/3.webp"} alt="Flower Image" />
                                 </div>
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/car2/4.jpg"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/4.webp"} alt="Flower Image" />
                                 </div>
                             </div>
                             {/* slider-4-slide-item-count */}

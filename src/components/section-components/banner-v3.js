@@ -4,17 +4,17 @@ import { Link } from 'react-router-dom';
 const BannerV3 = () => {
     const slides = [
         {
-            image: 'assets/img/slider/11.jpg',
+            image: 'assets/img/slider/11.webp',
             title: 'Votre avenir immobilier ',
             description: 'Nos agents vous feront visiter les biens et suivront votre dossier pour saisir les meilleures opportunités.',
         },
         {
-            image: 'assets/img/slider/12.jpg',
+            image: 'assets/img/slider/12.webp',
             title: 'Votre avenir immobilier ',
             description: 'Nos agents vous feront visiter les biens et suivront votre dossier pour saisir les meilleures opportunités.',
         },
         {
-            image: 'assets/img/slider/13.jpg',
+            image: 'assets/img/slider/13.webp',
             title: 'Votre avenir immobilier ',
             description: 'Nos agents vous feront visiter les biens et suivront votre dossier pour saisir les meilleures opportunités.',
         }

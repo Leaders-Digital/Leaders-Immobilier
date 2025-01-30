@@ -25,9 +25,9 @@ class 	Event3 extends Component {
 			        <div className="ltn__neighbour-tab-wrap">
 			          <div className="ltn__tab-menu ltn__tab-menu-3--- ltn__tab-menu-4 ltn__tab-menu-top-right-- text-uppercase--- text-center">
 			            <div className="nav">
-			              <a className="active show" data-bs-toggle="tab" href="#liton_tab_4_1"><img src={publicUrl+"assets/img/events/car1/1.jpg"} alt="#" /></a>
-			              <a data-bs-toggle="tab" href="#liton_tab_4_2" ><img src={publicUrl+"assets/img/events/car1/2.jpg"} alt="#" /></a>
-			              <a data-bs-toggle="tab" href="#liton_tab_4_3" ><img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" /></a>	
+			              <a className="active show" data-bs-toggle="tab" href="#liton_tab_4_1"><img src={publicUrl+"assets/img/events/car1/1.webp"} alt="#" /></a>
+			              <a data-bs-toggle="tab" href="#liton_tab_4_2" ><img src={publicUrl+"assets/img/events/car1/2.webp"} alt="#" /></a>
+			              <a data-bs-toggle="tab" href="#liton_tab_4_3" ><img src={publicUrl+"assets/img/events/car1/3.webp"} alt="#" /></a>	
 			            </div>
 			          </div>
 			          <div className="tab-content">
@@ -36,13 +36,13 @@ class 	Event3 extends Component {
 			                <div className="row">
 			                  <div className="col-lg-8">
 			                    <div className="neighbour-apartments-img">
-			                      <img src={publicUrl+"assets/img/events/car1/1.jpg"} alt="#" />
+			                      <img src={publicUrl+"assets/img/events/car1/1.webp"} alt="#" />
 			                    </div>
 			                  </div>
 			                  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/car1/4.jpg"} alt="#" /></Link>
+			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/car1/4.webp"} alt="#" /></Link>
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
@@ -66,13 +66,13 @@ class 	Event3 extends Component {
 			                <div className="row">
 			                  <div className="col-lg-8">
 			                    <div className="neighbour-apartments-img">
-			                      <img src={publicUrl+"assets/img/events/car1/2.jpg"} alt="#" />
+			                      <img src={publicUrl+"assets/img/events/car1/2.webp"} alt="#" />
 			                    </div>
 			                  </div>
 							  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/car1/5.jpg"} alt="#" /></Link>
+			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/car1/5.webp"} alt="#" /></Link>
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
@@ -96,13 +96,13 @@ class 	Event3 extends Component {
 			                <div className="row">
 			                  <div className="col-lg-8">
 			                    <div className="neighbour-apartments-img">
-			                      <img src={publicUrl+"assets/img/events/car1/3.jpg"} alt="#" />
+			                      <img src={publicUrl+"assets/img/events/car1/3.webp"} alt="#" />
 			                    </div>
 			                  </div>
 							  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/car1/6.jpg"} alt="#" /></Link>
+			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/car1/6.webp"} alt="#" /></Link>
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
