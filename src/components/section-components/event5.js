@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 
-class Event1 extends Component {
+class Event2 extends Component {
 
     render() {
 
@@ -21,7 +21,7 @@ class Event1 extends Component {
                                         <div className="col-lg-12 align-self-center ">
                                             <div className="slide-item-info ">
                                                 <div className="slide-item-info-inner ltn__slide-animation">
-                                                    <div className="slide-video d-none">
+                                                    <div className="slide-video mb-50 d-none">
                                                         <a className="ltn__video-icon-2 ltn__video-icon-2-border" href="https://www.youtube.com/embed/tlThdr3O5Qo" data-rel="lightcase:myCollection">
                                                             <i className="fa fa-play" />
                                                         </a>
@@ -30,22 +30,20 @@ class Event1 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                        Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
+                                                    Evènement Grand Jeu   <br />  1ére Edition <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023
-                                                        </p>
-                                                    </div>
+                                                    <p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !</p>                                                    </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
-                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
+                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
 												<div className="slide-item-img">
-													<img src={publicUrl + "assets/img/events/elu/1.webp"} alt={imagealt} />
+													<img src={publicUrl + "assets/img/events/car2/1.webp"} alt={imagealt} />
 												</div>
                                         </div>
                                     </div>
@@ -70,21 +68,20 @@ class Event1 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                        Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
+                                                    Evènement Grand Jeu   <br />  1ére Edition <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023</p>
-                                                    </div>
+                                                    <p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !</p>                                                    </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
-                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
+                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="slide-item-img">
-                                                <img src={publicUrl + "assets/img/events/elu/2.webp"} alt={imagealt} />
+                                                <img src={publicUrl + "assets/img/events/car2/2.webp"} alt={imagealt} />
                                             </div>
                                         </div>
                                     </div>
@@ -109,21 +106,21 @@ class Event1 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                        Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
+                                                    Evènement Grand Jeu   <br />  1ére Edition <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023</p>
+                                                        <p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
-                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
+                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="slide-item-img">
-                                                <img src={publicUrl + "assets/img/events/elu/3.webp"} alt={imagealt} />
+                                                <img src={publicUrl + "assets/img/events/car2/3.webp"} alt={imagealt} />
                                             </div>
                                         </div>
                                     </div>
@@ -147,21 +144,21 @@ class Event1 extends Component {
                                                         <span><i className="far fa-calendar" /></span> Notre événement
                                                     </h6>
                                                     <h4 className="slide-title animated" style={{ fontSize: "50px" }}>
-                                                        Festival National Brands <br /> and <span>Influencers Awards</span><br /> Of Tunisia 2023
+                                                    Evènement tirage au  <br />  sort <span> 18 Octobre</span><br /> By Leaders Immobilier
                                                     </h4>
                                                     <div className="slide-brief animated">
-                                                        <p>Leaders Immobilier a été distingué en tant que Meilleur Brand en Immobilier pour l’année 2023 lors du prestigieux Festival National Brands and Awards of Tunisia 2023</p>
+                                                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore.</p>
                                                     </div>
                                                     <div className="btn-wrapper animated">
                                                         <Link to="/about" className="event-btn-1 btn btn-effect-1">Explorer l'événement</Link>
-                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/Vuq9XfAmTCs" data-rel="lightcase">
+                                                        <a className="ltn__video-play-btn" style={{ backgroundColor: "#059ad7" }} href="https://www.youtube.com/embed/EOv5xX7C6ng" data-rel="lightcase">
                                                             <i className="icon-play " style={{ color: "#fff" }} />
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>	
                                             <div className="slide-item-img">
-                                                <img src={publicUrl + "assets/img/events/elu/5.webp"} alt={imagealt} />
+                                                <img src={publicUrl + "assets/img/events/car2/4.webp"} alt={imagealt} />
                                             </div>
                                         </div>
                                     </div>
@@ -181,16 +178,16 @@ class Event1 extends Component {
                         <div className="ltn__slider-11-img-slide-arrow-inner">
                             <div className="ltn__slider-11-img-slide-arrow-active">
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/elu/1.webp"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/1.webp"} alt="Flower Image" />
                                 </div>
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/elu/2.webp"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/2.webp"} alt="Flower Image" />
                                 </div>
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/elu/3.webp"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/3.webp"} alt="Flower Image" />
                                 </div>
                                 <div className="image-slide-item">
-                                    <img src={publicUrl + "assets/img/events/elu/5.webp"} alt="Flower Image" />
+                                    <img src={publicUrl + "assets/img/events/car2/4.webp"} alt="Flower Image" />
                                 </div>
                             </div>
                             {/* slider-4-slide-item-count */}
@@ -206,4 +203,4 @@ class Event1 extends Component {
     }
 }
 
-export default Event1;
+export default Event2;
