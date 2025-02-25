@@ -70,7 +70,7 @@ const ProductDetail = () => {
     if (!product) return <p>Aucune propriété trouvée</p>;
 
     const images = (product?.listImages || []).filter(image => image.version_web)
-        .map(image => `${process.env.REACT_APP_API_URL}${image.version_web}`);
+        .map(image => `${process.env.REACT_APP_API_URL_IMAGES}${image.version_web}`);
 
     const placeholdersNeeded = Math.max(0, 4 - images.length);
     const finalImages = [...images, ...new Array(placeholdersNeeded).fill('https://workingat.vu.nl/static/images/placeholder-image.jpg')];

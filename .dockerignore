@@ -1,0 +1,33 @@
+# Ignore node modules (will be installed inside the container)
+node_modules
+npm-debug.log
+yarn-error.log
+
+# Ignore build and dependencies
+build
+.cache
+
+# Ignore environment variables
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+
+# Ignore logs
+logs
+*.log
+log/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore Git
+.git
+.gitignore
+
+# Ignore Docker files inside Docker context
+.dockerignore
+Dockerfile
+docker-compose.yml

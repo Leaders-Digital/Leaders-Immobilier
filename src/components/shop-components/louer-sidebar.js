@@ -385,7 +385,7 @@ const getPaginationPages = () => {
                 <div className="product-img go-top">
                     <Link to={`/product-details/${product.id}`}>
                         <img 
-                            src={`${process.env.REACT_APP_API_URL}${product.listImages?.[0]?.version_web}`} 
+                            src={`${process.env.REACT_APP_API_URL_IMAGES}${product.listImages?.[0]?.version_web}`} 
                             onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'}  
                         />  
                     </Link>
@@ -448,7 +448,7 @@ const getPaginationPages = () => {
                                                                 <div className="product-img go-top">
                                                                     <Link to={`/product-details/${product.id}`}>
                                                                         <img 
-                                                                            src={`${process.env.REACT_APP_API_URL}${product.listImages?.[0]?.version_web}`} 
+                                                                            src={`${process.env.REACT_APP_API_URL_IMAGES}${product.listImages?.[0]?.version_web}`} 
                                                                             onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'}
                                                                         />
                                                                     </Link>

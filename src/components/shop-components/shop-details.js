@@ -101,7 +101,7 @@ const [formData, setFormData] = useState({
 	  }, [product]); //
 
 	const bg = product?.listImages?.[0]?.version_web 
-	? `${process.env.REACT_APP_API_URL}${product.listImages[0].version_web}` 
+	? `${process.env.REACT_APP_API_URL_IMAGES}${product.listImages[0].version_web}` 
 	: 'default-image-url';  
   
 
@@ -390,7 +390,7 @@ const [formData, setFormData] = useState({
 									<div className="product-img go-top">
 										<Link to={`/product-details/${similarProduct.id}`}>
 											<img 
-												src={`${process.env.REACT_APP_API_URL}${similarProduct.listImages?.[0]?.version_web}`}
+												src={`${process.env.REACT_APP_API_URL_IMAGES}${similarProduct.listImages?.[0]?.version_web}`}
 												onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'} 
 												alt={similarProduct.type_categorie}
 											/>
