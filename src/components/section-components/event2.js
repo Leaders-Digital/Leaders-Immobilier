@@ -21,7 +21,7 @@ class Event2 extends Component {
                                         <div className="col-lg-12 align-self-center ">
                                             <div className="slide-item-info ">
                                                 <div className="slide-item-info-inner ltn__slide-animation">
-                                                    <div className="slide-video mb-50 d-none">
+                                                    <div className="slide-video  d-none">
                                                         <a className="ltn__video-icon-2 ltn__video-icon-2-border" href="https://www.youtube.com/embed/tlThdr3O5Qo" data-rel="lightcase:myCollection">
                                                             <i className="fa fa-play" />
                                                         </a>
@@ -59,7 +59,7 @@ class Event2 extends Component {
                                         <div className="col-lg-12 align-self-center">
 										<div className="slide-item-info">
                                                 <div className="slide-item-info-inner ltn__slide-animation">
-                                                    <div className="slide-video mb-50 d-none">
+                                                    <div className="slide-video  d-none">
                                                         <a className="ltn__video-icon-2 ltn__video-icon-2-border" href="https://www.youtube.com/embed/tlThdr3O5Qo" data-rel="lightcase:myCollection">
                                                             <i className="fa fa-play" />
                                                         </a>
@@ -97,7 +97,7 @@ class Event2 extends Component {
                                         <div className="col-lg-12 align-self-center">
 										<div className="slide-item-info">
                                                 <div className="slide-item-info-inner ltn__slide-animation">
-                                                    <div className="slide-video mb-50 d-none">
+                                                    <div className="slide-video d-none">
                                                         <a className="ltn__video-icon-2 ltn__video-icon-2-border" href="https://www.youtube.com/embed/tlThdr3O5Qo" data-rel="lightcase:myCollection">
                                                             <i className="fa fa-play" />
                                                         </a>
@@ -135,7 +135,7 @@ class Event2 extends Component {
                                         <div className="col-lg-12 align-self-center">
 										<div className="slide-item-info ">
                                                 <div className="slide-item-info-inner ltn__slide-animation">
-                                                    <div className="slide-video mb-50 d-none">
+                                                    <div className="slide-video d-none">
                                                         <a className="ltn__video-icon-2 ltn__video-icon-2-border" href="https://www.youtube.com/embed/tlThdr3O5Qo" data-rel="lightcase:myCollection">
                                                             <i className="fa fa-play" />
                                                         </a>

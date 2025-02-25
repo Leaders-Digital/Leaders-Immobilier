@@ -13,10 +13,13 @@ const Home_V2 = () => {
     return <div>
         <Navbar />
         <PageHeader headertitle="Événements" /> 
+     
         <Event1  />   
-        <Event3 /> 
-        <Event2  />   
         <Event4  />   
+        <Event2  /> 
+        <Event3 /> 
+   
+      
         <CallToActionV1 />
         <Footer />
     </div>
