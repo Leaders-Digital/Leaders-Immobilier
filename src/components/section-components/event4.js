@@ -49,7 +49,7 @@ class Event3 extends Component {
                                                             <Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4"><img src={publicUrl + "assets/img/events/newevent/4.jpg"} alt="#" /></Link>
                                                         </div>
                                                         <div className="search-by-place-info go-top">
-                                                            <h4><Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4">Grand Jeu 2éme Edition</Link></h4>
+                                                            <h4><Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4">Festival National Brands</Link></h4>
                                                             <label><span className="ltn__secondary-color">6 février
 															</span> / 2025</label>
                                                             <div className="search-by-place-brief">
@@ -78,7 +78,7 @@ class Event3 extends Component {
                                                             <Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4"><img src={publicUrl + "assets/img/events/newevent/5.jpg"} alt="#" /></Link>
                                                         </div>
                                                         <div className="search-by-place-info go-top">
-                                                            <h4><Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4">Grand Jeu 2éme Edition</Link></h4>
+                                                            <h4><Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4">Festival National Brands</Link></h4>
                                                             <label><span className="ltn__secondary-color">6 février</span> / 2025</label>
                                                             <div className="search-by-place-brief">
                                                                 <p>Leaders Immobilier a été élu meilleure agence immobilière en Tunisie lors de la deuxième édition du Festival National Brand and Influencers Awards de Tunisie.</p>
@@ -106,7 +106,7 @@ class Event3 extends Component {
                                                             <Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4"><img src={publicUrl + "assets/img/events/newevent/7.jpg"} alt="#" /></Link>
                                                         </div>
                                                         <div className="search-by-place-info go-top">
-                                                            <h4><Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4">Grand Jeu 2éme Edition</Link></h4>
+                                                            <h4><Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4">Festival National Brands</Link></h4>
                                                             <label><span className="ltn__secondary-color">6 février</span> / 2025</label>
                                                             <div className="search-by-place-brief">
                                                                 <p>Leaders Immobilier a été élu meilleure agence immobilière en Tunisie lors de la deuxième édition du Festival National Brand and Influencers Awards de Tunisie.</p>
