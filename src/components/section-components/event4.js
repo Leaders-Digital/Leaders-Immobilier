@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import parse from 'html-react-parser';
 
-class 	Event4 extends Component {
+class 	Event4	 extends Component {
 
     render() {
 
@@ -15,7 +15,7 @@ class 	Event4 extends Component {
 			      <div className="col-lg-12">
 			        <div className="section-title-area ltn__section-title-2--- text-center---">
 			          <h6 className="section-subtitle section-subtitle-2--- ltn__secondary-color">  <span><i className="far fa-calendar" /></span> Notre événement</h6>
-			          <h1 className="section-title">Evènement Grand Jeu 1ére Edition   <br />
+			          <h1 className="section-title">Evènement Grand Jeu 2éme Edition<br />
 					 By Leaders Immobilier </h1>
 			        </div>
 			      </div>
@@ -25,9 +25,9 @@ class 	Event4 extends Component {
 			        <div className="ltn__neighbour-tab-wrap">
 			          <div className="ltn__tab-menu ltn__tab-menu-3--- ltn__tab-menu-4 ltn__tab-menu-top-right-- text-uppercase--- text-center">
 			            <div className="nav">
-			              <a className="active show" data-bs-toggle="tab" href="#liton_tab_4_1"><img  src={publicUrl+"assets/img/events/milano/1.jpg"} alt="#" /></a>
-			              <a data-bs-toggle="tab" href="#liton_tab_4_2" ><img  src={publicUrl+"assets/img/events/milano/2.jpg"} alt="#" /></a>
-			              <a data-bs-toggle="tab" href="#liton_tab_4_3" ><img src={publicUrl+"assets/img/events/milano/3.jpg"} alt="#" /></a>	
+			              <a className="active show" data-bs-toggle="tab" href="#liton_tab_4_1"><img src={publicUrl+"assets/img/events/newevent/2.jpg"} alt="#" /></a>
+			              <a data-bs-toggle="tab" href="#liton_tab_4_2" ><img src={publicUrl+"assets/img/events/newevent/4.jpg"} alt="#" /></a>
+			              <a data-bs-toggle="tab" href="#liton_tab_4_3" ><img src={publicUrl+"assets/img/events/newevent/5.jpg"} alt="#" /></a>	
 			            </div>
 			          </div>
 			          <div className="tab-content">
@@ -36,25 +36,24 @@ class 	Event4 extends Component {
 			                <div className="row">
 			                  <div className="col-lg-8">
 			                    <div className="neighbour-apartments-img">
-			                      <img src={publicUrl+"assets/img/events/milano/1.jpg"} alt="#" />
+			                      <img src={publicUrl+"assets/img/events/newevent/6.jpg"} alt="#" />
 			                    </div>
 			                  </div>
 			                  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
-			                      <div className="search-by-place-img">
-			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/milano/4.jpg"} alt="#" /></Link>
+			                      <div className="search-by-place-img">	
+			                        <Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4"><img src={publicUrl+"assets/img/events/newevent/3.jpg"} alt="#" /></Link>
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
-			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Lorem Lorem</Link></h4>
+			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4">Grand Jeu 2éme Edition</Link></h4>
 			                        <label><span className="ltn__secondary-color">18 Octobre</span> / 2023</label>
 			                        <div className="search-by-place-brief">
-			                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-			                            elit, sed do eiusmod tempor incididunt ut labore Enim
-			                            ullamco laboris.</p>
+			                          <p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !
+									  </p>
 			                        </div>
 			                        <div className="search-by-place-btn ">
-			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
+			                          <Link target='blank' to="https://www.youtube.com/watch?v=adnZaTnRFI4">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
 			                        </div>
 			                      </div>
 			                    </div>
@@ -67,25 +66,24 @@ class 	Event4 extends Component {
 			                <div className="row">
 			                  <div className="col-lg-8">
 			                    <div className="neighbour-apartments-img">
-			                      <img src={publicUrl+"assets/img/events/milano/2.jpg"} alt="#" />
+			                      <img src={publicUrl+"assets/img/events/newevent/2.jpg"} alt="#" />
 			                    </div>
 			                  </div>
 							  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/milano/5.jpg"} alt="#" /></Link>
+			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/newevent/3.jpg"} alt="#" /></Link>
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
-			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Lorem Lorem</Link></h4>
+			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Grand Jeu 2éme Edition</Link></h4>
 			                        <label><span className="ltn__secondary-color">18 Octobre</span> / 2023</label>
 			                        <div className="search-by-place-brief">
-			                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-			                            elit, sed do eiusmod tempor incididunt ut labore Enim
-			                            ullamco laboris.</p>
+									<p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !
+									</p>
 			                        </div>
 			                        <div className="search-by-place-btn ">
-			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
+			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement<i className="flaticon-right-arrow" /></Link>
 			                        </div>
 			                      </div>
 			                    </div>
@@ -98,22 +96,20 @@ class 	Event4 extends Component {
 			                <div className="row">
 			                  <div className="col-lg-8">
 			                    <div className="neighbour-apartments-img">
-			                      <img src={publicUrl+"assets/img/events/milano/3.jpg"} alt="#" />
+			                      <img src={publicUrl+"assets/img/events/newevent/1.jpg"} alt="#" />
 			                    </div>
 			                  </div>
 							  <div className="col-lg-4">
 			                    <div className="ltn__search-by-place-item neighbour-apartments-item">
 			                      <div className="search-by-place-img">
-			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/milano/6.jpg"} alt="#" /></Link>
+			                        <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM"><img src={publicUrl+"assets/img/events/newevent/5.jpg"} alt="#" /></Link>
 			                      
 			                      </div>
 			                      <div className="search-by-place-info go-top">
-			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Lorem Lorem</Link></h4>
+			                        <h4><Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Grand Jeu 2éme Edition</Link></h4>
 			                        <label><span className="ltn__secondary-color">18 Octobre</span> / 2023</label>
 			                        <div className="search-by-place-brief">
-			                          <p>Lorem ipsum dolor sit amet, consectetur adipisicing
-			                            elit, sed do eiusmod tempor incididunt ut labore Enim
-			                            ullamco laboris.</p>
+									<p>Leaders Immobilier lance "Le Grand Jeu" pour récompenser ses clients fidèles : une voiture exceptionnelle à gagner !</p>
 			                        </div>
 			                        <div className="search-by-place-btn ">
 			                          <Link target='blank' to="https://www.youtube.com/watch?v=IB9UeHrG2aM">Explorer l'événement   <i className="flaticon-right-arrow" /></Link>
@@ -135,4 +131,4 @@ class 	Event4 extends Component {
         }
 }
 
-export default Event4
+export default Event4	

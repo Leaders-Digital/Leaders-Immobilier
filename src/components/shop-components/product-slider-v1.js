@@ -73,7 +73,7 @@ const ProductDetail = () => {
         .map(image => `${process.env.REACT_APP_API_URL}${image.version_web}`);
 
     const placeholdersNeeded = Math.max(0, 4 - images.length);
-    const finalImages = [...images, ...new Array(placeholdersNeeded).fill('https://workingat.vu.nl/static/images/placeholder-image.jpg')];
+    const finalImages = [...images, ...new Array(placeholdersNeeded).fill('https://i.ibb.co/q3vJr4RP/placeholder-image.jpg')];
 
     const sliderSettings = {
         slidesToShow: 3,
@@ -111,7 +111,7 @@ const ProductDetail = () => {
                                             width: '100%',
                                             height: '440px',
                                         }}
-                                        onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'}
+                                        onError={(e) => e.target.src = 'https://i.ibb.co/q3vJr4RP/placeholder-image.jpg'}
                                     />
                                 </a>
                             </div>

@@ -7,6 +7,7 @@ import Event3 from './section-components/event3';
 
 import CallToActionV1 from './section-components/call-to-action-v1';
 import Footer from './global-components/footer';
+import Event4 from './section-components/event4';
 
 const Home_V2 = () => {
     return <div>
@@ -15,7 +16,7 @@ const Home_V2 = () => {
         <Event1  />   
         <Event3 /> 
         <Event2  />   
- 
+        <Event4  />   
         <CallToActionV1 />
         <Footer />
     </div>

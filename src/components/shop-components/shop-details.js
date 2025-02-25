@@ -391,7 +391,7 @@ const [formData, setFormData] = useState({
 										<Link to={`/product-details/${similarProduct.id}`}>
 											<img 
 												src={`${process.env.REACT_APP_API_URL}${similarProduct.listImages?.[0]?.version_web}`}
-												onError={(e) => e.target.src = 'https://workingat.vu.nl/static/images/placeholder-image.jpg'} 
+												onError={(e) => e.target.src = 'https://i.ibb.co/q3vJr4RP/placeholder-image.jpg'} 
 												alt={similarProduct.type_categorie}
 											/>
 										</Link>
