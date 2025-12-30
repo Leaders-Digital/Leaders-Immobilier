@@ -1,0 +1,79 @@
+name: Build and Deploy Frontend
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+    
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+      
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      
+      - name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: bangov2
+          password: ${{ secrets.DOCKERHUB_TOKEN }}
+      
+      - name: Build and push Docker image
+        uses: docker/build-push-action@v4
+        with:
+          push: true
+          tags: |
+            bangov2/leaders-immo:latest
+      
+      - name: Deploy to server
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.SERVER_HOST }}
+          username: ${{ secrets.SERVER_USERNAME }}
+          password: ${{ secrets.SERVER_PASSWORD }}
+          script: |
+            # Create frontend directory if it doesn't exist
+            mkdir -p /home/ubuntu/frontend
+            
+            # Create docker-compose.yml for frontend only
+            cat > /home/ubuntu/frontend/docker-compose.yml << 'EOF'
+            version: '3.8'
+            
+            services:
+              frontend:
+                image: bangov2/leaders-immo:latest
+                container_name: leaders-immo
+                ports:
+                  - "3201:3201"
+                restart: unless-stopped
+                networks:
+                  - frontend-network
+            
+            networks:
+              frontend-network:
+                driver: bridge
+            EOF
+            
+            # Stop any existing frontend containers that might conflict
+            sudo docker stop workspace_frontend_1 2>/dev/null || true
+            sudo docker rm workspace_frontend_1 2>/dev/null || true
+            sudo docker stop leaders-immo 2>/dev/null || true
+            sudo docker rm leaders-immo 2>/dev/null || true
+            
+            # Navigate to frontend directory
+            cd /home/ubuntu/frontend
+            
+            # Stop and remove only frontend containers
+            sudo docker compose down --remove-orphans
+            
+            # Pull the latest frontend image
+            sudo docker compose pull
+            
+            # Start only frontend service
+            sudo docker compose up -d
+
