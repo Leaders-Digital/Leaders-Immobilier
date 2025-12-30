@@ -38,10 +38,10 @@ jobs:
           password: ${{ secrets.SERVER_PASSWORD }}
           script: |
             # Create frontend directory if it doesn't exist
-            mkdir -p /home/ubuntu/frontend
+            mkdir -p /home/ubuntu/leaders-immo
             
             # Create docker-compose.yml for frontend only
-            cat > /home/ubuntu/frontend/docker-compose.yml << 'EOF'
+            cat > /home/ubuntu/leaders-immo/docker-compose.yml << 'EOF'
             version: '3.8'
             
             services:
@@ -60,20 +60,15 @@ jobs:
             EOF
             
             # Stop any existing frontend containers that might conflict
-            sudo docker stop workspace_frontend_1 2>/dev/null || true
-            sudo docker rm workspace_frontend_1 2>/dev/null || true
             sudo docker stop leaders-immo 2>/dev/null || true
             sudo docker rm leaders-immo 2>/dev/null || true
             
             # Navigate to frontend directory
-            cd /home/ubuntu/frontend
-            
-            # Stop and remove only frontend containers
-            sudo docker compose down --remove-orphans
+            cd /home/ubuntu/leaders-immo
             
             # Pull the latest frontend image
             sudo docker compose pull
             
-            # Start only frontend service
+            # Start the frontend service
             sudo docker compose up -d
 
