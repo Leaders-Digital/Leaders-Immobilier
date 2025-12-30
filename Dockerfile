@@ -13,6 +13,7 @@ RUN yarn install --frozen-lockfile
 # Copy all source files
 COPY . .
 
+
 # Set environment variables at build time
 ARG REACT_APP_API_URL
 ARG REACT_APP_API_URL_IMAGES
